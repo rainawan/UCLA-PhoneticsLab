@@ -4,26 +4,58 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
+  NavbarMenuToggle,
+  NavbarMenuItem,
+  NavbarMenu,
   Button,
+  DropdownItem,
+  DropdownTrigger,
+  Dropdown,
+  DropdownMenu,
 } from "@nextui-org/react";
-// import "./Navbar.css";
-import phonetics_logo from "../assets/phonetics_logo.jpeg";
 import "tailwindcss/tailwind.css";
+import { Link } from "react-router-dom";
+import ChevronDown from "./ChevronDown";
+import "./Navbar.css";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const menuItems = [
+    "Profile",
+    "Dashboard",
+    "Activity",
+    "Analytics",
+    "System",
+    "Deployments",
+    "My Settings",
+    "Team Settings",
+    "Help & Feedback",
+    "Log Out",
+  ];
   return (
     <div className="inline-block w-full">
-      <Nav className="bg-gray-700 pb-2" position="static" height="fit">
+      {/* <Nav className="bg-gray-700 pb-2" position="static" height="fit"> */}
+      <Nav
+        // className="bg-gray-700 pb-2"
+        isBordered
+        isMenuOpen={isMenuOpen}
+        onMenuOpenChange={setIsMenuOpen}
+      >
+        <NavbarContent className="sm:hidden">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          />
+        </NavbarContent>
+
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem>
-            <Link to="/">
+            <Link to="/" href="#">
               Home
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link href="#" aria-current="page">
-              Customers
+            <Link to="/people" href="#">
+              People
             </Link>
           </NavbarItem>
           <NavbarItem>
@@ -31,38 +63,67 @@ const Navbar = () => {
               Customers
             </Link>
           </NavbarItem>
-        </NavbarContent>
-      </Nav>
-      {/* <Nav
-        className="bg-gray-700 pb-2"
-        position="static"
-        height="fit"
-        shouldHideOnScroll
-      >
-        <div className="flex-col w-full">
-          <NavbarContent className="py-3">
-            <NavbarBrand className="max-w-[7rem]">
-              <Link
-                to="/"
-                className="font-bold text-lg text-white hover:text-gray-300"
-              >
-                <img src={phonetics_logo} alt="" className="w-[5rem] ml-2" />
-              </Link>
-            </NavbarBrand>
+
+          <Dropdown>
             <NavbarItem>
-              <Link color="foreground" href="#">
-                Features
-              </Link>
+              <DropdownTrigger>
+                <Button
+                  disableRipple
+                  className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                  endContent={<ChevronDown fill="currentColor" size={16} />}
+                  radius="sm"
+                  variant="light"
+                >
+                  Features
+                </Button>
+              </DropdownTrigger>
             </NavbarItem>
-            <NavbarItem isActive>
-              <Link href="#" aria-current="page">
-                Customers
+            <DropdownMenu
+              aria-label="ACME features"
+              className="w-[340px]"
+              itemClasses={{
+                base: "gap-4",
+              }}
+            >
+              <DropdownItem
+                key="autoscaling"
+                description="ACME scales apps to meet user demand, automagically, based on load."
+                // startContent={icons.scale}
+              >
+                Autoscaling
+              </DropdownItem>
+              <DropdownItem
+                key="usage_metrics"
+                description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+                // startContent={icons.activity}
+              >
+                Usage Metrics
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        </NavbarContent>
+
+        <NavbarMenu>
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link
+                color={
+                  index === 2
+                    ? "primary"
+                    : index === menuItems.length - 1
+                    ? "danger"
+                    : "foreground"
+                }
+                className="w-full"
+                href="#"
+                size="lg"
+              >
+                {item}
               </Link>
-            </NavbarItem>
-          </NavbarContent>
-        </div>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
       </Nav>
-      <Outlet /> */}
     </div>
   );
 };

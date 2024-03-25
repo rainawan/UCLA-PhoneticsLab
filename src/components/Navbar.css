@@ -1,0 +1,11 @@
+/* CSS */
+.navbar-menu-toggle-container {
+  display: none; /* Hide by default */
+}
+
+/* Show on small screens */
+@media screen and (max-width: 640px) {
+  .navbar-menu-toggle-container {
+    display: block;
+  }
+}
