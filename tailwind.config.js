@@ -8,7 +8,12 @@ export default {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blue: '#213555',
+        yellow: 'FFE59D'
+      }
+    },
     fontFamily: {
       lora: ["Lora", "serif"],
       inter: ["Inter", "serif"],
