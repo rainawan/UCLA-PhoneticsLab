@@ -5,7 +5,6 @@ import {
   NavbarContent,
   NavbarItem,
   NavbarMenuToggle,
-  NavbarMenuItem,
   NavbarMenu,
   Button,
   DropdownItem,
