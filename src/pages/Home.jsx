@@ -10,16 +10,15 @@ const HomePage = () => {
           UCLA Phonetics Lab
         </Text>
         <img src={MyFairLady} alt="my_fair_lady" className="pt-5 shadow-2xl" />
-        <h6 className="pt-5 px-20 sm:px-30 lg:px-40 text-center italic text-blue">
+        <h6 className="pt-10 px-20 sm:px-30 lg:px-80 text-center italic text-blue">
           Peter Ladefoged teaching Rex Harrison (Professor Higgins) and Wilfred
           Hyde White (Colonel Pickering) about Sweet's vowel symbols on the set
           of My Fair Lady. George Cukor (the director) is on the right.
         </h6>
       </div>
       <Divider className="my-4 w-2/3 mx-auto border-t-2 border-gray-400" />
-      {/* <div className="lg:col-span-12"> */}
-      <div class="px-10 sm:px-20 lg:px-30 py-10">
-        <div className="block text-lg px-35">
+      <div class="px-20 lg:px-60 py-10 ">
+        <div className="block text-left  text-lg px-35">
           <div className="p-3">
             The UCLA Phonetics Laboratory was established by Peter Ladefoged in
             the English Department in Fall 1962 and moved with him to the new

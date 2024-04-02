@@ -7,6 +7,7 @@ import People from "./pages/People";
 import CurrentMembers from "./pages/People/CurrentMembers";
 import FormerMembers from "./pages/People/FormerMembers";
 import LocalColleagues from "./pages/People/LocalColleagues";
+import LangAcquisition from "./pages/LangAcquisition";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route path="/people" element={<People />} />
+        <Route path="/langacquisition" element={<LangAcquisition />} />
         <Route path="/people/current_members" element={<CurrentMembers />} />
         <Route path="/people/former_members" element={<FormerMembers />} />
         <Route path="/people/local_colleagues" element={<LocalColleagues />} />

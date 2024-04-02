@@ -16,13 +16,12 @@ import "tailwindcss/tailwind.css";
 import { Link } from "react-router-dom";
 import ChevronDown from "./ChevronDown";
 import "./Navbar.css";
-import { render } from "react-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const menuItems = [
     { label: "Home", route: "/" },
-    { label: "Test", route: "/people" },
+    // { label: "Language Acquisition Lab", route: "/langacquisition" },
     {
       label: "People",
       dropdownItems: [

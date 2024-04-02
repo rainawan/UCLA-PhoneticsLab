@@ -8,28 +8,35 @@ const Footer = () => {
         <h1 className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold md:w-2/5">
           <span className="text-[#FFE578]">UCLA</span> Phonetics Lab
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-16">
-          <FooterItem
-            Links={[
-              "3125 Campbell Hall",
-              "Box 951543",
-              "Los Angeles, CA 90095-1543",
-            ]}
-            Title="Location"
-          />
-          <FooterItem
-            Links={[
-              "P: 310-825-0634",
-              "F: 310-206-5743",
-              "lingundergrad@humnet.ucla.edu",
-            ]}
-            Title="Contact"
-          />
+        {/* <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-16"> */}
+        <div className="text-left flex justify-center">
+          <div className="p-5">
+            <FooterItem
+              Links={[
+                "2101 Campbell Hall",
+                "Department of Linguistics",
+                "335 Portola Plaza",
+                "Box 951543, MC 154302",
+                "Los Angeles, CA 90095-1543",
+              ]}
+              Title="Location"
+            />
+          </div>
+          <div className="p-5">
+            <FooterItem
+              Links={[
+                "P: 310-825-0634",
+                "F: 310-206-5743",
+                "lingundergrad@humnet.ucla.edu",
+              ]}
+              Title="Contact"
+            />
+          </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center pt-2 text-gray-400 text-sm pb-8">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center pt-2 text-gray-400 text-sm pb-8">
           <span>2024 Apply. All rights reserved.</span>
           <span>Terms | Conditions</span>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
