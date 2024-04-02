@@ -5,7 +5,7 @@ import { Divider } from "@nextui-org/react";
 const HomePage = () => {
   return (
     <div>
-      <div className="px-10 flex flex-col items-center justify-center">
+      <div className="py-10 px-10 flex flex-col items-center justify-center">
         <Text h2 className="font-bold text-blue">
           UCLA Phonetics Lab
         </Text>
@@ -18,7 +18,7 @@ const HomePage = () => {
       </div>
       <Divider className="my-4 w-2/3 mx-auto border-t-2 border-gray-400" />
       {/* <div className="lg:col-span-12"> */}
-      <div class="px-10 sm:px-20 lg:px-30">
+      <div class="px-10 sm:px-20 lg:px-30 py-10">
         <div className="block text-lg px-35">
           <div className="p-3">
             The UCLA Phonetics Laboratory was established by Peter Ladefoged in
