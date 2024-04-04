@@ -8,7 +8,6 @@ const Footer = () => {
         <h1 className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold md:w-2/5">
           <span className="text-[#FFE578]">UCLA</span> Phonetics Lab
         </h1>
-        {/* <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-16"> */}
         <div className="text-left flex justify-center">
           <div className="p-5">
             <FooterItem

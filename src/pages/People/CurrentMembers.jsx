@@ -31,7 +31,7 @@ const CurrentMembers = () => {
               <CardBody className="overflow-visible py-2 justify-center items-center">
                 <div className="relative">
                   <Image
-                    alt="Card background"
+                    alt={card.name}
                     className="object-cover rounded-xl"
                     src={card.imgSrc}
                     width={270}

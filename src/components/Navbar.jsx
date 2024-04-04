@@ -15,7 +15,7 @@ import {
 import "tailwindcss/tailwind.css";
 import { Link } from "react-router-dom";
 import ChevronDown from "./ChevronDown";
-import "./Navbar.css";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -67,9 +67,8 @@ const Navbar = () => {
 
   return (
     <div className="inline-block w-full">
-      {/* <Nav className="bg-gray-700 pb-2" position="static" height="fit"> */}
       <Nav
-        className="bg-blue"
+        className="bg-gray-800 h-20"
         isBordered
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
