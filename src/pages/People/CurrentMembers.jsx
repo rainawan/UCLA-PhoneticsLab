@@ -5,7 +5,7 @@ import { members } from "../../components/CurrentMembers";
 const CurrentMembers = () => {
   return (
     <div className="px-20 md:px-40 lg:px-40 py-20">
-      <Text h2 className="font-bold text-blue pb-10">
+      <Text h2 className="font-bold text-darkblue pb-10">
         Current Members
       </Text>
 
@@ -20,7 +20,7 @@ const CurrentMembers = () => {
             <Card
               // key={index}
               // href={card.link}
-              className="bg-blue py-4 items-center"
+              className="bg-darkblue py-4 items-center"
             >
               <CardHeader className="text-white pb-0 pt-2 px-4 flex-col">
                 <div>

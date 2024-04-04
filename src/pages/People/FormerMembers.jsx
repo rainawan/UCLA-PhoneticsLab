@@ -14,7 +14,7 @@ import Text from "../../components/Text";
 const FormerMembers = () => {
   return (
     <div className="py-10">
-      <Text h2 className="font-bold text-blue">
+      <Text h2 className="font-bold text-darkblue">
         Former Members
       </Text>
       <div className="px-20 lg:px-60 py-10">
