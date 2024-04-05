@@ -10,9 +10,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        blue: '#2774AE',
-        yellow: 'FFE59D'
-      }
+        blue: "#2774AE",
+        darkblue: "#003B5C",
+        yellow: "FFE59D",
+      },
     },
     fontFamily: {
       lora: ["Lora", "serif"],

@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div className="shadow-lg">
       <div className="py-10 px-10 flex flex-col items-center justify-center">
-        <Text h2 className="font-bold text-blue">
+        <Text h2 className="font-bold text-darkblue">
           UCLA Phonetics Lab
         </Text>
         <img src={MyFairLady} alt="my_fair_lady" className="pt-5 shadow-2xl" />
