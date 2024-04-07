@@ -9,6 +9,11 @@ import LocalColleagues from "./pages/People/LocalColleagues";
 import LangAcquisition from "./pages/LangAcquisition";
 import Grants from "./pages/Research/Grants";
 import Dissertations from "./pages/Research/Dissertations";
+import Databases from "./pages/Resources/Databases";
+import Illustrations from "./pages/Resources/Illustrations";
+import Resources from "./pages/Resources/Resources";
+import Courses from "./pages/Teaching/Courses";
+import Materials from "./pages/Teaching/Materials";
 
 function App() {
   return (
@@ -42,6 +47,14 @@ function App() {
                 path="/research/dissertations"
                 element={<Dissertations />}
               />
+              <Route path="/resources/databases" element={<Databases />} />
+              <Route
+                path="/resources/illustrations"
+                element={<Illustrations />}
+              />
+              <Route path="/resources/resources" element={<Resources />} />
+              <Route path="/teaching/courses" element={<Courses />} />
+              <Route path="/teaching/materials" element={<Materials />} />
             </Routes>
           </div>
         </BrowserRouter>

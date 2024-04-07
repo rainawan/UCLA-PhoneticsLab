@@ -26,7 +26,7 @@ const Footer = () => {
               Links={[
                 "P: 310-825-0634",
                 "F: 310-206-5743",
-                "lingundergrad@humnet.ucla.edu",
+                "phonetics@ucla.edu",
               ]}
               Title="Contact"
             />

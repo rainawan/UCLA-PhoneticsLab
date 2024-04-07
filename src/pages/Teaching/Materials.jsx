@@ -1,13 +1,13 @@
 import Text from "../../components/Text";
 
-const Resources = () => {
+const Materials = () => {
   return (
     <div className="bg-white">
       <Text h2 className="font-bold text-darkblue">
-        Resources
+        Materials
       </Text>
     </div>
   );
 };
 
-export default Resources;
+export default Materials;
