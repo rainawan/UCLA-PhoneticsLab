@@ -13,11 +13,11 @@ import Text from "../../components/Text";
 
 const FormerMembers = () => {
   return (
-    <div className="py-10">
+    <div className="py-10 bg-white">
       <Text h2 className="font-bold text-darkblue">
         Former Members
       </Text>
-      <div className="px-20 lg:px-60 py-10">
+      <div className="px-10 md:px-20 lg:px-40 py-10">
         <Table isStriped className="text-left">
           <TableHeader columns={columns}>
             {(column) => (
