@@ -227,7 +227,7 @@ export const rows = [
 export const columns = [
   {
     key: "name",
-    label: "NAME",
+    label: "PRINCIPAL INVESTIGATOR",
   },
   {
     key: "date",
