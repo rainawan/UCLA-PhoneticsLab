@@ -33,7 +33,7 @@ const Navbar = () => {
       label: "Research",
       dropdownItems: [
         { label: "Grants", route: "/research/grants" },
-        { label: "Disserations", route: "/research/dissertations" },
+        // { label: "Disserations", route: "/research/dissertations" },
       ],
     },
     // {
