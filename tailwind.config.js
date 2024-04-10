@@ -11,8 +11,10 @@ export default {
     extend: {
       colors: {
         blue: "#2774AE",
-        darkblue: "#003B5C",
-        yellow: "FFE59D",
+        darkblue: "#005587",
+        yellow: "#FFE59D",
+        white: "#FFFFFF",
+        lightgray: "#D3D3D3",
       },
     },
     fontFamily: {

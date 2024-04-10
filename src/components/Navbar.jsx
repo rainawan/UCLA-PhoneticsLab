@@ -16,7 +16,6 @@ import "tailwindcss/tailwind.css";
 import { Link } from "react-router-dom";
 import ChevronDown from "./ChevronDown";
 
-
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const menuItems = [
@@ -30,6 +29,28 @@ const Navbar = () => {
         { label: "Local Colleagues", route: "/people/local_colleagues" },
       ],
     },
+    {
+      label: "Research",
+      dropdownItems: [
+        { label: "Grants", route: "/research/grants" },
+        // { label: "Disserations", route: "/research/dissertations" },
+      ],
+    },
+    // {
+    //   label: "Resources",
+    //   dropdownItems: [
+    //     { label: "Resources", route: "/resources/resources" },
+    //     { label: "Databases", route: "/resources/databases" },
+    //     { label: "Illustrations", route: "/resources/illustrations" },
+    //   ],
+    // },
+    // {
+    //   label: "Teaching",
+    //   dropdownItems: [
+    //     { label: "Courses", route: "/teaching/courses" },
+    //     { label: "Materials", route: "/teaching/materials" },
+    //   ],
+    // },
   ];
 
   const renderNavbarItem = (item, index) => (
@@ -68,7 +89,7 @@ const Navbar = () => {
   return (
     <div className="inline-block w-full">
       <Nav
-        className="bg-gray-800 h-20"
+        className="bg-darkblue h-20"
         isBordered
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}

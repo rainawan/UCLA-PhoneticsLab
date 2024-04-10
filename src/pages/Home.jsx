@@ -4,21 +4,21 @@ import { Divider } from "@nextui-org/react";
 
 const HomePage = () => {
   return (
-    <div className="shadow-lg">
+    <div className="bg-white">
       <div className="py-10 px-10 flex flex-col items-center justify-center">
         <Text h2 className="font-bold text-darkblue">
           UCLA Phonetics Lab
         </Text>
         <img src={MyFairLady} alt="my_fair_lady" className="pt-5 shadow-2xl" />
-        <h6 className="pt-10 px-20 sm:px-30 lg:px-80 text-center italic text-blue">
+        <h6 className="pt-10 px-20 sm:px-30 lg:px-40 text-center italic text-darkblue">
           Peter Ladefoged teaching Rex Harrison (Professor Higgins) and Wilfred
           Hyde White (Colonel Pickering) about Sweet's vowel symbols on the set
           of My Fair Lady. George Cukor (the director) is on the right.
         </h6>
       </div>
       <Divider className="my-4 w-2/3 mx-auto border-t-2 border-gray-400" />
-      <div class="px-20 lg:px-40 py-10 ">
-        <div className="block text-left  text-lg px-35">
+      <div class="px-10 lg:px-40 py-10">
+        <div className="block text-left text-lg px-35">
           <div className="p-3">
             The UCLA Phonetics Laboratory was established by Peter Ladefoged in
             the English Department in Fall 1962 and moved with him to the new

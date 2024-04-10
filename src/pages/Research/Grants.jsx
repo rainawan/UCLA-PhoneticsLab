@@ -8,14 +8,14 @@ import {
   getKeyValue,
   Link,
 } from "@nextui-org/react";
-import { rows, columns } from "../../components/FormerMembers";
+import { rows, columns } from "../../components/Grants";
 import Text from "../../components/Text";
 
-const FormerMembers = () => {
+const Grants = () => {
   return (
     <div className="py-10 bg-white">
       <Text h2 className="font-bold text-darkblue">
-        Former Members
+        Grants
       </Text>
       <div className="px-10 md:px-20 lg:px-40 py-10">
         <Table isStriped className="text-left">
@@ -53,4 +53,4 @@ const FormerMembers = () => {
   );
 };
 
-export default FormerMembers;
+export default Grants;
