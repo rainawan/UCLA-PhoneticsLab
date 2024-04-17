@@ -1023,10 +1023,6 @@ video {
   height: var(--nextui-spacing-unit-8);
 }
 
-.h-0 {
-  height: 0px;
-}
-
 .max-h-64 {
   max-height: 16rem;
 }
@@ -1625,10 +1621,6 @@ video {
   align-items: center;
 }
 
-.justify-normal {
-  justify-content: normal;
-}
-
 .justify-start {
   justify-content: flex-start;
 }
@@ -1643,18 +1635,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
-.justify-stretch {
-  justify-content: stretch;
 }
 
 .\!gap-0 {
@@ -2553,10 +2533,6 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
-}
-
-.pt-20 {
-  padding-top: 5rem;
 }
 
 .text-left {
