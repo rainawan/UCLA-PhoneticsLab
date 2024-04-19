@@ -70,7 +70,7 @@ const Dissertations = () => {
       <p>
         Note that dissertations by students in the Phonetics Lab have not been
         distributed as WPP since 1995. Virtually all dissertations since the
-        mid-eighties can be downloaded from the 
+        mid-eighties can be downloaded from the&nbsp;
         <Link
           href="https://linguistics.ucla.edu/research/"
           underline="hover"
