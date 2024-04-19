@@ -4,7 +4,7 @@ import { members } from "../../components/CurrentMembers";
 
 const CurrentMembers = () => {
   return (
-    <div className="px-20 md:px-40 lg:px-40 py-20 bg-white">
+    <div className="px-20 md:px-0 lg:px-40 py-20 bg-white">
       <Text h2 className="font-bold text-darkblue pb-10">
         Current Members
       </Text>
@@ -17,12 +17,8 @@ const CurrentMembers = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Card
-              // key={index}
-              // href={card.link}
-              className="bg-darkblue py-4 items-center"
-            >
-              <CardHeader className="text-white pb-0 pt-2 px-4 flex-col">
+            <Card className="bg-darkblue py-4 items-center">
+              <CardHeader className="text-white pb-0 pt-2 flex-col lg:h-[100px] md:h-[140px] sm:h-[100px]">
                 <div>
                   <h3 className="font-bold text-xl">{card.name}</h3>
                   <h3 className="text-gray-400 text-base">{card.occupation}</h3>

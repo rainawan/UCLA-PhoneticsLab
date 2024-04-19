@@ -33,17 +33,18 @@ const Navbar = () => {
       label: "Research",
       dropdownItems: [
         { label: "Grants", route: "/research/grants" },
-        // { label: "Disserations", route: "/research/dissertations" },
+        { label: "Disserations", route: "/research/dissertations" },
       ],
     },
-    // {
-    //   label: "Resources",
-    //   dropdownItems: [
-    //     { label: "Resources", route: "/resources/resources" },
-    //     { label: "Databases", route: "/resources/databases" },
-    //     { label: "Illustrations", route: "/resources/illustrations" },
-    //   ],
-    // },
+    {
+      label: "Resources",
+      dropdownItems: [
+        //     { label: "Resources", route: "/resources/resources" },
+        // { label: "Databases", route: "/resources/databases" },
+        // { label: "Physiology", route: "/resources/physiology" },
+        //     { label: "Illustrations", route: "/resources/illustrations" },
+      ],
+    },
     // {
     //   label: "Teaching",
     //   dropdownItems: [

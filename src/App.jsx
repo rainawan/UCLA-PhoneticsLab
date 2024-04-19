@@ -10,6 +10,7 @@ import LangAcquisition from "./pages/LangAcquisition";
 import Grants from "./pages/Research/Grants";
 import Dissertations from "./pages/Research/Dissertations";
 import Databases from "./pages/Resources/Databases";
+import Physiology from "./pages/Resources/Physiology";
 import Illustrations from "./pages/Resources/Illustrations";
 import Resources from "./pages/Resources/Resources";
 import Courses from "./pages/Teaching/Courses";
@@ -48,6 +49,7 @@ function App() {
                 element={<Dissertations />}
               />
               <Route path="/resources/databases" element={<Databases />} />
+              <Route path="/resources/physiology" element={<Physiology />} />
               <Route
                 path="/resources/illustrations"
                 element={<Illustrations />}
