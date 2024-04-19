@@ -40,8 +40,8 @@ const Navbar = () => {
       label: "Resources",
       dropdownItems: [
         //     { label: "Resources", route: "/resources/resources" },
-        { label: "Databases", route: "/resources/databases" },
-        { label: "Physiology", route: "/resources/physiology" },
+        // { label: "Databases", route: "/resources/databases" },
+        // { label: "Physiology", route: "/resources/physiology" },
         //     { label: "Illustrations", route: "/resources/illustrations" },
       ],
     },
