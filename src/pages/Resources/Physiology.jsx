@@ -5,7 +5,7 @@ import Text from "../../components/Text";
 
 const Physiology = () => {
   return (
-    <div className="bg-white p-20">
+    <div className="bg-white p-20 text-left">
       <Text h2 className="text-left">
         Physiology
       </Text>
@@ -13,7 +13,7 @@ const Physiology = () => {
         <Text h3>Palatography</Text>
         <Accordion variant="shadow">
           <AccordionItem title="Introduction">
-            <div className="pb-10">
+            <div className="pb-10 px-4">
               <Text h4>Static Palatography Introduction</Text>
               <Text p>
                 Static palatography is a well-known traditional method of
@@ -43,25 +43,76 @@ const Physiology = () => {
               <Text p className="font-semibold">
                 Material presented here has been adapted from:
               </Text>
+              <Text p>
+                Ladefoged, P. (2003). Phonetic Data Analysis. Oxford:
+                Blackwells. (due out summer 2003)
+                <br />
+                Anderson, V. (2000) Giving Weight to Phonetic Principles: The
+                Case of Place of Articulation in Western Arrente. UCLA Ph.D.
+                dissertation. Keating, P. (2002). Class Handout for Linguistics
+                251 Phonetics Seminar, Spring 2002.
+              </Text>
             </div>
           </AccordionItem>
           <AccordionItem title="Palatograms">
-            <div className="pb-10">Content for Accordion 0</div>
+            <div className="pb-10 px-4">
+              <Text h4>What are Palatograms?</Text>
+              <Text p>
+                A palatogram is an image of the region of the upper surface of
+                the vocal tract contacted by the tongue due to a consonant. The
+                best way to obtain such an image is to coat the tongue with a
+                mixture of equal parts olive oil and activated charcoal powder
+                and record the resulting transfer of pigment.
+              </Text>
+              <Text p className="font-semibold">
+                The process is as follows:
+              </Text>
+              <Text p>
+                1) To protect the subject, one should use latex type gloves and
+                preferably a surgical mask. <br />
+                2) Mix the olive oil and the activated charcoal powder. <br />
+                3) Apply mixture to the speaker's whole tongue with a paintbrush
+                or Q-Tip. NOTE: In case of dripping, one should cover the
+                speaker's clothes before applying the mixture. <br />
+                4) Ask the speaker to produce a word that contains the target
+                sound (The word should not include any other sounds that make
+                contact with the palate). <br />
+                5) Use a mirror (preferably a sterilized inter-oral mirror), and
+                place it inside the speaker's mouth at a 45° angle with respect
+                to the plane of the teeth.
+              </Text>
+              <Text p></Text>
+            </div>
           </AccordionItem>
           <AccordionItem title="Linguograms">
-            <div className="pb-10">Content for Accordion 0</div>
+            <div className="pb-10 px-4">
+              <Text h4>Header</Text>
+              <Text p>description</Text>
+            </div>
           </AccordionItem>
           <AccordionItem title="Alginate Impressions">
-            <div className="pb-10">Content for Accordion 0</div>
+            <div className="pb-10 px-4">
+              <Text h4>Header</Text>
+              <Text p>description</Text>
+            </div>
           </AccordionItem>
           <AccordionItem title="Midsaggital Diagrams">
-            <div className="pb-10">Content for Accordion 0</div>
+            <div className="pb-10 px-4">
+              <Text h4>Header</Text>
+              <Text p>description</Text>
+            </div>
           </AccordionItem>
           <AccordionItem title="Tomographic Slices">
-            <div className="pb-10">Content for Accordion 0</div>
+            <div className="pb-10 px-4">
+              <Text h4>Header</Text>
+              <Text p>description</Text>
+            </div>
           </AccordionItem>
           <AccordionItem title="Practical Points">
-            <div className="pb-10">Content for Accordion 0</div>
+            <div className="pb-10 px-4">
+              <Text h4>Header</Text>
+              <Text p>description</Text>
+            </div>
           </AccordionItem>
         </Accordion>
       </div>
