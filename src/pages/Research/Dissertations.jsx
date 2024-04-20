@@ -4,9 +4,7 @@ import { Link, Divider } from "@nextui-org/react";
 const Dissertations = () => {
   return (
     <div className="px-20 md:px-40 lg:px-60 py-20 bg-white text-left text-large">
-      <Text h2 className="font-bold text-darkblue pb-10">
-        Dissertations
-      </Text>
+      <Text h2>Dissertations</Text>
       <p>
         Until 1995, dissertations from the Phonetics Lab were published in
         the&nbsp;
@@ -78,9 +76,9 @@ const Dissertations = () => {
           size="lg"
         >
           Linguistics Department
-        </Link> or the
-        Phonetics Lab. The Linguistics Department continues to work on making
-        more of the back catalog of dissertations available online.
+        </Link>{" "}
+        or the Phonetics Lab. The Linguistics Department continues to work on
+        making more of the back catalog of dissertations available online.
       </p>
     </div>
   );
