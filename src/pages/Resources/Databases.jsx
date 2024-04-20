@@ -12,9 +12,7 @@ import { data } from "../../components/Databases";
 const Databases = () => {
   return (
     <div className="bg-white px-20 md:px-0 lg:px-40 py-20">
-      <Text h2 className="font-bold text-darkblue">
-        Databases
-      </Text>
+      <Text h2>Databases</Text>
       <div class="p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {data.map((card, index) => (
           <a

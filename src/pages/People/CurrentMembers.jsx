@@ -5,7 +5,7 @@ import { members } from "../../components/CurrentMembers";
 const CurrentMembers = () => {
   return (
     <div className="px-20 md:px-0 lg:px-40 py-20 bg-white">
-      <Text h2 className="font-bold text-darkblue pb-10">
+      <Text h2>
         Current Members
       </Text>
 
