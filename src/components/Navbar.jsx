@@ -33,15 +33,15 @@ const Navbar = () => {
       label: "Research",
       dropdownItems: [
         { label: "Grants", route: "/research/grants" },
-        { label: "Disserations", route: "/research/dissertations" },
+        { label: "Working Papers", route: "/research/dissertations" },
       ],
     },
     {
       label: "Resources",
       dropdownItems: [
         //     { label: "Resources", route: "/resources/resources" },
-        { label: "Databases", route: "/resources/databases" },
-        { label: "Physiology", route: "/resources/physiology" },
+        // { label: "Databases", route: "/resources/databases" },
+        // { label: "Physiology", route: "/resources/physiology" },
         //     { label: "Illustrations", route: "/resources/illustrations" },
       ],
     },
