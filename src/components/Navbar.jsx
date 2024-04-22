@@ -39,10 +39,11 @@ const Navbar = () => {
     {
       label: "Resources",
       dropdownItems: [
-        //     { label: "Resources", route: "/resources/resources" },
-        { label: "Databases", route: "/resources/databases" },
         { label: "Physiology", route: "/resources/physiology" },
-        //     { label: "Illustrations", route: "/resources/illustrations" },
+        { label: "Acoustic Analysis", route: "/resources/acoustic_analysis" },
+        { label: "Perception", route: "/resources/perception" },
+        { label: "Data Collection", route: "/resources/data_collection" },
+        { label: "Databases", route: "/resources/databases" },
       ],
     },
     // {

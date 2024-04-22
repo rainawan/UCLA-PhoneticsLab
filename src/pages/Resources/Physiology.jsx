@@ -400,6 +400,9 @@ const Physiology = () => {
           </AccordionItem>
         </Accordion>
       </div>
+      <div className="pt-10">
+        <Text h3>Demos & Illustrations</Text>
+      </div>
     </div>
   );
 };
