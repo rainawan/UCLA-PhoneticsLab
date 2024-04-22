@@ -1,8 +1,6 @@
 import React from "react";
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Accordion, AccordionItem, Divider } from "@nextui-org/react";
 import Text from "../../components/Text";
-import Img1 from "../../../src/components/resouces/palatogram_fig_1.jpeg";
-// import Img2 from "../../../src/"
 
 const Physiology = () => {
   return (
@@ -256,20 +254,148 @@ const Physiology = () => {
           </AccordionItem>
           <AccordionItem title="Midsaggital Diagrams">
             <div className="pb-10 px-4">
-              <Text h4>Header</Text>
-              <Text p>description</Text>
+              <Text h4>How to Make Midsaggital Diagrams</Text>
+              <Text p className="pb-10">
+                In order to obtain a precise diagram of the shape of the
+                speaker's palate, the palatal impression must be accurately
+                sectioned in three dimensions. The first cut will be through the
+                center of the impression to provide an datum line for further
+                measurement. To get the most information on the shape of the
+                soft tissues, the impression should be cut mid-sagittally before
+                trimming around the teeth. Next trace an outline of the palate,
+                upper teeth, and upper lip on a sheet of paper. Use a ruler and
+                your fingers to brace the impression. Alternatively, put one of
+                the halves on the glass of a copy machine, and copy. Either way,
+                make several copies of the tracing just in case.
+                <br />
+                <br />
+                Next, bisect the impression halves in the coronal plane, at a
+                point about the middle of the impression (usually between the
+                second premolar and first molar). The intersection of these
+                mid-sagittal and coronal cuts can be used to define x and y axes
+                and an origin on a piece of graph paper.
+              </Text>
+              <Accordion isCompact variant="bordered">
+                <AccordionItem title="View Figures">
+                  <div className="flex flex-wrap">
+                    <div class="w-full md:w-1/2 p-2">
+                      <img
+                        src="../../../src/components/resouces/palatogram_fig_5.jpeg"
+                        alt="palatogram_fig_5"
+                      />
+                      <h1>
+                        Fig 7: The impression is now sectioned along the
+                        saggital plane. Use the central fissure as a guide. One
+                        of the resulting halves is used as a pattern to create a
+                        paper tracing. The flexible nature of the alginate
+                        requires careful support so as not to distort the shape
+                        of the palate.
+                      </h1>
+                    </div>
+                  </div>
+                </AccordionItem>
+              </Accordion>
             </div>
           </AccordionItem>
-          <AccordionItem title="Tomographic Slices">
+          <AccordionItem title="Tomographic Slices & Superimposing Photography">
             <div className="pb-10 px-4">
-              <Text h4>Header</Text>
-              <Text p>description</Text>
+              <Text h4>Tomographic Slices</Text>
+              <Text p>
+                Slice each of the resulting quadrants horizontally, 5 mm above
+                the plane of the teeth (i.e. with the blade of the knife
+                parallel to the surface of the impression material corresponding
+                to the plane of the teeth). It is then possible to measure the
+                distance of this plane from the roof of the mouth, and to draw a
+                line round it.
+                <br />
+                <br />
+                In order to assist with the scaling it is also advisable to draw
+                round the base of the teeth. Check with your local biology or
+                physical anthropology departments for a tomograph with which to
+                make the 5 mm horizontal slices. Otherwise, it is relatively
+                easy to make a tool to cut the alginate mold parallel to the
+                plane of the teeth. On a flat, smooth, 190 x 125 mm wooden board
+                paste heavy cardboard strips parallel to each other, 70 mm
+                apart, resulting in a two “walls” of height 5mm. On top of, and
+                perpendicular to the cardboard walls place an 80 mm long razor
+                blade, creating a wide slicing area. Push each quadrant of the
+                dental impression through this tool so as to cut off the bottom
+                5 mm of impression material in the occlusal plane. Place the
+                quadrants back together at the origin on the graph paper, trace
+                them, and repeat the process until all of the impression
+                material is drawn in this way.
+                <br />
+                <br />
+                Alternatively, you can use a cast to get the contour lines: fill
+                the cast with liquid to depths of 5, 10, and 15 mm,
+                photographing each depth.
+              </Text>
+              <Divider className="my-4 w-full mx-auto border-t-2 border-gray-400" />
+              <Text h4>Superimposing on Photographs</Text>
+              <Text p>
+                To superimpose the contour lines and the marks of the teeth
+                accurately on the photograph, it is first necessary to be
+                certain that the photographs are not distorted. They will be
+                foreshortened, if the mirror was not at a 45° angle to the plane
+                of the teeth. The scaling can be done quite easily if the
+                photograph has been entered into a computer, either by scanning
+                it, or by conversion from the video. The contour lines, location
+                of the teeth and the tracing of the sagittal section can also be
+                scanned in, and then the image of the roof of the mouth scaled
+                independently in each direction so that obvious landmarks, such
+                as the distance between certain teeth are adjusted
+                appropriately.
+                <br />
+                <br />
+                For a detailed illustration of this process please refer to
+                Ladefoged's chapter on static palatography in his 2003 book,
+                Phonetic Data Analysis.
+              </Text>
             </div>
           </AccordionItem>
           <AccordionItem title="Practical Points">
             <div className="pb-10 px-4">
-              <Text h4>Header</Text>
-              <Text p>description</Text>
+              <Text h4>Practical Points</Text>
+              <Text p>
+                There are some practical points in connection with palatography
+                that should be noted. Firstly, care should be taken in selecting
+                appropriate words. We are often interested in comparing the
+                places of articulation of different sounds. Accordingly words
+                must be chosen that contain these articulations, and do not
+                contain any other similar articulations that might overlap with
+                them. Thus when investigating the difference between s and sh in
+                English one should use words such as "sop-shop" rather than
+                "sot-shot." Similarly one should use either a range of vowels
+                ("seep-sheep, sip-ship, same-shame, Sam-sham, sop-shop, etc.")
+                or, if this is not possible, just open vowels which might be
+                expected to have less effect on the consonant articulation. As
+                with all instrumental phonetic investigations, time spent
+                selecting suitable words is a good investment.
+                <br />
+                <br />
+                When doing palatography, one should allow the speaker to
+                practice the task extensively. It is important to get the
+                speakers to relax after the tongue or upper surface of the mouth
+                have been painted, so that when they say the word being
+                investigated they do so naturally. It also requires practice to
+                stick the tongue out of the mouth the same way every time. It is
+                obviously important to date and label the photographs as soon as
+                they are taken. In addition, again as with all instrumental
+                data, it is preferable to make records of several different
+                speakers saying a few utterances rather than one or two speakers
+                repeating a large number of different utterances. Ideally one
+                would like to get a dozen speakers of the same dialect each
+                repeating a dozen times all the contrasts to be investigated.
+                But making palatographic records is fairly time consuming, and
+                in a world in which time and effort are limited one may have to
+                be satisfied with half a dozen speakers saying each word once.
+                We hope, however that gone are the days when phoneticians such
+                as Ladefoged made general statements about some West African
+                languages based on the palatographic records of a single speaker
+                of each language. We need to find out the properties of the
+                language that a group of speakers have in common, rather than
+                the details of an individual's pronunciation.
+              </Text>
             </div>
           </AccordionItem>
         </Accordion>
