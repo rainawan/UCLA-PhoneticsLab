@@ -1,7 +1,8 @@
 import React from "react";
-import { Link, Accordion, AccordionItem } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 import Text from "../../components/Text";
-// import { Accordion } from "@material-tailwind/react";
+import Img1 from "../../../src/components/resouces/palatogram_fig_1.jpeg";
+// import Img2 from "../../../src/"
 
 const Physiology = () => {
   return (
@@ -79,9 +80,43 @@ const Physiology = () => {
                 contact with the palate). <br />
                 5) Use a mirror (preferably a sterilized inter-oral mirror), and
                 place it inside the speaker's mouth at a 45° angle with respect
-                to the plane of the teeth.
+                to the plane of the teeth. <br />
+                6) Use a camera or video camera to photograph the mirror's
+                reflection of the place of articulation depicted by the imprint.{" "}
+                <br />
+                7) If a video camera is used, the image can be transferred
+                directly to a computer for further processing. <br />
+                8) Once the image has been recorded, have the speaker rinse out
+                his/her mouth with lemonade (or lemon juice in water). <br />
               </Text>
-              <Text p></Text>
+
+              <Accordion isCompact variant="bordered">
+                <AccordionItem title="View Figures">
+                  <div className="flex flex-wrap">
+                    <div class="w-full md:w-1/2 p-2">
+                      <img
+                        src="../../../src/components/resouces/palatogram_fig_1.jpeg"
+                        alt="palatogram_fig_1"
+                      />
+                      <h1>
+                        Fig 1: Diagram showing relative position of the elements
+                        required to record the palatogram.
+                      </h1>
+                    </div>
+                    <div class="w-full md:w-1/2 p-2">
+                      <img
+                        src="../../../src/components/resouces/palatogram_fig_2.gif"
+                        alt="palatogram_fig_2"
+                      />
+                      <h1>
+                        Fig 2: Palatogram; still image digitized from video.
+                        Orientation: Upper teeth are shown at top and reflected
+                        in the mirror at bottom.
+                      </h1>
+                    </div>
+                  </div>
+                </AccordionItem>
+              </Accordion>
             </div>
           </AccordionItem>
           <AccordionItem title="Linguograms">
