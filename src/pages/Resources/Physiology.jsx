@@ -100,9 +100,9 @@ const Physiology = () => {
                         src="../../../src/components/resouces/palatogram_fig_1.jpeg"
                         alt="palatogram_fig_1"
                       />
-                      <h1>
-                        Fig 1: Diagram showing relative position of the elements
-                        required to record the palatogram.
+                      <h1 className="pt-4">
+                        Figure 1: Diagram showing relative position of the
+                        elements required to record the palatogram.
                       </h1>
                     </div>
                     <div class="w-full md:w-1/2 p-2">
@@ -110,8 +110,8 @@ const Physiology = () => {
                         src="../../../src/components/resouces/palatogram_fig_2.gif"
                         alt="palatogram_fig_2"
                       />
-                      <h1>
-                        Fig 2: Palatogram; still image digitized from video.
+                      <h1 className="pt-4">
+                        Figure 2: Palatogram; still image digitized from video.
                         Orientation: Upper teeth are shown at top and reflected
                         in the mirror at bottom.
                       </h1>
@@ -161,8 +161,9 @@ const Physiology = () => {
                         src="../../../src/components/resouces/palatogram_fig_3.gif"
                         alt="palatogram_fig_3"
                       />
-                      <h1>
-                        Fig 3: Linguogram showing tongue blade and body contact.
+                      <h1 className="pt-4">
+                        Figure 3: Linguogram showing tongue blade and body
+                        contact.
                       </h1>
                     </div>
                     <div class="w-full md:w-1/2 p-2">
@@ -170,8 +171,8 @@ const Physiology = () => {
                         src="../../../src/components/resouces/palatogram_fig_4.gif"
                         alt="palatogram_fig_4"
                       />
-                      <h1>
-                        Fig 4: Linguogram showing tongue tip contact and
+                      <h1 className="pt-4">
+                        Figure 4: Linguogram showing tongue tip contact and
                         sublaminal contact (contact under the tongue.)
                       </h1>
                     </div>
@@ -400,8 +401,79 @@ const Physiology = () => {
           </AccordionItem>
         </Accordion>
       </div>
+
       <div className="pt-10">
-        <Text h3>Demos & Illustrations</Text>
+        <Text h3>Aerodynamics</Text>
+        <Accordion variant="shadow">
+          <AccordionItem title="1) Recording Air Pressure and Airflow">
+            <div className="pb-10 px-4">
+              <Text h4>Air Pressure and Airflow</Text>
+              <Text p className="pb-10">
+                The UCLA Phonetics Lab has equipment to record the airflow from
+                the mouth and nose. In addition, it can record the pressure of
+                the air in the front of the mouth and in the pharynx. The system
+                is illustrated in Figure 1. It consists of a data acquisition
+                system (small box at the bottom left of the picture) connected
+                to a laptop or desktop computer (bottom right), and an assembly
+                with oral and nasal masks and pressure tubes held by the
+                speaker, together with a microphone that records the sound.At
+                the UCLA Phonetics Lab, we have the equipment shown in Figure 1
+                (oral and nasal masks, analysis box, and tubing), as well as a
+                Rothenberg mask.Any of these masks can also be used with the
+                4-channel CSL box, but this set-up will not be discussed here.{" "}
+                <br />
+                <br />
+                The mask for capturing the oral airflow fits around the mouth
+                and below the jaw. The nasal airflow mask is fastened over the
+                nose by a band that goes around the head. Both masks are joined
+                to the assembly by small tubes. The masks can be used either
+                together or independently (though the oral airflow apparatus
+                must be present, over the mouth or not, in any set-up, since it
+                contains the pressure transducers).
+              </Text>
+              <Accordion isCompact variant="bordered">
+                <AccordionItem title="View Figure 1">
+                  <div className="flex flex-wrap">
+                    <div class="w-full md:w-1/2 p-2">
+                      <img
+                        src="../../../src/components/resouces/aerodynamics_fig_1.jpeg"
+                        alt="aerodynamics_fig_1"
+                      />
+                      <h1 className="pt-4">
+                        Figure 1. The system for recording air pressure and air
+                        flow described in the text
+                      </h1>
+                    </div>
+                  </div>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </AccordionItem>
+          <AccordionItem title="2) Setting up the assembly">
+            <div className="pb-10 px-4">
+              <Text h4>header</Text>
+              <Text p>desc</Text>
+            </div>
+          </AccordionItem>
+          <AccordionItem title="3) Using the airflow equipment">
+            <div className="pb-10 px-4">
+              <Text h4>header</Text>
+              <Text p>desc</Text>
+            </div>
+          </AccordionItem>
+          <AccordionItem title="4) Analyzing the Data">
+            <div className="pb-10 px-4">
+              <Text h4>header</Text>
+              <Text p>desc</Text>
+            </div>
+          </AccordionItem>
+          <AccordionItem title="5) Measuring air pressure and airflow">
+            <div className="pb-10 px-4">
+              <Text h4>header</Text>
+              <Text p>desc</Text>
+            </div>
+          </AccordionItem>
+        </Accordion>
       </div>
     </div>
   );
