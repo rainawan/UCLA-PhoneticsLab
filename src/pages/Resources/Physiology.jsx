@@ -233,8 +233,8 @@ const Physiology = () => {
                         src="../../../src/components/resouces/palatogram_fig_5.jpeg"
                         alt="palatogram_fig_5"
                       />
-                      <h1>
-                        Fig 5: The dental impression being removed from the
+                      <h1 className="pt-4">
+                        Figure 5: The dental impression being removed from the
                         mirror used as a molding base.
                       </h1>
                     </div>
@@ -243,8 +243,8 @@ const Physiology = () => {
                         src="../../../src/components/resouces/palatogram_fig_6.jpeg"
                         alt="palatogram_fig_6"
                       />
-                      <h1>
-                        Fig 6: Excess material is trimmed from around the plane
+                      <h1 className="pt-4">
+                        Figure 6: Excess material is trimmed from around the plane
                         of the teeth.
                       </h1>
                     </div>
@@ -284,8 +284,8 @@ const Physiology = () => {
                         src="../../../src/components/resouces/palatogram_fig_5.jpeg"
                         alt="palatogram_fig_5"
                       />
-                      <h1>
-                        Fig 7: The impression is now sectioned along the
+                      <h1 className="pt-4">
+                        Figure 7: The impression is now sectioned along the
                         saggital plane. Use the central fissure as a guide. One
                         of the resulting halves is used as a pattern to create a
                         paper tracing. The flexible nature of the alginate
@@ -440,7 +440,7 @@ const Physiology = () => {
                         alt="aerodynamics_fig_1"
                       />
                       <h1 className="pt-4">
-                        Figure 1. The system for recording air pressure and air
+                        Figure 1: The system for recording air pressure and air
                         flow described in the text
                       </h1>
                     </div>
