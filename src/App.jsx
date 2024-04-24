@@ -11,8 +11,9 @@ import Grants from "./pages/Research/Grants";
 import Dissertations from "./pages/Research/Dissertations";
 import Databases from "./pages/Resources/Databases";
 import Physiology from "./pages/Resources/Physiology";
-import Illustrations from "./pages/Resources/Illustrations";
-import Resources from "./pages/Resources/Resources";
+import AcousticAnalysis from "./pages/Resources/AcousticAnalysis";
+import Perception from "./pages/Resources/Perception";
+import DataCollection from "./pages/Resources/DataCollection";
 import Courses from "./pages/Teaching/Courses";
 import Materials from "./pages/Teaching/Materials";
 
@@ -48,13 +49,14 @@ function App() {
                 path="/research/dissertations"
                 element={<Dissertations />}
               />
-              <Route path="/resources/databases" element={<Databases />} />
               <Route path="/resources/physiology" element={<Physiology />} />
               <Route
-                path="/resources/illustrations"
-                element={<Illustrations />}
+                path="/resources/acoustic_analysis"
+                element={<AcousticAnalysis />}
               />
-              <Route path="/resources/resources" element={<Resources />} />
+              <Route path="/resources/perception" element={<Perception />} />
+              <Route path="/resources/data_collection" element={<DataCollection />} />
+              <Route path="/resources/databases" element={<Databases />} />
               <Route path="/teaching/courses" element={<Courses />} />
               <Route path="/teaching/materials" element={<Materials />} />
             </Routes>
