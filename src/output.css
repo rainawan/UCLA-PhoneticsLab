@@ -2575,6 +2575,10 @@ video {
   padding-top: 0.5rem;
 }
 
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
@@ -7666,6 +7670,14 @@ video {
 
   .md\:w-2\/5 {
     width: 40%;
+  }
+
+  .md\:w-1 {
+    width: 0.25rem;
+  }
+
+  .md\:w-1\/3 {
+    width: 33.333333%;
   }
 
   .md\:grid-cols-3 {
