@@ -58,7 +58,7 @@ const Navbar = () => {
   const renderNavbarItem = (item, index) => (
     <React.Fragment key={`${item.label}-${index}`}>
       {item.dropdownItems ? (
-        <Dropdown>
+        <Dropdown onClose={() => setIsMenuOpen(false)}>
           <NavbarItem>
             <DropdownTrigger>
               <Button
@@ -81,7 +81,7 @@ const Navbar = () => {
           </DropdownMenu>
         </Dropdown>
       ) : (
-        <NavbarItem>
+        <NavbarItem onClick={() => setIsMenuOpen(false)}>
           <Link to={item.route}>{item.label}</Link>
         </NavbarItem>
       )}
@@ -91,7 +91,9 @@ const Navbar = () => {
   return (
     <div className="inline-block w-full">
       <Nav
-        className="bg-darkblue h-20"
+        className={`bg-darkblue h-20 transition ${
+          isMenuOpen ? "absolute" : "relative"
+        }`}
         isBordered
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
@@ -111,7 +113,7 @@ const Navbar = () => {
         </NavbarContent>
 
         {/* mobile navbar */}
-        <NavbarMenu className="bg-blue text-white">
+        <NavbarMenu className="bg-blue text-white pt-10">
           {menuItems.map((item, index) => renderNavbarItem(item, index))}
         </NavbarMenu>
       </Nav>
