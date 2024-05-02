@@ -58,7 +58,7 @@ const Navbar = () => {
   const renderNavbarItem = (item, index) => (
     <React.Fragment key={`${item.label}-${index}`}>
       {item.dropdownItems ? (
-        <Dropdown onClose={() => setIsMenuOpen(false)}>
+        <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
               <Button
@@ -72,18 +72,27 @@ const Navbar = () => {
               </Button>
             </DropdownTrigger>
           </NavbarItem>
-          <DropdownMenu aria-label={item.label} itemClasses={{ base: "gap-4" }}>
-            {item.dropdownItems.map((dropdownItem, idx) => (
+          <DropdownMenu
+            aria-label={item.label}
+            itemClasses={{ base: "gap-4" }}
+            onAction={() => setIsMenuOpen(false)}
+            items={item.dropdownItems}
+          >
+            {(dropdownItem, idx) => (
               <DropdownItem key={`${dropdownItem.label}-${idx}`}>
-                <Link to={dropdownItem.route}>{dropdownItem.label}</Link>
+                <Link to={dropdownItem.route} className="block w-full">
+                  {dropdownItem.label}
+                </Link>
               </DropdownItem>
-            ))}
+            )}
           </DropdownMenu>
         </Dropdown>
       ) : (
-        <NavbarItem onClick={() => setIsMenuOpen(false)}>
-          <Link to={item.route}>{item.label}</Link>
-        </NavbarItem>
+        <div onClick={() => setIsMenuOpen(false)}>
+          <NavbarItem>
+            <Link to={item.route}>{item.label}</Link>
+          </NavbarItem>
+        </div>
       )}
     </React.Fragment>
   );
