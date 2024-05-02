@@ -123,8 +123,7 @@ const Electropalatography = () => {
                 entire region (Front + Back). Note that you can define as many
                 regions (up to 10) as needed, using different and/or overlapping
                 areas of the palate. There are 96 electrodes and each electrode
-                is assigned its unique number from 1 to 96. Assign electrodes
-                regions.
+                is assigned its unique number from 1 to 96.
               </Text>
               <div className="flex flex-wrap">
                 <div class="w-full md:w-1/3 p-2">
@@ -140,11 +139,60 @@ const Electropalatography = () => {
                   />
                 </div>
               </div>
+              <Text p>
+                Assign electrodes regions. For example, if you want to examine
+                the contact for the coronal [t] in [to] context but want to
+                exclude the contact caused by the coarticulation with the
+                following [o], you first make control tokens with the [o]
+                articulation (e.g., with [po]) and subtract the [o] contact from
+                the [t] contact in the [to] context. This allows you to define a
+                region just for [t] exclusively. This kind of process is usually
+                done by marking contacted electrodes in the printout of the
+                layout of numbered electrodes. Using a text editor, make a DEF
+                file.
+              </Text>
+              <div class="w-full md:w-1/2 p-2">
+                <img
+                  src="../../../src/components/resouces/EGP_picture.jpeg"
+                  alt="epg_picture"
+                />
+              </div>
+              <div class="w-full md:w-1/2 p-2">
+                <h1 className="pt-4">
+                  Figure 1: Layout of EPG pseudo-palate. An example of regions
+                  defined. One can define as many regions (up to 10) as needed,
+                  using different or overlapping areas of the palate.
+                </h1>
+              </div>
               <Text p className="font-semibold">
                 3) Make a .BAT file (batch file)
               </Text>
+              <Text p>
+                A batch file can run 'Percent.exe' for all the .NSP files you
+                specify. On Jasmine, samples are in the the pal\output
+                directory.
+              </Text>
               <Text p className="font-semibold">
                 4) Do Batch Processing
+              </Text>
+              <Text p>
+                For batch processing, the following files should be included in
+                the same directory (folder) (or, give appropriate path to each
+                file on every line of the batch file):
+                <br />
+                <br />
+                <div className="pl-10">
+                  Percent.exe
+                  <br />
+                  A user file (e.g., Sample.USR)
+                  <br />
+                  A def file (e.g., Sample.DEF)
+                  <br />
+                  A batch file (e.g., Sample.BAT)
+                  <br />
+                  All the NSP files specified in the batch file (X.nsp, Y.nsp,
+                  Z.nsp)
+                </div>
               </Text>
             </div>
           </AccordionItem>
