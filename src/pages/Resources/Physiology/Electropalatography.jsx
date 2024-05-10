@@ -102,9 +102,11 @@ const Electropalatography = () => {
                 and indices in EPG data reduction, J. Sp. Hear. Res. 38,
                 821-827.
               </Text>
-              <Text p className="font-semibold">
-                Steps to Analyzing EPG data:
-              </Text>
+            </div>
+          </AccordionItem>
+          <AccordionItem title="Normal Data Analysis">
+            <div className="pb-10 px-4">
+              <Text h4>Steps to Analyzing EPG data:</Text>
               <Text p className="font-semibold">
                 1) Obtain 'Percent.exe' file.
               </Text>
@@ -123,8 +125,7 @@ const Electropalatography = () => {
                 entire region (Front + Back). Note that you can define as many
                 regions (up to 10) as needed, using different and/or overlapping
                 areas of the palate. There are 96 electrodes and each electrode
-                is assigned its unique number from 1 to 96. Assign electrodes
-                regions.
+                is assigned its unique number from 1 to 96.
               </Text>
               <div className="flex flex-wrap">
                 <div class="w-full md:w-1/3 p-2">
@@ -140,18 +141,114 @@ const Electropalatography = () => {
                   />
                 </div>
               </div>
+              <Text p>
+                Assign electrodes regions. For example, if you want to examine
+                the contact for the coronal [t] in [to] context but want to
+                exclude the contact caused by the coarticulation with the
+                following [o], you first make control tokens with the [o]
+                articulation (e.g., with [po]) and subtract the [o] contact from
+                the [t] contact in the [to] context. This allows you to define a
+                region just for [t] exclusively. This kind of process is usually
+                done by marking contacted electrodes in the printout of the
+                layout of numbered electrodes. Using a text editor, make a DEF
+                file.
+              </Text>
+              <div class="w-full md:w-1/2 p-2">
+                <img
+                  src="../../../src/components/resouces/EGP_picture.jpeg"
+                  alt="epg_picture"
+                />
+              </div>
+              <div class="w-full md:w-1/2 p-2">
+                <h1 className="pt-4">
+                  Figure 1: Layout of EPG pseudo-palate. An example of regions
+                  defined. One can define as many regions (up to 10) as needed,
+                  using different or overlapping areas of the palate.
+                </h1>
+              </div>
               <Text p className="font-semibold">
                 3) Make a .BAT file (batch file)
+              </Text>
+              <Text p>
+                A batch file can run 'Percent.exe' for all the .NSP files you
+                specify. On Jasmine, samples are in the the pal\output
+                directory.
               </Text>
               <Text p className="font-semibold">
                 4) Do Batch Processing
               </Text>
-            </div>
-          </AccordionItem>
-          <AccordionItem title="title">
-            <div className="pb-10 px-4">
-              <Text h4>header</Text>
-              <Text p>desc</Text>
+              <Text p>
+                For batch processing, the following files should be included in
+                the same directory (folder) (or, give appropriate path to each
+                file on every line of the batch file):
+                <br />
+                <br />
+                <div className="pl-10">
+                  Percent.exe
+                  <br />
+                  A user file (e.g., Sample.USR)
+                  <br />
+                  A def file (e.g., Sample.DEF)
+                  <br />
+                  A batch file (e.g., Sample.BAT)
+                  <br />
+                  All the NSP files specified in the batch file (X.nsp, Y.nsp,
+                  Z.nsp)
+                </div>
+              </Text>
+              <Text p>
+                Run the batch file (simply type the name of the batch file in
+                the DOS mode inside the directory where the above files are) The
+                batch processing will generate two types of files, in the same
+                directory as the NSP data files:
+                <br />
+                <br />
+                <div className="pl-10">
+                  ASCII files (.EXP files)
+                  <br />
+                  EXP file for each .nsp file (e.g., X.exp, Y.exp, Z.exp)
+                  <br />
+                  Numerics of the percent-contact for each regions specified in
+                  the course of time
+                  <br />
+                  Binary files (.TR0, TR1, TR2, TR3.. files)
+                  <br />
+                  TR0 files: Percent-contact profiles for the FIRST REGION
+                  defined
+                  <br />
+                  TR1 files: Percent-contact profiles for the SECOND REGION
+                  defined
+                  <br />
+                  TR2 files: Percent-contact profiles for the THIRD REGION
+                  defined
+                  <br />
+                  TRn files: Percent-contact profiles for the N+1th REGION
+                  defined
+                  <br />
+                </div>
+              </Text>
+              <Text p className="font-semibold">
+                5) Make a configuration file for CSL (.cfg file)
+              </Text>
+              <Text p>
+                A special configuration file should be used for the display of
+                PALATE and Percent-contact Profiles
+              </Text>
+              <Text p className="font-semibold">
+                6) Analyze the data using CSL
+              </Text>
+              <Text p>
+                Place .cfg and key files in the folder together with other files
+                (.nsp, tr0, exp...) <br />
+                Run CSL (type 'CSL' inside the working folder) <br />
+                Type 'run ThreeTR.cfg' (for example); this will bring you the
+                screen for EPG analysis <br />
+                <br />
+                Note that EPG data can be analyzed using MultiSpeech, but we
+                have usually used CSL due to the convenience of the settings
+                that have already been made for CSL. But certainly one can use
+                MultiSpeech.
+              </Text>
             </div>
           </AccordionItem>
           <AccordionItem title="title">

@@ -10,8 +10,8 @@ const Physiology = () => {
       <Palatography />
       <Electropalatography />
       <Aerodynamics />
-      <Electroglottograph />
-      <Ultrasound />
+      {/* <Electroglottograph /> */}
+      {/* <Ultrasound /> */}
     </div>
   );
 };
