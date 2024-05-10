@@ -102,9 +102,11 @@ const Electropalatography = () => {
                 and indices in EPG data reduction, J. Sp. Hear. Res. 38,
                 821-827.
               </Text>
-              <Text p className="font-semibold">
-                Steps to Analyzing EPG data:
-              </Text>
+            </div>
+          </AccordionItem>
+          <AccordionItem title="Normal Data Analysis">
+            <div className="pb-10 px-4">
+              <Text h4>Steps to Analyzing EPG data:</Text>
               <Text p className="font-semibold">
                 1) Obtain 'Percent.exe' file.
               </Text>
@@ -194,12 +196,59 @@ const Electropalatography = () => {
                   Z.nsp)
                 </div>
               </Text>
-            </div>
-          </AccordionItem>
-          <AccordionItem title="title">
-            <div className="pb-10 px-4">
-              <Text h4>header</Text>
-              <Text p>desc</Text>
+              <Text p>
+                Run the batch file (simply type the name of the batch file in
+                the DOS mode inside the directory where the above files are) The
+                batch processing will generate two types of files, in the same
+                directory as the NSP data files:
+                <br />
+                <br />
+                <div className="pl-10">
+                  ASCII files (.EXP files)
+                  <br />
+                  EXP file for each .nsp file (e.g., X.exp, Y.exp, Z.exp)
+                  <br />
+                  Numerics of the percent-contact for each regions specified in
+                  the course of time
+                  <br />
+                  Binary files (.TR0, TR1, TR2, TR3.. files)
+                  <br />
+                  TR0 files: Percent-contact profiles for the FIRST REGION
+                  defined
+                  <br />
+                  TR1 files: Percent-contact profiles for the SECOND REGION
+                  defined
+                  <br />
+                  TR2 files: Percent-contact profiles for the THIRD REGION
+                  defined
+                  <br />
+                  TRn files: Percent-contact profiles for the N+1th REGION
+                  defined
+                  <br />
+                </div>
+              </Text>
+              <Text p className="font-semibold">
+                5) Make a configuration file for CSL (.cfg file)
+              </Text>
+              <Text p>
+                A special configuration file should be used for the display of
+                PALATE and Percent-contact Profiles
+              </Text>
+              <Text p className="font-semibold">
+                6) Analyze the data using CSL
+              </Text>
+              <Text p>
+                Place .cfg and key files in the folder together with other files
+                (.nsp, tr0, exp...) <br />
+                Run CSL (type 'CSL' inside the working folder) <br />
+                Type 'run ThreeTR.cfg' (for example); this will bring you the
+                screen for EPG analysis <br />
+                <br />
+                Note that EPG data can be analyzed using MultiSpeech, but we
+                have usually used CSL due to the convenience of the settings
+                that have already been made for CSL. But certainly one can use
+                MultiSpeech.
+              </Text>
             </div>
           </AccordionItem>
           <AccordionItem title="title">
