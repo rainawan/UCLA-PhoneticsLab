@@ -7,7 +7,13 @@ const Aerodynamics = () => {
       <div className="pt-10">
         <Text h3>Aerodynamics</Text>
         <Accordion variant="shadow">
-          <AccordionItem title="1) Recording Air Pressure and Airflow">
+          <AccordionItem
+            title={
+              <span className="text-xl">
+                1) Recording Air Pressure and Airflow
+              </span>
+            }
+          >
             <div className="pb-10 px-4">
               <Text h4>Recording</Text>
               <Text p className="pb-10">
@@ -51,7 +57,9 @@ const Aerodynamics = () => {
               </Accordion>
             </div>
           </AccordionItem>
-          <AccordionItem title="2) Setting up the assembly">
+          <AccordionItem
+            title={<span className="text-xl">2) Setting up the assembly</span>}
+          >
             <div className="pb-10 px-4">
               <Text h4>Notes on Reconnecting the Assembly</Text>
               <Text p>
@@ -62,7 +70,11 @@ const Aerodynamics = () => {
               </Text>
             </div>
           </AccordionItem>
-          <AccordionItem title="3) Using the airflow equipment">
+          <AccordionItem
+            title={
+              <span className="text-xl">3) Using the airflow equipment</span>
+            }
+          >
             <div className="pb-10 px-4">
               <Text h4>Recording the Airflow</Text>
               <Text p>
@@ -90,7 +102,9 @@ const Aerodynamics = () => {
               </Text>
             </div>
           </AccordionItem>
-          <AccordionItem title="4) Analyzing the data">
+          <AccordionItem
+            title={<span className="text-xl">4) Analyzing the data</span>}
+          >
             <div className="pb-10 px-4">
               <Text h4>Data Analysis</Text>
               <Text p className="pb-10">
@@ -123,7 +137,13 @@ const Aerodynamics = () => {
               </h1>
             </div>
           </AccordionItem>
-          <AccordionItem title="5) Measuring air pressure and airflow">
+          <AccordionItem
+            title={
+              <span className="text-xl">
+                5) Measuring air pressure and airflow
+              </span>
+            }
+          >
             <div className="pb-10 px-4">
               <Text h4>Measuring</Text>
               <Text p className="pb-10">
@@ -175,6 +195,24 @@ const Aerodynamics = () => {
                 Figure 3: A system for calibrating airflow. Uses a U-tube to
                 calibrate pressure.
               </h1>
+              <Text p className="font-semibold">
+                About This Page
+              </Text>
+              <Text p>
+                The information on this page has been adapted from the
+                forthcoming book, Phonetic Data Analysis: An introduction to
+                phonetic fieldwork and instrumental techniques by{" "}
+                <a
+                  href="https://linguistics.ucla.edu/people/ladefoge/"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  Peter Ladefoged
+                </a>
+                . For more information on aerodynamic techniques, refer to this
+                book. This page was created by Rebecca Scarborough and Christina
+                Esposito.
+              </Text>
             </div>
           </AccordionItem>
         </Accordion>

@@ -10,7 +10,7 @@ const Palatography = () => {
       <div>
         <Text h3>Palatography</Text>
         <Accordion variant="shadow">
-          <AccordionItem title="Introduction">
+          <AccordionItem title={<span className="text-xl">Introduction</span>}>
             <div className="pb-10 px-4">
               <Text h4>Static Palatography Introduction</Text>
               <Text p>
@@ -52,7 +52,7 @@ const Palatography = () => {
               </Text>
             </div>
           </AccordionItem>
-          <AccordionItem title="Palatograms">
+          <AccordionItem title={<span className="text-xl">Palatograms</span>}>
             <div className="pb-10 px-4">
               <Text h4>What are Palatograms?</Text>
               <Text p>
@@ -96,7 +96,7 @@ const Palatography = () => {
                   <div className="flex flex-wrap">
                     <div class="w-full md:w-1/2 p-2">
                       <img
-                        src="../../../src/components/resouces/palatogram_fig_1.jpeg"
+                        src="../../../public/images/resources/palatogram_fig_1.jpeg"
                         alt="palatogram_fig_1"
                       />
                       <h1 className="pt-4">
@@ -120,7 +120,7 @@ const Palatography = () => {
               </Accordion>
             </div>
           </AccordionItem>
-          <AccordionItem title="Linguograms">
+          <AccordionItem title={<span className="text-xl">Linguograms</span>}>
             <div className="pb-10 px-4">
               <Text h4>Performing Linguograms</Text>
               <Text p>
@@ -180,7 +180,9 @@ const Palatography = () => {
               </Accordion>
             </div>
           </AccordionItem>
-          <AccordionItem title="Alginate Impressions">
+          <AccordionItem
+            title={<span className="text-xl">Alginate Impressions</span>}
+          >
             <div className="pb-10 px-4">
               <Text h4>How to Make Alginate Impressions</Text>
               <Text p>
@@ -252,7 +254,9 @@ const Palatography = () => {
               </Accordion>
             </div>
           </AccordionItem>
-          <AccordionItem title="Midsaggital Diagrams">
+          <AccordionItem
+            title={<span className="text-xl">Midsaggital Diagrams</span>}
+          >
             <div className="pb-10 px-4">
               <Text h4>How to Make Midsaggital Diagrams</Text>
               <Text p className="pb-10">
@@ -297,7 +301,13 @@ const Palatography = () => {
               </Accordion>
             </div>
           </AccordionItem>
-          <AccordionItem title="Tomographic Slices & Superimposing Photography">
+          <AccordionItem
+            title={
+              <span className="text-xl">
+                Tomographic Slices & Superimposing Photography
+              </span>
+            }
+          >
             <div className="pb-10 px-4">
               <Text h4>Tomographic Slices</Text>
               <Text p>
@@ -353,7 +363,9 @@ const Palatography = () => {
               </Text>
             </div>
           </AccordionItem>
-          <AccordionItem title="Practical Points">
+          <AccordionItem
+            title={<span className="text-xl">Practical Points</span>}
+          >
             <div className="pb-10 px-4">
               <Text h4>Practical Points</Text>
               <Text p>
