@@ -1,5 +1,7 @@
-import { Accordion, AccordionItem, Divider } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 import Text from "../../../components/Text";
+import aerodynamics_fig_1 from "../../../components/resources/aerodynamics_fig_1.jpeg";
+import aerodynamics_fig_2 from "../../../components/resources/aerodynamics_fig_2.gif";
 
 const Aerodynamics = () => {
   return (
@@ -44,7 +46,7 @@ const Aerodynamics = () => {
                   <div className="flex flex-wrap">
                     <div class="w-full md:w-1/2 p-2">
                       <img
-                        src="../../../src/components/resouces/aerodynamics_fig_1.jpeg"
+                        src={aerodynamics_fig_1}
                         alt="aerodynamics_fig_1"
                       />
                       <h1 className="pt-4">
@@ -127,7 +129,7 @@ const Aerodynamics = () => {
                 vibration.
               </Text>
               <img
-                src="../../../src/components/resouces/aerodynamics_fig_2.gif"
+                src={aerodynamics_fig_2}
                 alt="aerodynamics_fig_2"
                 className="shadow"
               />
@@ -187,7 +189,7 @@ const Aerodynamics = () => {
                 Lab.
               </Text>
               <img
-                src="../../../src/components/resouces/aerodynamics_fig_2.gif"
+                src={aerodynamics_fig_2}
                 alt="aerodynamics_fig_2"
                 className="shadow"
               />
