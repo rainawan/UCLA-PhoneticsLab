@@ -1,5 +1,11 @@
 import { Accordion, AccordionItem, Divider } from "@nextui-org/react";
 import Text from "../../../components/Text";
+import palatogram_fig_1 from "../../../components/resources/palatogram_fig_1.jpeg";
+import palatogram_fig_2 from "../../../components/resources/palatogram_fig_2.gif";
+import palatogram_fig_3 from "../../../components/resources/palatogram_fig_3.gif";
+import palatogram_fig_4 from "../../../components/resources/palatogram_fig_4.gif";
+import palatogram_fig_5 from "../../../components/resources/palatogram_fig_5.jpeg";
+import palatogram_fig_6 from "../../../components/resources/palatogram_fig_6.jpeg";
 
 const Palatography = () => {
   return (
@@ -95,20 +101,14 @@ const Palatography = () => {
                 <AccordionItem title="View Figures">
                   <div className="flex flex-wrap">
                     <div class="w-full md:w-1/2 p-2">
-                      <img
-                        src="../../../public/images/resources/palatogram_fig_1.jpeg"
-                        alt="palatogram_fig_1"
-                      />
+                      <img src={palatogram_fig_1} alt="palatogram_fig_1" />
                       <h1 className="pt-4">
                         Figure 1: Diagram showing relative position of the
                         elements required to record the palatogram.
                       </h1>
                     </div>
                     <div class="w-full md:w-1/2 p-2">
-                      <img
-                        src="../../../src/components/resouces/palatogram_fig_2.gif"
-                        alt="palatogram_fig_2"
-                      />
+                      <img src={palatogram_fig_2} alt="palatogram_fig_2" />
                       <h1 className="pt-4">
                         Figure 2: Palatogram; still image digitized from video.
                         Orientation: Upper teeth are shown at top and reflected
@@ -156,20 +156,14 @@ const Palatography = () => {
                 <AccordionItem title="View Figures">
                   <div className="flex flex-wrap">
                     <div class="w-full md:w-1/2 p-2">
-                      <img
-                        src="../../../src/components/resouces/palatogram_fig_3.gif"
-                        alt="palatogram_fig_3"
-                      />
+                      <img src={palatogram_fig_3} alt="palatogram_fig_3" />
                       <h1 className="pt-4">
                         Figure 3: Linguogram showing tongue blade and body
                         contact.
                       </h1>
                     </div>
                     <div class="w-full md:w-1/2 p-2">
-                      <img
-                        src="../../../src/components/resouces/palatogram_fig_4.gif"
-                        alt="palatogram_fig_4"
-                      />
+                      <img src={palatogram_fig_4} alt="palatogram_fig_4" />
                       <h1 className="pt-4">
                         Figure 4: Linguogram showing tongue tip contact and
                         sublaminal contact (contact under the tongue.)
@@ -230,20 +224,14 @@ const Palatography = () => {
                 <AccordionItem title="View Figures">
                   <div className="flex flex-wrap">
                     <div class="w-full md:w-1/2 p-2">
-                      <img
-                        src="../../../src/components/resouces/palatogram_fig_5.jpeg"
-                        alt="palatogram_fig_5"
-                      />
+                      <img src={palatogram_fig_5} alt="palatogram_fig_5" />
                       <h1 className="pt-4">
                         Figure 5: The dental impression being removed from the
                         mirror used as a molding base.
                       </h1>
                     </div>
                     <div class="w-full md:w-1/2 p-2">
-                      <img
-                        src="../../../src/components/resouces/palatogram_fig_6.jpeg"
-                        alt="palatogram_fig_6"
-                      />
+                      <img src={palatogram_fig_6} alt="palatogram_fig_6" />
                       <h1 className="pt-4">
                         Figure 6: Excess material is trimmed from around the
                         plane of the teeth.
@@ -284,7 +272,7 @@ const Palatography = () => {
                   <div className="flex flex-wrap">
                     <div class="w-full md:w-1/2 p-2">
                       <img
-                        src="../../../src/components/resouces/palatogram_fig_5.jpeg"
+                        src={palatogram_fig_5}
                         alt="palatogram_fig_5"
                       />
                       <h1 className="pt-4">
