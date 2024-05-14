@@ -5,9 +5,7 @@ import { members } from "../../components/CurrentMembers";
 const CurrentMembers = () => {
   return (
     <div className="px-20 md:px-0 lg:px-40 py-20 bg-white">
-      <Text h2>
-        Current Members
-      </Text>
+      <Text h2>Current Members</Text>
 
       <div class="p-5 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {members.map((card, index) => (
@@ -25,12 +23,16 @@ const CurrentMembers = () => {
                 </div>
               </CardHeader>
               <CardBody className="overflow-visible py-2 justify-center items-center">
-                <div className="relative">
+                <div className="relative w-full h-40">
                   <Image
                     alt={card.name}
                     className="object-cover rounded-xl"
                     src={card.imgSrc}
-                    width={270}
+                    // width={300}
+                    // height={200}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
                   />
                 </div>
               </CardBody>

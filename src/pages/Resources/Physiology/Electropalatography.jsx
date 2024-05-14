@@ -1,10 +1,19 @@
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import Text from "../../../components/Text";
-import epg_default from "../../../components/resources/EPG_default.gif";
-import epg_special from "../../../components/resources/EPG_special.gif";
-import epg_picture from "../../../components/resources/EGP_picture.jpeg";
+import epg_default from "../../../components/resources/electropalatography/EPG_default.gif";
+import epg_special from "../../../components/resources/electropalatography/EPG_special.gif";
+import epg_picture from "../../../components/resources/electropalatography/EGP_picture.jpeg";
 import tebebet from "../../../components/resources/electropalatography/tebebet.wav";
 import profile01 from "../../../components/resources/electropalatography/Profile01.gif";
+import rot_slow_sm from "../../../components/resources/electropalatography/rot_slow_sm.gif";
+import auntie_i from "../../../components/resources/electropalatography/auntie_i.gif";
+import autistic_i from "../../../components/resources/electropalatography/autistic_i.gif";
+import bad_gab from "../../../components/resources/electropalatography/bad_gab.gif";
+import pontiac from "../../../components/resources/electropalatography/pontiac.gif";
+import party_i from "../../../components/resources/electropalatography/party_i.gif";
+import party_sl_i from "../../../components/resources/electropalatography/party_sl_i.gif";
+import petty from "../../../components/resources/electropalatography/petty.gif";
+import potty_sl from "../../../components/resources/electropalatography/potty_sl.gif";
 
 const Electropalatography = () => {
   return (
@@ -303,13 +312,72 @@ const Electropalatography = () => {
               </div>
             </div>
           </AccordionItem>
-          <AccordionItem title="title">
+          <AccordionItem title="III. Displaying Palatometer in 3-D">
             <div className="pb-10 px-4">
-              <Text h4>header</Text>
-              <Text p>desc</Text>
+              <Text p>
+                Cheng Cheng Saw Tan developed a method of displaying Palatometer
+                data in 3-D, on a wire model palate. These displays are the
+                source of the "Flying Palate" used as a screensaver on some of
+                the Macs in the lab. Her procedures are fully documented in WPP
+                #85 (1993). Pat has all of her QuickTime files, and a video of
+                one of them is in the video cabinet in the lab.
+              </Text>
+              <div class="flex justify-center w-full">
+                <img
+                  src={rot_slow_sm}
+                  alt="rot_slow_sm"
+                  className="md:w-1/2 p-2 shadow-md"
+                />
+              </div>
+              <Text p className="font-semibold flex justify-center">
+                <br />
+                3D Wire Model Palate "Flying Palates" Sample Movies
+              </Text>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img
+                  src={auntie_i}
+                  alt="auntie_i"
+                  className="object-cover h-full w-full"
+                />
+                <img
+                  src={autistic_i}
+                  alt="autistic_i"
+                  className="object-cover h-full w-full"
+                />
+                <img
+                  src={bad_gab}
+                  alt="bad_gab"
+                  className="object-cover h-full w-full"
+                />
+                <img
+                  src={pontiac}
+                  alt="pontiac"
+                  className="object-cover h-full w-full"
+                />
+                <img
+                  src={party_i}
+                  alt="party_i"
+                  className="object-cover h-full w-full"
+                />
+                <img
+                  src={party_sl_i}
+                  alt="party_sl_i"
+                  className="object-cover h-full w-full"
+                />
+                <img
+                  src={petty}
+                  alt="petty"
+                  className="object-cover h-full w-full"
+                />
+                <img
+                  src={potty_sl}
+                  alt="potty_sl"
+                  className="object-cover h-full w-full"
+                />
+              </div>
             </div>
           </AccordionItem>
-          <AccordionItem title="title">
+          <AccordionItem title="IV. Domain-initial strengthening : French and Korean">
             <div className="pb-10 px-4">
               <Text h4>header</Text>
               <Text p>desc</Text>
