@@ -1,5 +1,10 @@
-import { Accordion, AccordionItem, Divider } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 import Text from "../../../components/Text";
+import epg_default from "../../../components/resources/EPG_default.gif";
+import epg_special from "../../../components/resources/EPG_special.gif";
+import epg_picture from "../../../components/resources/EGP_picture.jpeg";
+import tebebet from "../../../components/resources/electropalatography/tebebet.wav";
+import profile01 from "../../../components/resources/electropalatography/Profile01.gif";
 
 const Electropalatography = () => {
   return (
@@ -104,7 +109,7 @@ const Electropalatography = () => {
               </Text>
             </div>
           </AccordionItem>
-          <AccordionItem title="Normal Data Analysis">
+          <AccordionItem title="II. Normal Data Analysis">
             <div className="pb-10 px-4">
               <Text h4>Steps to Analyzing EPG data:</Text>
               <Text p className="font-semibold">
@@ -127,19 +132,17 @@ const Electropalatography = () => {
                 areas of the palate. There are 96 electrodes and each electrode
                 is assigned its unique number from 1 to 96.
               </Text>
-              <div className="flex flex-wrap">
-                <div class="w-full md:w-1/3 p-2">
-                  <img
-                    src="../../../src/components/resouces/EPG_default.gif"
-                    alt="epg_default"
-                  />
-                </div>
-                <div class="w-full md:w-1/3 p-2">
-                  <img
-                    src="../../../src/components/resouces/EPG_special.gif"
-                    alt="epg_special"
-                  />
-                </div>
+              <div className="flex flex-wrap flex justify-center w-full">
+                <img
+                  src={epg_default}
+                  alt="epg_default"
+                  className="md:w-1/3 p-2 shadow-md m-2"
+                />
+                <img
+                  src={epg_special}
+                  alt="epg_special"
+                  className="md:w-1/3 p-2 shadow-md m-2"
+                />
               </div>
               <Text p>
                 Assign electrodes regions. For example, if you want to examine
@@ -153,19 +156,21 @@ const Electropalatography = () => {
                 layout of numbered electrodes. Using a text editor, make a DEF
                 file.
               </Text>
-              <div class="w-full md:w-1/2 p-2">
+              <div class="flex justify-center w-full">
                 <img
-                  src="../../../src/components/resouces/EGP_picture.jpeg"
+                  src={epg_picture}
                   alt="epg_picture"
+                  className="md:w-1/2 p-2 shadow-md"
                 />
               </div>
-              <div class="w-full md:w-1/2 p-2">
-                <h1 className="pt-4">
+              <div className="flex justify-center">
+                <Text p className="md:w-1/2">
                   Figure 1: Layout of EPG pseudo-palate. An example of regions
                   defined. One can define as many regions (up to 10) as needed,
                   using different or overlapping areas of the palate.
-                </h1>
+                </Text>
               </div>
+
               <Text p className="font-semibold">
                 3) Make a .BAT file (batch file)
               </Text>
@@ -249,6 +254,53 @@ const Electropalatography = () => {
                 that have already been made for CSL. But certainly one can use
                 MultiSpeech.
               </Text>
+              <Text p className="font-semibold">
+                Sample CSL screens with TR0 and TR1 windows
+              </Text>
+              <div className="flex justify-center pt-2">
+                <audio controls src={tebebet}></audio>
+              </div>
+              <Text p>
+                <br />
+                Percent-Contact profiles for 'Tebebet fed them.' This was
+                obtained from data collected for the NSF funded 'Prosody
+                Strengthening' project (Pat Keating). This particular sample
+                shows the articulatory difference between sentence-initial onset
+                [t] and word-final coda [t] in 'tebebet': greater
+                percent-contact was found for the sentence-initial [t] than
+                word-final [t].
+                <br />
+                <br />
+                • Window B shows percent-contact profile in the entire region
+                with 96 electrodes included.
+                <br />
+                • Window E shows percent-contact profile in the Front Region
+                with the front 48 electrodes included.
+                <br />
+                • Window C 'PALATOGRAM' shows the contacted electrodes at the
+                red cursor which was placed at the peak contact of the
+                word-initial [t].
+                <br />
+                • The value '58' at the right corner of Window B means 58% of
+                the 96 electrodes were contacted at the cursor.
+                <br />
+                • The value '62' at the right corner of Window E means 62% of 45
+                electrodes (Front Region) was contacted at the cursor.
+                <br />
+                <br />
+              </Text>
+              <div class="flex justify-center w-full">
+                <img
+                  src={profile01}
+                  alt="Profile01"
+                  className="md:w-1/2 p-2 shadow-md"
+                />
+              </div>
+              <div className="flex justify-center">
+                <Text p className="md:w-1/2">
+                  Figure 2: Contact Profiles for 'Tebebet fed them.'
+                </Text>
+              </div>
             </div>
           </AccordionItem>
           <AccordionItem title="title">

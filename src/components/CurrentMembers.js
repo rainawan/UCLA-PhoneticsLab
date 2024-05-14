@@ -1,12 +1,10 @@
 import ReplaceImg from "../../public/myfairlady4.jpg";
 import img from "../components/current_members/Abeer_Abbas.jpg";
-// src/components/current_members/Abeer_Abbas.jpg
 export const members = [
   {
     name: "Abeer Abbas",
     occupation: "Graduate Student",
-    // imgSrc: require("../components/current_members/Abeer_Abbas.jpg").default,
-    imgSrc: "Abeer_Abbas.jpg",
+    imgSrc: ReplaceImg,
     link: "https://linguistics.ucla.edu/person/abeer-abbas/",
   },
   {
