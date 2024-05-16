@@ -14,6 +14,16 @@ import party_i from "../../../components/resources/electropalatography/party_i.g
 import party_sl_i from "../../../components/resources/electropalatography/party_sl_i.gif";
 import petty from "../../../components/resources/electropalatography/petty.gif";
 import potty_sl from "../../../components/resources/electropalatography/potty_sl.gif";
+import Fr_example2 from "../../../components/resources/electropalatography/Fr_example2.gif";
+import Ui_FR from "../../../components/resources/electropalatography/Ui_FR.wav";
+import IPi_Fr from "../../../components/resources/electropalatography/IPi_Fr.wav";
+import APi_Fr from "../../../components/resources/electropalatography/APi_Fr.wav";
+import Wi_Fr from "../../../components/resources/electropalatography/Wi_Fr.wav";
+import Si_FR from "../../../components/resources/electropalatography/Si_FR.wav";
+import Kr_example2 from "../../../components/resources/electropalatography/Kr_example2.gif";
+import Kr_corpus_web from "../../../components/resources/electropalatography/Kr_corpus_web.gif";
+import Wi_kr2 from "../../../components/resources/electropalatography/Wi_kr2.wav";
+import Si_kr from "../../../components/resources/electropalatography/Si_kr.wav";
 
 const Electropalatography = () => {
   return (
@@ -379,14 +389,263 @@ const Electropalatography = () => {
           </AccordionItem>
           <AccordionItem title="IV. Domain-initial strengthening : French and Korean">
             <div className="pb-10 px-4">
-              <Text h4>header</Text>
-              <Text p>desc</Text>
+              <Text p>
+                Keating et al (1998, LabPhon 6) and many other studies supported
+                by NSF grant #SBR 9511118 (to P. Keating) showed, in their EPG
+                studies of English, French, Korean, and Taiwanese, that
+                consonants have greater linguopalatal contact in a
+                domain-initial position than in a domain-medial position and
+                that this effect is in general cumulative: the linguopalatal
+                contact becomes greater as the domain is higher in the prosodic
+                hierarchy. Such cumulative effect was more pervasive in one
+                language (e.g., Korean) than in another (e.g., English). Here,
+                we put some results from French and Korean with representative
+                EPG contact figures and sounds (.WAV format).
+                <br />
+                <br />
+              </Text>
+              <div class="flex justify-center w-full">
+                <img
+                  src={Fr_example2}
+                  alt="Fr_example2"
+                  className="md:w-2/3 p-2 shadow-md"
+                />
+              </div>
+              <div className="flex justify-center">
+                <Text p className="md:w-2/3">
+                  Figure 3: Differences in linguopalatal contact for [n] in
+                  French as a function of prosodic position.
+                </Text>
+              </div>
+              <Text p>
+                As shown in Figure 3, the linguopalatal contact becomes
+                progressively greater as the prosodic position moves up in the
+                prosodic hierarchy, except that there is no substantial
+                difference between Ui and IPi. Note also that each initial
+                position of a prosodic domain is the medial position of the
+                immediately higher prosodic domain (e.g., Si = Word-medial, Wi =
+                AP-medial, etc.)
+                <br />
+                <br />
+              </Text>
+              <Text h4>French</Text>
+              <Text p>
+                Ui = Utterance-initial <br />
+                IPi = Intonational Phrase-initial (= Ui-medial) <br />
+                APi = Accentual Phrase-initial (= IP-medial) <br />
+                Wi = Word-initial (= AP-medial) <br />
+                Si = Syllable-initial (= W-medial) <br />
+              </Text>
+              <Text p className="font-semibold">
+                Examples:
+              </Text>
+              <Text p>
+                [n]s in bold are target segments which occur in different
+                prosodic positions. Examine the corpus and click each audio
+                segment to hear the sound, as you wish. (The Speaker is C.
+                Fougeron.)
+              </Text>
+
+              <Text p className="text-center font-semibold pt-4">
+                Ui
+              </Text>
+              <div className="flex justify-center">
+                <audio controls src={Ui_FR}></audio>
+              </div>
+              <Text p className="text-center pb-0">
+                Paul aime Tata. Nadia les protége en secret.
+              </Text>
+              <Text p className="text-center italic pt-0">
+                'Paul loves Tata. Nadia protects them in secret'
+              </Text>
+
+              <Text p className="text-center font-semibold pt-4">
+                IPi
+              </Text>
+              <div className="flex justify-center">
+                <audio controls src={IPi_Fr}></audio>
+              </div>
+              <Text p className="text-center pb-0">
+                La pauvre Tata, Nadia et Paul n'arriveront que demain
+              </Text>
+              <Text p className="text-center italic pt-0">
+                'Poor Tata, Nadia and Paul will arrive only tomorrow'
+              </Text>
+
+              <Text p className="text-center font-semibold pt-4">
+                APi
+              </Text>
+              <div className="flex justify-center">
+                <audio controls src={APi_Fr}></audio>
+              </div>
+              <Text p className="text-center pb-0">
+                Tonton, Tata, Nadia et Paul arriveront demain.
+              </Text>
+              <Text p className="text-center italic pt-0">
+                'Tonton, Tata, Nadia and Paul will arrive tomorrow'
+              </Text>
+
+              <Text p className="text-center font-semibold pt-4">
+                Wi
+              </Text>
+              <div className="flex justify-center">
+                <audio controls src={Wi_Fr}></audio>
+              </div>
+              <Text p className="text-center pb-0">
+                Paul et Tata-Nadia arriveront demain matin.
+              </Text>
+              <Text p className="text-center italic pt-0">
+                'Paul and Tata-Nadia will arrive tomorrow morning'
+              </Text>
+
+              <Text p className="text-center font-semibold pt-4">
+                Si
+              </Text>
+              <div className="flex justify-center">
+                <audio controls src={Si_FR}></audio>
+              </div>
+              <Text p className="text-center pb-0">
+                Tonton et Anabelle arriveront demain matin.
+              </Text>
+              <Text p className="text-center italic pt-0">
+                'Tonton and Anabelle will arrive tomorrow morning'
+              </Text>
+
+              <Text h4>Korean</Text>
+              <Text p>
+                The figure below shows that the linguopalatal contact varies
+                depending on prosodic position in the direction Ui {">"} IPi{" "}
+                {">"} APi {">"}
+                Wi (Wi {">"} Si). (Note: Wi vs. Si was examined separately.)
+              </Text>
+              <div class="flex justify-center w-full">
+                <img
+                  src={Kr_example2}
+                  alt="Kr_example2"
+                  className="md:w-2/3 p-2 shadow-md"
+                />
+              </div>
+              <div className="flex justify-center">
+                <Text p className="md:w-2/3">
+                  Figure 4: Differences in linguopalatal contact for [n] in
+                  Korean as a function of prosodic position. Wi vs. Si was
+                  examined separately.
+                </Text>
+              </div>
+              <Text p className="font-semibold">
+                Examples:
+              </Text>
+              <Text p>
+                [n]s in bold are target segments which occur in different
+                prosodic positions.
+              </Text>
+              <div class="flex justify-center w-full">
+                <img
+                  src={Kr_corpus_web}
+                  alt="Kr_corpus_web"
+                  className="md:w-2/3 p-2 shadow-md"
+                />
+              </div>
+              <div className="flex justify-center py-10">
+                <audio controls src={Wi_kr2} className="mr-2"></audio>
+                <audio controls src={Si_kr} className="ml-2"></audio>
+              </div>
             </div>
           </AccordionItem>
-          <AccordionItem title="title">
+          <AccordionItem title="V. References of EPG studies done at UCLA">
             <div className="pb-10 px-4">
-              <Text h4>header</Text>
-              <Text p>desc</Text>
+              <Text h4>References of EPG studies done at UCLA</Text>
+              <Text p>
+                <br />
+                Byrd, D. (1994) Articulatory timing in English consonant
+                sequences. UCLA dissertation. In UCLA Working Papers in
+                Phonetics, 86.
+                <br />
+                <br />
+                Byrd, D. (1995) C-Center revisited. Phonetica, 52, 285-306
+                <br />
+                <br />
+                Byrd, D. (1996) Influences on articulatory timing in consonant
+                sequences. Journal of Phonetics, 24, 209-244.
+                <br />
+                <br />
+                Byrd, D. (1996) A phase window framework for articulatory
+                timing. Phonology,13(2):139-169.
+                <br />
+                <br />
+                Byrd, D. & C. C. Tan. (1996) Saying consonant clusters quickly.
+                Journal of Phonetics, 24(2):263-282.
+                <br />
+                <br />
+                Byrd, D, E. Flemming, C. A. Mueller, & C. C. Tan. (1995) Using
+                regions and indices in EPG data reduction. Journal of Speech and
+                Hearing Research, 38:821-827.
+                <br />
+                <br />
+                Cho, T. (1998) Intergestural timing and overlap in Korean
+                palatalization. In David Silva (eds.) Japanese/Korean
+                Linguistic, vol. 8. CSLI: Stanford University.
+                <br />
+                <br />
+                Cho, T. (1998) Domain-initial strengthening in the prosodic
+                hierarchy: an EPG study. Proceedings of 11th International
+                Conference on Korean Linguistics (ICKL 11), July 6-9, 1998.
+                University of Hawaii at Manoa.
+                <br />
+                <br />
+                Cho, T. and P. Keating (1999) Articulatory and acoustic studies
+                of domain-initial strengthening in Korean. J. Phonetics
+                28:155-190 (2001)
+                <br />
+                <br />
+                Fougeron, C. (1999) Articulatory properties of initial segments
+                in several prosodic constituents in French. Journal of
+                Phonetics, Vol. 29, No. 2, Apr 2001, pp. 109-135.
+                <br />
+                <br />
+                Fougeron, C. & Keating, P. (1997) Articulatory strengthening at
+                edges of prosodic domains. JASA, 106 (6), 3728 - 3740.
+                <br />
+                <br />
+                Fougeron, C. & Keating, P. (1996) : Variations in velic and
+                lingual articulation depending on prosodic position: Results for
+                2 French speakers", UCLA Working Papers in Phonetics 92: 88-96
+                (1996)
+                <br />
+                <br />
+                Fougeron, C. & Keating, P. (1996) Articulatory strengthening in
+                prosodic domain-initial position. UCLA Working Papers in
+                Phonetics, 92, 61-87.
+                <br />
+                <br />
+                Hayashi, W; Hsu, C; Keating, P. (1999) Domain-initial
+                strengthening in Taiwanese: A follow-up study. UCLA Working
+                Papers in Phonetics, 97, 152-157.
+                <br />
+                <br />
+                Hsu, C. & Jun, S. (1998) Prosodic strengthening in Taiwanese:
+                Syntagmatic or paradigmatic ? UCLA Working Papers in Phonetics,
+                96, 69-89.
+                <br />
+                <br />
+                Keating, P; Cho, T; Fougeron, C; Hsu, C. (1999) Domain-initial
+                articulatory strengthening in four languages. UCLA Working
+                Papers in Phonetics, 97, 139-151. (To appear in LabPhon 6)
+                <br />
+                <br />
+                Keating, P; Wright, R; Zhang, J. (1999) Word-level asymmetries
+                in consonant articulation. UCLA Working Papers in Phonetics, 97,
+                152-157.
+                <br />
+                <br />
+                Saw, Cheng Cheng (1993) Customized 3-D Electropalatography
+                Display. UCLA Working Papers in Phonetics, 85, 71-96.
+                <br />
+                <br />
+                Thomas, Kim. (1999) Coproduction and Coarticulation in IsiZulu
+                Clicks. PhD. dissertation. UCLA. (her name is officially listed
+                as Kimberly Diane Thomas-Vilakati)
+              </Text>
             </div>
           </AccordionItem>
         </Accordion>
