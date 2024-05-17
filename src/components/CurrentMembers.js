@@ -1,132 +1,151 @@
 import ReplaceImg from "../../public/myfairlady4.jpg";
-import img from "../components/current_members/Abeer_Abbas.jpg";
-// src/components/current_members/Abeer_Abbas.jpg
+import Abber_Abbas from "../components/current_members/Abeer_Abbas.jpg";
+import Ben_Eischens from "../components/current_members/Ben_Eischens.jpg";
+import Bruce_Hayes from "../components/current_members/Bruce_Hayes.jpg";
+import Claire_Moore_Cantwell from "../components/current_members/Claire_Moore_Cantwell.jpg";
+import Ekaterina_Khlystova from "../components/current_members/Ekaterina_Khlystova.jpg";
+import Elizabeth_Sola_Llonch from "../components/current_members/Elizabeth_Sola_Llonch.jpg";
+import Jahnavi_Narkar from "../components/current_members/Jahnavi_Narkar.jpg";
+import Jake_Aziz from "../components/current_members/Jake_Aziz.jpg";
+import Jian_Leat_Siah from "../components/current_members/Jian_Leat_Siah.jpg";
+import Jinyoung_Jo from "../components/current_members/Jinyoung_Jo.jpg";
+import Jody_Kreiman from "../components/current_members/Jody_Kreiman.jpg";
+import John_McGahay from "../components/current_members/John_McGahay.jpg";
+import Kevin_Liang from "../components/current_members/Kevin_Liang.jpg";
+import Kie_Zuraw from "../components/current_members/Kie_Zuraw.jpg";
+import Lily_Xu from "../components/current_members/Lily_Xu.jpg";
+import Meg_Cychosz from "../components/current_members/Meg_Cychosz.jpg";
+import Megha_Sundara from "../components/current_members/Megha_Sundara.jpg";
+import Patricia_Keating from "../components/current_members/Patricia_Keating.jpg";
+import Sun_Ah_Jun from "../components/current_members/Sun_Ah_Jun.jpg";
+import Yang_Wang from "../components/current_members/Yang_Wang.jpg";
+import ZL_Zhou from "../components/current_members/ZL_Zhou.jpg";
+
 export const members = [
   {
     name: "Abeer Abbas",
     occupation: "Graduate Student",
-    // imgSrc: require("../components/current_members/Abeer_Abbas.jpg").default,
-    imgSrc: "Abeer_Abbas.jpg",
+    imgSrc: Abber_Abbas,
     link: "https://linguistics.ucla.edu/person/abeer-abbas/",
   },
   {
     name: "Jake Aziz",
     occupation: "Graduate Student",
-    imgSrc: ReplaceImg,
+    imgSrc: Jake_Aziz,
     link: "https://linguistics.ucla.edu/person/jake-aziz/",
   },
   {
     name: "Meg Cychosz",
     occupation: "Faculty",
-    imgSrc: ReplaceImg,
+    imgSrc: Meg_Cychosz,
     link: "https://megseekosh.github.io/",
   },
   {
     name: "Ben Eischens",
     occupation: "Faculty",
-    imgSrc: ReplaceImg,
+    imgSrc: Ben_Eischens,
     link: "https://linguistics.ucla.edu/person/ben-eischens",
   },
   {
     name: "Bruce Hayes",
     occupation: "Faculty",
-    imgSrc: ReplaceImg,
+    imgSrc: Bruce_Hayes,
     link: "https://linguistics.ucla.edu/people/hayes/index.htm",
   },
   {
     name: "Jinyoung Jo",
     occupation: "Graduate Student",
-    imgSrc: ReplaceImg,
+    imgSrc: Jinyoung_Jo,
     link: "https://jinyoungjo.com/",
   },
   {
     name: "Sun-Ah Jun",
     occupation: "Lab Director",
-    imgSrc: ReplaceImg,
+    imgSrc: Sun_Ah_Jun,
     link: "https://linguistics.ucla.edu/people/jun/sun-ah.htm",
   },
   {
-    name: "Pat Keating",
+    name: "Patricia Keating",
     occupation: "Faculty",
-    imgSrc: ReplaceImg,
+    imgSrc: Patricia_Keating,
     link: "https://linguistics.ucla.edu/people/keating/keating.htm",
   },
   {
     name: "Ekaterina Khlystova",
     occupation: "Graduate Student",
-    imgSrc: ReplaceImg,
+    imgSrc: Ekaterina_Khlystova,
     link: "https://ekhlystova.wixsite.com/home",
   },
   {
     name: "Jody Kreiman",
     occupation: "Faculty",
-    imgSrc: ReplaceImg,
+    imgSrc: Jody_Kreiman,
     link: "https://profiles.ucla.edu/jody.kreiman",
   },
   {
     name: "Kevin Liang",
     occupation: "Graduate Student",
-    imgSrc: ReplaceImg,
+    imgSrc: Kevin_Liang,
     link: "https://kevinliang8.github.io/",
   },
   {
     name: "John McGahay",
     occupation: "Graduate Student",
-    imgSrc: ReplaceImg,
+    imgSrc: John_McGahay,
     link: "https://www.linkedin.com/in/john-mcgahay-a78ba7126/",
   },
   {
     name: "Claire Moore-Cantwell",
     occupation: "Faculty",
-    imgSrc: ReplaceImg,
+    imgSrc: Claire_Moore_Cantwell,
     link: "http://www.clairemoorecantwell.org/",
   },
   {
     name: "Jahnavi Narkar",
     occupation: "Graduate Student",
-    imgSrc: ReplaceImg,
+    imgSrc: Jahnavi_Narkar,
     link: "http://jahnavinarkar.com/",
   },
   {
     name: "Jian-Leat Siah",
     occupation: "Graduate Student",
-    imgSrc: ReplaceImg,
+    imgSrc: Jian_Leat_Siah,
     link: "https://linguistics.ucla.edu/person/jian-siah/",
   },
   {
     name: "Elizabeth Sola-Llonch",
     occupation: "Graduate Student",
-    imgSrc: ReplaceImg,
+    imgSrc: Elizabeth_Sola_Llonch,
     link: "https://linguistics.ucla.edu/person/elizabeth-sola-llonch/",
   },
   {
     name: "Megha Sundara",
     occupation: "Faculty",
-    imgSrc: ReplaceImg,
+    imgSrc: Megha_Sundara,
     link: "https://linguistics.ucla.edu/person/megha-sundara/",
   },
   {
     name: "Yang Wang",
     occupation: "Graduate Student",
-    imgSrc: ReplaceImg,
+    imgSrc: Yang_Wang,
     link: "https://yangwangthelinguist.github.io/",
   },
   {
     name: "Lily Xu",
     occupation: "Graduate Student",
-    imgSrc: ReplaceImg,
+    imgSrc: Lily_Xu,
     link: "https://sites.google.com/view/lilyxxu/",
   },
   {
     name: "Z. L. Zhou",
     occupation: "Graduate Student",
-    imgSrc: ReplaceImg,
+    imgSrc: ZL_Zhou,
     link: "https://linguistics.ucla.edu/person/zlzhou/",
   },
   {
     name: "Kie Zuraw",
     occupation: "Faculty",
-    imgSrc: ReplaceImg,
+    imgSrc: Kie_Zuraw,
     link: "https://linguistics.ucla.edu/people/zuraw/index.htm",
   },
 ];

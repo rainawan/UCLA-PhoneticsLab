@@ -1,11 +1,11 @@
 import { Accordion, AccordionItem, Divider } from "@nextui-org/react";
 import Text from "../../../components/Text";
-import palatogram_fig_1 from "../../../components/resources/palatogram_fig_1.jpeg";
-import palatogram_fig_2 from "../../../components/resources/palatogram_fig_2.gif";
-import palatogram_fig_3 from "../../../components/resources/palatogram_fig_3.gif";
-import palatogram_fig_4 from "../../../components/resources/palatogram_fig_4.gif";
-import palatogram_fig_5 from "../../../components/resources/palatogram_fig_5.jpeg";
-import palatogram_fig_6 from "../../../components/resources/palatogram_fig_6.jpeg";
+import palatogram_fig_1 from "../../../components/resources/palatography/palatogram_fig_1.jpeg";
+import palatogram_fig_2 from "../../../components/resources/palatography/palatogram_fig_2.gif";
+import palatogram_fig_3 from "../../../components/resources/palatography/palatogram_fig_3.gif";
+import palatogram_fig_4 from "../../../components/resources/palatography/palatogram_fig_4.gif";
+import palatogram_fig_5 from "../../../components/resources/palatography/palatogram_fig_5.jpeg";
+import palatogram_fig_6 from "../../../components/resources/palatography/palatogram_fig_6.jpeg";
 
 const Palatography = () => {
   return (

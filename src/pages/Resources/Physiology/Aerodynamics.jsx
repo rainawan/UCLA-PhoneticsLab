@@ -1,7 +1,7 @@
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import Text from "../../../components/Text";
-import aerodynamics_fig_1 from "../../../components/resources/aerodynamics_fig_1.jpeg";
-import aerodynamics_fig_2 from "../../../components/resources/aerodynamics_fig_2.gif";
+import aerodynamics_fig_1 from "../../../components/resources/aerodynamics/aerodynamics_fig_1.jpeg";
+import aerodynamics_fig_2 from "../../../components/resources/aerodynamics/aerodynamics_fig_2.gif";
 
 const Aerodynamics = () => {
   return (
@@ -45,10 +45,7 @@ const Aerodynamics = () => {
                 <AccordionItem title="View Figure 1">
                   <div className="flex flex-wrap">
                     <div class="w-full md:w-1/2 p-2">
-                      <img
-                        src={aerodynamics_fig_1}
-                        alt="aerodynamics_fig_1"
-                      />
+                      <img src={aerodynamics_fig_1} alt="aerodynamics_fig_1" />
                       <h1 className="pt-4">
                         Figure 1: The system for recording air pressure and air
                         flow described in the text
