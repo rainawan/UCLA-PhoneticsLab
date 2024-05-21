@@ -177,14 +177,86 @@ const Electroglottograph = () => {
           </AccordionItem>
           <AccordionItem title="Using PCQuirer for the EGG">
             <div className="pb-10 px-4">
-              <Text h4>header</Text>
-              <Text p>desc</Text>
+              <Text p>
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    <li>
+                      PCQuirerX, usually used to record from the EGG, has a very
+                      helpful feature - Scope Mode. You can find this under
+                      Record/Play {">"} Scope Mode. Scope Mode will allow you to
+                      adjust the settings of the hardware, as well as the
+                      software settings (found under Options {">"} Record/Play),
+                      before you actually begin the recording. Select Scope Mode
+                      and have the subject produce a constant prolonged vowel.
+                      You should see the signal in Channel 1. In this mode, you
+                      can manipulate the gain - either on the EGG itself (#6),
+                      or in PCQuirer under Options {">"} Record/Play.
+                    </li>
+                    <li>
+                      To record the EGG session, select Record under Record/Play
+                      (not in Scope Mode). If possible, have your subject begin
+                      the vowel before you actually start the recording. This
+                      produces a better recording.
+                    </li>
+                    <li>
+                      To make an audio recording along with the EGG recording,
+                      use a microphone linked to the EGG via the interface box.
+                      You can change the gain in PCQuirer under Options{">"}
+                      Record/Play. This option can be manipulated in Scope Mode.
+                    </li>
+                  </ul>
+                </div>
+              </Text>
+              <Text p className="font-semibold">
+                Note about the version of PCQuirer for use with the EGG:
+              </Text>
+              <Text p>
+                If you change any settings (such as gain, recording time,
+                bandwidth, etc.), the EGG version of PCQuirer will save the
+                changes you made, even after you exit the program. So, it is
+                important to check most of the major settings before you begin
+                recording. For example, if the person who used the EGG last made
+                a recording that was 1 minute long, and you make a recording
+                without checking the settings, your recording will have to be
+                exactly 1 minute long, since there is no way to end the
+                recording early.
+              </Text>
+              <Text p className="font-semibold">
+                Cleaning the equipment
+              </Text>
+              <Text p>
+                When you are finished using the EGG, you should clean off the
+                electrodes with an alcohol-wipe.
+              </Text>
             </div>
           </AccordionItem>
-          <AccordionItem title="title">
+          <AccordionItem title="Understanding the EGG Signal">
             <div className="pb-10 px-4">
-              <Text h4>header</Text>
-              <Text p>desc</Text>
+              <Text p>
+                The EGG signal in the VFCA mode is an indicator of vocal fold
+                contact area. The top portion of the signal reflects closing of
+                the vocal folds, while the bottom portion reflects opening. The
+                reverse is true in the IVFCA mode.
+              </Text>
+              <div class="flex justify-center w-full">
+                <img
+                  src={egg_figure_2}
+                  alt="egg_figure_2"
+                  className="md:w-2/3 p-2 shadow-md"
+                />
+              </div>
+              <Text p className="font-semibold">
+                <br />
+                EggWorks:
+              </Text>
+              <Text p>
+                A free program by Henry Tehrani, created for the NSF Voice
+                project to analyze EGG signals (closing quotients, peak increase
+                in contact) -- unfortunately, as of April 1 2022 this program
+                will be unavailable for public use - we hope only temporarily.
+                Note that files to be analyzed should generally be under 5 min.
+                long.
+              </Text>
             </div>
           </AccordionItem>
         </Accordion>
