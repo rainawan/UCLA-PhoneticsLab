@@ -1,4 +1,7 @@
 import Text from "../../components/Text";
+import VoiceSauce from "./AcousticAnalysis/VoiceSauce";
+import Soundbooth from "./AcousticAnalysis/Soundbooth";
+import PraatScript from "./AcousticAnalysis/PraatScript";
 
 const AcousticAnalysis = () => {
   return (
@@ -6,6 +9,9 @@ const AcousticAnalysis = () => {
       <Text h2 className="text-left">
         Acoustic Analysis
       </Text>
+      <VoiceSauce />
+      <Soundbooth />
+      <PraatScript />
     </div>
   );
 };
