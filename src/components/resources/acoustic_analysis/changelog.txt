@@ -1,0 +1,175 @@
+Changelog:
+
+---------------- v1.37 (June 2, 2020)  ---------------
+* Added Sam Gregory's Snack binary for OSX - thanks Sam!
+* Added Sam Gregory's fix for output EMU format
+* Fix for output to text when no F0 parameters have been processed
+
+---------------- v1.36 (February 27, 2019)  ---------------
+* Fix for error initialization in Praat formants
+
+---------------- v1.35 (February 9, 2019)  ---------------
+* Setting lpctype back to 0 on Snack formants (for windows)
+* Fixing rare bug with lengths of Snack formants
+* Added code to try wish8.5
+
+---------------- v1.34 (May 11, 2018)  ---------------
+* Fixed Praat download script for MacOS
+
+---------------- v1.33 (March 7, 2018)  ---------------
+* Fixed textgrid labels issue
+* Integrated Soo's Praat download/install function
+
+---------------- v1.32 (August 2, 2017)  ---------------
+* Fixed crash with CPP
+* Fixed Straight non 1ms frameshift error
+
+---------------- v1.31 (May 31, 2017)  ---------------
+* Fixed crash with STRAIGHT F0 tracker
+
+---------------- v1.30 (April 15, 2017)  ---------------
+* Removed nanmean from soe measure
+
+---------------- v1.29 (March 19, 2017)  ---------------
+* Added support for newer EGG file format
+
+---------------- v1.28 (December 23, 2016)  ---------------
+* Added new STRAIGHT F0 tracker - now compatible with Matlab 2015 and up
+* Deprecating support for previous Matlab 2007
+* Removed support for wavwrite and wavread
+
+---------------- v1.27 (August 15, 2016)  ---------------
+* Fixed issue when textgrid time points are greater than actual wav file length when using sub segments
+
+---------------- v1.26 (July 22, 2016)  ---------------
+* Fixed issue when textgrid time points are greater than actual wav file length
+* Fixed output to text crash when shrF0 is used
+
+---------------- v1.25 (November 16, 2015)  ---------------
+* Fixed wavread/wavwrite deprecation issue
+
+---------------- v1.24 (July 15, 2015)  ---------------
+* Fixed F0 Praat crash when wav file is too short
+* Added Soo's addition to change lpc order in Snack
+
+---------------- v1.23 (July 5, 2015)  ---------------
+* Added ability to use increments of 0.5 in Praat num formants
+* Added Soo's implementation of SoE parameter
+
+---------------- v1.22 (June 6, 2015)  ---------------
+* Added ability to print out algorithm data in output to text
+* Added ability to use estimated bandwidths - Thanks Soo
+* Fixing loading settings error in certain cases
+
+---------------- v1.21 (May 6, 2015)  ---------------
+* Fixed output to text folder settings
+* Disabled resampling of signal if Fs <= 16k
+
+---------------- v1.20 (April 6, 2015)  ---------------
+* Split processing of SHR into 10sec chunks to reduce memory usage
+
+---------------- v1.19 (January 27, 2015)  ---------------
+* Output warning dialog box when EGG file is unreadable
+* Fixed double printing results when EGG file is used and nsegments=1
+* Fixed Praat bandwidth display
+
+---------------- v1.18 (July 24, 2014)  ---------------
+* Fixed crash when Praat formants are used for parameter estimation
+
+---------------- v1.17 (July 22, 2014)  ---------------
+* Fixed crash when only SHR and F0(shr) are selected as parameters
+
+---------------- v1.16 (June 05, 2014)  ---------------
+* Added 5K and 2K*-5K measure
+* Added options for Praat formants (max formant frequency, num of formants)
+* Fixed 2K measure
+* Fixed output path when OutputToText is used first
+
+---------------- v1.15a (February 20, 2014)  ---------------
+* Fixed file paths for Mac when using Praat
+
+---------------- v1.15 (January 29, 2014)  ---------------
+* Added H4*-2K* measure
+
+---------------- v1.14 (May 30, 2013)  ---------------
+* Fixed output to text bug
+
+---------------- v1.13 (May 20, 2013)  ---------------
+* Make fileparts compatible with latter versions of Matlab
+* Allowed shrF0 to be used for parameter calculations
+
+---------------- v1.12 (February 5, 2012)  ---------------
+* Prevent parameter estimation from crashing when multi-channel wav files
+  are used - Thanks Grace.
+
+---------------- v1.11 (June 23, 2011)  ---------------
+* Prevents readEGGfile from crashing when NaNs are read.
+
+---------------- v1.10 (March 16, 2011)  ---------------
+* Changed "OK" button in Parameter Display to "Close".
+* Fixed bug - forgot to add SHR and shrF0 to file output list
+* Linked Output to Text directory with mat directory
+
+---------------- v1.09 (March 10, 2011)  ---------------
+* Added more Praat F0 options - Thanks Kristine.
+* Added Praat support for MacOS - Thanks Kristine.
+* Added SHRP measures - Thanks Kristine.
+* Added adjustable window sizes
+* Added new EGG measures to defaults
+
+---------------- v1.08 (February 23, 2011)  ---------------
+* Fixed bug - remove 0s from Straight output - Thanks Christian.
+* Modified Snack scripts for newer OSX 
+* Added point source Textgrid support
+* Fixed bug - empty parameter output - Thanks Anja.
+
+---------------- v1.07 (August 16, 2010) ---------------
+* Fixed file name bug for Praat F0 and formant calculations
+* Fixed bug - stops closing MessageBox from crashing the whole program
+* Provided checks to prevent log and divide by zero warnings
+
+---------------- v1.06 (June 28, 2010) ---------------
+* Added condition to stretch single value replacements
+* Moved F0 = 0 checks to reduce matlab warnings on parameter estimation
+* Added Praat formant estimation
+* Added Praat F0 estimation
+* Fixed bug - no need to output 001 values when Nseg = 1 in OutputText
+
+---------------- v1.05 (March 17, 2010) ---------------
+* Fixed NaN's for EMU output - Thanks Marc.
+
+---------------- v1.04 (February 16, 2010) ---------------
+* Changed wording of segments to sub-segments
+* Default in OutputToText and OutputToEMU is changed to select all parameters
+* Removed double smoothing on uncorrected measures (H1H2u, etc) - Thanks Marc.
+
+---------------- v1.03 (December 2, 2009) ----------------
+* Enabled OutputToText when only EGG measures are needed
+* Fixed bug - EGG output boundary calculation method
+* Fixed bug - error with func_parseF0 and func_parseFMT - if parameters don't exist
+* Fixed bug - no textgrids in wav file list causes error - missing labels
+* Fixed bug - unable to bring up Parameter display when there is no mat file
+* Fixed bug - closing main VoiceSauce through [x] doesn't close other windows
+
+---------------- v1.02 (November 5, 2009) ----------------
+* Added Harmonic to Noise ratio measures: HNR05, HNR15, HNR25, HNR35
+* Changed func_buildMData.m to account for older versions of VS mat files
+* Added F0 (other) and Formant (other) capability - untested
+* Fixed small bug with parameter selection display
+
+---------------- v1.01 (November 2, 2009) ----------------
+* Fixed minor bugs with wav/mat file linking
+* Made func_SnackFormants.m compatible with the Snack toolkit in Mac OS 
+* Changed vs_Settings - allow more than 1 textgrid tier
+                      - added search string for wav files (for case-sensitive systems)
+* Disabled F0 (other) and Formant (Other) settings
+* Changed naming of the formant-corrected parameters used in the mat files:
+    - H1H2 --> H1H2c
+    - H2H4 --> H2H4c
+    - H1A1 --> H1A1c
+    - H1A2 --> H1A2c
+    - H1A3 --> H1A3c
+* Changed the naming of "segments" in vs_Settings to "sub-segments"
+
+---------------- v1.00 (October 23, 2009) ----------------
+* Initial release

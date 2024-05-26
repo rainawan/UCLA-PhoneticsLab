@@ -26,7 +26,7 @@ const CurrentMembers = () => {
                 <div className="relative w-full h-40">
                   <Image
                     alt={card.name}
-                    className="object-cover rounded-xl"
+                    className="object-cover rounded-xl aspect-square"
                     src={card.imgSrc}
                     // width={300}
                     // height={200}
