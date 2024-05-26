@@ -72,29 +72,47 @@ const Palatography = () => {
                 The process is as follows:
               </Text>
               <Text p className="pb-10">
-                1) To protect the subject, one should use latex type gloves and
-                preferably a surgical mask. <br />
-                2) Mix the olive oil and the activated charcoal powder. <br />
-                3) Apply mixture to the speaker's whole tongue with a paintbrush
-                or Q-Tip. NOTE: In case of dripping, one should cover the
-                speaker's clothes before applying the mixture. <br />
-                4) Ask the speaker to produce a word that contains the target
-                sound (The word should not include any other sounds that make
-                contact with the palate).
-                <br />
-                5) Use a mirror (preferably a sterilized inter-oral mirror), and
-                place it inside the speaker's mouth at a 45° angle with respect
-                to the plane of the teeth. See Figure 1 for more.
-                <br />
-                6) Use a camera or video camera to photograph the mirror's
-                reflection of the place of articulation depicted by the imprint.{" "}
-                <br />
-                7) If a video camera is used, the image can be transferred
-                directly to a computer for further processing. <br />
-                8) Once the image has been recorded, have the speaker rinse out
-                his/her mouth with lemonade (or lemon juice in water). See
-                Figure 2 for more.
-                <br />
+                <div className="pl-10">
+                  <ul className="list-decimal">
+                    <li>
+                      To protect the subject, one should use latex type gloves
+                      and preferably a surgical mask.
+                    </li>
+                    <li>
+                      Mix the olive oil and the activated charcoal powder.
+                    </li>
+                    <li>
+                      Apply mixture to the speaker's whole tongue with a
+                      paintbrush or Q-Tip. NOTE: In case of dripping, one should
+                      cover the speaker's clothes before applying the mixture.
+                    </li>
+                    <li>
+                      Ask the speaker to produce a word that contains the target
+                      sound (The word should not include any other sounds that
+                      make contact with the palate).
+                    </li>
+                    <li>
+                      Use a mirror (preferably a sterilized inter-oral mirror),
+                      and place it inside the speaker's mouth at a 45° angle
+                      with respect to the plane of the teeth. See Figure 1 for
+                      more.
+                    </li>
+                    <li>
+                      Use a camera or video camera to photograph the mirror's
+                      reflection of the place of articulation depicted by the
+                      imprint.
+                    </li>
+                    <li>
+                      If a video camera is used, the image can be transferred
+                      directly to a computer for further processing.
+                    </li>
+                    <li>
+                      Once the image has been recorded, have the speaker rinse
+                      out his/her mouth with lemonade (or lemon juice in water).
+                      See Figure 2 for more.
+                    </li>
+                  </ul>
+                </div>
               </Text>
 
               <Accordion isCompact variant="bordered">
@@ -133,17 +151,26 @@ const Palatography = () => {
                 The process is as follows:
               </Text>
               <Text p className="pb-10">
-                1) Paint the upper surface of the mouth with the same mixture
-                described in the palatography section. <br />
-                2) Have the speaker produce the desired sound and observe (and
-                photograph) the part of the tongue that is making the contact.
-                It may be necessary to instruct the speaker to move the tongue
-                up, down or to the side, to show sublaminal contact, or contact
-                on the sides of the tongue. <br />
-                3) Once you have finished taking the pictures, have the speaker
-                rinse out their mouths with lemonade or lemon juice. See Figure
-                3 & 4 for more.
-                <br />
+                <div className="pl-10">
+                  <ul className="list-decimal">
+                    <li>
+                      Paint the upper surface of the mouth with the same mixture
+                      described in the palatography section.
+                    </li>
+                    <li>
+                      Have the speaker produce the desired sound and observe
+                      (and photograph) the part of the tongue that is making the
+                      contact. It may be necessary to instruct the speaker to
+                      move the tongue up, down or to the side, to show
+                      sublaminal contact, or contact on the sides of the tongue.
+                    </li>
+                    <li>
+                      Once you have finished taking the pictures, have the
+                      speaker rinse out their mouths with lemonade or lemon
+                      juice. See Figure 3 & 4 for more.
+                    </li>
+                  </ul>
+                </div>
                 <br />
                 NOTE: Speakers' tongues differ in their absorbency to the
                 charcoal mixture. For speakers whose tongues begin to collect
@@ -197,28 +224,50 @@ const Palatography = () => {
               <Text p className="font-semibold">
                 One possible process for making impressions:
               </Text>
-              <Text p className="pb-10">
-                1) Mix the Jel-Trate with water in a bowl using a spatula. Don't
-                use when it's still runny. You must be able to pile the mixture.
-                If it runs out the sides, you won't get the whole palate and it
-                could be unpleasant for the subject. <br />
-                2) Heap the mixture on a mirror or other flat surface, or in an
-                appropriately sized dental tray. <br />
-                3) Have the subject lean forward, so that if the material does
-                run out, it will not be swallowed. <br />
-                4) Insert the mixture into the mouth, press up against the
-                palate and teeth. You want to push up until you feel the bottom
-                of the impression material to be on the plane of the teeth.{" "}
-                <br />
-                5) Hold in this position until set (by color change, if you are
-                using color phase dental alginate, or by timing+touch). <br />
-                6) Remove the tray from the person's mouth and remove the
-                impression from the mirror/tray. See Figure 5 for more. <br />
-                7) Trim the base of the impression so that it is flat and in
-                line with the plane of the teeth. If necessary, trim the excess
-                from the back and sides. See Figure 6 for more. <br />
-                8) If you need to store the impression, you can wrap it in a
-                wet, moist paper towel.
+              <Text p>
+                <div className="pl-10">
+                  <ul className="list-decimal">
+                    <li>
+                      Mix the Jel-Trate with water in a bowl using a spatula.
+                      Don't use when it's still runny. You must be able to pile
+                      the mixture. If it runs out the sides, you won't get the
+                      whole palate and it could be unpleasant for the subject.
+                    </li>
+                    <li>
+                      Heap the mixture on a mirror or other flat surface, or in
+                      an appropriately sized dental tray.
+                    </li>
+                    <li>
+                      Have the subject lean forward, so that if the material
+                      does run out, it will not be swallowed.
+                    </li>
+                    <li>
+                      Insert the mixture into the mouth, press up against the
+                      palate and teeth. You want to push up until you feel the
+                      bottom of the impression material to be on the plane of
+                      the teeth.
+                    </li>
+                    <li>
+                      Hold in this position until set (by color change, if you
+                      are using color phase dental alginate, or by
+                      timing+touch).
+                    </li>
+                    <li>
+                      Remove the tray from the person's mouth and remove the
+                      impression from the mirror/tray. See Figure 5 for more.
+                    </li>
+                    <li>
+                      Trim the base of the impression so that it is flat and in
+                      line with the plane of the teeth. If necessary, trim the
+                      excess from the back and sides. See Figure 6 for more.
+                    </li>
+                    <li>
+                      If you need to store the impression, you can wrap it in a
+                      wet, moist paper towel.
+                    </li>
+                  </ul>
+                  <br />
+                </div>
               </Text>
               <Accordion isCompact variant="bordered">
                 <AccordionItem title="View Figures">
@@ -271,10 +320,7 @@ const Palatography = () => {
                 <AccordionItem title="View Figures">
                   <div className="flex flex-wrap">
                     <div class="w-full md:w-1/2 p-2">
-                      <img
-                        src={palatogram_fig_5}
-                        alt="palatogram_fig_5"
-                      />
+                      <img src={palatogram_fig_5} alt="palatogram_fig_5" />
                       <h1 className="pt-4">
                         Figure 7: The impression is now sectioned along the
                         saggital plane. Use the central fissure as a guide. One

@@ -62,10 +62,19 @@ const Aerodynamics = () => {
             <div className="pb-10 px-4">
               <Text h4>Notes on Reconnecting the Assembly</Text>
               <Text p>
-                <br />• Make sure the tubes for pressure and flow are placed
-                over the corresponding pressure and flow ports.
-                <br />• The nasal mask has only one tube. This should be placed
-                over the flow port. (There is no nasal pressure to be measured.)
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    <li>
+                      Make sure the tubes for pressure and flow are placed over
+                      the corresponding pressure and flow ports.
+                    </li>
+                    <li>
+                      The nasal mask has only one tube. This should be placed
+                      over the flow port. (There is no nasal pressure to be
+                      measured.)
+                    </li>
+                  </ul>
+                </div>
               </Text>
             </div>
           </AccordionItem>
@@ -79,25 +88,42 @@ const Aerodynamics = () => {
               <Text p>
                 While talking, press the masks firmly against the face, making
                 sure that there are no leaks.
-                <br />
-                <br />• To record the pressure of the air in the mouth, hold a
-                small tube between the lips while speaking. (If the tube is
-                small enough it will not interfere too much with speaking.){" "}
-                <br />• The pressure of the air behind a velar closure can be
-                measured using a small tube passed through the nose, with its
-                open end in the pharynx. However, this will not be discussed
-                here.
+                <div className="pl-10">
+                  <br />
+                  <ul className="list-disc">
+                    <li>
+                      To record the pressure of the air in the mouth, hold a
+                      small tube between the lips while speaking. (If the tube
+                      is small enough it will not interfere too much with
+                      speaking.)
+                    </li>
+                    <li>
+                      The pressure of the air behind a velar closure can be
+                      measured using a small tube passed through the nose, with
+                      its open end in the pharynx. However, this will not be
+                      discussed.
+                    </li>
+                  </ul>
+                </div>
               </Text>
               <br />
               <Text h4>Tips for Recording</Text>
               <Text p>
-                <br />• When recording air pressure in the mouth, it is
-                important to keep the tubes free of saliva. The tubes should be
-                blown clear at frequent intervals.
-                <br />• If you want to record the changes in pressure and flow
-                that occur as a result of the vibrations of the vocal folds, you
-                will need to use tubes with an internal diameter of at least 2
-                mm.
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    <li>
+                      When recording air pressure in the mouth, it is important
+                      to keep the tubes free of saliva. The tubes should be
+                      blown clear at frequent intervals.
+                    </li>
+                    <li>
+                      If you want to record the changes in pressure and flow
+                      that occur as a result of the vibrations of the vocal
+                      folds, you will need to use tubes with an internal
+                      diameter of at least 2mm.
+                    </li>
+                  </ul>
+                </div>
               </Text>
             </div>
           </AccordionItem>
@@ -112,18 +138,29 @@ const Aerodynamics = () => {
                 computer running Macquirer or PCquirer, the program will
                 automatically display the data, as shown in Figure 2, which
                 contains three records made of "He paid the price."
-                <br />
-                <br />• The top display (Audio) is the record produced by the
-                microphone. The sound is a little distorted due to muffling from
-                the mask, but it shows the number of syllables and which ones
-                are relatively weaker or stronger.
-                <br />• The second display (Oral flow) shows the bursts of air
-                due to the aspiration of stops.It also shows variations in flow
-                due to vocal fold vibration.
-                <br />• The third display (Oral pressure) shows the increase in
-                the pressure of the air in the mouth for each of the stops. It
-                also show the variations in pressure associated with vocal fold
-                vibration.
+                <div className="pl-10">
+                  <br />
+                  <ul className="list-disc">
+                    <li>
+                      The top display (Audio) is the record produced by the
+                      microphone. The sound is a little distorted due to
+                      muffling from the mask, but it shows the number of
+                      syllables and which ones are relatively weaker or
+                      stronger.
+                    </li>
+                    <li>
+                      The second display (Oral flow) shows the bursts of air due
+                      to the aspiration of stops.It also shows variations in
+                      flow due to vocal fold vibration.
+                    </li>
+                    <li>
+                      The third display (Oral pressure) shows the increase in
+                      the pressure of the air in the mouth for each of the
+                      stops. It also show the variations in pressure associated
+                      with vocal fold vibration.
+                    </li>
+                  </ul>
+                </div>
               </Text>
               <img
                 src={aerodynamics_fig_2}

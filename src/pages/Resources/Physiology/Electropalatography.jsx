@@ -50,26 +50,41 @@ const Electropalatography = () => {
                 Detailed procedures of data collection:
               </Text>
               <Text p>
-                • Have your subject wear his/her pseudo-palate.
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    <li>Have your subject wear his/her pseudo-palate.</li>
+                    <li>
+                      Turn off the Palatometer, attach a grounding electrode to
+                      the speaker (which can be found in 2101P, the 'cool'
+                      room), connect the pseudo-palate to the Palatometer, and
+                      turn on the Palatometer.
+                    </li>
+                    <li>
+                      When ready to collect the data, run "pal.exe" (by typing
+                      "pal" - you don't have to be in the directory where the
+                      program is, which is also "pal"), and do three steps under
+                      the 'setup' menu on the screen:
+                    </li>
+                  </ul>
+                </div>
+
+                <ul className="list-decimal pl-4">
+                  <br />
+                  <li>Choose the number of users.</li>
+                  <li>
+                    Choose a user name (a user file such as PKEATNG1.USR,
+                    THCHO.USR) for each user (back-ups of these files are on a
+                    disk kept near the computer, and Pat and Henry both have
+                    copies).
+                  </li>
+                  <li>
+                    Check the sensitivity, by turning the small knob while
+                    subject talks until the peak value is in the preferred
+                    range.
+                  </li>
+                </ul>
+
                 <br />
-                • Turn off the Palatometer, attach a grounding electrode to the
-                speaker (which can be found in 2101P, the 'cool' room), connect
-                the pseudo-palate to the Palatometer, and turn on the
-                Palatometer.
-                <br />
-                • When ready to collect the data, run "pal.exe" (by typing "pal"
-                - you don't have to be in the directory where the program is,
-                which is also "pal"), and do three steps under the 'setup' menu
-                on the screen: <br />
-                <br />
-                (1) Choose the number of users
-                <br />
-                (2) Choose a user name (a user file such as PKEATNG1.USR,
-                THCHO.USR) for each user (back-ups of these files are on a disk
-                kept near the computer, and Pat and Henry both have copies);
-                <br />
-                (3) Check the sensitivity, by turning the small knob while
-                subject talks until the peak value is in the preferred range.
               </Text>
               <Text p className="font-semibold">
                 Note about choosing a channel:
@@ -290,22 +305,32 @@ const Electropalatography = () => {
                 word-final [t].
                 <br />
                 <br />
-                • Window B shows percent-contact profile in the entire region
-                with 96 electrodes included.
-                <br />
-                • Window E shows percent-contact profile in the Front Region
-                with the front 48 electrodes included.
-                <br />
-                • Window C 'PALATOGRAM' shows the contacted electrodes at the
-                red cursor which was placed at the peak contact of the
-                word-initial [t].
-                <br />
-                • The value '58' at the right corner of Window B means 58% of
-                the 96 electrodes were contacted at the cursor.
-                <br />
-                • The value '62' at the right corner of Window E means 62% of 45
-                electrodes (Front Region) was contacted at the cursor.
-                <br />
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    <li>
+                      Window B shows percent-contact profile in the entire
+                      region with 96 electrodes included.
+                    </li>
+                    <li>
+                      Window E shows percent-contact profile in the Front Region
+                      with the front 48 electrodes included.
+                    </li>
+                    <li>
+                      Window C 'PALATOGRAM' shows the contacted electrodes at
+                      the red cursor which was placed at the peak contact of the
+                      word-initial [t].
+                    </li>
+                    <li>
+                      The value '58' at the right corner of Window B means 58%
+                      of the 96 electrodes were contacted at the cursor.
+                    </li>
+                    <li>
+                      The value '62' at the right corner of Window E means 62%
+                      of 45 electrodes (Front Region) was contacted at the
+                      cursor.
+                    </li>
+                  </ul>
+                </div>
                 <br />
               </Text>
               <div class="flex justify-center w-full">
