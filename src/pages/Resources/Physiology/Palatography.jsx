@@ -14,11 +14,11 @@ const Palatography = () => {
         Physiology
       </Text>
       <div>
-        <Text h3>Palatography</Text>
+        <Text h3>Static Palatography</Text>
         <Accordion variant="shadow">
           <AccordionItem title={<span className="text-xl">Introduction</span>}>
             <div className="pb-10 px-4">
-              <Text h4>Static Palatography Introduction</Text>
+              <Text h4>Static Palatography</Text>
               <Text p>
                 Static palatography is a well-known traditional method of
                 obtaining articulatory data. It is a low-tech, inexpensive tool

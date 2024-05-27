@@ -16,8 +16,8 @@ const VoiceSauce = () => {
   return (
     <div>
       <div className="pt-10">
-        <Text h2>VoiceSauce</Text>
-        <Text h3>A program for voice analysis</Text>
+        <Text h3>VoiceSauce</Text>
+        <Text h4>A program for voice analysis</Text>
         <div class="flex justify-center w-full">
           <img
             src={voicesauce}
