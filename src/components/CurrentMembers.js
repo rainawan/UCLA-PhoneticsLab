@@ -60,7 +60,7 @@ export const members = [
   },
   {
     name: "Sun-Ah Jun",
-    occupation: "Lab Director",
+    occupation: "Faculty | Lab Director",
     imgSrc: Sun_Ah_Jun,
     link: "https://linguistics.ucla.edu/people/jun/sun-ah.htm",
   },
@@ -75,12 +75,6 @@ export const members = [
     occupation: "Graduate Student",
     imgSrc: Ekaterina_Khlystova,
     link: "https://ekhlystova.wixsite.com/home",
-  },
-  {
-    name: "Jody Kreiman",
-    occupation: "Faculty",
-    imgSrc: Jody_Kreiman,
-    link: "https://profiles.ucla.edu/jody.kreiman",
   },
   {
     name: "Kevin Liang",

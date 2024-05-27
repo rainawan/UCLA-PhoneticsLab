@@ -29,7 +29,7 @@ const Electropalatography = () => {
   return (
     <div>
       <div className="pt-10">
-        <Text h3>Electropalatography</Text>
+        <Text h3>Electropalatography (EPG)</Text>
         <Accordion variant="shadow">
           <AccordionItem title="I. Basic Experimental Steps to Follow">
             <div className="pb-10 px-4">
