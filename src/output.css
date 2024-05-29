@@ -732,6 +732,10 @@ video {
   top: var(--navbar-height);
 }
 
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
 .-z-30 {
   z-index: -30;
 }
@@ -901,6 +905,18 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.-mt-4 {
+  margin-top: -1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .box-border {
@@ -1246,6 +1262,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[calc\(100\%_-_8px\)\] {
+  width: calc(100% - 8px);
 }
 
 .min-w-10 {
@@ -1984,6 +2004,10 @@ video {
   border-width: var(--nextui-border-width-small);
 }
 
+.border-1 {
+  border-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -2084,6 +2108,10 @@ video {
 .border-warning {
   --tw-border-opacity: 1;
   border-color: hsl(var(--nextui-warning) / var(--nextui-warning-opacity, var(--tw-border-opacity)));
+}
+
+.border-white\/20 {
+  border-color: rgb(255 255 255 / 0.2);
 }
 
 .border-x-transparent {
@@ -2381,6 +2409,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-black\/20 {
+  background-color: rgb(0 0 0 / 0.2);
+}
+
 .bg-stripe-gradient {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
 }
@@ -2656,10 +2688,6 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
-}
-
-.pb-6 {
-  padding-bottom: 1.5rem;
 }
 
 .text-left {
@@ -2982,6 +3010,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-white\/80 {
+  color: rgb(255 255 255 / 0.8);
 }
 
 .underline {
@@ -3985,6 +4017,11 @@ video {
   border-radius: 0.125rem;
 }
 
+.before\:rounded-xl::before {
+  content: var(--tw-content);
+  border-radius: 0.75rem;
+}
+
 .before\:border-2::before {
   content: var(--tw-content);
   border-width: 2px;
@@ -4092,6 +4129,11 @@ video {
 .before\:bg-warning\/20::before {
   content: var(--tw-content);
   background-color: hsl(var(--nextui-warning) / 0.2);
+}
+
+.before\:bg-white\/10::before {
+  content: var(--tw-content);
+  background-color: rgb(255 255 255 / 0.1);
 }
 
 .before\:bg-gradient-to-r::before {
@@ -7822,6 +7864,11 @@ video {
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
