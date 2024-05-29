@@ -16,8 +16,12 @@ const VoiceSauce = () => {
   return (
     <div>
       <div className="pt-10">
-        <Text h3>VoiceSauce</Text>
-        <Text h4>A program for voice analysis</Text>
+        <Text h3 className="pb-0">
+          VoiceSauce
+        </Text>
+        <Text h4 className="pb-4">
+          A program for voice analysis
+        </Text>
         <div class="flex justify-center w-full">
           <img
             src={voicesauce}
@@ -159,7 +163,7 @@ const VoiceSauce = () => {
           providing a compatible binary version.
         </Text>
 
-        <Table aria-label="Example static collection table">
+        {/* <Table aria-label="Example static collection table">
           <TableHeader>
             <TableColumn>Matlab m-code (v1.37 - Jun 2, 2020)</TableColumn>
             <TableColumn>
@@ -169,23 +173,76 @@ const VoiceSauce = () => {
           <TableBody>
             <TableRow key="1">
               <TableCell>
-                {/* <a
-                  href={voicesaucezip}
-                  className="text-blue hover:underline"
-                  target="_blank"
-                >
-                  Matlab m-code
-                </a> */}
-                Matlab m-code (v1.37 - Jun 2, 2020)
+                Instructions: Unzip and run VoiceSauce.m from Matlab.
+                <br />
+                <br />
+                Note: Requires Matlab 2015a or later.
               </TableCell>
-              <TableCell>CEO</TableCell>
-            </TableRow>
-            <TableRow key="2">
-              <TableCell>Zoey Lang</TableCell>
-              <TableCell>Technical Lead</TableCell>
+              <TableCell>
+                Instructions: Run MCRInstaller (only needs to be done once).
+                Unzip VoiceSauce_bin.zip and run VoiceSauce.exe.
+                <br />
+                <br />
+                Note: Running VoiceSauce.exe for the first time may take a few
+                minutes to load.
+              </TableCell>
             </TableRow>
           </TableBody>
-        </Table>
+        </Table> */}
+
+        <Text pbold>Documentation:</Text>
+        <Text p>
+          Documentaton is available{" "}
+          <a
+            href="https://phonetics.ucla.edu/voicesauce/documentation/index.html"
+            className="text-blue hover:underline"
+            target="_blank"
+          >
+            here
+          </a>
+          . Originally written by Chad Vicenik and later expanded by Spencer
+          Lin, this manual is now maintained by Pat Keating, with expert input
+          from Yen Shue. Requests for additions are always welcome. To cite this
+          manual: Chad Vicenik, Spencer Lin, Patricia Keating, and Yen-Liang
+          Shue (current year). Online documentation for VoiceSauce. Available at
+          http://www.phonetics.ucla.edu/voicesauce/documentation/index.html.
+        </Text>
+        <Text pbold>Note about running VoiceSauce:</Text>
+        <Text p>
+          VoiceSauce's Matlab console provides various run-time messages about
+          its dealings with individual input files. These are not necessarily
+          error messages! Unless VoiceSauce actually crashes, or hangs up, while
+          running, you should be able to find .mat output files in the folder
+          you specified, and you should be able to produce a .txt output file
+          from these. Most notably, "Multicue failed: switching to
+          exstraightsource" is not an error message and does not mean that
+          VoiceSauce has crashed. See the documentation for more information
+          about this message.
+        </Text>
+        <Text pbold>Companion software:</Text>
+        <Text p>
+          EggWorks: A free program by Henry Tehrani, created for the NSF Voice
+          project to analyze EGG signals (closing quotients, peak increase in
+          contact) in batch mode; also includes utilities for splitting .pmf
+          files into separate .wav files, for inverting .wav files, and for
+          converting .wav files from 32- to 16-bit.
+        </Text>
+        <Text pbold>Acknowledgements:</Text>
+        <Text p>
+          This work was supported in part by grants from the NSF to UCLA.
+        </Text>
+        <Text pbold>How to cite:</Text>
+        <Text p>
+          The original reference for VoiceSauce is Yen Shue's dissertation:
+          Y.-L. Shue (2010), The voice source in speech production: Data,
+          analysis and models. UCLA dissertation. <br />
+          VoiceSauce is described in this paper: Shue, Y.-L., P. Keating , C.
+          Vicenik, K. Yu (2011) VoiceSauce: A program for voice analysis,
+          Proceedings of the ICPhS XVII, 1846-1849. <br />
+          Note: Do not be fooled by the bogus citation that Google Scholar has
+          somehow concocted (a supposed 2010 paper in the supposed journal
+          "Energy", with pages H1-A1!).
+        </Text>
       </div>
     </div>
   );
