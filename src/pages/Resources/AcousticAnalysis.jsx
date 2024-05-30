@@ -6,6 +6,7 @@ import { Divider } from "@nextui-org/react";
 
 const AcousticAnalysis = () => {
   return (
+    // <div>
     <div className="px-20 md:px-40 lg:px-60 py-20 bg-white text-left text-large">
       <Text h2>Acoustic Analysis</Text>
       <Divider className="w-full mx-auto border-t-2 border-gray-400" />

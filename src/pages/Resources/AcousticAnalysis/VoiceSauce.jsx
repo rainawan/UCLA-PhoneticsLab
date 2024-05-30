@@ -204,8 +204,7 @@ const VoiceSauce = () => {
           Lin, this manual is now maintained by Pat Keating, with expert input
           from Yen Shue. Requests for additions are always welcome. To cite this
           manual: Chad Vicenik, Spencer Lin, Patricia Keating, and Yen-Liang
-          Shue (current year). Online documentation for VoiceSauce. Available at
-          http://www.phonetics.ucla.edu/voicesauce/documentation/index.html.
+          Shue (current year). Online documentation for VoiceSauce.
         </Text>
         <Text pbold>Note about running VoiceSauce:</Text>
         <Text p>
