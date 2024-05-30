@@ -16,7 +16,7 @@ const VoiceSauce = () => {
   return (
     <div>
       <div className="pt-10">
-        <Text h3 className="pb-0">
+        <Text h3 className="pb-0 text-blue">
           VoiceSauce
         </Text>
         <Text h4 className="pb-4">

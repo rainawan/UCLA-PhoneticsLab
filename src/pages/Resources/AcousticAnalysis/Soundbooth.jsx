@@ -20,7 +20,9 @@ const Soundbooth = () => {
   return (
     <div>
       <div className="pt-10">
-        <Text h3>Soundbooth</Text>
+        <Text h3 className="text-blue">
+          Soundbooth
+        </Text>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
