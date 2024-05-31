@@ -175,8 +175,8 @@ export const rows = [
   },
   {
     key: "17",
-    name: "Terry Au (Collaborators: Sun-Ah Jun, Sahyang Kim, Hyuck-Joon Lee, Minjung Son, Moto Ueyama, Olivia Martinez, Wendy Hayashi)",
-    date: "",
+    name: "Terry Au, Sun-Ah Jun (Collaborators: Sahyang Kim, Hyuck-Joon Lee, Minjung Son, Moto Ueyama, Olivia Martinez, Wendy Hayashi)",
+    date: "1998-2000",
     agency: "National Institute of Mental Health",
     number: "1R01MH56118",
     title: "Language Acquisition--Timing and Nature of Output",
@@ -194,7 +194,7 @@ export const rows = [
   },
   {
     key: "19",
-    name: "Pat Keating",
+    name: "Pat Keating, Sun-Ah Jun",
     date: "1995-1999",
     agency: "National Science Foundation",
     number: "9511118",

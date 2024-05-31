@@ -6,14 +6,14 @@ import { Divider } from "@nextui-org/react";
 
 const AcousticAnalysis = () => {
   return (
-    <div className="bg-white p-20 text-left">
-      <Text h2 className="text-left">
-        Acoustic Analysis
-      </Text>
-      <Divider className="my-4 w-full mx-auto border-t-4 border-gray-600" />
+    <div className="px-20 md:px-20 lg:px-40 py-20 bg-white text-left text-large">
+      <Text h2>Acoustic Analysis</Text>
+      <Divider className="w-full mx-auto border-t-2 border-gray-400" />
       <VoiceSauce />
-      {/* <Soundbooth /> */}
-      {/* <PraatScript /> */}
+      <Divider className="mt-6 w-full mx-auto border-t-2 border-gray-400" />
+      <Soundbooth />
+      <Divider className="mt-10 w-full mx-auto border-t-2 border-gray-400" />
+      <PraatScript />
     </div>
   );
 };

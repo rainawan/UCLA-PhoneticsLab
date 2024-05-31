@@ -77,6 +77,12 @@ export const members = [
     link: "https://ekhlystova.wixsite.com/home",
   },
   {
+    name: "Jody Kreiman",
+    occupation: "Faculty",
+    imgSrc: Jody_Kreiman,
+    link: "https://profiles.ucla.edu/jody.kreiman",
+  },
+  {
     name: "Kevin Liang",
     occupation: "Graduate Student",
     imgSrc: Kevin_Liang,
