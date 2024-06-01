@@ -295,6 +295,134 @@ const PraatScript = () => {
         <Text h4 className="pt-6 pb-4">
           Segmentation and extraction
         </Text>
+        <Text p>
+          <div className="pl-10">
+            <ul className="list-disc">
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/Segmenter.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  segmenter
+                </a>{" "}
+                (Katherine Crosswhite)
+                <br />
+                Extract clips demarcated by labeled markers into individual AIFF
+                or WAV files {"("}KC's{" "}
+                <a
+                  href="http://web.archive.org/web/20030620172734/ling.rochester.edu/people/cross/scripts.html"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  description
+                </a>
+                {")"}.
+              </li>
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/word_chomper.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  word-chomper
+                </a>{" "}
+                (Joe Toscano)
+                <br />
+                Take a WAV file and split it into smaller files corresponding to
+                utterances.
+              </li>
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/save_intervals_to_aiff_sound_files.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  segment-to-aiffs-and-log
+                </a>
+                {" | "}
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/save_intervals_to_wav_sound_files.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  segment-to-wavs-and-log
+                </a>{" "}
+                (Mietta Lennes)
+                <br />
+                Extract textgrid-demarcated clips from LongSound into numbered
+                files and log markers.
+              </li>
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/save_labeled_intervals_to_aiff_sound_files.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  segment-to-labeled-aiffs
+                </a>
+                {" | "}
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/save_labeled_intervals_to_wav_sound_files.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  segment-to-labeled-wavs
+                </a>{" "}
+                (Mietta Lennes)
+                <br />
+                Extract textgrid-demarcated clips from LongSound into files
+                named after textgrid markers.
+              </li>
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/voiced_extract_auto.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  extract-voiced-portions
+                </a>{" "}
+                (John Tøndering)
+                <br />
+                Extract and concatenate voiced portions of selected Sound to
+                create new voiced-portions-only Sound.
+              </li>
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/save_selection_to_sound_and_textgrid.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  save-selection-to-sound-and-textgrid
+                </a>{" "}
+                (Mietta Lennes) From an open LongSound TextGrid, save selected
+                portion of LongSound and its TextGrid.
+              </li>
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/make_textgrid_from_segment_data.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  from-segmentation-data-files-to-text-grids
+                </a>{" "}
+                (Mietta Lennes)
+                <br />
+                Convert data files listing segment startpoints and labels to
+                TextGrids; cf.{" "}
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/make_textgrid_from_segment_data_endpoints.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  endpoint
+                </a>{" "}
+                version.
+              </li>
+            </ul>
+          </div>
+        </Text>
+
         <Text h4 className="pt-6 pb-4">
           Drawing pictures
         </Text>
