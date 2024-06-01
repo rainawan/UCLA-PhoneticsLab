@@ -426,11 +426,151 @@ const PraatScript = () => {
         <Text h4 className="pt-6 pb-4">
           Drawing pictures
         </Text>
+        <Text p>
+          <div className="pl-10">
+            <ul className="list-disc">
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/figure.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  draw-sample-figure
+                </a>{" "}
+                (Hugo Quené)
+                <br />
+                Demonstrates how to draw a figure (graph) using a script {"("}
+                HQ's{" "}
+                <a
+                  href="https://hugoquene.nl/quene.nl.html"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  scripts
+                </a>
+                {")."}
+              </li>
+              <li>
+                <a
+                  href="https://www.fon.hum.uva.nl/paul/diss/"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  Functional phonology
+                </a>{" "}
+                (Paul Boersma)
+                <br />
+                1998 dissertation including a number of sophisticated figure
+                drawing scripts.{" "}
+                <a
+                  href="https://www.fon.hum.uva.nl/paul/diss/ch2/lungs.draw"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  draw-lungs
+                </a>
+                {" and "}
+                <a
+                  href="https://www.fon.hum.uva.nl/paul/diss/ch2/muscles.draw"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  draw-muscle-effects
+                </a>
+                {" in "}
+                <a
+                  href="https://www.fon.hum.uva.nl/paul/diss/ch2/"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  Chapter 2: Articulation model
+                </a>
+                .
+              </li>
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/draw_distribution_bar_from_data_file.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  draw-distribution-bar
+                </a>{" "}
+                (Mietta Lennes)
+                <br />
+                Draw a makeshift bar showing distribution of labeled intervals
+                from a file of timepoint, label pairs.
+              </li>
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/draw_source_filter_model.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  draw-source-filter-model
+                </a>{" "}
+                (Niels Petersen)
+                <br />
+                Draw the components of the source-filter model of vowel
+                production to the Picture window.
+              </li>
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/draw_formant_point_to_Bark_chart.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  draw-formant-point-to-bark-chart
+                </a>{" "}
+                (Mietta Lennes)
+                <br />
+                Draw a one-Bark vowel circle from given formant values (Hz) on a
+                Bark-scale F1/F2 chart. Cf.{" "}
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/draw_formant_point_to_ERB_chart.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  draw-formant-point-to-erb-chart
+                </a>
+                : same as above script except Erb-scale chart.
+              </li>
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/mxn_plot.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  make-matrix-of-plots
+                </a>{" "}
+                (Chris Darwin)
+                <br />
+                Create a matrix of plots; format these plots by changing the
+                script code (try it with the defaults).
+              </li>
+            </ul>
+          </div>
+        </Text>
+
         <Text h4 className="pt-6 pb-4">
           Noise and speech manipulation
         </Text>
+        <Text p>
+          <div className="pl-10">
+            <ul className="list-disc">
+              <li></li>
+            </ul>
+          </div>
+        </Text>
+
         <Text h4 className="pt-6 pb-4">
           More sound analysis
+        </Text>
+        <Text p>
+          <div className="pl-10">
+            <ul className="list-disc">
+              <li></li>
+            </ul>
+          </div>
         </Text>
       </div>
     </div>
