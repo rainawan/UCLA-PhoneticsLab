@@ -1,6 +1,10 @@
 import Text from "../../../components/Text";
 import { Code } from "@nextui-org/react";
-import { sound_files, text_grids } from "../../../components/PraatScript";
+import {
+  noise_and_speech,
+  sound_files,
+  text_grids,
+} from "../../../components/PraatScript";
 
 const PraatScript = () => {
   return (
@@ -557,7 +561,20 @@ const PraatScript = () => {
         <Text p>
           <div className="pl-10">
             <ul className="list-disc">
-              <li></li>
+              {noise_and_speech.map((item, index) => (
+                <li key={index}>
+                  <a
+                    href={item.href}
+                    className="text-blue hover:underline"
+                    target="_blank"
+                  >
+                    {item.text}
+                  </a>{" "}
+                  ({item.author})
+                  <br />
+                  {item.desc}
+                </li>
+              ))}
             </ul>
           </div>
         </Text>

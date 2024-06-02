@@ -82,19 +82,88 @@ export const text_grids = [
   },
 ];
 
-export const analysis = [
+export const noise_and_speech = [
   {
-    href: "",
-    text: "",
-    author: "",
-    desc: "",
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/FlatIntonationSynthesizer.txt",
+    text: "flat-intonation-resynthesizer",
+    author: "Chad Vicenik",
+    desc: "Resynthesizes all files in a directory to have flat pitch of a given frequency.",
   },
   {
-    href: "",
-    text: "",
-    author: "",
-    desc: "",
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/adjust_intensity_whole_file.txt",
+    text: "adjust-intensity",
+    author: "Katherine Crosswhite",
+    desc: "Scale a set of sounds so that their peak amplitudes are identical.",
   },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/IntensityScaler.txt",
+    text: "intensity-scaler",
+    author: "Chad Vicenik",
+    desc: "Scales the intensity of all files in a directory to the same value.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/IntensityNeutralizer.txt",
+    text: "intensity-neutralizer",
+    author: "Chad Vicenik",
+    desc: "Flattens the intensity curve of all files in a directory.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/resampler.txt",
+    text: "file-resampler",
+    author: "Chad Vicenik",
+    desc: "Resamples all the files in a directory.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/LowPassFilter.txt",
+    text: "low-pass-filter",
+    author: "Chad Vicenik",
+    desc: "Low-pass filters all files in a directory.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/create_sustained_vowel_lpc.txt",
+    text: "create-sustained-vowel",
+    author: "Niels Petersen",
+    desc: "Create a sustained vowel of the specified type using the LF source model.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/create_waveforms.txt",
+    text: "create-waveforms",
+    author: "Niels Petersen",
+    desc: "Create various kinds of waveforms (sawtooth, square, sine, white noise, pink noise, etc.).",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/comb_filter.txt",
+    text: "comb-filter-noise",
+    author: "Chris Darwin",
+    desc: "Generate and comb-filter white noise.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/Shannon.txt",
+    text: "shannon-am-noise",
+    author: "Chris Darwin",
+    desc: "Produce Shannon-type AM noise from a selected Sound file using four bands.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/SWS.txt",
+    text: "sine-wave-speech",
+    author: "Chris Darwin",
+    desc: "Create three-formant sine-wave speech using selected Sound object.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/VTchange.txt",
+    text: "vocal-tract-change",
+    author: "Chris Darwin",
+    desc: "Change size of vocal tract (formants, but not duration/pitch)",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/metronomeL000.txt",
+    text: "metronome",
+    author: "Hugo Quené",
+    desc: "Simple one-beat metronome. Careful: the default durations are very long; they should be set shorter before testing, lest Praat be tied up for minutes. Also, references to mywhoosh.wav should be changed to some extant WAV or removed.",
+  },
+];
+
+export const sound_analysis = [
   {
     href: "",
     text: "",
