@@ -220,10 +220,60 @@ export const sound_analysis = [
   },
 ];
 
-export const links = [
+export const links_and_collections = [
+  {
+    href: "https://www.fon.hum.uva.nl/praat/",
+    text: "Praat",
+    desc: "main Praat website (e.g. download the program).",
+  },
+  {
+    href: "https://www.yahoo.com/",
+    text: "Praat users group",
+    desc: "Yahoo! discussion group for Praat users; some scripts available in database.",
+  },
+  {
+    href: "https://lennes.github.io/spect/",
+    text: "Mietta Lennes",
+    desc: "a large number of scripts, many quite involved, with very informative descriptions.",
+  },
+  {
+    href: "https://github.com/stylerw/styler_praat_scripts/blob/master/sinewavespeech_chris_darwin.praat",
+    text: "Chris Darwin",
+    desc: "advanced scripts for e.g. sine-wave speech, Shannon AM-noise speech, resizing vocal tract, etc.",
+  },
+  {
+    href: "https://www.fon.hum.uva.nl/paul/diss/",
+    text: "Paul Boersma",
+    desc: "explore links for various highly tailored scripts associated with PB's 1998 dissertation.",
+  },
+  {
+    href: "http://web.archive.org/web/20030620172734/ling.rochester.edu/people/cross/scripts.html",
+    text: "Katherine Crosswhite",
+    desc: "the code of the first few scripts is very well documented; good for learning Praat scripting.",
+  },
+  {
+    href: "http://web.archive.org/web/20070208013222/http://www.cphling.dk/pers/nrp/akustik/akustik.html",
+    text: "Niels Petersen",
+    desc: "20-some scripts at the bottom.",
+  },
+  {
+    href: "https://hugoquene.nl/quene.nl.html",
+    text: "Hugo Quené",
+    desc: "some neat scripts, including several metronomes.",
+  },
+  {
+    href: "https://github.com/stylerw/styler_praat_scripts/blob/master/formant_automeasure/FormantMeasureVerifyv3.praat",
+    text: "Bert Remijsen",
+    desc: "some very well explained scripts, with sample input.",
+  },
+  {
+    href: "http://web.archive.org/web/20080104122516/http://www.cphling.dk/pers/johtnd/praat/my_praat.htm",
+    text: "John Tøndering",
+    desc: "a “Label.man” (annotate from ManPage) package plus a few other common scripts.",
+  },
   {
     href: "",
-    text: "",
-    desc: "",
+    text: "Joe Toscano:",
+    desc: "archived scripts, including his own.",
   },
 ];
