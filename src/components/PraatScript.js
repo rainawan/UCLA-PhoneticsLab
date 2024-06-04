@@ -165,9 +165,65 @@ export const noise_and_speech = [
 
 export const sound_analysis = [
   {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/amplitude_gating.txt",
+    text: "amplitude-gating",
+    author: "Niels Petersen",
+    desc: "Gates the selected Sound object in and out (in intensity) using specified rise and fall times.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/voice_rep_from_object_window.txt",
+    text: "voice-report",
+    author: "Niels Petersen",
+    desc: "Generate a customized “voice report” for the selected Sound.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/Fodurndynamic.txt",
+    text: "adjust-f0-and-duration",
+    author: "Chris Darwin",
+    desc: "Globally alter fundamental frequency and/or duration of all selected Sound objects.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/draw_spectrum_from_selection.txt",
+    text: "draw-fft-spectrum",
+    author: "Mietta Lennes",
+    desc: "Draw and save FFT spectrum for 40 ms window around cursor; run from sound editor.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/draw_LPC_spectrum_from_selection.txt",
+    text: "draw-lpc-spectrum",
+    author: "Mietta Lennes",
+    desc: "Like draw-fft-spectrum above, but LPC spectrum.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/CreateTable.txt",
+    text: "create-analysis-table",
+    author: "Setsuko Shirai",
+    desc: "Create a table showing pitch, intensity, and formants every 10 ms for a set of WAVs (untested).",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/pitch_unit_conversion.txt",
+    text: "pitch-unit-conversion",
+    author: "Niels Petersen",
+    desc: "Convert between different types of units, e.g. Hertz to Semitones, Bark, or Mel.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/Make_stereo.txt",
+    text: "make-stereo",
+    author: "Chris Darwin",
+    desc: "Combine selected Sounds to make a stereo Sound file.",
+  },
+  {
+    href: "http://phonetics.linguistics.ucla.edu/facilities/acoustic/Spectral_Rotation.txt",
+    text: "spectral-rotation",
+    author: "Chris Darwin",
+    desc: "",
+  },
+];
+
+export const links = [
+  {
     href: "",
     text: "",
-    author: "",
     desc: "",
   },
 ];

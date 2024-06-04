@@ -2,6 +2,7 @@ import Text from "../../../components/Text";
 import { Code } from "@nextui-org/react";
 import {
   noise_and_speech,
+  sound_analysis,
   sound_files,
   text_grids,
 } from "../../../components/PraatScript";
@@ -581,6 +582,74 @@ const PraatScript = () => {
 
         <Text h4 className="pt-6 pb-4">
           More sound analysis
+        </Text>
+        <Text p>
+          <div className="pl-10">
+            <ul className="list-disc">
+              {sound_analysis.map((item, index) => (
+                <li key={index}>
+                  <a
+                    href={item.href}
+                    className="text-blue hover:underline"
+                    target="_blank"
+                  >
+                    {item.text}
+                  </a>{" "}
+                  ({item.author})
+                  <br />
+                  {item.desc}
+                </li>
+              ))}
+            </ul>
+            <ul className="list-disc">
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/vowelonset_v3_praat.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  mark-vowel-onsets
+                </a>{" "}
+                (Hugo Quené)
+                <br />
+                Find the vowel onsets in a selected Sound and log their
+                timepoints in a new PointProcess; can then use HQ's{" "}
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/writePP.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  write-pp
+                </a>{" "}
+                to record the PointProcess timepoints in a data file.
+              </li>
+              <li>
+                <a
+                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/mxn_plot.txt"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  annotate-using-manpage
+                </a>{" "}
+                (John Tøndering)
+                <br />
+                Annotate a TextGrid with phonetic symbols using ManPage {"("}see
+                JT's{" "}
+                <a
+                  href="http://web.archive.org/web/20080104122516/http://www.cphling.dk/pers/johtnd/praat/my_praat.htm"
+                  className="text-blue hover:underline"
+                  target="_blank"
+                >
+                  description
+                </a>
+                {")."}
+              </li>
+            </ul>
+          </div>
+        </Text>
+
+        <Text h4 className="pt-6 pb-4">
+          Praat Scripts: Links and Online Collections
         </Text>
         <Text p>
           <div className="pl-10">
