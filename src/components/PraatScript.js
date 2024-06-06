@@ -273,7 +273,7 @@ export const links_and_collections = [
   },
   {
     href: "",
-    text: "Joe Toscano:",
+    text: "Joe Toscano",
     desc: "archived scripts, including his own.",
   },
 ];
