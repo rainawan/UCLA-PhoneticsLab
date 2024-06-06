@@ -6,7 +6,7 @@ import changelog from "../../../components/resources/acoustic_analysis/changelog
 const VoiceSauce = () => {
   return (
     <div>
-      <div>
+      <div className="pt-10">
         <Text h3>Voice Sauce</Text>
         <Accordion variant="shadow">
           <AccordionItem title="A Program for Voice Analysis">
@@ -206,32 +206,27 @@ const VoiceSauce = () => {
               </Text>
             </div>
           </AccordionItem>
-          <AccordionItem title="title">
+          <AccordionItem title="Acknowledgements">
             <div className="pb-10 px-4">
-              <Text h4>header</Text>
-              <Text p>desc</Text>
+              <Text pbold>Acknowledgements:</Text>
+              <Text p>
+                This work was supported in part by grants from the NSF to UCLA.
+              </Text>
+              <Text pbold>How to cite:</Text>
+              <Text p>
+                The original reference for VoiceSauce is Yen Shue's
+                dissertation: Y.-L. Shue (2010), The voice source in speech
+                production: Data, analysis and models. UCLA dissertation. <br />
+                VoiceSauce is described in this paper: Shue, Y.-L., P. Keating ,
+                C. Vicenik, K. Yu (2011) VoiceSauce: A program for voice
+                analysis, Proceedings of the ICPhS XVII, 1846-1849. <br />
+                Note: Do not be fooled by the bogus citation that Google Scholar
+                has somehow concocted (a supposed 2010 paper in the supposed
+                journal "Energy", with pages H1-A1!).
+              </Text>
             </div>
           </AccordionItem>
         </Accordion>
-      </div>
-
-      <div className="pt-10">
-        <Text pbold>Acknowledgements:</Text>
-        <Text p>
-          This work was supported in part by grants from the NSF to UCLA.
-        </Text>
-        <Text pbold>How to cite:</Text>
-        <Text p>
-          The original reference for VoiceSauce is Yen Shue's dissertation:
-          Y.-L. Shue (2010), The voice source in speech production: Data,
-          analysis and models. UCLA dissertation. <br />
-          VoiceSauce is described in this paper: Shue, Y.-L., P. Keating , C.
-          Vicenik, K. Yu (2011) VoiceSauce: A program for voice analysis,
-          Proceedings of the ICPhS XVII, 1846-1849. <br />
-          Note: Do not be fooled by the bogus citation that Google Scholar has
-          somehow concocted (a supposed 2010 paper in the supposed journal
-          "Energy", with pages H1-A1!).
-        </Text>
       </div>
     </div>
   );
