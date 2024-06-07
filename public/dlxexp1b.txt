@@ -1,0 +1,185 @@
+function dlxexp1b
+
+% DLXEXP1B  Run dyslexia experiment 1b (discrimination).
+%
+% Script written by Stephen Wilson <stephenw@ucla.edu>, 2003.
+
+% variables
+soundvolume = 1; % you can change the sound volume here
+bbox = 1; % set this to 1 if there's a button box, 0 if there isn't
+differentkey = '1';
+samekey = '3';
+promptfont = 'Arial';
+textsize = 24;
+
+% specific initialization
+npractice = 8;
+nreal = 120; % 60 trials on the 95s then 60 on the 45s
+ntotal = npractice + nreal;
+mode = 95; % this gets changed to 45 at the appropriate point
+
+thispath = which('dlxexp1b');
+[pathstr name ext versn] = fileparts(thispath);
+cd(pathstr);
+
+rand('state', sum(100*clock));
+% conds are coded xy where x = sound 1, y = sound 2
+practiceconds = [15 26 37 48 51 62 73 84];
+practiceconds = practiceconds(randperm(8));
+realconds1 = [repmat([13 24 35 46 57 68 86 75 64, 53, 42, 31], 1, 3) ...
+    repmat([11 22 33 44 55 66 77 88], 1, 2) repmat([17 28 82 71], 1, 2)];
+realconds2 = realconds1;
+realconds1 = realconds1(randperm(length(realconds1)));
+realconds2 = realconds2(randperm(length(realconds2)));
+conds = [practiceconds realconds1 realconds2];
+
+snd('Open');
+
+if bbox
+    port = psychserial('Open', '.Bin', '.Bout', 19200);	
+    a0 = psychserial('Read', port, 0.020); % I don't know what this does
+else
+    port = 0;
+end
+
+% generic initialization
+outfid = dlxexpinit('dlxexp1b');
+if outfid == -1
+    return;
+end
+
+fprintf(outfid, 'trial\tstim\texactstim\trt\tkey\tbbox\tresponse\n');
+
+screen('CloseAll');
+bg = 255;
+[w, wrect] = screen(0, 'OpenWindow', [bg bg bg], [], 32);
+x = wrect(3) / 2;
+y = wrect(4) / 2;
+hidecursor;
+screen(w, 'TextFont', promptfont);
+screen(w, 'TextSize', textsize);
+screen(w, 'TextStyle', 1);
+accuratewait(1);
+
+% instructions
+
+prompt = {'This word is SPY:', 'Listen to SPY again', 'This word is SKY:', 'Listen to SKY again'};
+sndfname = {'S19511.wav', 'S19511.wav', 'S19518.wav', 'S19518.wav'};
+for i = 1:4
+	width = screen(w, 'TextWidth', prompt{i});
+	screen(w, 'DrawText', prompt{i}, x - width / 2, y, 0);
+	while ~kbcheck, end
+	[wav, samprate, bits] = wavread(fullfile('dlxexp1-wavs', sndfname{i}));
+	wav = wav';
+	snd('Quiet');
+	snd('Play', wav * soundvolume, samprate, bits);
+    screen(w, 'FillRect', bg);
+    while snd('IsPlaying'), end
+	accuratewait(1);
+end
+
+screen(w, 'DrawText', 'Now you are going to hear two words, one after the other', 200, 200, 0);
+screen(w, 'DrawText', 'Listen to both of them, and decide if they', 200, 250, 0);
+screen(w, 'DrawText', 'sound the same or different.', 200, 275,0);
+screen(w, 'DrawText', 'Even when they are the same word,', 200, 325, 0);
+screen(w, 'DrawText', 'they might still sound different.', 200, 350, 0);
+screen(w, 'DrawText', 'If they sound the same, press the SAME button', 200, 400, 0);
+screen(w, 'DrawText', 'If they sound different, press the DIFFERENT button', 200, 450, 0);
+
+accuratewait(1);
+while ~kbcheck, end
+screen(w, 'FillRect', bg);
+accuratewait(1);
+
+width = screen(w, 'TextWidth', 'Different                 Same');
+
+% main loop
+for t = 1:ntotal
+    if mod(t - npractice, 10) == 1
+        pic = mod(floor((t - npractice) / 10), 6) + 1;
+		p = imread(fullfile('dlxexp1-pics', sprintf('level%d.jpg', pic)));
+		screen(w, 'PutImage', p);
+        accuratewait(1);
+        while ~kbcheck, end
+        screen(w, 'FillRect', bg);
+    end
+    
+    screen(w, 'DrawText', 'Different                 Same', x - width / 2, y, 0);
+    accuratewait(0.2);
+
+    snd1 = floor(conds(t) / 10);
+    snd2 = mod(conds(t), 10);
+    
+    [wav1, samprate, bits] = wavread(fullfile('dlxexp1-wavs', sprintf('S1%d1%d.wav', mode, snd1)));
+    wav1 = wav1';
+    [wav2, samprate, bits] = wavread(fullfile('dlxexp1-wavs', sprintf('S1%d1%d.wav', mode, snd2)));
+    wav2 = wav2';
+
+    snd('Quiet');
+    snd('Play', wav1 * soundvolume, samprate, bits);
+    while snd('IsPlaying'), end
+    accuratewait(0.4);
+    snd('Quiet');
+    snd('Play', wav2 * soundvolume, samprate, bits);
+    while snd('IsPlaying'), end
+    
+    [keydown, keycode, button, rt] = getresponse(bbox, port);
+    keycode = keycode(1);
+    
+    if keycode == differentkey | button == 1
+        response = 'different';
+    elseif keycode == samekey | button == 4
+        response = 'same';
+    else
+        response = 'invalid';
+    end
+
+    stimstep = abs(snd1 - snd2);
+    switch(stimstep)
+    case 0
+        stim = 'same';
+    case 2
+        stim = '2step';
+    case 4
+        stim = '4step';
+    case 6
+        stim = '6step';
+    end
+    fprintf(outfid, '%d\t%s\t%d\t%.3f\t%s\t%d\t%s\n', t, stim, conds(t), rt, keycode, button, response);
+    while kbcheck, end
+    accuratewait(0.4);
+    screen(w, 'FillRect', bg);
+    accuratewait(0.1);
+    
+    if t == npractice
+        screen(w, 'FillRect', bg);
+        screen(w, 'DrawText', 'You''ve finised the practice items. Press any key to continue.', 200, 200, 0);
+        accuratewait(3);
+        kbwait;
+        screen(w, 'FillRect', bg);
+        accuratewait(1);
+    elseif t == npractice + nreal / 2
+        mode = 45;
+        screen(w, 'FillRect', bg);
+		p = imread(fullfile('dlxexp1-pics', 'congrats.jpg'));
+		screen(w, 'PutImage', p);
+		accuratewait(2);
+		kbwait;
+        screen(w, 'FillRect', bg);
+        screen(w, 'DrawText', 'Press any key to continue.', 200, 200, 0);
+        accuratewait(3);
+        kbwait;
+        screen(w, 'FillRect', bg);
+        accuratewait(1);
+    end
+end
+
+% finish up
+snd('Close');
+fclose(outfid);
+screen(w, 'FillRect', bg);
+p = imread(fullfile('dlxexp1-pics', 'congrats.jpg'));
+screen(w, 'PutImage', p);
+accuratewait(2);
+kbwait;
+screen('CloseAll');

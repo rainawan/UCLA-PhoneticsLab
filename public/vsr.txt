@@ -1,0 +1,232 @@
+function vsr
+
+global g;
+
+% cd to own directory
+thispath = which('vsr3');
+[pathstr, name, ext, versn] = fileparts(thispath);
+cd(pathstr);
+
+% get session parameters
+subjid = input('Subject id: ', 's');
+mode = input('Practice (p) or real (r): ', 's');
+if strcmp(mode, ''), error('Invalid choice.'); end
+if mode(1) == 'p'
+    mode = 1;
+elseif mode(1) == 'r'
+    mode = 2;
+else
+    error('Invalid choice.');
+end
+
+% initialize screen
+Screen('CloseAll');
+[g.w, g.wrect] = Screen(0, 'OpenWindow', 200, [], 8);
+g.cx = g.wrect(3) / 2;
+screen_clut = [[0:255]', [0:255]', [0:255]'];
+screen_clut(2, :) = [200 200 200]; % background
+screen_clut(3, :) = [255 255 200]; % boxes
+screen_clut(4, :) = [255 255 0]; % selected box
+screen_clut(5, :) = [170 210 210]; % solution boxes
+screen_clut(6, :) = [255 0 0]; % sound played dots
+screen_clut(7, :) = [255 170 170]; % end button
+Screen(g.w, 'SetClut', screen_clut);
+Screen(g.w, 'TextFont', 'Arial');
+Screen(g.w, 'TextSize', 18);
+Screen(g.w, 'TextStyle', 1); % bold
+
+g.solnbox1rect = [g.cx - 400, 50, g.cx - 50, 300];
+g.solnbox2rect = [g.cx + 50, 50, g.cx + 400, 300];
+g.endbuttonrect = [g.cx - 100, g.wrect(4) - 100, g.cx + 100, g.wrect(4) - 50];
+
+% timing for mouse clicks
+mindragtime = 0.15;
+maxsoundtime = 0.30;
+
+% initialize boxes and sounds
+g.boxsize = 30;
+g.spacing = 80;
+
+if mode == 1
+    g.nboxes = 10;
+    g.x = repmat(g.cx + g.spacing * (-2:2), [1 2]);
+    g.y = kron([400:g.spacing:(400 + g.spacing)], ones(1, 5));
+    wavs = {'p1.wav', 'p2.wav', 'p3.wav', 'p4.wav', 'p5.wav', ...
+        'p6.wav', 'p7.wav', 'p8.wav', 'p9.wav', 'p10.wav'};
+elseif mode == 2
+    g.nboxes = 22;
+    g.x = repmat(g.cx + g.spacing * (-2:2), [1 5]);
+    g.y = kron([400:g.spacing:(400 + g.spacing * 4)], ones(1, 5));
+    wavs = {'r1.wav', 'r2.wav', 'r3.wav', 'r4.wav', 'r5.wav', ...
+        'r6.wav', 'r7.wav', 'r8.wav', 'r9.wav', 'r10.wav', ...
+        'r11.wav', 'r12.wav', 'r13.wav', 'r14.wav', 'r15.wav', ...
+        'r16.wav', 'r17.wav', 'r18.wav', 'r19.wav', 'r20.wav', ...
+        'r21.wav', 'r22.wav', 'r23.wav', 'r24.wav', 'r25.wav'};
+end
+g.order = 1:g.nboxes;
+g.nclicks = zeros(1, g.nboxes);
+g.category = zeros(1, g.nboxes);
+
+% draw screen
+drawscreen;
+
+% main loop
+while 1
+    [x, y, buttons] = GetMouse;
+    if buttons(1) == 1
+        initialx = x;
+        initialy = y;
+        
+        % was finished button clicked?
+        if IsInRect(x, y, g.endbuttonrect)
+            if any(g.category == 0)
+                beep;
+            else
+                m = [1:g.nboxes; g.category; g.nclicks]';
+                dlmwrite(subjid, m, '\t');
+                Screen('CloseAll');
+                fprintf('Thank you for your time.\n');
+                return
+            end
+        end
+        
+        % was click in any of the boxes?
+        for i = 1:g.nboxes
+            curbox = g.order(i);
+            if abs(x - g.x(curbox)) <= g.boxsize & ...
+                    abs(y - g.y(curbox)) <= g.boxsize
+                starttime = GetSecs;
+                g.order = [-curbox g.order(g.order ~= curbox)]; % negative to hilite
+                boxrect = [g.x(curbox) - g.boxsize, g.y(curbox) - g.boxsize, ...
+                    g.x(curbox) + g.boxsize, g.y(curbox) + g.boxsize];
+                Screen(g.w, 'SetDrawingRegion', boxrect);
+                drawscreen;
+                Screen(g.w, 'SetDrawingRegion', g.wrect);
+                
+                xoffset = x - g.x(curbox);
+                yoffset = y - g.y(curbox);
+                
+                % drag
+                while buttons(1) == 1
+                    [x, y, buttons] = GetMouse;
+                    if GetSecs > starttime + mindragtime & g.nclicks(curbox) > 0
+                        lastrect = [g.x(curbox) - g.boxsize, g.y(curbox) - g.boxsize, ...
+                            g.x(curbox) + g.boxsize, g.y(curbox) + g.boxsize];
+                        g.x(curbox) = x - xoffset;
+                        g.y(curbox) = y - yoffset;
+                        % don't allow drag off edge of screen
+                        if g.x(curbox) < g.boxsize
+                            g.x(curbox) = g.boxsize;
+                        end
+                        if g.x(curbox) > g.wrect(3) - g.boxsize
+                            g.x(curbox) = g.wrect(3) - g.boxsize;
+                        end
+                        if g.y(curbox) < g.boxsize
+                            g.y(curbox) = g.boxsize;
+                        end
+                        if g.y(curbox) > g.wrect(4) - g.boxsize
+                            g.y(curbox) = g.wrect(4) - g.boxsize
+                        end
+                        newrect = [g.x(curbox) - g.boxsize, g.y(curbox) - g.boxsize, ...
+                            g.x(curbox) + g.boxsize, g.y(curbox) + g.boxsize];
+                        % redraw
+                        if any(lastrect ~= newrect)
+                            redrawrect = UnionRect(lastrect, newrect);
+                            Screen(g.w, 'SetDrawingRegion', redrawrect);
+                            drawscreen;
+                            Screen(g.w, 'SetDrawingRegion', g.wrect);
+                        end
+                    end
+                end
+                % play sound if click was short enough
+                if GetSecs < starttime + maxsoundtime & ...
+                        abs(x - initialx) < 5 & abs(y - initialy) < 5
+                    if exist(wavs{curbox}) == 2
+                        [y, fs, nbits] = wavread(wavs{curbox});
+                        sound(y, fs);
+                    else
+                        beep;
+                    end
+                    g.nclicks(curbox) = g.nclicks(curbox) + 1;
+                end
+                % hilite for at least a moment
+                while GetSecs < starttime + maxsoundtime
+                end
+                % unselect and redraw
+                g.order(1) = -g.order(1);
+                boxrect = [g.x(curbox) - g.boxsize, g.y(curbox) - g.boxsize, ...
+                    g.x(curbox) + g.boxsize, g.y(curbox) + g.boxsize];
+                Screen(g.w, 'SetDrawingRegion', boxrect);
+                drawscreen;
+                Screen(g.w, 'SetDrawingRegion', g.wrect);
+                % categorize
+                if IsInRect(g.x(curbox), g.y(curbox), g.solnbox1rect)
+                    g.category(curbox) = 1;
+                elseif IsInRect(g.x(curbox), g.y(curbox), g.solnbox2rect)
+                    g.category(curbox) = 2;
+                else
+                    g.category(curbox) = 0;
+                end
+                
+                x = -100; y = -100; % skip through rest of loop
+            end
+        end
+    end
+    
+    % check for quit key
+    [keyIsDown, secs, keyCode] = KbCheck;
+    key = KbName(keyCode);
+    if ~isempty(key)
+        if key(1) == 'q'
+            Screen('CloseAll');
+            return
+        end
+    end
+end
+
+
+function drawscreen
+
+global g;
+
+Screen(g.w, 'FillRect', 1);
+
+% solution boxes
+Screen(g.w, 'FrameRect', 0, g.solnbox1rect, 2);
+Screen(g.w, 'FillRect', 4, InsetRect(g.solnbox1rect, 2, 2));
+Screen(g.w, 'FrameRect', 0, g.solnbox2rect, 2);
+Screen(g.w, 'FillRect', 4, InsetRect(g.solnbox2rect, 2, 2));
+
+% end button
+Screen(g.w, 'FrameRect', 0, g.endbuttonrect, 2);
+Screen(g.w, 'FillRect', 6, InsetRect(g.endbuttonrect, 2, 2));
+boxtext = 'Finished';
+textwidth = Screen(g.w, 'TextWidth', boxtext);
+Screen(g.w, 'DrawText', boxtext, g.cx - textwidth / 2, g.wrect(4) - 70, 0);
+
+% boxes
+for i = fliplr(1:g.nboxes)
+    curbox = g.order(i);
+    if curbox < 0
+        curbox = -curbox;
+        boxcolor = 3;
+    else
+        boxcolor = 2;
+    end
+    boxrect = [g.x(curbox) - g.boxsize, g.y(curbox) - g.boxsize, ...
+        g.x(curbox) + g.boxsize, g.y(curbox) + g.boxsize];
+    Screen(g.w, 'FrameRect', 0, boxrect, 2);
+    Screen(g.w, 'FillRect', boxcolor, InsetRect(boxrect, 2, 2));
+    
+    nclicks = g.nclicks(curbox);
+    if nclicks > 0
+        for i = 0:(nclicks - 1)
+            pt = [g.x(curbox) + (mod(i, 10) - 5) * 3, boxrect(2) + 5 + floor(i /10) * 3];
+            Screen(g.w, 'FrameRect', 5, [pt (pt + 2)]);
+        end
+    end
+    
+    boxtext = sprintf('%d', curbox);
+    textwidth = Screen(g.w, 'TextWidth', boxtext);
+    Screen(g.w, 'DrawText', boxtext, g.x(curbox) - textwidth / 2, g.y(curbox) + 8, 0);
+end

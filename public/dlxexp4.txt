@@ -1,0 +1,98 @@
+function dlxexp4
+
+% DLXEXP4  Run dyslexia experiment 4.
+%
+% Script written by Stephen Wilson <stephenw@ucla.edu>, 2002.
+
+% variables
+soundvolume = 1; % you can change the sound volume here
+bbox = 1; % set this to 1 if there's a button box, 0 if there isn't
+
+% specific initialization
+numgates = 6; % total number of gates
+firstgatepractice = 3; % first gate to start on for practice items
+firstgatereal = 2; % first gate to start on for real items
+numpractice = 3; % number of practice items
+numtargets = 22; % number of real items
+
+thispath = which('dlxexp4');
+[pathstr name ext versn] = fileparts(thispath);
+cd(pathstr);
+
+% words = textread('dlxexp4-list.txt', '%s', 'delimiter', '\n', 'whitespace', '');
+words = mytextread('dlxexp4-list.txt'); % Matlab version 5 does not have textread
+
+trialnum = 0;
+
+snd('Open');
+rand('state', sum(100*clock));
+
+if bbox
+    port = psychserial('Open', '.Bin', '.Bout', 19200);
+    a0 = psychserial('Read', port, 0.020); % I don't know what this does
+else
+    port = 0;
+end
+
+% generic initialization
+outfid = dlxexpinit('dlxexp4');
+if outfid == -1
+    return;
+end
+fprintf(outfid, 'trial\tgate\twordid\tword\trt\tkey\tbbox\n');
+
+screen('CloseAll');
+grey = 100;
+[w, wRect] = screen(0, 'OpenWindow', grey, [], 8);
+screen_clut = [[0:255]', [0:255]', [0:255]'];
+err = screen(w, 'SetClut', screen_clut);
+hidecursor;
+accuratewait(3);
+
+% main loop
+for phase = 1:2
+    if phase == 1
+        numwords = numpractice;
+        base = 0;
+        firstgate = firstgatepractice;
+    else
+        numwords = numtargets;
+        base = numpractice;
+        firstgate = firstgatereal;
+        
+        screen(w, 'DrawText', 'You''ve finised the practice items. Press any key when you''re ready to start.', 200, 200, 255);
+        accuratewait(1);
+        kbwait;
+        screen(w, 'FillRect', grey);
+        accuratewait(3);
+    end
+    
+	for gate = firstgate:numgates
+        wordorder = randperm(numwords) + base;
+        
+        for word = 1:numwords
+            trialnum = trialnum + 1;
+            filename = [words{wordorder(word)} '_gate' num2str(gate) '.wav'];
+            [wav, samprate, bits] = wavread(fullfile('dlxexp4-wavs', filename));
+            wav = wav'; % this is necessary to run on mac
+            snd('Play', wav * soundvolume, samprate, bits);
+            
+            [keydown, keycode, button, rt] = getresponse(bbox, port);
+            snd('Quiet');
+            fprintf(outfid, '%d\t%d\t%d\t%s\t%.3f\t%s\t%d\n', trialnum, gate, ...
+                wordorder(word), words{wordorder(word)}, rt, keycode, button);
+            
+            while kbcheck
+            end
+            accuratewait(0.5);
+        end
+	end
+end
+
+% finish up
+snd('Close');
+fclose(outfid);
+screen(w, 'DrawText', 'You''ve finished! (Press any key to continue.)', 200, 200, 255);
+accuratewait(1);
+kbwait;
+screen('CloseAll');
