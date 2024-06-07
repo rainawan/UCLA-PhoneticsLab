@@ -1,6 +1,5 @@
 import Text from "../../components/Text";
 import VoiceSauce from "./AcousticAnalysis/VoiceSauce";
-import Soundbooth from "./AcousticAnalysis/Soundbooth";
 import PraatScript from "./AcousticAnalysis/PraatScript";
 import { Divider } from "@nextui-org/react";
 
@@ -10,8 +9,6 @@ const AcousticAnalysis = () => {
       <Text h2>Acoustic Analysis</Text>
       <Divider className="w-full mx-auto border-t-2 border-gray-400" />
       <VoiceSauce />
-      <Divider className="mt-6 w-full mx-auto border-t-2 border-gray-400" />
-      <Soundbooth />
       <Divider className="mt-10 w-full mx-auto border-t-2 border-gray-400" />
       <PraatScript />
     </div>

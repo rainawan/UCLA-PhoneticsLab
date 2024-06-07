@@ -1,0 +1,158 @@
+function dlxexp1a
+
+% DLXEXP1A  Run dyslexia experiment 1a (identification).
+%
+% Script written by Stephen Wilson <stephenw@ucla.edu>, 2003.
+
+% variables
+soundvolume = 1; % you can change the sound volume here
+bbox = 1; % set this to 1 if there's a button box, 0 if there isn't
+leftkey = '1';
+rightkey = '3';
+dontknowkey = '2';
+showtrialnumber = 1; % 1 to show, 0 not to show
+
+% specific initialization
+npractice = 6;
+nreal = 64; % 32 trials on the 95s then 32 on the 45s
+ntotal = npractice + nreal;
+mode = 95; % this gets changed to 45 at the appropriate point
+
+thispath = which('dlxexp1a');
+[pathstr name ext versn] = fileparts(thispath);
+cd(pathstr);
+
+rand('state', sum(100*clock));
+conds = [1 8 8 1 8 1]; % practice in fixed order
+for i = 1:8
+    c = 1:8;
+    c = c(randperm(8));
+    conds = [conds c];
+end
+
+snd('Open');
+
+if bbox
+    port = psychserial('Open', '.Bin', '.Bout', 19200);	
+    a0 = psychserial('Read', port, 0.020); % I don't know what this does
+else
+    port = 0;
+end
+
+% generic initialization
+outfid = dlxexpinit('dlxexp1a');
+if outfid == -1
+    return;
+end
+
+fprintf(outfid, 'trial\tstim\torder\trt\tkey\tbbox\tresponse\n');
+
+screen('CloseAll');
+bg = 255;
+[w, wrect] = screen(0, 'OpenWindow', [bg bg bg], [], 32);
+x = wrect(3) / 2;
+y = wrect(4) / 2;
+hidecursor;
+accuratewait(1);
+
+% instructions
+
+screen(w, 'DrawText', '        INSTRUCTIONS', 200, 200, 0);
+screen(w, 'DrawText', 'Listen carefully to the word.  Then point to', 200, 250, 0);
+screen(w, 'DrawText', 'the picture of the word that you heard.', 200, 275,0);
+screen(w, 'DrawText', '(Press ''1'' for the LEFT picture', 200, 325, 0);
+screen(w, 'DrawText', ' Press ''3'' for the RIGHT picture', 200, 350, 0);
+screen(w, 'DrawText', ' Press ''2'' if you''re not sure)', 200, 375, 0);
+screen(w, 'DrawText', '** PRESS ANY KEY TO START **', 200, 425, 0);
+
+accuratewait(1);
+while ~kbcheck, end
+screen(w, 'FillRect', bg);
+accuratewait(1);
+
+% main loop
+for t = 1:ntotal
+
+    % choose order of pictures on screen
+    order = sample([1 2]);
+    if order == 1
+        picfname = fullfile('dlxexp1-pics', 'skyspy.jpg');
+    else
+        picfname = fullfile('dlxexp1-pics', 'spysky.jpg');
+    end
+    
+    % display picture
+    p = imread(picfname);
+    screen(w, 'PutImage', p);
+    if t > npractice & showtrialnumber == 1
+        screen(w, 'DrawText', num2str(t - npractice), x + 20, y, 0);
+    end
+    
+    accuratewait(0.25);
+    
+    [wav, samprate, bits] = wavread(fullfile('dlxexp1-wavs', sprintf('S1%d1%d.wav', mode, conds(t))));
+    wav = wav';
+    snd('Quiet');
+    snd('Play', wav * soundvolume, samprate, bits);
+    
+    while snd('IsPlaying'), end
+    
+    [keydown, keycode, button, rt] = getresponse(bbox, port);
+    keycode = keycode(1);
+    
+    switch(order)
+    case 1 % skyspy
+        if keycode == leftkey | button == 1
+            response = 'sky';
+        elseif keycode == rightkey | button == 4
+            response = 'spy';
+        elseif keycode == dontknowkey | button == 2 % i am not sure about this button code
+            response = 'dontknow';
+        else
+            response = 'invalid';
+        end
+    case 2 % spysky
+        if keycode == leftkey | button == 1
+            response = 'spy';
+        elseif keycode == rightkey | button == 4
+            response = 'sky';
+        elseif keycode == dontknowkey | button == 2 % i am not sure about this button code
+            response = 'dontknow';
+        else
+            response = 'invalid';
+        end
+    end
+    
+    fprintf(outfid, '%d\t%d\t%d\t%.3f\t%s\t%d\t%s\n', t, conds(t), order, rt, keycode, button, response);
+    while kbcheck, end
+    accuratewait(0.4);
+    screen(w, 'FillRect', bg);
+    accuratewait(0.1);
+    
+    if t == npractice
+        screen(w, 'FillRect', bg);
+        screen(w, 'DrawText', 'You''ve finised the practice items. Press any key to continue.', 200, 200, 0);
+        accuratewait(3);
+        kbwait;
+        screen(w, 'FillRect', bg);
+        accuratewait(1);
+    elseif t == npractice + nreal / 2
+        mode = 45;
+        screen(w, 'FillRect', bg);
+        screen(w, 'DrawText', 'You can take a break now before part 2. Press any key to continue.', 200, 200, 0);
+        accuratewait(3);
+        kbwait;
+        screen(w, 'FillRect', bg);
+        accuratewait(1);
+    end
+end
+
+% finish up
+snd('Close');
+fclose(outfid);
+screen(w, 'FillRect', bg);
+p = imread(fullfile('dlxexp1-pics', 'congrats.jpg'));
+screen(w, 'PutImage', p);
+accuratewait(2);
+kbwait;
+screen('CloseAll');

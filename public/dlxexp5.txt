@@ -1,0 +1,157 @@
+function dlxexp5
+
+% DLXEXP5  Run dyslexia experiment 5.
+%
+% Script written by Stephen Wilson <stephenw@ucla.edu>, 2002-03.
+
+% variables
+soundvolume = 5; % you can change the sound volume here
+% probably don't go over about 4 or there will be clipping
+bbox = 0; % set this to 1 if there's a button box, 0 if there isn't
+
+% specific initialization
+thispath = which('dlxexp5');
+[pathstr name ext versn] = fileparts(thispath);
+cd(pathstr);
+
+list = mytextread('dlxexp5-list.txt');
+fieldsperitem = 20; %number of lines including blanksfor each trial in list file, set to max needed and pad all to match
+nitems = length(list) / fieldsperitem; % n.b. last item is dummy to show text, since it's functioning like a trial it needs the full number of lines ='fieldsperitem'
+trialnum = 0;
+
+snd('Open');
+rand('state', sum(100*clock));
+
+if bbox
+    port = psychserial('Open', '.Bin', '.Bout', 19200);	
+    a0 = psychserial('Read', port, 0.020); % I don't know what this does
+else
+    port = 0;
+end
+
+% generic initialization
+outfid = dlxexpinit('dlxexp5');
+if outfid == -1
+    return;
+end
+
+fprintf(outfid, 'item\ttest\ttrial\ttarget\tword\trt\tkey\tbbox\tcorr\n');
+
+screen('CloseAll');
+grey = 100;
+[w, wrect] = screen(0, 'OpenWindow', [grey grey grey], [], 32);
+screen(w, 'TextFont', 'Helvetica');
+screen(w, 'TextFont', 'Arial');
+screen(w, 'TextStyle', 1);
+screen(w, 'TextSize', 42);
+%screen_clut = [[0:255]', [0:255]', [0:255]'];
+%screen(w, 'SetClut', screen_clut);
+hidecursor;
+centerrect = [wrect(3) / 2 - 100, wrect(4) / 2 - 100, wrect(3) / 2 + 100, wrect(4) / 2 + 100];
+accuratewait(2);
+
+% main loop
+for item = 1:nitems
+
+    offset = (item - 1) * fieldsperitem;
+    targetword = list{offset + 4};
+    ntesttrials = str2num(list{offset + 3}) - 1;
+ 
+    % display entertaining image if specified
+    entimgname = list{offset + 2};
+    if ~isempty(entimgname)    
+        img = imread(fullfile('dlxexp5-pics', entimgname));
+        if size(img, 1) > wrect(4) - 300
+            scalefactor = (wrect(4) - 300) / size(img, 1);
+            imgrect = [wrect(3) / 2 - round(size(img, 2) / 2 * scalefactor), ...
+                wrect(4) / 2 - round(size(img, 1) / 2 * scalefactor), ...
+                wrect(3) / 2 + round(size(img, 2) / 2 * scalefactor), ...
+                wrect(4) / 2 + round(size(img, 1) / 2 * scalefactor)];
+            screen(w, 'PutImage', img, imgrect);
+        else
+            scalefactor = 1;
+            screen(w, 'PutImage', img);
+        end
+        text = list{offset + 1};
+        width = screen(w, 'TextWidth', text);
+        screen(w, 'DrawText', text, wrect(3) / 2 - width / 2, ...
+            wrect(4) / 2 + size(img, 1) * scalefactor / 2 + 60, [255 255 255]);
+        while kbcheck, end
+        while ~kbcheck, end
+        screen(w, 'FillRect', grey);
+        while kbcheck, end
+    end
+
+    if ntesttrials > 0
+
+        img = imread(fullfile('dlxexp5-pics', 'ear.jpg'));
+        screen(w, 'PutImage', img);
+        accuratewait(1);
+     
+        [wav, samprate, bits] = wavread(fullfile('dlxexp5-wavs', list{offset + 4} '.wav']));
+        wav = wav';
+        if item <= 7  %as below this is how many trials get loudness equalized
+            wav = normalize(wav);
+        end
+        snd('Play', wav * soundvolume, samprate, bits);
+
+        while snd('IsPlaying'), end
+        accuratewait(1); % wait 2 seconds from end of prompt
+       
+        while snd('IsPlaying'), end
+        accuratewait(1); % wait 2 seconds from end of target word
+        screen(w, 'FillRect', grey);
+        accuratewait(1);
+        while kbcheck, end
+	
+        for t = 1:ntesttrials
+            trialnum = trialnum + 1;
+            testword = list{offset + 4 + t * 2};
+            [wav, samprate, bits] = wavread(fullfile('dlxexp5-wavs', list{offset + 5 + t * 2}));
+            wav = wav';
+            if item <= 7  %this is how many trials get loudness equalized, after this the trials vary
+                wav = normalize(wav);
+            end
+            screen(w, 'DrawText', '?', wrect(3) / 2, wrect(4) / 2, [255 255 255]);
+            snd('Play', wav * soundvolume, samprate, bits);
+            [keydown, keycode, button, rt] = getresponse(bbox, port);
+            if keycode == 'q'
+                snd('Close');
+				fclose(outfid);
+				screen('CloseAll');
+                error('Quit key pressed.');
+            end
+            snd('Quiet');
+            screen(w, 'FillRect', grey);
+            
+            match = strcmp(targetword, testword) | testword(end) == '*';
+            
+            if match == 1 & (keycode == 'y' | button == 1 | button == 8)
+                corr = 1;
+            elseif match == 0 & (keycode == 'n' | button == 4 | button == 16)
+                corr = 1;
+            else
+                corr = 0;
+            end
+            
+            fprintf(outfid, '%d\t%d\t%d\t%s\t%s\t%.3f\t%s\t%d\t%d\n', item, t, trialnum, targetword, ...
+                testword, rt, keycode, button, corr);
+            while kbcheck, end
+            accuratewait(0.5);
+        end
+    end
+    screen(w, 'FillRect', grey);
+    accuratewait(2);
+end
+
+% finish up
+snd('Close');
+fclose(outfid);
+screen('CloseAll');
+
+
+function y = normalize(wav)
+
+sortwav = sort(abs(wav));
+newmax = sortwav(floor(0.99 * length(sortwav))); % 99th percentile
+y = wav / newmax * 0.2; % scale to 20%
