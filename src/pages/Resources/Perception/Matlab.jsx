@@ -27,9 +27,9 @@ const Matlab = () => {
           need to be updated before they can be used with the new version.
           <br />
           <br />
-          Downloadable scripts:
-          <br />
-          <br />
+        </Text>
+        <Text pbold>Downloadable scripts:</Text>
+        <Text p>
           Stephen Wilson's{" "}
           <a
             href="/vsr.txt"
