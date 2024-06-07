@@ -1,19 +1,5 @@
-import {
-  Card,
-  CardFooter,
-  CardHeader,
-  CardBody,
-  Image,
-  Button,
-} from "@nextui-org/react";
+import { Card, CardFooter, Image, Button } from "@nextui-org/react";
 import Text from "../../../components/Text";
-import Audio_Room from "../../../components/resources/acoustic_analysis/Audio_Room.jpg";
-import Blue_Booth from "../../../components/resources/acoustic_analysis/Blue_Booth.jpg";
-import Gold_Booth from "../../../components/resources/acoustic_analysis/Gold_Booth.jpg";
-import Infant_Lab_Soundbooth from "../../../components/resources/acoustic_analysis/Infant_Lab_Soundbooth.jpg";
-import Orange_Booth from "../../../components/resources/acoustic_analysis/Orange_Booth.jpg";
-import Ultrasound_Room from "../../../components/resources/acoustic_analysis/Ultrasound_Room.jpg";
-import { members } from "../../../components/CurrentMembers";
 import { cards } from "../../../components/Soundbooth";
 
 const Soundbooth = () => {
@@ -21,7 +7,7 @@ const Soundbooth = () => {
     <div>
       <div className="pt-10">
         <Text h3 className="text-blue">
-          Soundbooth
+          In-Person Booth/Room and Sign-Up
         </Text>
       </div>
 

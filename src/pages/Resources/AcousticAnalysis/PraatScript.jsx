@@ -1,5 +1,5 @@
 import Text from "../../../components/Text";
-import { Code } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 import {
   links_and_collections,
   noise_and_speech,
@@ -15,151 +15,166 @@ const PraatScript = () => {
         <Text h3 className="text-blue">
           Praat Script Resources
         </Text>
-        <Text h4 className="pt-6 pb-4">
-          How to use this page
-        </Text>
-        <Text pbold>How to run a script</Text>
-        <Text p>
-          Scripts save{" "}
-          <a
-            href="https://www.fon.hum.uva.nl/praat/"
-            className="text-blue hover:underline"
-            target="_blank"
-          >
-            Praat
-          </a>{" "}
-          users time and effort by automating a sequence of operations. To run a
-          Praat script, go to the "Control" menu in the "Praat objects" window
-          and select "New Praat script". Then pull up the code for the desired
-          script by clicking on one of the links below. Copy all the code there
-          (e.g. highlight and Ctrl-C on a PC) and paste it into the new
-          "untitled script" window. Finally, select Run {">"} Run (or type
-          Ctrl-R) in the untitled script window to execute the script.
-        </Text>
-        <Text pbold>How to save a script or add it to the menu</Text>
-        <Text p>
-          In the open "untitled script" window with the new script pasted in the
-          text box, go to the "File" menu to "Save" the script to a convenient
-          location. The "Add to fixed menu..." command under "File" can be used
-          to add the current script to one of the head menus in the "Praat
-          objects" window. Menus can be edited (e.g. to remove previously added
-          scripts) by going to "Control {">"} Preferences {">"} Buttons" and
-          clicking on the desired command.
-        </Text>
-        <Text pbold>How to script in Praat</Text>
-        <Text p>
-          See the "Scripting tutorial" under "Help" in "Praat objects" or try
-          any of the many online tutorials.
-        </Text>
-
-        <Text h4 className="pt-6 pb-4">
-          Sound file management
-        </Text>
-        <Text p>
-          <div className="pl-10">
-            <ul className="list-disc">
-              {sound_files.map((sound_file, index) => (
-                <li key={index}>
-                  <a
-                    href={sound_file.href}
-                    className="text-blue hover:underline"
-                    target="_blank"
-                  >
-                    {sound_file.text}
-                  </a>{" "}
-                  ({sound_file.author})
-                  <br />
-                  {sound_file.desc}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Text>
-
-        <Text h4 className="pt-6 pb-4">
-          Text grid management
-        </Text>
-        <Text p>
-          <div className="pl-10">
-            <ul className="list-disc">
-              <li>
+        <Accordion variant="shadow">
+          <AccordionItem title="How to Use This Page">
+            <div className="pb-10 px-4">
+              <Text pbold>How to run a script</Text>
+              <Text p>
+                Scripts save{" "}
                 <a
-                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/grid-maker.praat"
+                  href="https://www.fon.hum.uva.nl/praat/"
                   className="text-blue hover:underline"
                   target="_blank"
                 >
-                  grid-maker
+                  Praat
                 </a>{" "}
-                (Kevin Ryan)
-                <br />
-                Make or edit text grids for a set of sound files.
-                <br />
-                See also K. Crosswhite's amply commented grid{" "}
-                <a
-                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/text_grid_maker.txt"
-                  className="text-blue hover:underline"
-                  target="_blank"
-                >
-                  maker
-                </a>{" "}
-                and{" "}
-                <a
-                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/text_grid_reviewer.txt"
-                  className="text-blue hover:underline"
-                  target="_blank"
-                >
-                  reviewer
-                </a>{" "}
-                scripts {"("}and their{" "}
-                <a
-                  href="https://web.archive.org/web/20030620172734/ling.rochester.edu/people/cross/scripts.html"
-                  className="text-blue hover:underline"
-                  target="_blank"
-                >
-                  descriptions
-                </a>
-                {")"}.
-              </li>
-              <li>
-                <a
-                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/label_from_text_file.txt"
-                  className="text-blue hover:underline"
-                  target="_blank"
-                >
-                  label-from-text-file
-                </a>{" "}
-                (Mietta Lennes)
-                <br />
-                Replace interval labels in selected TextGrid with labeled text
-                from a file {"("}ML's{" "}
-                <a
-                  href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/label_quickly_from_text_file.txt"
-                  className="text-blue hover:underline"
-                  target="_blank"
-                >
-                  streamlined version
-                </a>
-                {")"}.
-              </li>
+                users time and effort by automating a sequence of operations. To
+                run a Praat script, go to the "Control" menu in the "Praat
+                objects" window and select "New Praat script". Then pull up the
+                code for the desired script by clicking on one of the links
+                below. Copy all the code there (e.g. highlight and Ctrl-C on a
+                PC) and paste it into the new "untitled script" window. Finally,
+                select Run {">"} Run (or type Ctrl-R) in the untitled script
+                window to execute the script.
+              </Text>
+              <Text pbold>How to save a script or add it to the menu</Text>
+              <Text p>
+                In the open "untitled script" window with the new script pasted
+                in the text box, go to the "File" menu to "Save" the script to a
+                convenient location. The "Add to fixed menu..." command under
+                "File" can be used to add the current script to one of the head
+                menus in the "Praat objects" window. Menus can be edited (e.g.
+                to remove previously added scripts) by going to "Control {">"}{" "}
+                Preferences {">"} Buttons" and clicking on the desired command.
+              </Text>
+              <Text pbold>How to script in Praat</Text>
+              <Text p>
+                See the "Scripting tutorial" under "Help" in "Praat objects" or
+                try any of the many online tutorials.
+              </Text>
+            </div>
+          </AccordionItem>
+          <AccordionItem title="Sound File Management">
+            <div className="pb-10 px-4">
+              <Text p>
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    {sound_files.map((sound_file, index) => (
+                      <li key={index}>
+                        <a
+                          href={sound_file.href}
+                          className="text-blue hover:underline"
+                          target="_blank"
+                        >
+                          {sound_file.text}
+                        </a>{" "}
+                        ({sound_file.author})
+                        <br />
+                        {sound_file.desc}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Text>
+            </div>
+          </AccordionItem>
 
-              {text_grids.map((text_grid, index) => (
-                <li key={index}>
-                  <a
-                    href={text_grid.href}
-                    className="text-blue hover:underline"
-                    target="_blank"
-                  >
-                    {text_grid.text}
-                  </a>{" "}
-                  ({text_grid.author})
-                  <br />
-                  {text_grid.desc}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Text>
+          <AccordionItem title="Text grid management">
+            <div className="pb-10 px-4">
+              <Text p>
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    <li>
+                      <a
+                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/grid-maker.praat"
+                        className="text-blue hover:underline"
+                        target="_blank"
+                      >
+                        grid-maker
+                      </a>{" "}
+                      (Kevin Ryan)
+                      <br />
+                      Make or edit text grids for a set of sound files.
+                      <br />
+                      See also K. Crosswhite's amply commented grid{" "}
+                      <a
+                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/text_grid_maker.txt"
+                        className="text-blue hover:underline"
+                        target="_blank"
+                      >
+                        maker
+                      </a>{" "}
+                      and{" "}
+                      <a
+                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/text_grid_reviewer.txt"
+                        className="text-blue hover:underline"
+                        target="_blank"
+                      >
+                        reviewer
+                      </a>{" "}
+                      scripts {"("}and their{" "}
+                      <a
+                        href="https://web.archive.org/web/20030620172734/ling.rochester.edu/people/cross/scripts.html"
+                        className="text-blue hover:underline"
+                        target="_blank"
+                      >
+                        descriptions
+                      </a>
+                      {")"}.
+                    </li>
+                    <li>
+                      <a
+                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/label_from_text_file.txt"
+                        className="text-blue hover:underline"
+                        target="_blank"
+                      >
+                        label-from-text-file
+                      </a>{" "}
+                      (Mietta Lennes)
+                      <br />
+                      Replace interval labels in selected TextGrid with labeled
+                      text from a file {"("}ML's{" "}
+                      <a
+                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/label_quickly_from_text_file.txt"
+                        className="text-blue hover:underline"
+                        target="_blank"
+                      >
+                        streamlined version
+                      </a>
+                      {")"}.
+                    </li>
 
+                    {text_grids.map((text_grid, index) => (
+                      <li key={index}>
+                        <a
+                          href={text_grid.href}
+                          className="text-blue hover:underline"
+                          target="_blank"
+                        >
+                          {text_grid.text}
+                        </a>{" "}
+                        ({text_grid.author})
+                        <br />
+                        {text_grid.desc}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Text>
+            </div>
+          </AccordionItem>
+
+          <AccordionItem title="title">
+            <div className="pb-10 px-4"></div>
+          </AccordionItem>
+
+          <AccordionItem title="title">
+            <div className="pb-10 px-4"></div>
+          </AccordionItem>
+        </Accordion>
+      </div>
+
+      <div className="pt-10">
         <Text h4 className="pt-6 pb-4">
           Analysis of sounds using text grids
         </Text>
@@ -297,7 +312,6 @@ const PraatScript = () => {
             </ul>
           </div>
         </Text>
-
         <Text h4 className="pt-6 pb-4">
           Segmentation and extraction
         </Text>
@@ -428,7 +442,6 @@ const PraatScript = () => {
             </ul>
           </div>
         </Text>
-
         <Text h4 className="pt-6 pb-4">
           Drawing pictures
         </Text>
@@ -556,7 +569,6 @@ const PraatScript = () => {
             </ul>
           </div>
         </Text>
-
         <Text h4 className="pt-6 pb-4">
           Noise and speech manipulation
         </Text>
@@ -580,7 +592,6 @@ const PraatScript = () => {
             </ul>
           </div>
         </Text>
-
         <Text h4 className="pt-6 pb-4">
           More sound analysis
         </Text>
@@ -648,13 +659,12 @@ const PraatScript = () => {
             </ul>
           </div>
         </Text>
-
         <Text h4 className="pt-6 pb-4">
           Praat Scripts: Links and Online Collections
         </Text>
         <Text p>
           <div className="pl-10">
-          <ul className="list-disc">
+            <ul className="list-disc">
               {links_and_collections.map((item, index) => (
                 <li key={index}>
                   <a
@@ -663,8 +673,8 @@ const PraatScript = () => {
                     target="_blank"
                   >
                     {item.text}
-                  </a>:{" "}
-                  {item.desc}
+                  </a>
+                  : {item.desc}
                 </li>
               ))}
             </ul>
