@@ -12,11 +12,11 @@ const PraatScript = () => {
   return (
     <div>
       <div className="pt-10">
-        <Text h3 className="text-blue">
+        <Text h3>
           Praat Script Resources
         </Text>
         <Accordion variant="shadow">
-          <AccordionItem title="How to Use This Page">
+          <AccordionItem title="Introduction">
             <div className="pb-10 px-4">
               <Text pbold>How to run a script</Text>
               <Text p>
