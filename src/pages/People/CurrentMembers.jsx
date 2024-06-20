@@ -28,8 +28,6 @@ const CurrentMembers = () => {
                     alt={card.name}
                     className="object-cover rounded-xl aspect-square"
                     src={card.imgSrc}
-                    // width={300}
-                    // height={200}
                     layout="fill"
                     objectFit="cover"
                     objectPosition="center"
