@@ -1,5 +1,7 @@
 import Text from "../../components/Text";
 import Soundbooth from "./DataCollection/Soundbooth";
+import Labvanced from "./DataCollection/Labvanced";
+import MechanicalTurk from "./DataCollection/MechanicalTurk";
 
 const DataCollection = () => {
   return (
@@ -8,6 +10,8 @@ const DataCollection = () => {
         Data Collection
       </Text>
       <Soundbooth />
+      <Labvanced />
+      <MechanicalTurk />
     </div>
   );
 };

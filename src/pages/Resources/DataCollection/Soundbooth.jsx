@@ -6,9 +6,7 @@ const Soundbooth = () => {
   return (
     <div>
       <div className="pt-10">
-        <Text h3 className="text-blue">
-          In-Person Booth/Room and Sign-Up
-        </Text>
+        <Text h3>In-Person Booth/Room and Sign-Up</Text>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
@@ -24,7 +22,7 @@ const Soundbooth = () => {
               className="object-cover w-full h-full"
               src={card.src}
             />
-            <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+            <CardFooter className="justify-between before:bg-white/10 border-white/20 bg-black/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
               <p className="text-tiny text-white/80">{card.room_name}</p>
               <a href={card.link} target="_blank" rel="noopener noreferrer">
                 <Button

@@ -911,10 +911,6 @@ video {
   margin-top: 0.5rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -928,6 +924,13 @@ video {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .block {
@@ -2675,10 +2678,6 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
 }
 
 .text-left {

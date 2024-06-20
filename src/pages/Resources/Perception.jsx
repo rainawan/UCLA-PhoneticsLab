@@ -1,5 +1,7 @@
 import Text from "../../components/Text";
+import Eyetracker from "./Perception/Eyetracker";
 import Matlab from "./Perception/Matlab";
+import Eprime from "./Perception/Eprime";
 
 const Perception = () => {
   return (
@@ -7,7 +9,9 @@ const Perception = () => {
       <Text h2 className="text-left">
         Perception
       </Text>
+      <Eyetracker />
       <Matlab />
+      <Eprime />
     </div>
   );
 };
