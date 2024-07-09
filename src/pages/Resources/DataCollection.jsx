@@ -2,6 +2,7 @@ import Text from "../../components/Text";
 import Soundbooth from "./DataCollection/Soundbooth";
 import Labvanced from "./DataCollection/Labvanced";
 import MechanicalTurk from "./DataCollection/MechanicalTurk";
+import Prolific from "./DataCollection/Prolific";
 
 const DataCollection = () => {
   return (
@@ -12,6 +13,7 @@ const DataCollection = () => {
       <Soundbooth />
       <Labvanced />
       <MechanicalTurk />
+      <Prolific />
     </div>
   );
 };

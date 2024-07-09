@@ -41,7 +41,7 @@ export const within_ucla = [
     title: "UPSID (UCLA Phonological Segment Inventory Database)",
     desc: "Data on the phonological systems of 451 languages, with programs to access it, by Ian Maddieson and Kristin Precoda. This is an elderly DOS program (Windows only), neither of whose developers are still at UCLA, and no support is offered.",
     imgSrc: upsid,
-    link: "",
+    link: "http://phonetics.linguistics.ucla.edu/sales/software.htm",
   },
   {
     title: "K-ToBI (Korean Tones & Break Indices)",
@@ -53,7 +53,7 @@ export const within_ucla = [
     title: "CELEX",
     desc: "The lab's copy of the CELEX database, used for calculating lexical statistics, is on the T: server, along with some scripts for doing searches.",
     imgSrc: celex,
-    link: "",
+    link: "http://phonetics.linguistics.ucla.edu/facilities/databases/databases.html#celex",
   },
   {
     title: "Phonation Database",
