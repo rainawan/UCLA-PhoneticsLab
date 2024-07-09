@@ -46,13 +46,20 @@ const Navbar = () => {
         { label: "Databases", route: "/resources/databases" },
       ],
     },
-    // {
-    //   label: "Teaching",
-    //   dropdownItems: [
-    //     { label: "Courses", route: "/teaching/courses" },
-    //     { label: "Materials", route: "/teaching/materials" },
-    //   ],
-    // },
+    {
+      label: "Teaching",
+      dropdownItems: [
+        { label: "Courses", route: "/teaching/courses" },
+        { label: "Materials", route: "/teaching/materials" },
+      ],
+    },
+    {
+      label: "Sub-Labs",
+      dropdownItems: [
+        { label: "Infant Lab", route: "/sub-labs/infant" },
+        { label: "SPOG Lab", route: "/sub-labs/spog" },
+      ],
+    },
   ];
 
   const renderNavbarItem = (item, index) => (
