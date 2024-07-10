@@ -2,11 +2,14 @@ import Text from "../../components/Text";
 import {
   Table,
   TableHeader,
-  TableBody,
   TableColumn,
+  TableBody,
   TableRow,
   TableCell,
-} from "@nextui-org/table";
+  getKeyValue,
+} from "@nextui-org/react";
+
+import { undergradRows, columns, gradRows } from "../../components/Courses";
 
 const Courses = () => {
   return (
@@ -15,22 +18,26 @@ const Courses = () => {
         Courses
       </Text>
 
-      {/* <Table aria-label="Example table with dynamic content">
-        <TableHeader columns={columns}>
-          {(column) => (
-            <TableColumn key={column.key}>{column.label}</TableColumn>
-          )}
-        </TableHeader>
-        <TableBody items={rows}>
-          {(item) => (
-            <TableRow key={item.key}>
-              {(columnKey) => (
-                <TableCell>{getKeyValue(item, columnKey)}</TableCell>
-              )}
-            </TableRow>
-          )}
-        </TableBody>
-      </Table> */}
+      <div className="px-10 md:px-20 lg:px-10">
+        <Table isStriped className="text-left">
+          <TableHeader columns={columns}>
+            {(column) => (
+              <TableColumn key={column.key}>{column.label}</TableColumn>
+            )}
+          </TableHeader>
+          <TableBody items={undergradRows}>
+            {(item) => (
+              <TableRow key={item.key}>
+                {(columnKey) => (
+                  <TableCell>{getKeyValue(item, columnKey)}</TableCell>
+                )}
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+
+      <Text className="py-2 color">* marks usually-offered quarters.</Text>
     </div>
   );
 };
