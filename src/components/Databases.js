@@ -29,7 +29,7 @@ export const within_ucla = [
     title: "Roy Becker's Vowel Corpus",
     desc: "(an .xlsx file, see his 2010 dissertation for a description of the database)",
     imgSrc: vowels,
-    link: "",
+    link: "http://phonetics.linguistics.ucla.edu/facilities/databases/databases.html",
   },
   {
     title: "Linguistic Voice Quality project archive",
@@ -41,7 +41,7 @@ export const within_ucla = [
     title: "UPSID (UCLA Phonological Segment Inventory Database)",
     desc: "Data on the phonological systems of 451 languages, with programs to access it, by Ian Maddieson and Kristin Precoda. This is an elderly DOS program (Windows only), neither of whose developers are still at UCLA, and no support is offered.",
     imgSrc: upsid,
-    link: "http://phonetics.linguistics.ucla.edu/sales/software.htm",
+    link: "http://web.phonetik.uni-frankfurt.de/upsid.html",
   },
   {
     title: "K-ToBI (Korean Tones & Break Indices)",
@@ -59,7 +59,7 @@ export const within_ucla = [
     title: "Phonation Database",
     desc: "(languages with contrastive phonation)",
     imgSrc: phonation,
-    link: "",
+    link: "http://phonetics.linguistics.ucla.edu/facilities/databases/databases.html",
   },
 ];
 

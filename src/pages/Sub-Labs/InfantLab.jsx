@@ -1,10 +1,12 @@
 import Text from "../../components/Text";
 const InfantLab = () => {
   return (
-    <div>
-      <div className="pt-10">
-        <Text h3>Infant Lab</Text>
-        <Text p>
+    <div className="py-20 bg-white">
+      <div>
+        <Text h2 className="font-bold text-darkblue">
+          Infant Lab
+        </Text>
+        <Text className="pt-20">
           <a
             href="https://languagelab.humanities.ucla.edu/en/"
             className="text-blue hover:underline"

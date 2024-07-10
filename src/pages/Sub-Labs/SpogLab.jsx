@@ -1,10 +1,12 @@
 import Text from "../../components/Text";
 const SpogLab = () => {
   return (
-    <div>
-      <div className="pt-10">
-        <Text h3>SPOG Lab</Text>
-        <Text p>
+    <div className="py-20 bg-white">
+      <div>
+        <Text h2 className="font-bold text-darkblue">
+          SPOG Lab
+        </Text>
+        <Text className="pt-20">
           <a
             href="https://spog.ucla.edu/"
             className="text-blue hover:underline"

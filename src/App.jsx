@@ -63,7 +63,7 @@ function App() {
               />
               <Route path="/resources/databases" element={<Databases />} />
               <Route path="/teaching/courses" element={<Courses />} />
-              <Route path="/teaching/materials" element={<Materials />} />
+              {/* <Route path="/teaching/materials" element={<Materials />} /> */}
               <Route path="/sub-labs/infant" element={<InfantLab />} />
               <Route path="/sub-labs/spog" element={<SpogLab />} />
             </Routes>
