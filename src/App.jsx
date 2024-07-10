@@ -16,6 +16,8 @@ import Perception from "./pages/Resources/Perception";
 import DataCollection from "./pages/Resources/DataCollection";
 import Courses from "./pages/Teaching/Courses";
 import Materials from "./pages/Teaching/Materials";
+import InfantLab from "./pages/Sub-Labs/InfantLab";
+import SpogLab from "./pages/Sub-Labs/SpogLab";
 
 function App() {
   return (
@@ -55,10 +57,15 @@ function App() {
                 element={<AcousticAnalysis />}
               />
               <Route path="/resources/perception" element={<Perception />} />
-              <Route path="/resources/data_collection" element={<DataCollection />} />
+              <Route
+                path="/resources/data_collection"
+                element={<DataCollection />}
+              />
               <Route path="/resources/databases" element={<Databases />} />
               <Route path="/teaching/courses" element={<Courses />} />
-              <Route path="/teaching/materials" element={<Materials />} />
+              {/* <Route path="/teaching/materials" element={<Materials />} /> */}
+              <Route path="/sub-labs/infant" element={<InfantLab />} />
+              <Route path="/sub-labs/spog" element={<SpogLab />} />
             </Routes>
           </div>
         </BrowserRouter>
