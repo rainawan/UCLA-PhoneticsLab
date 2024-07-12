@@ -78,7 +78,7 @@ export const gradRows = [
     course: "LING 203",
     name: "Phonetic Theory",
     offered: "About every other year",
-    details: "",
+    details: "---",
   },
   {
     key: "4",
