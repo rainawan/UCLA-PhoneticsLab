@@ -6,7 +6,7 @@ const InfantLab = () => {
         <Text h2 className="font-bold text-darkblue">
           Infant Lab
         </Text>
-        <Text className="pt-20">
+        <Text className=" text-xl	pt-1o">
           <a
             href="https://languagelab.humanities.ucla.edu/en/"
             className="text-blue hover:underline"

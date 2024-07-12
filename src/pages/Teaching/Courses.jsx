@@ -9,20 +9,34 @@ import {
   getKeyValue,
 } from "@nextui-org/react";
 
-import { undergradRows, columns, gradRows } from "../../components/Courses";
+import {
+  columns,
+  undergradRows,
+  otherUndergradRows,
+  gradRows,
+  otherGradRows,
+} from "../../components/Courses";
 
 const Courses = () => {
   return (
-    <div className="py-20 bg-white">
-      <Text h2 className="font-bold text-darkblue">
+    <div className="py-20 bg-white px-10 md:px-20 lg:px-40">
+      <Text h2 className="text-center font-bold text-darkblue">
         Courses
       </Text>
 
-      <div className="px-10 md:px-20 lg:px-10">
-        <Table isStriped className="text-left">
+      <div>
+        <Text h3 className="text-center">
+          Regular Undergraduate Courses
+        </Text>
+      </div>
+
+      <div>
+        <Table isStriped style={{ tableLayout: "fixed" }} className="text-left">
           <TableHeader columns={columns}>
             {(column) => (
-              <TableColumn key={column.key}>{column.label}</TableColumn>
+              <TableColumn width={column.width} key={column.key}>
+                {column.label}
+              </TableColumn>
             )}
           </TableHeader>
           <TableBody items={undergradRows}>
@@ -37,7 +51,86 @@ const Courses = () => {
         </Table>
       </div>
 
-      <Text className="py-2 color">* marks usually-offered quarters.</Text>
+      <div className=" pt-10">
+        <Text h3 className="text-center">
+          Other Undergraduate Courses
+        </Text>
+      </div>
+
+      <div>
+        <Table isStriped style={{ tableLayout: "fixed" }} className="text-left">
+          <TableHeader columns={columns}>
+            {(column) => (
+              <TableColumn width={column.width} key={column.key}>
+                {column.label}
+              </TableColumn>
+            )}
+          </TableHeader>
+          <TableBody items={otherUndergradRows}>
+            {(item) => (
+              <TableRow key={item.key}>
+                {(columnKey) => (
+                  <TableCell>{getKeyValue(item, columnKey)}</TableCell>
+                )}
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+
+      <div className="pt-10">
+        <Text h3 className="text-center">
+          Regular Graduate Courses
+        </Text>
+      </div>
+
+      <div>
+        <Table isStriped style={{ tableLayout: "fixed" }} className="text-left">
+          <TableHeader columns={columns}>
+            {(column) => (
+              <TableColumn width={column.width} key={column.key}>
+                {column.label}
+              </TableColumn>
+            )}
+          </TableHeader>
+          <TableBody items={gradRows}>
+            {(item) => (
+              <TableRow key={item.key}>
+                {(columnKey) => (
+                  <TableCell>{getKeyValue(item, columnKey)}</TableCell>
+                )}
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+
+      <div className="pt-10">
+        <Text h3 className="text-center">
+          Other Graduate Activities
+        </Text>
+      </div>
+
+      <div>
+        <Table isStriped style={{ tableLayout: "fixed" }} className="text-left">
+          <TableHeader columns={columns}>
+            {(column) => (
+              <TableColumn width={column.width} key={column.key}>
+                {column.label}
+              </TableColumn>
+            )}
+          </TableHeader>
+          <TableBody items={otherGradRows}>
+            {(item) => (
+              <TableRow key={item.key}>
+                {(columnKey) => (
+                  <TableCell>{getKeyValue(item, columnKey)}</TableCell>
+                )}
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
     </div>
   );
 };

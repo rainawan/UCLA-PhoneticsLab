@@ -6,7 +6,7 @@ const SpogLab = () => {
         <Text h2 className="font-bold text-darkblue">
           SPOG Lab
         </Text>
-        <Text className="pt-20">
+        <Text className="text-xl pt-1o">
           <a
             href="https://spog.ucla.edu/"
             className="text-blue hover:underline"
