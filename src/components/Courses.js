@@ -85,14 +85,14 @@ export const gradRows = [
     course: "LING 204B",
     name: "Speech Production",
     offered: "Every third year",
-    details: "",
+    details: "---",
   },
   {
     key: "4",
     course: "LING 204C",
     name: "Speech Production",
     offered: "Every third year",
-    details: "",
+    details: "---",
   },
   {
     key: "5",
