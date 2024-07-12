@@ -20,12 +20,12 @@ import {
 const Courses = () => {
   return (
     <div className="py-20 bg-white px-10 md:px-20 lg:px-40">
-      <Text h2 className="text-center font-bold text-darkblue">
+      <Text h2 className="text-left font-bold text-darkblue">
         Courses
       </Text>
 
       <div>
-        <Text h3 className="text-center">
+        <Text h3 className="text-left">
           Regular Undergraduate Courses
         </Text>
       </div>
@@ -52,7 +52,7 @@ const Courses = () => {
       </div>
 
       <div className=" pt-10">
-        <Text h3 className="text-center">
+        <Text h3 className="text-left">
           Other Undergraduate Courses
         </Text>
       </div>
@@ -79,7 +79,7 @@ const Courses = () => {
       </div>
 
       <div className="pt-10">
-        <Text h3 className="text-center">
+        <Text h3 className="text-left">
           Regular Graduate Courses
         </Text>
       </div>
@@ -106,7 +106,7 @@ const Courses = () => {
       </div>
 
       <div className="pt-10">
-        <Text h3 className="text-center">
+        <Text h3 className="text-left">
           Other Graduate Activities
         </Text>
       </div>
