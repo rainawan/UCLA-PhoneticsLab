@@ -50,7 +50,7 @@ const Navbar = () => {
       label: "Teaching",
       dropdownItems: [
         { label: "Courses", route: "/teaching/courses" },
-        // { label: "Materials", route: "/teaching/materials" },
+        { label: "Materials", route: "/teaching/materials" },
       ],
     },
     {
