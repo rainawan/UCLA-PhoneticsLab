@@ -18,11 +18,12 @@ import { rows, columns } from "../../components/Materials";
 const Materials = () => {
   return (
     <div className="px-20 md:px-60 lg:px-40 py-20 bg-white text-left text-large">
-      <Text h2 className=" text-left font-bold text-darkblue">
+      <Text h2 className="text-left font-bold text-darkblue">
         Materials
       </Text>
+      <Divider></Divider>
 
-      <Text h3 className="text-left">
+      <Text h3 className="py-10 text-left">
         Downloadable Phonetic Transcription Exercises
       </Text>
 
