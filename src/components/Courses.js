@@ -22,32 +22,40 @@ export const undergradRows = [
     key: "1",
     course: "LING 102",
     name: "Introduction to Applied Phonetics",
-    offered: "Winter",
+    offered: "Twice a year",
     details: "Sometimes offered summer",
   },
   {
     key: "2",
     course: "LING 103",
     name: "Introduction to General Phonetics",
-    offered: "Once a quarter",
+    offered: "Twice a year",
     details: "Sometimes offered summer",
   },
   {
     key: "3",
-    course: "LING 104",
+    course: "LING C104",
     name: "Experimental Phonetics",
     offered: "Once a year",
     details: "Usually offered in winter",
   },
   {
     key: "4",
-    course: "LING 111",
+    course: "LING C111",
     name: "Intonation",
-    offered: "Every other year",
-    details: "---",
+    offered: "Usually offered in spring",
+    details: "Co-listed with Ling C211",
   },
+  // {
+  //   key: "5",
+  //   course: "Honors Collegium 16",
+  //   name: "Science of the Singing Voice",
+  //   offered: "Occasionally",
+  //   details: "---",
+  // },
 ];
 
+// not used right now
 export const otherUndergradRows = [
   {
     key: "1",
@@ -61,17 +69,17 @@ export const otherUndergradRows = [
 export const gradRows = [
   {
     key: "1",
-    course: "LING 204A",
+    course: "CLING 204A",
     name: "Experimental Phonetics",
-    offered: "Discontinued",
-    details: "No longer offered, take Ling 104 instead",
+    offered: "Every winter",
+    details: "Co-listed with Ling C104",
   },
   {
     key: "2",
-    course: "LING 211",
-    name: "Phonetic Theory",
-    offered: "See schedule",
-    details: "Alternates with Ling 111",
+    course: "LING C211",
+    name: "Intonation",
+    offered: "Every spring",
+    details: "Alternates with Ling C111",
   },
   {
     key: "3",
@@ -84,20 +92,20 @@ export const gradRows = [
     key: "4",
     course: "LING 204B",
     name: "Speech Production",
-    offered: "Every third year",
+    offered: "About every third year",
     details: "---",
   },
   {
     key: "4",
     course: "LING 204C",
-    name: "Speech Production",
-    offered: "Every third year",
+    name: "Speech Perception",
+    offered: "About every other year",
     details: "---",
   },
   {
     key: "5",
     course: "LING 239",
-    name: "Linguistic Methods Laboratory",
+    name: "Research Design & Statistical Methods",
     offered: "See schedule",
     details: "Course on research methods",
   },
@@ -106,24 +114,32 @@ export const gradRows = [
 export const otherGradRows = [
   {
     key: "1",
+    course: "LING 251",
+    name: "Graduate Proseminars",
+    offered: "See schedule",
+    details: "Past and current topics listed on department page",
+  },
+  {
+    key: "2",
     course: "LING 403",
     name: "Practical Phonetics Training",
     offered: "See schedule",
     details:
-      "Graduate students attend sections of Linguistics 103 to prepare for Practical Phonetics test",
+      "Graduate students attend sections of Linguistics 103 to prepare for Practical Phonetics exam",
   },
   {
-    key: "2",
+    key: "3",
     course: "LING 422",
     name: "Practicum",
     offered: "Every quarter",
     details: "Spectogram reading",
   },
   {
-    key: "3",
+    key: "4",
     course: "LING 260",
-    name: "Seminar",
-    offered: "Every quarter",
-    details: "Lab meeting",
+    name: "Phonetics Seminar",
+    offered: "Every quarter on Mondays 4-6pm",
+    details:
+      "Lab members to present their research or rehearse a talk/poster and get feedback",
   },
 ];

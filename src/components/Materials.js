@@ -72,14 +72,14 @@ export const rows = [
   {
     key: "7",
     name: "Exercise 7",
-    title: "Broad English",
+    title: "Tagalog",
     handout: Exercise7Handout,
     zip: "",
   },
   {
     key: "8",
     name: "Exercise 8",
-    title: "Broad English",
+    title: "Ibibio",
     handout: Exercise8Handout,
     zip: "",
   },
