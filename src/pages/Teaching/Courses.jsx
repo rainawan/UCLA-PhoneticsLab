@@ -51,13 +51,13 @@ const Courses = () => {
         </Table>
       </div>
 
-      <div className=" pt-10">
+      {/* <div className=" pt-10">
         <Text h3 className="text-left">
           Other Undergraduate Courses
         </Text>
-      </div>
+      </div> */}
 
-      <div>
+      {/* <div>
         <Table isStriped style={{ tableLayout: "fixed" }} className="text-left">
           <TableHeader columns={columns}>
             {(column) => (
@@ -76,7 +76,7 @@ const Courses = () => {
             )}
           </TableBody>
         </Table>
-      </div>
+      </div> */}
 
       <div className="pt-10">
         <Text h3 className="text-left">
@@ -107,7 +107,7 @@ const Courses = () => {
 
       <div className="pt-10">
         <Text h3 className="text-left">
-          Other Graduate Activities
+          Other Graduate Courses
         </Text>
       </div>
 
