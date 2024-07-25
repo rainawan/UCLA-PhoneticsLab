@@ -4,6 +4,7 @@ import Labvanced from "./DataCollection/Labvanced";
 import MechanicalTurk from "./DataCollection/MechanicalTurk";
 import Prolific from "./DataCollection/Prolific";
 import { Divider } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 
 const DataCollection = () => {
   return (
@@ -13,14 +14,29 @@ const DataCollection = () => {
       </Text>
       <Divider></Divider>
       <Soundbooth />
-      <Text h2 className="text-left py-20">
+      <Text h3 className="text-left py-20">
         Online Data Collection
       </Text>
-      <Divider></Divider>
 
-      <Labvanced />
+      <Accordion variant="shadow">
+        <AccordionItem key="1" aria-label="Labvanced" title="Labvanced">
+          <Labvanced />
+        </AccordionItem>
+        <AccordionItem
+          key="2"
+          aria-label="MechanicalTurk"
+          title="MechanicalTurk"
+        >
+          <MechanicalTurk />
+        </AccordionItem>
+        <AccordionItem key="3" aria-label="Prolific" title="Prolific">
+          <Prolific />
+        </AccordionItem>
+      </Accordion>
+
+      {/* <Labvanced />
       <MechanicalTurk />
-      <Prolific />
+      <Prolific /> */}
     </div>
   );
 };
