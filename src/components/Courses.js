@@ -131,7 +131,7 @@ export const otherGradRows = [
     key: "3",
     course: "LING 422",
     name: "Practicum",
-    offered: "Every quarter",
+    offered: "Every quarter on Mondays 1-2pm",
     details: "Spectogram reading",
   },
   {
