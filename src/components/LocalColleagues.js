@@ -1,4 +1,13 @@
 import AbeerAlwan from "../components/local_members/Abeer_Alwan.jpg";
+import DaveBerry from "../components/local_members/Dave_Berry.jpg";
+import DaniByrd from "../components/local_members/Dani_Byrd.png";
+import SandyDisner from "../components/local_members/Sandy_Disner.png";
+import Profile from "../components/local_members/profile.png";
+import LouisGoldstein from "../components/local_members/Louis_Goldstein.jpg";
+import JiyoungKim from "../components/local_members/Jiyoung_Kim.png";
+import KhalilIskarous from "../components/local_members/Khalil_Iskarous.webp";
+import ShriNarayanan from "../components/local_members/Shri_Narayanan.jpg";
+import Zhaoyan_Zhang from "../components/local_members/Zhaoyan_Zhang.jpg";
 
 export const members = [
   {
@@ -14,18 +23,21 @@ export const members = [
     department:
       "Bureau of Glottal Affairs, Head & Neck Surgery, Medical School, UCLA",
     website: "https://www.linkedin.com/in/david-a-berry-81aa29a3/",
+    imgSrc: DaveBerry,
   },
   {
     key: "3",
     name: "Dani Byrd",
     department: "Linguistics, USC",
     website: "https://dornsife.usc.edu/profile/dani-byrd/",
+    imgSrc: DaniByrd,
   },
   {
     key: "4",
     name: "Sandy Disner",
     department: "Linguistics, USC",
     website: "https://dornsife.usc.edu/profile/sandra-disner/",
+    imgSrc: SandyDisner,
   },
   {
     key: "5",
@@ -33,30 +45,35 @@ export const members = [
     department:
       "Bureau of Glottal Affairs, Head & Neck Surgery, Medical School, UCLA",
     website: "https://www.linkedin.com/in/bruce-gerratt-56862468/",
+    imgSrc: Profile,
   },
   {
     key: "6",
     name: "Louis Goldstein",
     department: "Linguistics, USC",
     website: "https://sail.usc.edu/~lgoldste/me/index.php",
+    imgSrc: LouisGoldstein,
   },
   {
     key: "7",
     name: "Jiyoung Kim",
     department: "Spanish & Portuguese, UCLA",
     website: "https://www.spanport.ucla.edu/person/ji-young-kim/",
+    imgSrc: JiyoungKim,
   },
   {
     key: "8",
     name: "Khalil Iskarous",
     department: "Linguistics, USC",
     website: "https://dornsife.usc.edu/profile/khalil-iskarous/",
+    imgSrc: KhalilIskarous,
   },
   {
     key: "9",
     name: "Shrikanth Narayanan",
     department: "Linguistics; Electrical & Computer Engineering, USC",
     website: "https://viterbi.usc.edu/directory/faculty/Narayanan/Shrikanth",
+    imgSrc: ShriNarayanan,
   },
   {
     key: "10",
@@ -64,6 +81,7 @@ export const members = [
     department:
       "Bureau of Glottal Affairs, Head & Neck Surgery, Medical School, UCLA",
     website: "https://profiles.ucla.edu/zhaoyan.zhang",
+    imgSrc: Zhaoyan_Zhang,
   },
 ];
 
