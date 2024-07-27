@@ -14,6 +14,7 @@ const DataCollection = () => {
       </Text>
       <Divider></Divider>
       <Soundbooth />
+      <Divider className="pt-20"></Divider>
       <Text h3 className="text-left py-20">
         Online Data Collection
       </Text>

@@ -1,4 +1,6 @@
 import Exercise1Handout from "../components/teaching/Ex1--Broad_English.pdf";
+// import Exercise1Handout from "../components/teaching/Ex1--Broad_English.zip";
+
 import Exercise2Handout from "../components/teaching/Ex2__Narrow_English.pdf";
 import Exercise3Handout from "../components/teaching/Ex3--Tone_drills.pdf";
 import Exercise4Handout from "../components/teaching/Ex4--Hindi.pdf";

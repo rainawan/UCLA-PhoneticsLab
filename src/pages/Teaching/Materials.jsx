@@ -1,6 +1,6 @@
 import Text from "../../components/Text";
 
-import BroadHandout from "../../components/teaching/Ex1--Broad_English.pdf";
+import BroadHandout from "../../components/teaching/Ex1--Broad_English.zip";
 import { LuDownload } from "react-icons/lu";
 import {
   Table,
@@ -22,6 +22,9 @@ const Materials = () => {
         Materials
       </Text>
       <Divider></Divider>
+      <a href={BroadHandout} download>
+        download me
+      </a>
 
       <Text h3 className="py-10 text-left">
         Downloadable Phonetic Transcription Exercises

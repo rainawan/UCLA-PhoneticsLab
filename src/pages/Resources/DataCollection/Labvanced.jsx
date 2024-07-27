@@ -2,9 +2,9 @@ import Text from "../../../components/Text";
 const Labvanced = () => {
   return (
     <div>
-      <div className="pt-10">
-        <Text h3>Labvanced</Text>
-        <Text p>
+      <div className="">
+        {/* <Text h3>Labvanced</Text> */}
+        <p>
           <a
             href="https://www.labvanced.com/"
             className="text-blue hover:underline"
@@ -12,7 +12,7 @@ const Labvanced = () => {
           >
             View here.
           </a>
-        </Text>
+        </p>
       </div>
     </div>
   );
