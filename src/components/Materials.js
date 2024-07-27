@@ -1,5 +1,5 @@
 import Exercise1Handout from "../components/teaching/Ex1--Broad_English.pdf";
-// import Exercise1Handout from "../components/teaching/Ex1--Broad_English.zip";
+import Exercise1Zip from "../components/teaching/Ex1--Broad_English.zip";
 
 import Exercise2Handout from "../components/teaching/Ex2__Narrow_English.pdf";
 import Exercise3Handout from "../components/teaching/Ex3--Tone_drills.pdf";
@@ -34,7 +34,7 @@ export const rows = [
     name: "Exercise 1",
     title: "Broad English",
     handout: Exercise1Handout,
-    zip: "",
+    // zip: Exercise1Zip,
   },
   {
     key: "2",

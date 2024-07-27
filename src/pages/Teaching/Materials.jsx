@@ -1,6 +1,5 @@
 import Text from "../../components/Text";
 
-import BroadHandout from "../../components/teaching/Ex1--Broad_English.zip";
 import { LuDownload } from "react-icons/lu";
 import {
   Table,
@@ -22,9 +21,6 @@ const Materials = () => {
         Materials
       </Text>
       <Divider></Divider>
-      <a href={BroadHandout} download>
-        download me
-      </a>
 
       <Text h3 className="py-10 text-left">
         Downloadable Phonetic Transcription Exercises
@@ -52,12 +48,6 @@ const Materials = () => {
                   <TableCell>
                     {columnKey === "handout" ? (
                       item.handout ? (
-                        // <Link
-                        //   href={getKeyValue(item, columnKey)}
-                        //   showAnchorIcon
-                        //   anchorIcon={<LuDownload />}
-                        //   download
-                        // ></Link>
                         <a
                           href={getKeyValue(item, columnKey)}
                           className="text-blue dark:text-white hover:underline"
