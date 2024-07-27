@@ -16,7 +16,6 @@ const LocalColleagues = () => {
   return (
     <div className="px-20 md:px-0 lg:px-40 py-20 bg-white">
       <Text h2>Local Colleagues</Text>
-
       <div class="p-5 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {members.map((card, index) => (
           <a
@@ -25,30 +24,38 @@ const LocalColleagues = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Card className="bg-darkblue py-4 items-center">
-              <CardHeader className=" h-1/3 py-2 text-white flex-col lg:h-[150px] md:h-[140px] sm:h-[100px]">
-                <div className="">
-                  <h3 className="font-bold text-xl">{card.name}</h3>
-                  <h3 className="text-gray-400 text-base">{card.department}</h3>
+            <Card className=" bg-darkblue py-4 items-center ">
+              <div className="">
+                <div className="h-1/2">
+                  <CardHeader className="text-white flex-col lg:h-[150px] md:h-[140px] sm:h-[100px]">
+                    <div className="">
+                      <h3 className="font-bold text-xl">{card.name}</h3>
+                      <h4 className="text-gray-400 text-base">
+                        {card.department}
+                      </h4>
+                    </div>
+                  </CardHeader>
                 </div>
-              </CardHeader>
-              <CardBody className="h-2/3 py-2 justify-center items-center">
-                <div className="h-40 px-2 justify-center items-center aspect-square">
-                  <Image
-                    alt={card.name}
-                    className="h-40 object-cover rounded-xl aspect-square"
-                    src={card.imgSrc}
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="center"
-                  />
-                </div>
-              </CardBody>
+
+                <CardBody className="aspect-square items-center h-1/2">
+                  <div className="">
+                    <Image
+                      alt={card.name}
+                      className="h-40 aspect-square object-cover "
+                      src={card.imgSrc}
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="center"
+                    />
+                  </div>
+                </CardBody>
+              </div>
             </Card>
           </a>
         ))}
       </div>
     </div>
+
     // <div className="py-20 bg-white">
     //   <Text h2 className="font-bold text-darkblue">
     //     Local Colleagues
