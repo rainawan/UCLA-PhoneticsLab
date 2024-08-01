@@ -1,6 +1,6 @@
 import Text from "../../components/Text";
 
-import { LuDownload } from "react-icons/lu";
+import { IoMdDownload } from "react-icons/io";
 import {
   Table,
   TableHeader,
@@ -53,7 +53,19 @@ const Materials = () => {
                           className="text-blue dark:text-white hover:underline"
                           download
                         >
-                          Download
+                          <IoMdDownload />
+                        </a>
+                      ) : (
+                        ""
+                      )
+                    ) : columnKey === "zip" ? (
+                      item.zip ? (
+                        <a
+                          href={getKeyValue(item, columnKey)}
+                          className="text-blue dark:text-white hover:underline"
+                          download
+                        >
+                          <IoMdDownload />
                         </a>
                       ) : (
                         ""
