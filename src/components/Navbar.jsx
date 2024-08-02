@@ -56,8 +56,13 @@ const Navbar = () => {
     {
       label: "Sub-Labs",
       dropdownItems: [
-        { label: "Infant Lab", route: "/sub-labs/infant" },
-        { label: "SPOG Lab", route: "/sub-labs/spog" },
+        // { label: "Infant Lab", route: "/sub-labs/infant" },
+        // { label: "SPOG Lab", route: "/sub-labs/spog" },
+        {
+          label: "Infant Lab",
+          link: "https://languagelab.humanities.ucla.edu/en/",
+        },
+        { label: "SPOG Lab", link: "https://spog.ucla.edu/" },
       ],
     },
   ];
@@ -87,9 +92,16 @@ const Navbar = () => {
           >
             {(dropdownItem, idx) => (
               <DropdownItem key={`${dropdownItem.label}-${idx}`}>
-                <Link to={dropdownItem.route} className="block w-full">
+                {/* <Link to={dropdownItem.route} className="block w-full">
                   {dropdownItem.label}
-                </Link>
+                </Link> */}
+                {dropdownItem.route ? (
+                  <Link to={dropdownItem.route} className="block w-full">
+                    {dropdownItem.label}
+                  </Link>
+                ) : (
+                  <a href={dropdownItem.link}>{dropdownItem.label}</a>
+                )}
               </DropdownItem>
             )}
           </DropdownMenu>

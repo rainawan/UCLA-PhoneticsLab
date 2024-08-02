@@ -140,6 +140,6 @@ export const otherGradRows = [
     name: "Phonetics Seminar",
     offered: "Every quarter on Mondays 4-6pm",
     details:
-      "Lab members to present their research or rehearse a talk/poster and get feedback",
+      "Lab members present their research or rehearse a talk/poster and get feedback",
   },
 ];

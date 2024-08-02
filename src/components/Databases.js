@@ -2,7 +2,7 @@ import bu_radio from "../../src/components/databases/bu_radio.jpeg";
 import buckeye from "../../src/components/databases/buckeye.png";
 import celex from "../../src/components/databases/celex.jpeg";
 import coraal from "../../src/components/databases/coraal.jpeg";
-import ktobi from "../../src/components/databases/k-tobi.gif";
+import ktobi from "../../src/components/databases/k-tobi.jpeg";
 import lab_archive from "../../src/components/databases/lab_archive.png";
 import lab_data from "../../src/components/databases/lab_data.png";
 import phonation from "../../src/components/databases/phonation.gif";
@@ -12,6 +12,10 @@ import upsid from "../../src/components/databases/upsid.png";
 import voice_quality from "../../src/components/databases/voice_quality.jpeg";
 import vowels from "../../src/components/databases/vowels.jpeg";
 import becker from "../../src/components/databases/BeckerVowelCorpus.xls";
+import phonotationfile from "../../src/components/databases/LgsPhon.xls";
+
+const roybecker =
+  'Click <a href="https://www.w3schools.com">here</a> for more information.';
 
 export const within_ucla = [
   {
@@ -61,6 +65,7 @@ export const within_ucla = [
     desc: "(languages with contrastive phonation)",
     imgSrc: phonation,
     link: "http://phonetics.linguistics.ucla.edu/facilities/databases/databases.html",
+    file: phonotationfile,
   },
 ];
 

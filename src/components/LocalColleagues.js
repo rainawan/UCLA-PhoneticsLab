@@ -1,13 +1,13 @@
-import AbeerAlwan from "../components/local_members/Abeer_Alwan.jpg";
-import DaveBerry from "../components/local_members/Dave_Berry.jpg";
+import AbeerAlwan from "../components/local_members/Abeer_Alwan.png";
+import DaveBerry from "../components/local_members/Dave_Berry.png";
 import DaniByrd from "../components/local_members/Dani_Byrd.png";
 import SandyDisner from "../components/local_members/Sandy_Disner.png";
 import Profile from "../components/local_members/profile.png";
-import LouisGoldstein from "../components/local_members/Louis_Goldstein.jpg";
+import LouisGoldstein from "../components/local_members/Louis_Goldstein.png";
 import JiyoungKim from "../components/local_members/Jiyoung_Kim.png";
 import KhalilIskarous from "../components/local_members/Khalil_Iskarous.webp";
 import ShriNarayanan from "../components/local_members/Shri_Narayanan.jpg";
-import Zhaoyan_Zhang from "../components/local_members/Zhaoyan_Zhang.jpg";
+import Zhaoyan_Zhang from "../components/local_members/Zhaoyan_Zhang.png";
 
 export const members = [
   {

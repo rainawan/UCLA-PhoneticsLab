@@ -14,9 +14,10 @@ const Databases = () => {
         {within_ucla.map((card, index) => (
           <a
             key={index}
-            href={card.link}
+            href={card.file ? card.file : card.link}
             target="_blank"
             rel="noopener noreferrer"
+            download
           >
             <Card className="bg-gray-800 py-4 items-center">
               <CardBody className="overflow-hidden py-2 justify-center items-center">
@@ -31,7 +32,8 @@ const Databases = () => {
               <CardHeader className="text-white pb-0 pt-2 px-4 flex-col lg:h-[120px] md:h-[140px] sm:h-[100px]">
                 <div className="overflow-auto">
                   <h3 className="font-bold text-xl">{card.title}</h3>
-                  <h3 className="text-gray-400 text-base">{card.desc}</h3>
+                  <div className="text-gray-400 text-base">{card.desc}</div>
+                  {/* <h3 className="text-gray-400 text-base">{card.desc}</h3> */}
                 </div>
               </CardHeader>
             </Card>
