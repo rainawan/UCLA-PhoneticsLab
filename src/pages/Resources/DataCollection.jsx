@@ -14,13 +14,16 @@ const DataCollection = () => {
       </Text>
       <Divider></Divider>
       <Soundbooth />
-      <Divider className="pt-20"></Divider>
       <Text h3 className="text-left py-20">
         Online Data Collection
       </Text>
 
       <Accordion variant="shadow">
-        <AccordionItem key="1" aria-label="Labvanced" title="Labvanced">
+        <AccordionItem
+          key="1"
+          aria-label="Labvanced"
+          title={<span className="text-xl">Labvanced</span>}
+        >
           <Labvanced />
         </AccordionItem>
         <AccordionItem
