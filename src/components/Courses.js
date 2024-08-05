@@ -36,33 +36,15 @@ export const undergradRows = [
     key: "3",
     course: "LING C104",
     name: "Experimental Phonetics",
-    offered: "Once a year",
-    details: "Usually offered in winter",
+    offered: "Every winter",
+    details: "Co-listed with LingC204A",
   },
   {
     key: "4",
     course: "LING C111",
     name: "Intonation",
-    offered: "Usually offered in spring",
+    offered: "Every other spring",
     details: "Co-listed with Ling C211",
-  },
-  // {
-  //   key: "5",
-  //   course: "Honors Collegium 16",
-  //   name: "Science of the Singing Voice",
-  //   offered: "Occasionally",
-  //   details: "---",
-  // },
-];
-
-// not used right now
-export const otherUndergradRows = [
-  {
-    key: "1",
-    course: "Honors Collegium 16",
-    name: "Science of the Singing Voice",
-    offered: "Occasionally",
-    details: "---",
   },
 ];
 
@@ -79,7 +61,7 @@ export const gradRows = [
     course: "LING C211",
     name: "Intonation",
     offered: "Every spring",
-    details: "Alternates with Ling C111",
+    details: "Co-listed with Ling C111",
   },
   {
     key: "3",
@@ -107,7 +89,7 @@ export const gradRows = [
     course: "LING 239",
     name: "Research Design & Statistical Methods",
     offered: "See schedule",
-    details: "Course on research methods",
+    details: "Course on research methods and statistics",
   },
 ];
 
@@ -131,7 +113,7 @@ export const otherGradRows = [
     key: "3",
     course: "LING 422",
     name: "Practicum",
-    offered: "Every quarter on Mondays 1-2pm",
+    offered: "Every quarter on Mondays 12-1pm",
     details: "Spectogram reading",
   },
   {
