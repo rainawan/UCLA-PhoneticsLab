@@ -22,7 +22,7 @@ export const members = [
     name: "Dave Berry",
     department:
       "Bureau of Glottal Affairs, Head & Neck Surgery, Medical School, UCLA",
-    website: "https://www.linkedin.com/in/david-a-berry-81aa29a3/",
+    website: "https://profiles.ucla.edu/david.berry",
     imgSrc: DaveBerry,
   },
   {
