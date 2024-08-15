@@ -12,12 +12,19 @@ import {
 import {
   columns,
   undergradRows,
-  otherUndergradRows,
   gradRows,
   otherGradRows,
 } from "../../components/Courses";
 
 const Courses = () => {
+  const newGradRows = gradRows.map((item) => ({
+    ...item,
+    offered: item.offered.replace(
+      "[website]",
+      `<a href={"https://linguistics.ucla.edu/courses/"}>website</a>`
+    ),
+  }));
+
   return (
     <div className="py-20 bg-white px-10 md:px-20 lg:px-40">
       <Text h2 className="text-left font-bold text-darkblue">
@@ -93,7 +100,7 @@ const Courses = () => {
               </TableColumn>
             )}
           </TableHeader>
-          <TableBody items={gradRows}>
+          <TableBody items={newGradRows}>
             {(item) => (
               <TableRow key={item.key}>
                 {(columnKey) => (

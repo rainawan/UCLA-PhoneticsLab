@@ -15,13 +15,13 @@ import Text from "../../components/Text";
 const LocalColleagues = () => {
   return (
     <div className="px-20 md:px-0 lg:px-40 py-20 bg-white">
-      <Text h2>Local Members</Text>
+      <Text h2>Local Colleagues</Text>
 
       <div class="p-5 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5">
         {members.map((card, index) => (
           <a
             key={index}
-            href={card.link}
+            href={card.website}
             target="_blank"
             rel="noopener noreferrer"
           >
