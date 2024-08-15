@@ -29,18 +29,18 @@ const DataCollection = () => {
         <AccordionItem
           key="2"
           aria-label="MechanicalTurk"
-          title="MechanicalTurk"
+          title={<span className="text-xl">Mechanical Turk</span>}
         >
           <MechanicalTurk />
         </AccordionItem>
-        <AccordionItem key="3" aria-label="Prolific" title="Prolific">
+        <AccordionItem
+          key="3"
+          aria-label="Prolific"
+          title={<span className="text-xl">Prolific</span>}
+        >
           <Prolific />
         </AccordionItem>
       </Accordion>
-
-      {/* <Labvanced />
-      <MechanicalTurk />
-      <Prolific /> */}
     </div>
   );
 };
