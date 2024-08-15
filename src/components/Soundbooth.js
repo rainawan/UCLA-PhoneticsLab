@@ -35,7 +35,7 @@ export const cards = [
     id: 4,
     alt: "Ultrasound_Room",
     src: Ultrasound_Room,
-    room_name: "Ultrasound Room (2101B)",
+    room_name: "Ultrasound Room (2101E)",
     button: "Coming Soon",
   },
   {
