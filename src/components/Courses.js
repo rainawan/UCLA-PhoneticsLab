@@ -88,7 +88,8 @@ export const gradRows = [
     key: "5",
     course: "LING 239",
     name: "Research Design & Statistical Methods",
-    offered: "See schedule",
+    offered: "See [website]",
+    websiteURL: "https://linguistics.ucla.edu/courses/",
     details: "Course on research methods and statistics",
   },
 ];
