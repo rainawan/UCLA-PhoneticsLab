@@ -98,7 +98,7 @@ export const otherGradRows = [
   {
     key: "1",
     course: "LING 251",
-    name: "Graduate Proseminars",
+    name: "Topics in Phonetics & Phonology (graduate proseminar)",
     offered: "See schedule",
     details: "Past and current topics listed on department page",
   },
