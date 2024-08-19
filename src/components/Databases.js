@@ -26,7 +26,7 @@ export const within_ucla = [
   },
   {
     title: "UCLA Phonetics Lab Archive",
-    desc: "(raw data files not structured for teaching)  (NOTE: These files have been digitized at very high sampling rates. It is often useful to downsample before acoustic analysis. See Henry for a Matlab routine to do this; or check out Praat scripts to do this.)",
+    desc: "(raw data files not structured for teaching)  (NOTE: These files have been digitized at very high sampling rates. It is often useful to downsample before acoustic analysis.",
     imgSrc: lab_archive,
     link: "http://archive.phonetics.ucla.edu/",
   },
@@ -38,7 +38,7 @@ export const within_ucla = [
   },
   {
     title: "Linguistic Voice Quality project archive",
-    desc: "(audio and EGG recordings, spreadsheet of measurements) BU Radio News corpus and Buckeye corpus are available on the internal T: drive",
+    desc: "(audio and EGG recordings, spreadsheet of measurements)",
     imgSrc: voice_quality,
     link: "https://phonetics.ucla.edu/voiceproject/voice.html",
   },
