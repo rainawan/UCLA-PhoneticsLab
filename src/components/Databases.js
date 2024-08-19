@@ -11,7 +11,7 @@ import timit from "../../src/components/databases/timit.jpeg";
 import upsid from "../../src/components/databases/upsid.png";
 import voice_quality from "../../src/components/databases/voice_quality.jpeg";
 import vowels from "../../src/components/databases/vowels.jpeg";
-import becker from "../../src/components/databases/BeckerVowelCorpus.xls";
+import becker from "../../src/components/databases/BeckerVowelCorpus.xlsx";
 import phonotationfile from "../../src/components/databases/LgsPhon.xls";
 
 const roybecker =
@@ -34,7 +34,8 @@ export const within_ucla = [
     title: "Roy Becker's Vowel Corpus",
     desc: "(an .xlsx file, see his 2010 dissertation for a description of the database)",
     imgSrc: vowels,
-    link: "https://www.proquest.com/docview/861321787?parentSessionId=zb9Ei5nAQFT15tH3GrfIypF4rg3IEP3n8zc1f79%2FQ8A%3D&sourcetype=Dissertations%20&%20Theses",
+    file: becker,
+    // link: "https://www.proquest.com/docview/861321787?parentSessionId=zb9Ei5nAQFT15tH3GrfIypF4rg3IEP3n8zc1f79%2FQ8A%3D&sourcetype=Dissertations%20&%20Theses",
   },
   {
     title: "Linguistic Voice Quality project archive",

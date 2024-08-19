@@ -4,6 +4,6 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  assetsInclude: [/\.(zip)$/i, "**/*.xls"],
+  assetsInclude: [/\.(zip)$/i, "**/*.xls", "**/*.xlsx"],
   // assetsInclude: ["**/*.xls"],
 });
