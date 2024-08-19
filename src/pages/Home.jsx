@@ -24,27 +24,39 @@ const HomePage = () => {
             the English Department in Fall 1962 and moved with him to the new
             Linguistics Department in 1966. Members of the lab include faculty,
             postdocs, graduate students, staff, and visiting scholars in
-            Linguistics. In our research we document sounds from a range of
-            languages, and describe the behavior of a language's sounds as part
-            of a linguistic system. The UCLA Linguistics Department is
-            well-known for the close cooperation between its phonetics and
-            phonology programs.
+            Linguistics. In our research we document segments and prosody of a
+            range of languages and describe their patterns as part of a
+            linguistic system through the production and perception of adult
+            native speakers. We also study how infants and children learn to
+            perceive and produce the sounds of their native language(s). The
+            UCLA Linguistics Department is well-known for the close cooperation
+            between its phonetics and phonology programs.
           </div>
           <div className="p-3">
             The lab maintains facilities for teaching and research in adult and
-            infant speech production, acoustics, and perception. Descriptions of
-            our current facilities, and information about how to use them, are
-            in the Facilities section of this site, while some illustrative data
-            are posted under Demos. Dissertation and grant projects are listed
-            under Research Projects. Current and past members of the lab, and
-            local colleagues with whom we collaborate, are listed under People.
+            infant speech production and perception. Descriptions of our current
+            facilities, and information about how to use them, are in the
+            Resources section of this site, while courses and materials on
+            phonetics are listed under Teaching, and grant projects and working
+            paper information are listed under Research. Current and past
+            members of the lab, and local colleagues with whom we collaborate,
+            are listed under People. The UCLA Phonetics Lab has two sub-labs,
+            Language Acquisition “Infant” Lab, and SPOG team (Speech and
+            Cognitive Development).
           </div>
           <div className="p-3">
-            This archive consists of thousands of recordings of hundreds of
-            speakers, some of which are acknowledged in full, others in part
-            (with their first name) and still others who did not wish to be
-            acknowledged. When available, these acknowledgements can be found
-            under "Recording Details".
+            The UCLA Phonetics Lab holds valuable databases, which you can
+            access under Resources. UCLA Phonetics Lab Data (formerly Sounds of
+            the World’s Languages) are organized for teaching, and UCLA
+            Phonetics Lab Archive includes raw data files consisting of
+            thousands of recordings of hundreds of speakers, some of which are
+            acknowledged in full, others in part (with their first name) and
+            still others who did not wish to be acknowledged. When available,
+            these acknowledgements can be found under "Recording Details". UPSID
+            (UCLA Phonological Segment Inventory Database) holds data from 451
+            languages, and finally, the Linguistic Voice Quality project archive
+            includes audio and EGG recordings and spreadsheets of measurements
+            on nine languages.
           </div>
         </div>
       </div>

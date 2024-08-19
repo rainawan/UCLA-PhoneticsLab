@@ -27,6 +27,7 @@ const Navbar = () => {
         { label: "Current Members", route: "/people/current_members" },
         { label: "Former Members", route: "/people/former_members" },
         { label: "Local Colleagues", route: "/people/local_colleagues" },
+        { label: "Join the Lab", route: "/people/join_the_lab" },
       ],
     },
     {
@@ -39,7 +40,10 @@ const Navbar = () => {
     {
       label: "Resources",
       dropdownItems: [
-        { label: "Physiology", route: "/resources/physiology" },
+        {
+          label: "Articulatory Analysis",
+          route: "/resources/articulatory_analysis",
+        },
         { label: "Acoustic Analysis", route: "/resources/acoustic_analysis" },
         { label: "Perception", route: "/resources/perception" },
         { label: "Data Collection", route: "/resources/data_collection" },

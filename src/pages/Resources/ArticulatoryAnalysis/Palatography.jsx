@@ -11,7 +11,7 @@ const Palatography = () => {
   return (
     <div>
       <Text h2 className="text-left">
-        Physiology
+        Articulatory Analysis
       </Text>
       <div>
         <Text h3>Static Palatography</Text>

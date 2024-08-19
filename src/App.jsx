@@ -10,7 +10,7 @@ import LangAcquisition from "./pages/LangAcquisition";
 import Grants from "./pages/Research/Grants";
 import Dissertations from "./pages/Research/Dissertations";
 import Databases from "./pages/Resources/Databases";
-import Physiology from "./pages/Resources/Physiology";
+import ArticulatoryAnalysis from "./pages/Resources/ArticulatoryAnalysis";
 import AcousticAnalysis from "./pages/Resources/AcousticAnalysis";
 import Perception from "./pages/Resources/Perception";
 import DataCollection from "./pages/Resources/DataCollection";
@@ -18,6 +18,7 @@ import Courses from "./pages/Teaching/Courses";
 import Materials from "./pages/Teaching/Materials";
 import InfantLab from "./pages/Sub-Labs/InfantLab";
 import SpogLab from "./pages/Sub-Labs/SpogLab";
+import JoinTheLab from "./pages/People/JoinTheLab";
 
 function App() {
   return (
@@ -46,12 +47,16 @@ function App() {
                 path="/people/local_colleagues"
                 element={<LocalColleagues />}
               />
+              <Route path="/people/join_the_lab" element={<JoinTheLab />} />
               <Route path="/research/grants" element={<Grants />} />
               <Route
                 path="/research/dissertations"
                 element={<Dissertations />}
               />
-              <Route path="/resources/physiology" element={<Physiology />} />
+              <Route
+                path="/resources/articulatory_analysis"
+                element={<ArticulatoryAnalysis />}
+              />
               <Route
                 path="/resources/acoustic_analysis"
                 element={<AcousticAnalysis />}
