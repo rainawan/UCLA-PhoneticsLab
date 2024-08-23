@@ -16,7 +16,7 @@ const Eprime = () => {
           color="danger"
           size="lg"
         >
-          E-Prime
+          Eprime
         </Link>{" "}
         Player is available throughout the lab for running experiments. To
         program an experiment in Eprime, you need to get the key for the program

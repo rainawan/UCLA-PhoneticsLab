@@ -7,6 +7,7 @@ import {
   TableRow,
   TableCell,
   getKeyValue,
+  Link,
 } from "@nextui-org/react";
 
 import {
@@ -58,33 +59,6 @@ const Courses = () => {
         </Table>
       </div>
 
-      {/* <div className=" pt-10">
-        <Text h3 className="text-left">
-          Other Undergraduate Courses
-        </Text>
-      </div> */}
-
-      {/* <div>
-        <Table isStriped style={{ tableLayout: "fixed" }} className="text-left">
-          <TableHeader columns={columns}>
-            {(column) => (
-              <TableColumn width={column.width} key={column.key}>
-                {column.label}
-              </TableColumn>
-            )}
-          </TableHeader>
-          <TableBody items={otherUndergradRows}>
-            {(item) => (
-              <TableRow key={item.key}>
-                {(columnKey) => (
-                  <TableCell>{getKeyValue(item, columnKey)}</TableCell>
-                )}
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </div> */}
-
       <div className="pt-10">
         <Text h3 className="text-left">
           Regular Graduate Courses
@@ -101,13 +75,33 @@ const Courses = () => {
             )}
           </TableHeader>
           <TableBody items={newGradRows}>
-            {(item) => (
-              <TableRow key={item.key}>
-                {(columnKey) => (
-                  <TableCell>{getKeyValue(item, columnKey)}</TableCell>
-                )}
-              </TableRow>
-            )}
+            {(item) =>
+              item.offered == "See schedule" ? (
+                <TableRow>
+                  <TableCell>{item.course}</TableCell>
+                  <TableCell>{item.name}</TableCell>
+                  <TableCell>
+                    <Link
+                      size="sm"
+                      underline="always"
+                      color="foreground"
+                      showAnchorIcon
+                      isExternal
+                      href="https://linguistics.ucla.edu/courses/"
+                    >
+                      See schedule
+                    </Link>
+                  </TableCell>
+                  <TableCell>{item.details}</TableCell>
+                </TableRow>
+              ) : (
+                <TableRow key={item.key}>
+                  {(columnKey) => (
+                    <TableCell>{getKeyValue(item, columnKey)}</TableCell>
+                  )}
+                </TableRow>
+              )
+            }
           </TableBody>
         </Table>
       </div>
@@ -128,13 +122,33 @@ const Courses = () => {
             )}
           </TableHeader>
           <TableBody items={otherGradRows}>
-            {(item) => (
-              <TableRow key={item.key}>
-                {(columnKey) => (
-                  <TableCell>{getKeyValue(item, columnKey)}</TableCell>
-                )}
-              </TableRow>
-            )}
+            {(item) =>
+              item.offered == "See schedule" ? (
+                <TableRow>
+                  <TableCell>{item.course}</TableCell>
+                  <TableCell>{item.name}</TableCell>
+                  <TableCell>
+                    <Link
+                      size="sm"
+                      underline="always"
+                      color="foreground"
+                      showAnchorIcon
+                      isExternal
+                      href="https://linguistics.ucla.edu/courses/"
+                    >
+                      See schedule
+                    </Link>
+                  </TableCell>
+                  <TableCell>{item.details}</TableCell>
+                </TableRow>
+              ) : (
+                <TableRow key={item.key}>
+                  {(columnKey) => (
+                    <TableCell>{getKeyValue(item, columnKey)}</TableCell>
+                  )}
+                </TableRow>
+              )
+            }
           </TableBody>
         </Table>
       </div>
