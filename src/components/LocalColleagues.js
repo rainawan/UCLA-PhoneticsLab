@@ -1,8 +1,8 @@
 import AbeerAlwan from "../components/local_members/Abeer_Alwan.png";
 import DaveBerry from "../components/local_members/Dave_Berry.png";
-import DaniByrd from "../components/local_members/Dani_Byrd.png";
+import DaniByrd from "../components/local_members/Dani_Byrd.jpg";
 import SandyDisner from "../components/local_members/Sandy_Disner.png";
-import Profile from "../components/local_members/profile.png";
+import BruceGerratt from "../components/local_members/Bruce_Gerratt.png";
 import LouisGoldstein from "../components/local_members/Louis_Goldstein.png";
 import JiyoungKim from "../components/local_members/Jiyoung_Kim.png";
 import KhalilIskarous from "../components/local_members/Khalil_Iskarous.webp";
@@ -45,7 +45,7 @@ export const members = [
     department:
       "Bureau of Glottal Affairs, Head & Neck Surgery, Medical School, UCLA",
     website: "https://www.linkedin.com/in/bruce-gerratt-56862468/",
-    imgSrc: Profile,
+    imgSrc: BruceGerratt,
   },
   {
     key: "6",

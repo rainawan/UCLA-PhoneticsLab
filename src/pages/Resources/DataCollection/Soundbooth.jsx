@@ -1,13 +1,15 @@
-import { Card, CardFooter, Image, Button } from "@nextui-org/react";
+import { Card, CardFooter, Image, Button, Divider } from "@nextui-org/react";
 import Text from "../../../components/Text";
 import { cards } from "../../../components/Soundbooth";
 
 const Soundbooth = () => {
   return (
-    <div>
+    <div className="pb-10">
       <div className="pt-10">
         <Text h3>In-Person Booth/Room and Sign-Up</Text>
       </div>
+      {/* <Divider></Divider>
+      <div className="pt-10"></div> */}
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {cards.map((card) => (

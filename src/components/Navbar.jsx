@@ -104,7 +104,9 @@ const Navbar = () => {
                     {dropdownItem.label}
                   </Link>
                 ) : (
-                  <a href={dropdownItem.link}>{dropdownItem.label}</a>
+                  <a target="_blank" href={dropdownItem.link}>
+                    {dropdownItem.label}
+                  </a>
                 )}
               </DropdownItem>
             )}
@@ -113,7 +115,8 @@ const Navbar = () => {
       ) : (
         <div onClick={() => setIsMenuOpen(false)}>
           <NavbarItem>
-            <Link to={item.route}>{item.label}</Link>
+            {/* <Link to={item.route}>{item.label}</Link> */}
+            <a href={item.route}>{item.label}</a>
           </NavbarItem>
         </div>
       )}
