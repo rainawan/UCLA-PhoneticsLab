@@ -2,9 +2,6 @@ import Text from "../../components/Text";
 import Soundbooth from "./DataCollection/Soundbooth";
 import OnlineDataCollection from "./DataCollection/OnlineDataCollection";
 import RunningExperiments from "./DataCollection/RunningExperiments";
-import Labvanced from "./DataCollection/Labvanced";
-import MechanicalTurk from "./DataCollection/MechanicalTurk";
-import Prolific from "./DataCollection/Prolific";
 import { Divider } from "@nextui-org/react";
 
 const DataCollection = () => {
