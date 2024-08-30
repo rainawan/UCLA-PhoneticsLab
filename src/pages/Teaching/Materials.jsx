@@ -13,6 +13,7 @@ import {
   Divider,
 } from "@nextui-org/react";
 import { rows, columns } from "../../components/Materials";
+import InstructionalMaterials from "./Materials/InstructionalMaterials";
 
 const Materials = () => {
   return (
@@ -21,6 +22,8 @@ const Materials = () => {
         Materials
       </Text>
       <Divider></Divider>
+
+      <InstructionalMaterials></InstructionalMaterials>
 
       <Text h3 className="py-10 text-left">
         Downloadable Phonetic Transcription Exercises
