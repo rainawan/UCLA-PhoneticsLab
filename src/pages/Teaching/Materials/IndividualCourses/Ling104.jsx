@@ -4,7 +4,7 @@ import powerpoint from "../Downloads/spex.ppt";
 const Ling104 = () => {
   return (
     <div>
-      <Text className="text-left">Ling 104</Text>
+      <Text className="text-left">Ling C104/C204a</Text>
       <ul className="px-10 list-disc list-outside">
         <li>
           The usual textbook: K. Johnson (2012) Acoustic and Auditory Phonetics
@@ -85,7 +85,7 @@ const Ling104 = () => {
           the cabinet in the lab kitchen
         </li>
         <li>
-          a{" "}
+          A{" "}
           <CustomLink download href={powerpoint}>
             Powerpoint file
           </CustomLink>{" "}
@@ -94,9 +94,16 @@ const Ling104 = () => {
         <li>
           articles we have read in seminar about measurements:{" "}
           <CustomLink href="https://www.sciencedirect.com/science/article/abs/pii/S0167639301000498">
-            Vallabha & Tuller
+            Vallabha & Tuller 2002
           </CustomLink>{" "}
-          2002 on formants; Francis et al. 2003 on VOT
+          on formants; Francis et al. 2003 on VOT
+        </li>
+        <li>
+          Rob Hagiwara's{" "}
+          <CustomLink href="https://phonetics.linguistics.ucla.edu/teaching/111Win06Jun.pdf">
+            Monthly Mystery Spectrogram page
+          </CustomLink>{" "}
+          at the U. of Manitoba
         </li>
       </ul>
     </div>

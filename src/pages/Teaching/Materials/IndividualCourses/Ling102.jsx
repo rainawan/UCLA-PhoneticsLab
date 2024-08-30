@@ -7,8 +7,7 @@ const Ling102 = () => {
       <Text className="text-left">Ling 102/103</Text>
       <ul className="px-10 list-disc list-outside">
         <li>
-          Textbook: Textbook: We use A Course in Phonetics or The Sounds of
-          Language
+          Textbook: We use A Course in Phonetics or The Sounds of Language
         </li>
         <li>
           optional books sometimes ordered: Pullum & Ladusaw (1996) Phonetic
@@ -33,8 +32,11 @@ const Ling102 = () => {
           directly to the clickable webpage. Currently not available.
         </li>
         <li>
-          Normal Speech Articulation (the "Iowa movie") VHS, DVD and film in the
-          IML (retired film copy is in cabinet in General Lab) - but now freely
+          Normal Speech Articulation (the "Iowa movie") VHS, DVD and film in the{" "}
+          <CustomLink href="https://media.dymaxion.ca/display/214/wwk770">
+            IML
+          </CustomLink>{" "}
+          (retired film copy is in cabinet in General Lab) - but now freely
           available online at the{" "}
           <CustomLink href="https://archive.org/details/normalspeecharticulation">
             Internet Archive
@@ -63,15 +65,15 @@ const Ling102 = () => {
           </CustomLink>
         </li>
         <li>
-          Transcription: Phonetics Lab's downloadable transcription exercises
+          Transcription: Phonetics Lab's downloadable transcription exercises,
           see below
         </li>
         <li>
           IPA:{" "}
           <CustomLink href="https://www.internationalphoneticassociation.org/">
-            IPA
+            IPA homepage
           </CustomLink>{" "}
-          homepage (including links to Sound files for Illustrations of the IPA)
+          (including links to Sound files for Illustrations of the IPA)
         </li>
         <li>
           IPA: IPA's page for the{" "}
@@ -92,14 +94,14 @@ const Ling102 = () => {
             lexilogos;
           </CustomLink>{" "}
           <CustomLink href="https://r12a.github.io/pickers/ipa/">
-            r12a ;{" "}
-          </CustomLink>
+            r12a;
+          </CustomLink>{" "}
           <CustomLink href="https://ipa.typeit.org/full/">typeit</CustomLink>
         </li>
         <li>
-          IPA: CD <CustomLink href="">The Phonicon 1.0</CustomLink>
-          by M. Stanley Whitley; an entire course and reference materials but
-          the license does not permit putting it on the CLICC server for general
+          IPA: CD <CustomLink href="">"The Phonicon 1.0"</CustomLink> by M.
+          Stanley Whitley; an entire course and reference materials but the
+          license does not permit putting it on the CLICC server for general
           student use; on the shelf in the General Lab
         </li>
         <li>
@@ -119,7 +121,7 @@ const Ling102 = () => {
         <li>
           David Crystal's{" "}
           <CustomLink href="https://originalpronunciation.com/GBR/Home">
-            Speech Accent Archive
+            Original Pronunciation
           </CustomLink>{" "}
           of Shakespeare site
         </li>

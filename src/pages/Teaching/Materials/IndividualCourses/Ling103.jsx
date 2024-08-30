@@ -36,7 +36,7 @@ const Ling103 = () => {
           </CustomLink>
         </li>
         <li>
-          term project resources: Illustrations of the IPA -{" "}
+          Term project resources: Illustrations of the IPA -{" "}
           <CustomLink href="https://richardbeare.github.io/marijatabain/ipa_illustrations_all.html">
             UCLA Language Materials Project
           </CustomLink>
