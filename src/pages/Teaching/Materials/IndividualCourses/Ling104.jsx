@@ -7,12 +7,14 @@ const Ling104 = () => {
       <Text className="text-left">Ling C104/C204a</Text>
       <ul className="px-10 list-disc list-outside">
         <li>
-          The usual textbook: K. Johnson (2012) Acoustic and Auditory Phonetics
+          The usual textbook: K. Johnson (2012){" "}
+          <span class="italic">Acoustic and Auditory Phonetics</span>
         </li>
         <li>
-          optional books sometimes ordered: Kent & Read (1992) The Acoustic
-          Analysis of Speech (especially for its chapter on the use of a Klatt
-          synthesizer); Ladefoged Elements of Acoustic Phonetics
+          optional books sometimes ordered: Kent & Read (1992){" "}
+          <span class="italic">The Acoustic Analysis of Speech</span>{" "}
+          (especially for its chapter on the use of a Klatt synthesizer);
+          Ladefoged <span class="italic">Elements of Acoustic Phonetics</span>
         </li>
         <li>
           link to our page of{" "}

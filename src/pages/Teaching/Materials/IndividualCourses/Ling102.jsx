@@ -7,12 +7,19 @@ const Ling102 = () => {
       <Text className="text-left">Ling 102/103</Text>
       <ul className="px-10 list-disc list-outside">
         <li>
-          Textbook: We use A Course in Phonetics or The Sounds of Language
+          Textbook: We use{" "}
+          <span class="italic">
+            A Course in Phonetics or The Sounds of Language
+          </span>
         </li>
         <li>
-          optional books sometimes ordered: Pullum & Ladusaw (1996) Phonetic
-          Symbol Guide 2nd edition; Handbook of the International Phonetic
-          Association (1999)
+          optional books sometimes ordered: Pullum & Ladusaw (1996){" "}
+          <span class="italic">Phonetic Symbol Guide</span> 2nd edition;
+          <span class="italic">
+            {" "}
+            Handbook of the International Phonetic Association
+          </span>{" "}
+          (1999)
         </li>
         <li>
           <CustomLink href="https://phonetics.ucla.edu/">

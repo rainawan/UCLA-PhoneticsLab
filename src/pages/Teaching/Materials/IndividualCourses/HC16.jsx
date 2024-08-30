@@ -7,13 +7,16 @@ const HC16 = () => {
       <Text className="text-left">HC 16</Text>
       <ul className="px-10 list-disc list-outside">
         <li>
-          the usual textbook: J. Sundberg (1987) The Science of the Singing
-          Voice, Northern Illinois University Press
+          the usual textbook: J. Sundberg (1987){" "}
+          <span class="italic">The Science of the Singing Voice</span>, Northern
+          Illinois University Press
         </li>
         <li>
-          optional books: G. Nair (1999) Voice - Tradition and Technology,
-          Singular Publishing; R. Miller (1996) The Structure of Singing,
-          Schirmer; I. Titze Principles of Voice Production
+          optional books: G. Nair (1999){" "}
+          <span class="italic">Voice - Tradition and Technology</span>, Singular
+          Publishing ; R. Miller (1996){" "}
+          <span class="italic">The Structure of Singing, Schirmer</span>; I.
+          Titze <span class="italic">Principles of Voice Production</span>
         </li>
         <li>
           "Human Speech: Source-filter Theory" (Caldwell) 2002 DVD in the{" "}
