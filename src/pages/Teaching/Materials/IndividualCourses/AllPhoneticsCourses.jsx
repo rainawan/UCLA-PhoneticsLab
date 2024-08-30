@@ -13,18 +13,19 @@ const AllPhoneticsCourses = () => {
           <CustomLink href="https://scripts.sil.org/cms/scripts/page.php?id=fontdownloads&site_id=nrsi">
             SIL phonetic fonts download page
           </CustomLink>{" "}
-          Unicode{" "}
+          (Unicode{" "}
           <CustomLink href="https://software.sil.org/gentium/">
             {" "}
-            Gentium
-          </CustomLink>
+            Gentium,
+          </CustomLink>{" "}
           <CustomLink href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=encore-ipa">
-            Encore IPA93
+            Encore IPA93,
           </CustomLink>{" "}
           unicode{" "}
           <CustomLink href="https://scripts.sil.org/cms/scripts/page.php?id=doulossilfont&site_id=nrsi">
             DuolosSIL
           </CustomLink>
+          )
         </li>
         <li>
           <CustomLink href="https://www.library.ucla.edu/about/programs/campus-library-instructional-computing-commons-clicc/">
