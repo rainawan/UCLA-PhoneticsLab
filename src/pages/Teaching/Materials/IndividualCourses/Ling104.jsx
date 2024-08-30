@@ -86,10 +86,17 @@ const Ling104 = () => {
         </li>
         <li>
           a{" "}
-          <a download href={powerpoint}>
+          <CustomLink download href={powerpoint}>
             Powerpoint file
-          </a>{" "}
+          </CustomLink>{" "}
           of spectrograms to be read from Pat Keating
+        </li>
+        <li>
+          articles we have read in seminar about measurements:{" "}
+          <CustomLink href="https://www.sciencedirect.com/science/article/abs/pii/S0167639301000498">
+            Vallabha & Tuller
+          </CustomLink>{" "}
+          2002 on formants; Francis et al. 2003 on VOT
         </li>
       </ul>
     </div>

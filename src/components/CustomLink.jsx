@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, Divider } from "@nextui-org/react";
 
-const CustomLink = ({ isExternal, href, children, ...props }) => {
-  if (isExternal) {
+const CustomLink = ({ isExternal, download, href, children, ...props }) => {
+  if (download) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+      <Link isExternal download size="lg" href={href} {...props}>
         {children}
-      </a>
+      </Link>
     );
   }
 
