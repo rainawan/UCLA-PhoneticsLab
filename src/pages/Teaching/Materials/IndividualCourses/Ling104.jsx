@@ -11,13 +11,13 @@ const Ling104 = () => {
           <span class="italic">Acoustic and Auditory Phonetics</span>
         </li>
         <li>
-          optional books sometimes ordered: Kent & Read (1992){" "}
+          Optional books sometimes ordered: Kent & Read (1992){" "}
           <span class="italic">The Acoustic Analysis of Speech</span>{" "}
           (especially for its chapter on the use of a Klatt synthesizer);
           Ladefoged <span class="italic">Elements of Acoustic Phonetics</span>
         </li>
         <li>
-          link to our page of{" "}
+          Link to our page of{" "}
           <CustomLink href="https://phonetics.linguistics.ucla.edu/facilities/acoustic/praat.html">
             Praat resources{" "}
           </CustomLink>

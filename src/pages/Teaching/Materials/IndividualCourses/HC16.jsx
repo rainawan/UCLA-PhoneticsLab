@@ -4,15 +4,15 @@ import CustomLink from "../../../../components/CustomLink";
 const HC16 = () => {
   return (
     <div>
-      <Text className="text-left">HC 16</Text>
+      <Text className="text-left">HC16</Text>
       <ul className="px-10 list-disc list-outside">
         <li>
-          the usual textbook: J. Sundberg (1987){" "}
+          The usual textbook: J. Sundberg (1987){" "}
           <span class="italic">The Science of the Singing Voice</span>, Northern
           Illinois University Press
         </li>
         <li>
-          optional books: G. Nair (1999){" "}
+          Optional books: G. Nair (1999){" "}
           <span class="italic">Voice - Tradition and Technology</span>, Singular
           Publishing ; R. Miller (1996){" "}
           <span class="italic">The Structure of Singing, Schirmer</span>; I.

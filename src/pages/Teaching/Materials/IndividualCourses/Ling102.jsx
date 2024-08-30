@@ -13,7 +13,7 @@ const Ling102 = () => {
           </span>
         </li>
         <li>
-          optional books sometimes ordered: Pullum & Ladusaw (1996){" "}
+          Optional books sometimes ordered: Pullum & Ladusaw (1996){" "}
           <span class="italic">Phonetic Symbol Guide</span> 2nd edition;
           <span class="italic">
             {" "}
@@ -132,12 +132,12 @@ const Ling102 = () => {
           </CustomLink>{" "}
           of Shakespeare site
         </li>
-        <li>link to Esling's IPA chart iOS app</li>
+        <li>Link to Esling's IPA chart iOS app</li>
         <li>
-          link to Glasgow U's IPA chart with vocal tract ultrasound videos; USC
+          Link to Glasgow U's IPA chart with vocal tract ultrasound videos; USC
           real-time MRI IPA charts
         </li>
-        <li>link to U. Iowa app on English, Spanish, Korean, Chinese</li>
+        <li>Link to U. Iowa app on English, Spanish, Korean, Chinese</li>
         <li>Daniel Hall's interactive midsagittal section at the U Toronto</li>
         <li>
           Bruce Hayes's{" "}
