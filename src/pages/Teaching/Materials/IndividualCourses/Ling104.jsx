@@ -73,9 +73,10 @@ const Ling104 = () => {
         </li>
         <li>Hartmut Traunmüller's History of speech synthesis</li>
         <li>
-          Klatt's sound examples of history of speech synthesis hosted at
-          Indiana U. for the Acoustical Society Sami Lemmetty's Text to speech
-          demos (including Klatt's illustrations)
+          Klatt's 'History of speech synthesis' archive audio clips, hosted in
+          <CustomLink href="https://acousticstoday.org/klatts-speech-synthesis-d/">
+            Acoustics Today
+          </CustomLink>
         </li>
         <li>
           Larry Rosenblum's{" "}

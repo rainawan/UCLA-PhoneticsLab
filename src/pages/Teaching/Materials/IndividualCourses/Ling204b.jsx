@@ -17,11 +17,8 @@ const Ling204b = () => {
         </li>
         <li>
           Information on using the lab's equipment for measuring aspects of
-          speech production is in the{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/facilities/physiology/physiology.html">
-            Physiology
-          </CustomLink>{" "}
-          section
+          speech production is in the Articulatory Analysis section under
+          Resources in this website.
         </li>
         <li>
           Peter Ladefoged et al.{" "}
