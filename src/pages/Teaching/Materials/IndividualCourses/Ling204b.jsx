@@ -4,7 +4,9 @@ import CustomLink from "../../../../components/CustomLink";
 const Ling204b = () => {
   return (
     <div>
-      <Text className="text-left">Ling 204b</Text>
+      <Text pbold className="text-left">
+        Ling 204b
+      </Text>
       <ul className="px-10 list-disc list-outside">
         <li>
           1993 ASA Speech Production videos by Maureen Stone and others, in the{" "}

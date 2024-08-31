@@ -4,7 +4,9 @@ import powerpoint from "../Downloads/spex.ppt";
 const Ling104 = () => {
   return (
     <div>
-      <Text className="text-left">Ling C104/C204a</Text>
+      <Text pbold className="text-left">
+        Ling C104/C204a
+      </Text>
       <ul className="px-10 list-disc list-outside">
         <li>
           The usual textbook: K. Johnson (2012){" "}

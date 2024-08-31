@@ -5,7 +5,9 @@ import powerpoint from "../Downloads/spex.ppt";
 const Ling422 = () => {
   return (
     <div>
-      <Text className="text-left">Ling 422</Text>
+      <Text pbold className="text-left">
+        Ling 422
+      </Text>
       <ul className="px-10 list-disc list-outside">
         <li>
           Bruce Hayes's{" "}

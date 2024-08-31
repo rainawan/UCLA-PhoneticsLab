@@ -4,7 +4,9 @@ import CustomLink from "../../../../components/CustomLink";
 const Ling111 = () => {
   return (
     <div>
-      <Text className="text-left">Ling C111/C211</Text>
+      <Text pbold className="text-left">
+        Ling C111/C211
+      </Text>
       <ul className="px-10 list-disc list-outside">
         <li>
           Link to our{" "}
