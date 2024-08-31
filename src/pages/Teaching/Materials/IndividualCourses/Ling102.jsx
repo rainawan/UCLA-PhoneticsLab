@@ -4,7 +4,9 @@ import CustomLink from "../../../../components/CustomLink";
 const Ling102 = () => {
   return (
     <div>
-      <Text className="text-left">Ling 102/103</Text>
+      <Text pbold className="text-left">
+        Ling 102/103
+      </Text>
       <ul className="px-10 list-disc list-outside">
         <li>
           Textbook: We use{" "}
@@ -31,13 +33,7 @@ const Ling102 = () => {
           edition of A Course in Phonetics and 1st edition of Vowels and
           Consonants) - archival teaching materials
         </li>
-        <li>
-          IPA Soundsearch application for searching for segments simultaneously
-          in the Phonetics Lab Data and the Illustrations of the IPA. Gives you
-          links to all the languages in these sources that contain a requested
-          sound; if the language is in the Phonetics Lab Data, it takes you
-          directly to the clickable webpage. Currently not available.
-        </li>
+
         <li>
           Normal Speech Articulation (the "Iowa movie") VHS, DVD and film in the{" "}
           <CustomLink href="https://media.dymaxion.ca/display/214/wwk770">
@@ -132,13 +128,6 @@ const Ling102 = () => {
           </CustomLink>{" "}
           of Shakespeare site
         </li>
-        <li>Link to Esling's IPA chart iOS app</li>
-        <li>
-          Link to Glasgow U's IPA chart with vocal tract ultrasound videos; USC
-          real-time MRI IPA charts
-        </li>
-        <li>Link to U. Iowa app on English, Spanish, Korean, Chinese</li>
-        <li>Daniel Hall's interactive midsagittal section at the U Toronto</li>
         <li>
           Bruce Hayes's{" "}
           <CustomLink href="https://linguistics.ucla.edu/people/hayes/103/SpectrogramReading/index.htm">

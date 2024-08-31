@@ -6,7 +6,9 @@ import { Link, Divider } from "@nextui-org/react";
 const AllPhoneticsCourses = () => {
   return (
     <div>
-      <Text className="text-left">All Phonetics Courses</Text>
+      <Text pbold className="text-left">
+        All Phonetics Courses
+      </Text>
       <ul className="px-10 list-disc list-outside ">
         <li>
           {" "}

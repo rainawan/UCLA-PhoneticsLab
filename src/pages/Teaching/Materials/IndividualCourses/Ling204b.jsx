@@ -4,7 +4,9 @@ import CustomLink from "../../../../components/CustomLink";
 const Ling204b = () => {
   return (
     <div>
-      <Text className="text-left">Ling 204b</Text>
+      <Text pbold className="text-left">
+        Ling 204b
+      </Text>
       <ul className="px-10 list-disc list-outside">
         <li>
           1993 ASA Speech Production videos by Maureen Stone and others, in the{" "}
@@ -15,11 +17,8 @@ const Ling204b = () => {
         </li>
         <li>
           Information on using the lab's equipment for measuring aspects of
-          speech production is in the{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/facilities/physiology/physiology.html">
-            Physiology
-          </CustomLink>{" "}
-          section
+          speech production is in the Articulatory Analysis section under
+          Resources in this website.
         </li>
         <li>
           Peter Ladefoged et al.{" "}

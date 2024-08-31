@@ -4,7 +4,9 @@ import CustomLink from "../../../../components/CustomLink";
 const HC16 = () => {
   return (
     <div>
-      <Text className="text-left">HC16</Text>
+      <Text pbold className="text-left">
+        HC16
+      </Text>
       <ul className="px-10 list-disc list-outside">
         <li>
           The usual textbook: J. Sundberg (1987){" "}

@@ -4,7 +4,9 @@ import powerpoint from "../Downloads/spex.ppt";
 const Ling104 = () => {
   return (
     <div>
-      <Text className="text-left">Ling C104/C204a</Text>
+      <Text pbold className="text-left">
+        Ling C104/C204a
+      </Text>
       <ul className="px-10 list-disc list-outside">
         <li>
           The usual textbook: K. Johnson (2012){" "}
@@ -71,9 +73,10 @@ const Ling104 = () => {
         </li>
         <li>Hartmut Traunmüller's History of speech synthesis</li>
         <li>
-          Klatt's sound examples of history of speech synthesis hosted at
-          Indiana U. for the Acoustical Society Sami Lemmetty's Text to speech
-          demos (including Klatt's illustrations)
+          Klatt's 'History of speech synthesis' archive audio clips, hosted in
+          <CustomLink href="https://acousticstoday.org/klatts-speech-synthesis-d/">
+            Acoustics Today
+          </CustomLink>
         </li>
         <li>
           Larry Rosenblum's{" "}

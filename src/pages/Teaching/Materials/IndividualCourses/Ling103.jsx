@@ -4,7 +4,9 @@ import CustomLink from "../../../../components/CustomLink";
 const Ling103 = () => {
   return (
     <div>
-      <Text className="text-left">Ling 103</Text>
+      <Text pbold className="text-left">
+        Ling 103
+      </Text>
       <ul className="px-10 list-disc list-outside">
         <li>
           The master reserves list: a standing list of books kept on 2-hour
