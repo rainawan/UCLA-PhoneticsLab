@@ -73,7 +73,7 @@ const Ling104 = () => {
         </li>
         <li>Hartmut Traunmüller's History of speech synthesis</li>
         <li>
-          Klatt's 'History of speech synthesis' archive audio clips, hosted in
+          Klatt's 'History of speech synthesis' archive audio clips, hosted in{" "}
           <CustomLink href="https://acousticstoday.org/klatts-speech-synthesis-d/">
             Acoustics Today
           </CustomLink>

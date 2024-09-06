@@ -8,7 +8,7 @@ const ArticulatoryAnalysis = () => {
   return (
     <div className="bg-white p-20 text-left">
       <Palatography />
-      <Electropalatography />
+      {/* <Electropalatography /> */}
       <Aerodynamics />
       <Electroglottograph />
       <Ultrasound />
