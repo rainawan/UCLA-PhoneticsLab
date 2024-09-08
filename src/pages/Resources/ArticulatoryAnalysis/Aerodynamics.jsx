@@ -6,7 +6,7 @@ import aerodynamics_fig_2 from "../../../components/resources/aerodynamics/aerod
 const Aerodynamics = () => {
   return (
     <div>
-      <div className="pt-10">
+      <div>
         <Text h3>Aerodynamics</Text>
         <Accordion variant="shadow">
           <AccordionItem

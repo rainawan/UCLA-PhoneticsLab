@@ -10,10 +10,7 @@ import palatogram_fig_6 from "../../../components/resources/palatography/palatog
 const Palatography = () => {
   return (
     <div>
-      <Text h2 className="text-left">
-        Articulatory Analysis
-      </Text>
-      <div>
+      <div className="pt-10">
         <Text h3>Static Palatography</Text>
         <Accordion variant="shadow">
           <AccordionItem title={<span className="text-xl">Introduction</span>}>
