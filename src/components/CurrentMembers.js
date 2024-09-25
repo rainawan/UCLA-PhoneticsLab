@@ -20,6 +20,8 @@ import Patricia_Keating from "../components/current_members/Patricia_Keating.jpg
 import Sun_Ah_Jun from "../components/current_members/Sun_Ah_Jun.jpg";
 import Yang_Wang from "../components/current_members/Yang_Wang.jpg";
 import ZL_Zhou from "../components/current_members/ZL_Zhou.jpg";
+import Jonah_Katz from "../components/current_members/Jonah_Katz.jpg";
+import Elise_Bell from "../components/current_members/Elise_Bell.jpg";
 
 export const members = [
   {
@@ -147,5 +149,17 @@ export const members = [
     occupation: "Faculty",
     imgSrc: Kie_Zuraw,
     link: "https://linguistics.ucla.edu/people/zuraw/index.htm",
+  },
+  {
+    name: "Jonah Katz",
+    occupation: "Faculty",
+    imgSrc: Jonah_Katz,
+    link: "https://linguistics.ucla.edu/person/jonah-katz/",
+  },
+  {
+    name: "Elise Bell",
+    occupation: "Faculty",
+    imgSrc: Elise_Bell,
+    link: "https://elisebell.github.io/",
   },
 ];
