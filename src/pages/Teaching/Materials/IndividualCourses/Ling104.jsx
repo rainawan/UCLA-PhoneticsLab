@@ -87,7 +87,7 @@ const Ling104 = () => {
         </li>
         <li>
           Artificial larynx (great for illustrating source-filter theory) is in
-          the cabinet in the lab kitchen
+          the desk drawer in Room 2101B
         </li>
         <li>
           A{" "}
@@ -105,10 +105,20 @@ const Ling104 = () => {
         </li>
         <li>
           Rob Hagiwara's{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/teaching/111Win06Jun.pdf">
+          <CustomLink href="https://home.cc.umanitoba.ca/%7Erobh/howto.html">
             Monthly Mystery Spectrogram page
           </CustomLink>{" "}
           at the U. of Manitoba
+        </li>
+        <li>
+          <CustomLink italic href="https://nascl.rc.nau.edu/gramle/">
+            Gramle,
+          </CustomLink>{" "}
+          online spectrogram reading game; see{" "}
+          <CustomLink href="https://nascl.rc.nau.edu/gramle-transcription/">
+            Gramle transcription
+          </CustomLink>{" "}
+          , Nothern Arizona University.
         </li>
       </ul>
     </div>
