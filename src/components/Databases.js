@@ -13,6 +13,7 @@ import voice_quality from "../../src/components/databases/voice_quality.jpeg";
 import vowels from "../../src/components/databases/vowels.jpeg";
 import becker from "../../src/components/databases/BeckerVowelCorpus.xlsx";
 import phonotationfile from "../../src/components/databases/LgsPhon.xls";
+import ldc from "../../src/components/databases/LDC.png";
 
 const roybecker =
   'Click <a href="https://www.w3schools.com">here</a> for more information.';
@@ -55,18 +56,24 @@ export const within_ucla = [
     imgSrc: ktobi,
     link: "https://linguistics.ucla.edu/people/jun/ktobi/k-tobi.html",
   },
-  {
-    title: "CELEX",
-    desc: "The lab's copy of the CELEX database, used for calculating lexical statistics, is on the T: server, along with some scripts for doing searches.",
-    imgSrc: celex,
-    link: "http://phonetics.linguistics.ucla.edu/facilities/databases/databases.html#celex",
-  },
+  // {
+  //   title: "CELEX",
+  //   desc: "The lab's copy of the CELEX database, used for calculating lexical statistics, is on the T: server, along with some scripts for doing searches.",
+  //   imgSrc: celex,
+  //   link: "http://phonetics.linguistics.ucla.edu/facilities/databases/databases.html#celex",
+  // },
   {
     title: "Phonation Database",
     desc: "(languages with contrastive phonation)",
     imgSrc: phonation,
     link: "http://phonetics.linguistics.ucla.edu/facilities/databases/databases.html",
     file: phonotationfile,
+  },
+  {
+    title: "LDC (Linguistic Data Consortium)",
+    desc: "The department has an LDC license and if anyone is interested in an LDC corpus, please reach out to Tim Hunter.",
+    imgSrc: ldc,
+    link: "https://www.ldc.upenn.edu/",
   },
 ];
 

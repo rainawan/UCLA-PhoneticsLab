@@ -32,15 +32,9 @@ const Ling103 = () => {
           <CustomLink href="https://www.ethnologue.com/">ethnologue</CustomLink>
         </li>
         <li>
-          Term project resources:{" "}
-          <CustomLink href="http://www.lmp.ucla.edu/">
-            UCLA Language Materials Project
-          </CustomLink>
-        </li>
-        <li>
           Term project resources: Illustrations of the IPA -{" "}
           <CustomLink href="https://richardbeare.github.io/marijatabain/ipa_illustrations_all.html">
-            UCLA Language Materials Project
+            maps and lists of languages
           </CustomLink>
         </li>
       </ul>

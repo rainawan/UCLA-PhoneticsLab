@@ -3,7 +3,7 @@ import Abber_Abbas from "../components/current_members/Abeer_Abbas.jpg";
 import Ben_Eischens from "../components/current_members/Ben_Eischens.jpg";
 import Bruce_Hayes from "../components/current_members/Bruce_Hayes.jpg";
 import Claire_Moore_Cantwell from "../components/current_members/Claire_Moore_Cantwell.jpg";
-import Ekaterina_Khlystova from "../components/current_members/Ekaterina_Khlystova.jpg";
+import Katya_Khlystova from "../components/current_members/Katya_Khlystova.jpg";
 import Elizabeth_Sola_Llonch from "../components/current_members/Elizabeth_Sola_Llonch.jpg";
 import Jahnavi_Narkar from "../components/current_members/Jahnavi_Narkar.jpg";
 import Jake_Aziz from "../components/current_members/Jake_Aziz.jpg";
@@ -18,8 +18,9 @@ import Meg_Cychosz from "../components/current_members/Meg_Cychosz.jpg";
 import Megha_Sundara from "../components/current_members/Megha_Sundara.jpg";
 import Patricia_Keating from "../components/current_members/Patricia_Keating.jpg";
 import Sun_Ah_Jun from "../components/current_members/Sun_Ah_Jun.jpg";
-import Yang_Wang from "../components/current_members/Yang_Wang.jpg";
 import ZL_Zhou from "../components/current_members/ZL_Zhou.jpg";
+import Jonah_Katz from "../components/current_members/Jonah_Katz.jpg";
+import Elise_Bell from "../components/current_members/Elise_Bell.jpg";
 
 export const members = [
   {
@@ -71,9 +72,9 @@ export const members = [
     link: "https://linguistics.ucla.edu/people/keating/keating.htm",
   },
   {
-    name: "Ekaterina Khlystova",
+    name: "Katya Khlystova",
     occupation: "Graduate Student",
-    imgSrc: Ekaterina_Khlystova,
+    imgSrc: Katya_Khlystova,
     link: "https://ekhlystova.wixsite.com/home",
   },
   {
@@ -125,12 +126,6 @@ export const members = [
     link: "https://linguistics.ucla.edu/person/megha-sundara/",
   },
   {
-    name: "Yang Wang",
-    occupation: "Graduate Student",
-    imgSrc: Yang_Wang,
-    link: "https://yangwangthelinguist.github.io/",
-  },
-  {
     name: "Lily Xu",
     occupation: "Graduate Student",
     imgSrc: Lily_Xu,
@@ -147,5 +142,17 @@ export const members = [
     occupation: "Faculty",
     imgSrc: Kie_Zuraw,
     link: "https://linguistics.ucla.edu/people/zuraw/index.htm",
+  },
+  {
+    name: "Jonah Katz",
+    occupation: "Faculty",
+    imgSrc: Jonah_Katz,
+    link: "https://linguistics.ucla.edu/person/jonah-katz/",
+  },
+  {
+    name: "Elise Bell",
+    occupation: "Faculty",
+    imgSrc: Elise_Bell,
+    link: "https://elisebell.github.io/",
   },
 ];

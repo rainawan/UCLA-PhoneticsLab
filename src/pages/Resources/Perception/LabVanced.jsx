@@ -1,37 +1,37 @@
 import Text from "../../../components/Text";
 import { Link } from "@nextui-org/react";
 
-const Eprime = () => {
+const LabVanced = () => {
   return (
     <div>
       <Text h3 className="pt-10">
-        Eprime
+        LabVanced
       </Text>
       <Text p>
-        The{" "}
+        The Phonetics Lab has a group account on{" "}
         <Link
           isExternal
-          href="https://pstnet.com/products/e-prime/"
+          href="https://www.labvanced.com/"
           underline="hover"
           color="danger"
           size="lg"
         >
-          Eprime
-        </Link>{" "}
-        Player is available throughout the lab for running experiments. To
-        program an experiment in Eprime, you need to get the key for the program
-        from the Language (Infant) Lab manager, and use it to access a copy of
-        Eprime on one of the lab's computers.
+          LabVanced
+        </Link>
+        . So if you want to use LabVanced, please create an account in
+        LabVanced, and give your user id or email address to the lab director,
+        informing that you want to use the Phonetics Lab's group account of
+        LabVanced.
       </Text>
 
       <Text p>
         If a laptop is used to run an experiment, we recommend also using an
         external D/A device for presenting audio stimuli; and outside a
         soundbooth, we recommend using Sennheiser or other sound-attenuating
-        headphones."
+        headphones.
       </Text>
     </div>
   );
 };
 
-export default Eprime;
+export default LabVanced;

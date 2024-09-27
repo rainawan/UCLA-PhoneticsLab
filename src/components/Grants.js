@@ -9,6 +9,48 @@ export const rows = [
     website: "",
   },
   {
+    key: "",
+    name: "Meg Cychosz",
+    date: "2024-25",
+    agency: "Hearing Health Foundation Emerging Research Grant",
+    number: "",
+    title:
+      "Leveraging automatic speech recognition algorithms to understand how the home listening environment impacts spoken language development among infants with cochlear implants",
+    website: "",
+  },
+  {
+    key: "",
+    name: "Sola A.M. (PI), CHan, D.K. & Cychosz, M. (Mentors)",
+    date: "2024-25",
+    agency:
+      "American Academy of Otolaryngology - Head and Neck Surgery Foundation Resident Rsearch Award",
+    number: "",
+    title:
+      "Automated speech processing as a predictive tool for speech and language outcomes",
+    website: "",
+  },
+  {
+    key: "",
+    name: "Meg Cychosz",
+    date: "2023-24",
+    agency:
+      "American Speech-Language-Hearing Foundation New Investigators Research Grant",
+    number: "",
+    title:
+      "The impact of cochlear implant device limitations on preschoolers' real time phonological processing skills",
+    website: "",
+  },
+  {
+    key: "",
+    name: "Megha Sundara, Connor Mayer (UCI)",
+    date: "2022-2026",
+    agency: "NSF",
+    number: "BCS-2214017",
+    title:
+      "A new approach to computation model evaluation: Benchmarking against infant experimental data",
+    website: "",
+  },
+  {
     key: "1",
     name: "Megha Sundara, Bruce Hayes",
     date: "2020-2024",

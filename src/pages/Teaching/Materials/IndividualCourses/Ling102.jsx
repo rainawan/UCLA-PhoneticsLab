@@ -134,6 +134,16 @@ const Ling102 = () => {
             practice spectrogram reading
           </CustomLink>
         </li>
+        <li>
+          <CustomLink italic href="https://nascl.rc.nau.edu/gramle/">
+            Gramle,
+          </CustomLink>{" "}
+          online spectrogram reading game; see{" "}
+          <CustomLink href="https://nascl.rc.nau.edu/gramle-transcription/">
+            Gramle transcription
+          </CustomLink>{" "}
+          , Nothern Arizona University.
+        </li>
       </ul>
     </div>
   );

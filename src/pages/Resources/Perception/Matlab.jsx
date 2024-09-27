@@ -11,13 +11,12 @@ const Matlab = () => {
             <div className="pb-10 px-4">
               <Text p>
                 For the benefit of future users, we ask that a brief description
-                of working scripts used in the lab be sent to the Lab Director for posting
-                here.
+                of working scripts used in the lab be sent to the Lab Director
+                for posting here.
                 <br />
                 <br />
                 Many of the perception experiments run in the lab are scripted
-                in Matlab. Henry can provide you with custom scripts for your
-                experiments. In addition, this page archives a few past scripts
+                in Matlab. In addition, this page archives a few past scripts
                 that can be used as models. Be aware that these scripts include
                 path information and filenames that may need to be adjusted by
                 new users, and they often call for text files listing the
@@ -187,8 +186,6 @@ const Matlab = () => {
             </div>
           </AccordionItem>
         </Accordion>
-
-       
       </div>
     </div>
   );
