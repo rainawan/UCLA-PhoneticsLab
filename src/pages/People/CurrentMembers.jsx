@@ -23,7 +23,7 @@ const CurrentMembers = () => {
                 </div>
               </CardHeader>
               <CardBody className="overflow-visible py-2 justify-center items-center">
-                <div className="relative w-full h-40">
+                <div className="relative w-full">
                   <Image
                     alt={card.name}
                     className="object-cover rounded-xl aspect-square"

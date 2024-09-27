@@ -3,7 +3,7 @@ import Abber_Abbas from "../components/current_members/Abeer_Abbas.jpg";
 import Ben_Eischens from "../components/current_members/Ben_Eischens.jpg";
 import Bruce_Hayes from "../components/current_members/Bruce_Hayes.jpg";
 import Claire_Moore_Cantwell from "../components/current_members/Claire_Moore_Cantwell.jpg";
-import Ekaterina_Khlystova from "../components/current_members/Ekaterina_Khlystova.jpg";
+import Katya_Khlystova from "../components/current_members/Katya_Khlystova.jpg";
 import Elizabeth_Sola_Llonch from "../components/current_members/Elizabeth_Sola_Llonch.jpg";
 import Jahnavi_Narkar from "../components/current_members/Jahnavi_Narkar.jpg";
 import Jake_Aziz from "../components/current_members/Jake_Aziz.jpg";
@@ -73,9 +73,9 @@ export const members = [
     link: "https://linguistics.ucla.edu/people/keating/keating.htm",
   },
   {
-    name: "Ekaterina Khlystova",
+    name: "Katya Khlystova",
     occupation: "Graduate Student",
-    imgSrc: Ekaterina_Khlystova,
+    imgSrc: Katya_Khlystova,
     link: "https://ekhlystova.wixsite.com/home",
   },
   {

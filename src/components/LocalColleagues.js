@@ -40,14 +40,6 @@ export const members = [
     imgSrc: SandyDisner,
   },
   {
-    key: "5",
-    name: "Bruce Geratt",
-    department:
-      "Bureau of Glottal Affairs, Head & Neck Surgery, Medical School, UCLA",
-    website: "https://www.linkedin.com/in/bruce-gerratt-56862468/",
-    imgSrc: BruceGerratt,
-  },
-  {
     key: "6",
     name: "Louis Goldstein",
     department: "Linguistics, USC",

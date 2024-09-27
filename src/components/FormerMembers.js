@@ -890,7 +890,8 @@ export const rows = [
   {
     key: "144",
     name: "Motoko Ueyama",
-    status: "Associate Professor in the Department of Interpretation & Translation at Università Di Bologna",
+    status:
+      "Associate Professor in the Department of Interpretation & Translation at Università Di Bologna",
     website: "",
   },
   {
@@ -903,7 +904,8 @@ export const rows = [
     key: "146",
     name: "Diana Van Lancker Sidtis",
     status: "",
-    website: "https://steinhardt.nyu.edu/faculty_bios/view/Diana_Van_Lancker_Sidtis",
+    website:
+      "https://steinhardt.nyu.edu/faculty_bios/view/Diana_Van_Lancker_Sidtis",
   },
   {
     key: "147",
@@ -938,7 +940,8 @@ export const rows = [
   {
     key: "152",
     name: "Harry Whitaker",
-    status: "Northern Michigan University, Department of Psychological Science, Retired",
+    status:
+      "Northern Michigan University, Department of Psychological Science, Retired",
     website: "https://www.researchgate.net/profile/Harry-Whitaker",
   },
   {
@@ -968,7 +971,8 @@ export const rows = [
   {
     key: "157",
     name: "Richard Wright",
-    status: "University of Washington, Department of Linguistics, Professor and Department Chair",
+    status:
+      "University of Washington, Department of Linguistics, Professor and Department Chair",
     website: "https://linguistics.washington.edu/people/richard-wright",
   },
   {
@@ -980,7 +984,8 @@ export const rows = [
   {
     key: "159",
     name: "Kristine Yu",
-    status: "University of Massachusetts Amherst, Associate Professor of Linguistics",
+    status:
+      "University of Massachusetts Amherst, Associate Professor of Linguistics",
     website: "https://www.krisyu.org/",
   },
   {
@@ -1000,6 +1005,19 @@ export const rows = [
     name: "Jesse Zymet",
     status: "Lecturer in Phonology at UC Berkeley",
     website: "http://linguistics.berkeley.edu/~jzymet/",
+  },
+  {
+    key: "163",
+    name: "Bruce Geratt",
+    status:
+      "Professor Emeritus, UCLA Dept. Head & Neck Surgery, Medical School",
+    website: "https://www.linkedin.com/in/bruce-gerratt-56862468/",
+  },
+  {
+    key: "164",
+    name: "Yang Wang",
+    status: "Assistant Professor at the University of Utah",
+    website: "https://yangwangthelinguist.github.io/",
   },
 ];
 
