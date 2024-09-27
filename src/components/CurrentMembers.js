@@ -18,7 +18,6 @@ import Meg_Cychosz from "../components/current_members/Meg_Cychosz.jpg";
 import Megha_Sundara from "../components/current_members/Megha_Sundara.jpg";
 import Patricia_Keating from "../components/current_members/Patricia_Keating.jpg";
 import Sun_Ah_Jun from "../components/current_members/Sun_Ah_Jun.jpg";
-import Yang_Wang from "../components/current_members/Yang_Wang.jpg";
 import ZL_Zhou from "../components/current_members/ZL_Zhou.jpg";
 import Jonah_Katz from "../components/current_members/Jonah_Katz.jpg";
 import Elise_Bell from "../components/current_members/Elise_Bell.jpg";
@@ -125,12 +124,6 @@ export const members = [
     occupation: "Faculty",
     imgSrc: Megha_Sundara,
     link: "https://linguistics.ucla.edu/person/megha-sundara/",
-  },
-  {
-    name: "Yang Wang",
-    occupation: "Graduate Student",
-    imgSrc: Yang_Wang,
-    link: "https://yangwangthelinguist.github.io/",
   },
   {
     name: "Lily Xu",

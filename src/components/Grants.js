@@ -31,7 +31,7 @@ export const rows = [
   },
   {
     key: "",
-    name: "Sola A.M. (PI), CHan, D.K. & Cychosz, M. (Mentors)",
+    name: "Meg Cychosz",
     date: "2023-24",
     agency:
       "American Speech-Language-Hearing Foundation New Investigators Research Grant",

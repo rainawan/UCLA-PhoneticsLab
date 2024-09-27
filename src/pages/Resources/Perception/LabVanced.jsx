@@ -20,7 +20,7 @@ const LabVanced = () => {
         </Link>
         . So if you want to use LabVanced, please create an account in
         LabVanced, and give your user id or email address to the lab director,
-        informing that you want to use the phonetics Lab's group account of
+        informing that you want to use the Phonetics Lab's group account of
         LabVanced.
       </Text>
 
@@ -28,7 +28,7 @@ const LabVanced = () => {
         If a laptop is used to run an experiment, we recommend also using an
         external D/A device for presenting audio stimuli; and outside a
         soundbooth, we recommend using Sennheiser or other sound-attenuating
-        headphones."
+        headphones.
       </Text>
     </div>
   );
