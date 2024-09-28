@@ -18,7 +18,6 @@ import Meg_Cychosz from "../components/current_members/Meg_Cychosz.jpg";
 import Megha_Sundara from "../components/current_members/Megha_Sundara.jpg";
 import Patricia_Keating from "../components/current_members/Patricia_Keating.jpg";
 import Sun_Ah_Jun from "../components/current_members/Sun_Ah_Jun.jpg";
-import ZL_Zhou from "../components/current_members/ZL_Zhou.jpg";
 import Jonah_Katz from "../components/current_members/Jonah_Katz.jpg";
 import Elise_Bell from "../components/current_members/Elise_Bell.jpg";
 
@@ -34,6 +33,12 @@ export const members = [
     occupation: "Graduate Student",
     imgSrc: Jake_Aziz,
     link: "https://linguistics.ucla.edu/person/jake-aziz/",
+  },
+  {
+    name: "Elise Bell",
+    occupation: "Faculty/Lab Support Staff",
+    imgSrc: Elise_Bell,
+    link: "https://elisebell.github.io/",
   },
   {
     name: "Meg Cychosz",
@@ -64,6 +69,12 @@ export const members = [
     occupation: "Faculty | Lab Director",
     imgSrc: Sun_Ah_Jun,
     link: "https://linguistics.ucla.edu/people/jun/sun-ah.htm",
+  },
+  {
+    name: "Jonah Katz",
+    occupation: "Faculty",
+    imgSrc: Jonah_Katz,
+    link: "https://linguistics.ucla.edu/person/jonah-katz/",
   },
   {
     name: "Patricia Keating",
@@ -132,27 +143,9 @@ export const members = [
     link: "https://sites.google.com/view/lilyxxu/",
   },
   {
-    name: "Z. L. Zhou",
-    occupation: "Graduate Student",
-    imgSrc: ZL_Zhou,
-    link: "https://linguistics.ucla.edu/person/zlzhou/",
-  },
-  {
     name: "Kie Zuraw",
     occupation: "Faculty",
     imgSrc: Kie_Zuraw,
     link: "https://linguistics.ucla.edu/people/zuraw/index.htm",
-  },
-  {
-    name: "Jonah Katz",
-    occupation: "Faculty",
-    imgSrc: Jonah_Katz,
-    link: "https://linguistics.ucla.edu/person/jonah-katz/",
-  },
-  {
-    name: "Elise Bell",
-    occupation: "Faculty",
-    imgSrc: Elise_Bell,
-    link: "https://elisebell.github.io/",
   },
 ];

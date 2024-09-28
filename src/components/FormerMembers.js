@@ -326,6 +326,13 @@ export const rows = [
     website: "https://pages.ucsd.edu/~mgarellek/",
   },
   {
+    key: "163",
+    name: "Bruce Geratt",
+    status:
+      "Professor Emeritus, UCLA Dept. Head & Neck Surgery, Medical School",
+    website: "https://www.linkedin.com/in/bruce-gerratt-56862468/",
+  },
+  {
     key: "53",
     name: "Eleanor Glewwe",
     status: "Visiting Assistant Professor at Grinnell College",
@@ -932,6 +939,12 @@ export const rows = [
     website: "",
   },
   {
+    key: "164",
+    name: "Yang Wang",
+    status: "Assistant Professor at the University of Utah",
+    website: "https://yangwangthelinguist.github.io/",
+  },
+  {
     key: "151",
     name: "Nancy Ward",
     status: "",
@@ -1001,23 +1014,16 @@ export const rows = [
     website: "https://linguistics.ku.edu/jie-zhang",
   },
   {
+    key: "161",
+    name: "Z. L. Zhou",
+    status: "Graduate Student",
+    website: "https://linguistics.ucla.edu/person/zlzhou/",
+  },
+  {
     key: "162",
     name: "Jesse Zymet",
     status: "Lecturer in Phonology at UC Berkeley",
     website: "http://linguistics.berkeley.edu/~jzymet/",
-  },
-  {
-    key: "163",
-    name: "Bruce Geratt",
-    status:
-      "Professor Emeritus, UCLA Dept. Head & Neck Surgery, Medical School",
-    website: "https://www.linkedin.com/in/bruce-gerratt-56862468/",
-  },
-  {
-    key: "164",
-    name: "Yang Wang",
-    status: "Assistant Professor at the University of Utah",
-    website: "https://yangwangthelinguist.github.io/",
   },
 ];
 
