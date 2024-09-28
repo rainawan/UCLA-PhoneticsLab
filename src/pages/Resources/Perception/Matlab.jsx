@@ -125,10 +125,10 @@ const Matlab = () => {
           </AccordionItem>
           <AccordionItem title="Descriptions">
             <div className="pb-10 px-4">
-              <Text pbold>
+              {/* <Text pbold>
                 Descriptions of existing scripts available from Henry (to be
                 modified for your needs):
-              </Text>
+              </Text> */}
               <Text p>
                 <div className="pl-10">
                   <ul className="list-disc">
