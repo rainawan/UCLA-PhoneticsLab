@@ -37,6 +37,12 @@ const Ling103 = () => {
             maps and lists of languages
           </CustomLink>
         </li>
+        <li>
+          Audio recording in 2101B Campbell -{" "}
+          <CustomLink href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3TmgVoG0Ijs_ftZHwnUhH7FSuTg91vw1dJYKdicsQsKC5uPL_YO5H6_aYHeEDpuljUPZVRZfZl">
+            link to online sign-up for this room
+          </CustomLink>
+        </li>
       </ul>
     </div>
   );

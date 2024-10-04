@@ -33,12 +33,6 @@ const AllPhoneticsCourses = () => {
           CDH lab classroom in Rolfe
         </li>
         <li>
-          Audio recording in 2101B Campbell -{" "}
-          <CustomLink href="https://mysitecalendar.com/calendar.aspx?id1=1041">
-            link to online sign-up for this room
-          </CustomLink>
-        </li>
-        <li>
           Anatomical models (larynx, auditory system, brain) are in the cabinet
           in the lab kitchen
         </li>
