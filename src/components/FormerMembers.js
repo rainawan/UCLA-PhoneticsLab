@@ -122,8 +122,8 @@ export const rows = [
   {
     key: "20",
     name: "Cathe Browman",
-    status: "",
-    website: "http://www.haskins.yale.edu/browman.html",
+    status: "Haskins Laboratories (deceased)",
+    website: "https://haskinslabs.org/cathe-browman",
   },
   {
     key: "21",
@@ -177,8 +177,8 @@ export const rows = [
   {
     key: "29",
     name: "John Choi",
-    status: "",
-    website: "",
+    status: "Apple Computer, Cupertino, CA (deceased)",
+    website: "https://escholarship.org/uc/item/07b9m6x8",
   },
   {
     key: "30",
@@ -818,7 +818,8 @@ export const rows = [
   {
     key: "131",
     name: "Jeremy Steffman",
-    status: "Postdoctoral Fellow at Northwestern University",
+    status:
+      "Lecturer in Phonetics (= Assistant Prof.) at the University of Edinburgh",
     website: "https://jsteffman.github.io/",
   },
   {
@@ -885,8 +886,9 @@ export const rows = [
   {
     key: "142",
     name: "Siri Tuttle",
-    status: "",
-    website: "",
+    status: "Professor of Navajo Linguistics at Navajo Technical University",
+    website:
+      "https://www.navajotech.edu/faculty-staff/faculty-directory/school-of-graduate-studies-research/",
   },
   {
     key: "143",
@@ -1016,13 +1018,13 @@ export const rows = [
   {
     key: "161",
     name: "Z. L. Zhou",
-    status: "Graduate Student",
-    website: "https://linguistics.ucla.edu/person/zlzhou/",
+    status: "Senior Research Scientist, Grid Dynamics",
+    website: "https://www.linkedin.com/in/zlzhou/",
   },
   {
     key: "162",
     name: "Jesse Zymet",
-    status: "Lecturer in Phonology at UC Berkeley",
+    status: "Data Science Manager, AI Foundations. Capital One",
     website: "http://linguistics.berkeley.edu/~jzymet/",
   },
 ];

@@ -10,7 +10,7 @@ const Eyetracker = () => {
       <Text p>
         <Text p>
           The Phonetics Lab has two SR Research Eyelink 1000 eyetrackers. A
-          non-portable eystracker is installed in Room 2101A and a portable
+          stationary eyetracker is installed in Room 2101A and a portable
           eyetracker is normally held in Room 2101E in the Phonetics Lab. These
           eyetrackers can record the eye movements of both adults and children
           in response to visual stimuli displayed on a computer monitor.{" "}

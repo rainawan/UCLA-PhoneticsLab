@@ -22,15 +22,18 @@ const HomePage = () => {
           <div className="p-3">
             The UCLA Phonetics Laboratory was established by Peter Ladefoged in
             the English Department in Fall 1962 and moved with him to the new
-            Linguistics Department in 1966. Members of the lab include faculty,
-            postdocs, graduate students, staff, and visiting scholars in
-            Linguistics. In our research we document segments and prosody of a
-            range of languages and describe their patterns as part of a
-            linguistic system through the production and perception of adult
-            native speakers. We also study how infants and children learn to
-            perceive and produce the sounds of their native language(s). The
-            UCLA Linguistics Department is well-known for the close cooperation
-            between its phonetics and phonology programs.
+            Linguistics Department in 1966. The lab was directed by Peter
+            Ladefoged until his retirement in 1991, then by Pat Keating until
+            her retirement in 2022. The current Director of the Phonetics Lab is
+            Sun-Ah Jun. Members of the lab include faculty, postdocs, graduate
+            students, staff, and visiting scholars in Linguistics. In our
+            research we document segments and prosody of a range of languages
+            and describe their patterns as part of a linguistic system through
+            the production and perception of adult native speakers. We also
+            study how infants and children learn to perceive and produce the
+            sounds of their native language(s). The UCLA Linguistics Department
+            is well-known for the close cooperation between its phonetics and
+            phonology programs.
           </div>
           <div className="p-3">
             The lab maintains facilities for teaching and research in adult and

@@ -67,6 +67,32 @@ const Dissertations = () => {
         </Link>{" "}
         for more information.
       </p>
+      <p>&nbsp;</p>
+
+      <Text h3>Join the listserv of the Phonetics Lab</Text>
+      <p>
+        The Phonetics Lab has a listserv,
+        <Link
+          underline="hover"
+          color="danger"
+          size="lg"
+          href="mailto:p-lab@lists.ucla.edu"
+        >
+          p-lab@lists.ucla.edu
+        </Link>
+        , for communication among its members. If you are a member of the
+        Phonetics Lab, please send your email address to{" "}
+        <Link
+          underline="hover"
+          color="danger"
+          size="lg"
+          href="mailto:jun@humnet.ucla.edu"
+        >
+          the Director
+        </Link>{" "}
+        so it can be added to the listserv.
+      </p>
+      <p>&nbsp;</p>
     </div>
   );
 };
