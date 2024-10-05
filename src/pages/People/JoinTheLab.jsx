@@ -71,7 +71,7 @@ const Dissertations = () => {
 
       <Text h3>Join the listserv of the Phonetics Lab</Text>
       <p>
-        The Phonetics Lab has a listserv,
+        The Phonetics Lab has a listserv,{" "}
         <Link
           underline="hover"
           color="danger"
