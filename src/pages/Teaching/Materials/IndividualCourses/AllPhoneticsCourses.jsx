@@ -54,6 +54,30 @@ const AllPhoneticsCourses = () => {
           (for films, videos, DVDs) (individual items listed below by course,
           but cannot be linked individually)
         </li>
+        <li>
+          A slow-motion{" "}
+          <CustomLink href="https://phonetics.linguistics.ucla.edu/demos/vocalfolds/vocalfolds.htm">
+            animation of the vocal folds
+          </CustomLink>{" "}
+          vibrating during speech, contributed by Peter Ladefoged.
+        </li>
+        <li>
+          An{" "}
+          <CustomLink href="https://phonetics.linguistics.ucla.edu/demos/croatian/index.html">
+            animation of articulators
+          </CustomLink>{" "}
+          in motion during speech, created from Electromagnetic Articulography
+          data by Adam Albright (about 200k)
+        </li>
+        <li>
+          <CustomLink
+            href="          https://phonetics.linguistics.ucla.edu/facilities/physiology/epg.html#3D
+"
+          >
+            Displaying Palatometer
+          </CustomLink>{" "}
+          data in 3-D, by former undergrad Cheng Cheng Saw Tan
+        </li>
       </ul>
     </div>
   );
