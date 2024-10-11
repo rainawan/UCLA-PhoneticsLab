@@ -1,10 +1,10 @@
-import Audio_Room from "./resources/acoustic_analysis/Audio_Room.jpg";
+import Audio_Room from "./resources/acoustic_analysis/Audio.jpg";
 import Blue_Booth from "./resources/acoustic_analysis/Blue_Booth.jpg";
-import Eyetracking_Room from "./resources/acoustic_analysis/Eyetracking_Room.jpg";
+import Eyetracking_Room from "./resources/acoustic_analysis/Eyetracking.jpg";
 import Gold_Booth from "./resources/acoustic_analysis/Gold_Booth.jpg";
 import Infant_Lab_Soundbooth from "./resources/acoustic_analysis/Infant_Lab_Soundbooth.jpg";
 import Orange_Booth from "./resources/acoustic_analysis/Orange_Booth.jpg";
-import Ultrasound_Room from "./resources/acoustic_analysis/Ultrasound_Room.jpg";
+import Ultrasound_Room from "./resources/acoustic_analysis/Ultrasound.jpg";
 
 export const cards = [
   {

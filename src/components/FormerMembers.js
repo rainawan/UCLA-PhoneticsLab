@@ -38,14 +38,16 @@ export const rows = [
   {
     key: "7",
     name: "Alice Anderton",
-    status: "",
-    website: "",
+    status:
+      "Society for the Study of Indigenous Languages of the Americas (SSILA) (deceased)",
+    website: "https://www.ssila.org/news1/obituaries/alice-anderton-1949-2016",
   },
   {
     key: "8",
-    name: "Norma Antonanzas",
-    status: "UCLA Bureau of Glottal Affairs",
-    website: "",
+    name: "Norma Antonanzas-Barroso",
+    status: "UCLA Head and Neck Surgery",
+    website:
+      "https://scholargps.com/scholars/40006904355250/norma-antonanzas-barroso",
   },
   {
     key: "9",
@@ -79,7 +81,7 @@ export const rows = [
     name: "Marco Baroni",
     status:
       "Catalan Institution for Research & Advanced Studies (ICREA), Research Professor",
-    website: "http://clic.cimec.unitn.it/marco/",
+    website: "https://marcobaroni.org/",
   },
   {
     key: "14",
@@ -98,20 +100,20 @@ export const rows = [
   {
     key: "16",
     name: "Jason Bishop",
-    status: "City University of New York, Associate Professor",
+    status: "City University of New York, Professor",
     website: "https://jbishop.ws.gc.cuny.edu/",
   },
   {
     key: "17",
     name: "Barbara Blankenship",
-    status: "Professor at UCLA",
+    status: 'Co-IP, NSF project, "Broadening Access to UCLA Phonetics Data"',
     website: "https://linguistics.ucla.edu/people/blankenship/",
   },
   {
     key: "18",
     name: "Dustin Bowers",
-    status: "University of Arizona, Visiting Scholar",
-    website: "",
+    status: "Fellow, National Endowment for the Humanities.",
+    website: "https://www.linkedin.com/in/dustin-b-a08a248/",
   },
   {
     key: "19",
@@ -191,13 +193,13 @@ export const rows = [
     key: "31",
     name: "Abby Cohn",
     status: "Professor at Cornell",
-    website: "",
+    website: "https://linguistics.cornell.edu/abigail-c-cohn",
   },
   {
     key: "32",
     name: "Court Crowther",
-    status: "Assistant Dean at UC Irvine",
-    website: "https://grad.uci.edu/about-us/contact-us.php",
+    status: "(retired) Assistant Graduate Dean & Chief of Staff at UC Irvine",
+    website: "https://www.linkedin.com/in/court-crowther/",
   },
   {
     key: "33",
@@ -209,14 +211,14 @@ export const rows = [
   {
     key: "34",
     name: "Sarah Dart",
-    status: "",
+    status: "(retired) Professor, Dept. of Linguistics, Macalester College",
     website: "",
   },
   {
     key: "35",
     name: "Deborah Davison",
-    status: "",
-    website: "",
+    status: "Clinical Psychologist",
+    website: "https://www.linkedin.com/in/deborah-davidson-ph-d-059ab8134/",
   },
   {
     key: "36",
@@ -252,9 +254,9 @@ export const rows = [
   {
     key: "41",
     name: "Melissa Epstein",
-    status: "Albert Einstein College of Medicine, IRB Director",
-    website:
-      "https://www.einstein.yu.edu/administration/institutional-review-board/staff-list.aspx",
+    status:
+      "Executive Director, Human Research Protection & Compliance, Cornell University",
+    website: "https://www.linkedin.com/in/melissaaepstein/",
   },
   {
     key: "42",
@@ -266,7 +268,7 @@ export const rows = [
   {
     key: "43",
     name: "Matt Faytak",
-    status: "Postdoctoral Fellow at UCLA",
+    status: "‘Assistant Professor of Linguistics at University of Buffalo",
     website: "https://mfaytak.github.io/",
   },
   {
@@ -284,33 +286,34 @@ export const rows = [
   {
     key: "46",
     name: "James Forrest Fordyce",
-    status: "lendale Community College, English as a Second Language",
+    status: "Glendale Community College, English as a Second Language",
     website: "",
   },
   {
     key: "47",
     name: "Christina Foreman",
     status: "Speech Pathologist in Hartford, CT",
-    website: "",
+    website: "https://www.linkedin.com/in/christina-foreman-40b97389/",
   },
   {
     key: "48",
     name: "Vicki Fromkin",
-    status: "",
-    website: "",
+    status: "Professor, UCLA Linguistics Department (deceased)",
+    website: "https://linguistics.ucla.edu/people/fromkin/fromkin.htm",
   },
   {
     key: "49",
     name: "Cecile Fougeron",
     status:
       "CNRS-Université Sorbonne-Nouvelle, Senior Scientist & Laboratoire de Phonétique et Phonologie",
-    website: "",
+    website: "https://lpp.cnrs.fr/cecile-fougeron/",
   },
   {
     key: "50",
     name: "Sean Fulop",
     status: "Professor of Linguistics at Fresno State",
-    website: "https://seanfulop.weebly.com/",
+    website:
+      "https://cah.fresnostate.edu/about/directory/linguistics/fulop-sean.html",
   },
   {
     key: "51",
@@ -335,7 +338,7 @@ export const rows = [
   {
     key: "53",
     name: "Eleanor Glewwe",
-    status: "Visiting Assistant Professor at Grinnell College",
+    status: "Assistant Professor of Linguistics at Grinnell College",
     website: "https://eglewwe.com/",
   },
   {
@@ -348,26 +351,27 @@ export const rows = [
     key: "55",
     name: "Louis Goldstein",
     status: "Professor of Linguistics at USC",
-    website:
-      "https://dornsife.usc.edu/cf/ling/ling_faculty_display.cfm?Person_ID=1016450",
+    website: "https://sail.usc.edu/%7Elgoldste/me/research.php",
   },
   {
     key: "56",
     name: "Matt Gordon",
     status: "Professor of Linguistics at UC Santa Barbara",
-    website: "http://www.linguistics.ucsb.edu/faculty/gordon/",
+    website: "https://www.linguistics.ucsb.edu/people/matthew-gordon",
   },
   {
     key: "57",
     name: "Steve Greenberg",
-    status: "",
-    website: "",
+    status:
+      "Center for Applied Hearing Research, Technical Univ. of Denmark; Silicon Speech, Santa Venetia, CA",
+    website:
+      "https://www.clsp.jhu.edu/events/quest-for-the-essence-of-language-steven-greenberg-centre-for-applied-hearing-research-technical-univ-of-denmark-silicon-speech-santa-venetia-ca-usa/",
   },
   {
     key: "58",
     name: "Narineh Hacopian",
-    status: "",
-    website: "",
+    status: "Producer, Freelance",
+    website: "https://www.linkedin.com/in/narineh/",
   },
   {
     key: "59",
@@ -384,7 +388,7 @@ export const rows = [
   {
     key: "61",
     name: "Susan Hess",
-    status: "",
+    status: "(deceased)",
     website: "",
   },
   {
@@ -398,14 +402,14 @@ export const rows = [
     key: "63",
     name: "Damir Horga",
     status: "University of Zagreb, Croatia, Phonetics Department",
-    website:
-      "https://www-gewi.uni-graz.at/gralis-alt/4.Gralisarium/GraLiS%202004/Horga_Zagr.%20Phonetic.htm",
+    website: "https://fonet.ffzg.unizg.hr/en/teachers/damir-horga/",
   },
   {
     key: "64",
     name: "Chai-Shune Hsu",
     status: "Formerly at Nuance",
-    website: "",
+    website:
+      "https://linguistics.ucla.edu/general/matheses/Hsu_UCLA_MA_1995.pdf",
   },
   {
     key: "65",
@@ -428,15 +432,15 @@ export const rows = [
   },
   {
     key: "68",
-    name: "L. Carl Jacobsen (formerly Leon C. Jacobsen)",
-    status: "",
-    website: "",
+    name: "Carl Jacobsen",
+    status: "Technology consultant, document reviewer, or legal researcher",
+    website: "https://www.linkedin.com/in/carljacobsen/",
   },
   {
     key: "69",
     name: "Rachel Jacobson",
-    status: "",
-    website: "",
+    status: "Software engineer, Lucidworks",
+    website: "https://hironori1123.github.io/Homepage/",
   },
   {
     key: "70",
@@ -466,13 +470,14 @@ export const rows = [
   {
     key: "74",
     name: "Hiro Katsuda",
-    status: "Postdoctoral Researcher at the University of Toronto Scarborough",
-    website: "https://www.utsc.utoronto.ca/dls/hironori-katsuda",
+    status: "Visiting Assistant Professor, University of Kansas",
+    website:
+      "https://www.researchgate.net/scientific-contributions/Hector-Javkin-70784618",
   },
   {
     key: "75",
     name: "Sameer Khan",
-    status: "Associate Professor at Reed College",
+    status: "Professor at Reed College",
     website: "https://www.reed.edu/linguistics/khan/",
   },
   {
@@ -498,13 +503,13 @@ export const rows = [
     key: "79",
     name: "Chin-Woo Kim",
     status: "Professor Emeritus at the University of Illinois",
-    website: "http://www.linguistics.illinois.edu/people/cwkim",
+    website: "https://linguistics.illinois.edu/directory/profile/cwkim",
   },
   {
     key: "80",
     name: "Paul Kirk",
     status: "CSUN, Emeritus",
-    website: "",
+    website: "https://catalog.csun.edu/academics/anth/faculty/kirk-paul-l/",
   },
   {
     key: "81",
@@ -521,10 +526,11 @@ export const rows = [
   },
   {
     key: "83",
-    name: "Grace Kuo",
+    name: "Grace Chen-Hsiu Kuo",
     status:
-      "National Taiwan University, Assistant Professor in the Department of Foreign Languages & Literatures",
-    website: "",
+      "National Taiwan University, Associate Professor in the Department of Foreign Languages & Literatures",
+    website:
+      "https://www.forex.ntu.edu.tw/%E9%83%AD%E8%B2%9E%E7%A7%80/?lang=en",
   },
   {
     key: "84",
@@ -535,63 +541,64 @@ export const rows = [
   {
     key: "85",
     name: "Jenny Ladefoged",
-    status: "",
+    status: "(deceased)",
     website: "",
   },
   {
     key: "86",
     name: "Peter Ladefoged",
-    status: "",
+    status: "Emeritus Professor, Linguistics, UCLA (deceased)",
     website: "https://linguistics.ucla.edu/people/ladefoge/",
   },
   {
     key: "87",
     name: "Jose Maria Lahoz",
     status: "Profesor Ayudante Doctor at the Universidad Complutense Madrid",
-    website:
-      "https://www.ucm.e/lengespyteoliter/cv-lahoz-bengoechea-jose-maria",
+    website: "https://www.researchgate.net/profile/Jose-Maria-Lahoz-Bengoechea",
   },
   {
     key: "88",
     name: "Eun Hwa Lee",
-    status: "",
-    website: "",
+    status: "Speech Language Pathologist",
+    website: "https://npino.com/speech-pathologist/1063724839-eun-hwa--lee/",
   },
   {
     key: "89",
     name: "Hyuck-Joon Lee",
-    status: "",
-    website: "",
+    status: "Apple, Cupertino, CA",
+    website:
+      "https://www.researchgate.net/scientific-contributions/Hyuck-Joon-Lee-81561019",
   },
   {
     key: "90",
     name: "Tatiana Libman",
-    status: "",
-    website: "",
+    status: "Software Engineer, Google",
+    website: "https://www.linkedin.com/in/tatiana-libman-23b2847/",
   },
   {
     key: "91",
     name: "Isabelle Lin",
-    status: "",
-    website: "",
+    status: "Student, L’Ecole Cesan, Paris",
+    website:
+      "https://linguistics.ucla.edu/wp-content/uploads/2021/11/IsabelleLin_dissertation.pdf",
   },
   {
     key: "92",
     name: "Ying Lin",
-    status: "",
-    website: "",
+    status: "Mathematics instructor, Santa Rosa Junior College",
+    website: "https://profiles.santarosa.edu/ying-lin",
   },
   {
     key: "93",
     name: "Mona Lindau",
     status: "",
-    website: "http://www.bestdogtrainer.net/",
+    website: "https://independent.academia.edu/MLindau",
   },
   {
     key: "94",
     name: "Wendy Linker",
-    status: "",
-    website: "",
+    status: "Psychiatrist, Veterans Administration",
+    website: "https://www.linkedin.com/in/wendy-linker-4650a220/",
   },
   {
     key: "95",
@@ -603,7 +610,8 @@ export const rows = [
     key: "96",
     name: "Ingvar Lofstedt",
     status: "",
-    website: "",
+    website:
+      "https://linguistics.ucla.edu/people/zuraw/251_2013/Readings/LofstedtDissertationUCLA2010Extract.pdf",
   },
   {
     key: "97",
@@ -653,20 +661,22 @@ export const rows = [
   {
     key: "104",
     name: "Jonas Nartey (or Akpanglo-Nartey)",
-    status: "",
-    website: "",
+    status: "Professor, University of Education, Winneba, Ghana.",
+    website: "https://wikieducator.org/UEW/JONAS",
   },
   {
     key: "105",
     name: "Kuniko Yasu Nielsen",
     status: "Associate Professor of Linguistics at Oakland University",
-    website: "https://files.oakland.edu/users/nielsen/web/",
+    website: "https://oakland.edu/linguistics/faculty-and-staff/nielsen/",
   },
   {
     key: "106",
     name: "Mira Oh",
-    status: "",
-    website: "",
+    status:
+      "(retired) Professor, English Language and Literature, Chonnam National University, Korea",
+    website:
+      "https://ell.jnu.ac.kr/ell/14380/subview.do?enc=Zm5jdDF8QEB8JTJGcHJvZiUyRmVsbCUyRjI2NSUyRjE0NDYlMkZ2aWV3LmRvJTNG",
   },
   {
     key: "107",
@@ -677,40 +687,39 @@ export const rows = [
   {
     key: "108",
     name: "Ho-hsien Pan",
-    status: "National Chiao Tung University",
-    website:
-      "https://www.researchgate.net/scientific-contributions/Ho-Hsien-Pan-15617440",
+    status: "Professor, National Chiao Tung University, Taiwan",
+    website: "https://fl.nycu.edu.tw/en/2020/08/26/ho-hsien-pan/",
   },
   {
     key: "109",
     name: "George Papcun",
-    status: "",
-    website: "http://soundevidence.com/",
+    status:
+      "Papcun, Scientist/Forensic Analyst, Los Alamos National Laboratory",
+    website: "https://soundevidence.com/",
   },
   {
     key: "110",
     name: "Christine Prechtel",
-    status: "",
+    status: "Lab Manager, Marcus Autism Center, Emory University",
     website: "https://www.linkedin.com/in/christine-prechtel/",
   },
   {
     key: "111",
     name: "Kristin Precoda",
     status: "SRI's Speech Technology & Research Laboratory",
-    website:
-      "http://www.speech.sri.com/https://www.sri.com/about/organization/information-computing-sciences/star-laboratory",
+    website: "https://www.sri.com/people/kristin-precoda/",
   },
   {
     key: "112",
-    name: "Ren Hong-mo",
+    name: "Hongmo Ren",
     status: "",
-    website: "",
+    website: "https://escholarship.org/content/qt8431z0hn/qt8431z0hn.pdf",
   },
   {
     key: "113",
     name: "Lloyd Rice",
     status: "patent review editor for JASA",
-    website: "http://asa.aip.org/jasa.html",
+    website: "https://www.thenaturalfuneral.com/donald-lloyd-rice/",
   },
   {
     key: "114",
@@ -722,19 +731,20 @@ export const rows = [
     key: "115",
     name: "Brice Roberts",
     status: "Analyst at Accenture",
-    website: "",
+    website: "https://www.linkedin.com/in/brice-roberts-phd/",
   },
   {
     key: "116",
     name: "J'aime Roemer",
-    status: "",
-    website: "",
+    status:
+      "Speech-Language Pathology Intern. MGH Institute of Health Professions Aphasia Center,",
+    website: "https://www.linkedin.com/in/j-aime-roemer-b2bb035/",
   },
   {
     key: "117",
     name: "Adam Royer",
-    status: "",
-    website: "",
+    status: "Lead Research Scientist at thrv.com",
+    website: "https://www.linkedin.com/in/adamroyer/",
   },
   {
     key: "118",
@@ -770,31 +780,32 @@ export const rows = [
   {
     key: "123",
     name: "Joan Sereno",
-    status: "Professor of Psycholinguistics at the University of Kansas",
-    website: "https://linguistics.ku.edu/joan-sereno",
+    status: "Professor, Dept. of Linguistics, University of Kansas",
+    website: "https://kuppl.ku.edu/people/joan-sereno",
   },
   {
     key: "124",
     name: "Michael Shalev",
-    status: "",
-    website: "",
+    status: "Principal PM Manager, Microsoft.",
+    website: "https://www.linkedin.com/in/michael-shalev/",
   },
   {
     key: "125",
     name: "Molly Shilman",
-    status: "",
-    website: "",
+    status:
+      "Head of Research and Content, Consumer Financial Service Corporation",
+    website: "https://www.consumerfinancial.com/molly-shilman",
   },
   {
     key: "126",
     name: "Caroline Sigouin",
-    status: "",
-    website: "https://www.mendeley.com/profiles/caroline-sigouin/",
+    status: "Doctoral Student at l'Université Laval",
+    website: "https://www.researchgate.net/profile/Caroline-Sigouin",
   },
   {
     key: "127",
     name: "Dan Silverman",
-    status: "",
+    status: "Associate Professor of Linguistics at San Jose State University",
     website: "https://seedyroad.com/",
   },
   {
@@ -807,13 +818,13 @@ export const rows = [
     key: "129",
     name: "Tim Smith",
     status: "",
-    website: "",
+    website: "https://www.linkedin.com/in/tim-smith-b6922267/",
   },
   {
     key: "130",
     name: "Aaron Shryock",
-    status: "",
-    website: "",
+    status: "Ministry of Bible translation",
+    website: "https://www.gracechurch.org/shryock",
   },
   {
     key: "131",
@@ -832,7 +843,7 @@ export const rows = [
     key: "133",
     name: "Beth Sturman",
     status: "Growth Strategist, thrv",
-    website: "https://bsturman.humspace.ucla.edu/",
+    website: "https://www.linkedin.com/in/beth-sturman-phd-a2096749/",
   },
   {
     key: "134",
@@ -843,15 +854,15 @@ export const rows = [
   {
     key: "135",
     name: "Cheng Cheng Saw Tan",
-    status: "",
-    website: "",
+    status: "Tan, Senior Communications Specialist at FAR AI",
+    website: "https://far.ai/author/chengcheng-tan/",
   },
   {
     key: "136",
     name: "Yu Tanaka",
     status:
-      "Doshisha University, Assistant Profesor in the Faculty of Culture & Information Science",
-    website: "",
+      "Tanaka, Associate Professor at the National Institute for Japanese Language and Linguistics (NINJAL), Tokyo, Japan",
+    website: "https://www2.ninjal.ac.jp/yutanaka/",
   },
   {
     key: "137",
@@ -862,8 +873,8 @@ export const rows = [
   {
     key: "138",
     name: "Henry Tehrani",
-    status: "Retired",
-    website: "",
+    status: "Retired from UCLA Phonetics Lab’s Engineer staff. Scicon R&D",
+    website: "https://sciconrd.com/",
   },
   {
     key: "139",
@@ -874,8 +885,8 @@ export const rows = [
   {
     key: "140",
     name: "Victoria Thatte",
-    status: "",
-    website: "",
+    status: "Grossmont College",
+    website: "https://www.linkedin.com/in/victoria-thatte-416495a/",
   },
   {
     key: "141",
@@ -894,14 +905,14 @@ export const rows = [
     key: "143",
     name: "Yuichi Todaka",
     status: "Miyazaki Municipal University",
-    website: "",
+    website: "https://www.linkedin.com/in/yuichi-todaka-21990811b/",
   },
   {
     key: "144",
     name: "Motoko Ueyama",
     status:
       "Associate Professor in the Department of Interpretation & Translation at Università Di Bologna",
-    website: "",
+    website: "https://www.unibo.it/sitoweb/motoko.ueyama/cv-en",
   },
   {
     key: "145",
@@ -912,15 +923,15 @@ export const rows = [
   {
     key: "146",
     name: "Diana Van Lancker Sidtis",
-    status: "",
-    website:
-      "https://steinhardt.nyu.edu/faculty_bios/view/Diana_Van_Lancker_Sidtis",
+    status: "Professor emeritus, Communicative Sciences and Disorders, NYU.",
+    website: "https://steinhardt.nyu.edu/people/diana-van-lancker-sidtis",
   },
   {
     key: "147",
     name: "Ralph Vanderslice",
-    status: "",
-    website: "",
+    status: "(deceased)",
+    website:
+      "https://obits.oregonlive.com/us/obituaries/oregon/name/ralph-vanderslice-obituary?id=19024460",
   },
   {
     key: "148",
@@ -931,14 +942,17 @@ export const rows = [
   {
     key: "149",
     name: "Chad Vicenik",
-    status: "",
-    website: "",
+    status: "high school teacher, U.K.",
+    website:
+      "https://www.researchgate.net/scientific-contributions/Chad-Vicenik-58926474",
   },
   {
     key: "150",
     name: "Caiyu Wang",
-    status: "",
-    website: "",
+    status:
+      "Associate Professor, School of Foreign Languages at the Zhongnan University of Economics and Law, China",
+    website:
+      "https://www.researchgate.net/scientific-contributions/Caiyu-Wang-2290465406",
   },
   {
     key: "164",
@@ -968,7 +982,7 @@ export const rows = [
   {
     key: "154",
     name: "Colin Wilson",
-    status: "Johns Hopkins, Professor & Interim Chair of Cognitive Science",
+    status: "Johns Hopkins, Professor of Cognitive Science",
     website: "https://cogsci.jhu.edu/directory/colin-wilson/",
   },
   {
@@ -994,7 +1008,8 @@ export const rows = [
     key: "158",
     name: "Meng Yang",
     status: "UCLA Linguistics",
-    website: "",
+    website:
+      "https://linguistics.ucla.edu/wp-content/uploads/2019/09/Yang_Dissertation_final.pdf",
   },
   {
     key: "159",
@@ -1007,13 +1022,14 @@ export const rows = [
     key: "160",
     name: "Eric Zee",
     status: "The Chinese University of Hong Kong, Language Aquisition Lab",
-    website: "http://www.arts.cuhk.edu.hk/~lal/people.html#ericzee",
+    website:
+      "https://www.researchgate.net/scientific-contributions/Eric-Zee-14531690",
   },
   {
     key: "161",
     name: "Jie Zhang",
     status: "Kansas University, Professor, Department Chair Phonology",
-    website: "https://linguistics.ku.edu/jie-zhang",
+    website: "https://linguistics.ku.edu/people/jie-zhang",
   },
   {
     key: "161",

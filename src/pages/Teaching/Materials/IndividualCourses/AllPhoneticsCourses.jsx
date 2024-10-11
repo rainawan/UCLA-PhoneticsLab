@@ -1,8 +1,6 @@
 import Text from "../../../../components/Text";
 import CustomLink from "../../../../components/CustomLink";
 
-import { Link, Divider } from "@nextui-org/react";
-
 const AllPhoneticsCourses = () => {
   return (
     <div>
@@ -69,6 +67,7 @@ const AllPhoneticsCourses = () => {
           in motion during speech, created from Electromagnetic Articulography
           data by Adam Albright (about 200k)
         </li>
+
         <li>
           <CustomLink
             href="          https://phonetics.linguistics.ucla.edu/facilities/physiology/epg.html#3D

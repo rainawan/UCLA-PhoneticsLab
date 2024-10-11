@@ -79,6 +79,18 @@ const Ling104 = () => {
           </CustomLink>
         </li>
         <li>
+          <CustomLink href="https://ychaiucsd.github.io/website/subpages/VS-tutorial.html">
+            VoiceSauce tutorial
+          </CustomLink>
+          , prepared by Yuan Chai
+        </li>
+        <li>
+          <CustomLink href="https://ychaiucsd.github.io/website/subpages/ucla-synthesizer.html">
+            Tutorial for UCLA Voice Synthesizer
+          </CustomLink>
+          , written by Yuan Chai
+        </li>
+        <li>
           Larry Rosenblum's{" "}
           <CustomLink href="http://www.faculty.ucr.edu/%7Erosenblu/lab-index.html">
             McGurk demo
