@@ -17,12 +17,12 @@ const Ling103 = () => {
           hours.{" "}
           <CustomLink href="https://search.library.ucla.edu/discovery/search?vid=01UCS_LAL:UCLA">
             Link to the library's reserve page
-          </CustomLink>
+          </CustomLink>{" "}
           (select this quarter's instructor, OR Linguistics, OR 103 Phonetics).
         </li>
         <li>
           Term project resources:{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/teaching/project%20-%20combined%20handouts.pdf">
+          <CustomLink href="../../../../../OldPhoneticsResources/project - combined handouts.pdf">
             sample handouts for the term project
           </CustomLink>{" "}
           from Pat Keating, Spring 2007

@@ -10,13 +10,13 @@ const Ling111 = () => {
       <ul className="px-10 list-disc list-outside">
         <li>
           Link to our{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/facilities/acoustic/praat.html">
+          <CustomLink href="../../../../../OldPhoneticsResources/praat.html">
             page of Praat resources
           </CustomLink>{" "}
         </li>
         <li>
           Sample syllabus:{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/teaching/111Win06Jun.pdf">
+          <CustomLink href="../../../../../OldPhoneticsResources/111Win06Jun.pdf">
             Winter06
           </CustomLink>
         </li>
@@ -33,7 +33,7 @@ const Ling111 = () => {
         </li>
         <li>
           Sun-Ah Jun's{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/teaching/111Win06Jun.pdf">
+          <CustomLink href="https://linguistics.ucla.edu/people/jun/ktobi/k-tobi.html">
             Korean ToBI{" "}
           </CustomLink>{" "}
           at UCLA

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html><head>
+        
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        
+  <meta name="GENERATOR" content="Mozilla/4.5 [en]C-CCK-MCD {UCLA}  (Win98; I) [Netscape]">
+  <title>UCLA Phonetics Lab Electropalotography</title></head>
+<body body="" background="bgrnd266.jpg" bgcolor="#ffffff">
+    
+<hr align="center">  
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+     <tr>
+  <td width="16%"><a name="Begining"></a><img src="rot_icon_fly.GIF" height="124" width="175">
+       </td>
+   <td width="84%">        
+      <center>        
+      <h2> UCLA Phonetics Lab</h2>
+       </center>
+          
+      <center>        
+      <h1> <font color="#cc0000">ELECTROPALATOGRAPHY (EPG)</font>&nbsp;</h1>
+       </center>
+  </td>
+  </tr>
+     
+  </tbody> 
+</table>
+    
+<hr align="center">  
+<p><font size="+1">The Phonetics Lab acquired its Kay Palatometer Model
+6300 in 1992, with a dissertation improvement grant to Dani Byrd, and
+much use was made of it. While it is still in the lab, it has not been
+used in years: a DOS program limited to a low sampling
+rate (12.8 kHz for the audio, 100 Hz for the EPG), it requires an older
+type
+of PC with two full-size slots for the Palatometer and CSL boards.
+&nbsp;The instructions below are kept available for historical purposes.</font>
+ </p>
+ 
+<blockquote>    
+  <ul>
+       
+    <ul>
+       <b><font size="+1"><a href="#I.%20Basic%20Experimental%20Steps%20to">I. Basic Experimental Steps 
+to Follow</a></font></b>        
+      <ul>
+           
+        <ol>
+  <li> <font size="+1">Get a grant (or inherit money)</font></li>
+   <li> <font size="+1">Human subject approval</font></li>
+   <li> <font size="+1">Custom pseudo-palate</font></li>
+   <li> <font size="+1">Get used to pseudo-palate</font></li>
+   <li> <font size="+1">Do the experiment</font></li>
+   <li> <font size="+1">Analyze the data</font></li>
+           
+        </ol>
+         
+      </ul>
+  <b><font size="+1"><a href="#II.%20How%20we%20normally%20analyse%20EPG">II. How we normally analyze
+the data</a></font></b>        
+      <ul>
+           
+        <ol>
+  <li> <font size="+1">Obtain 'Percent.exe' software which is in Frida</font></li>
+   <li> <font size="+1">Create a .DEF file</font></li>
+   <li> <font size="+1">Create a .BAT (batch) file</font></li>
+   <li> <font size="+1">Do batch processing</font></li>
+   <li> <font size="+1">Make a configuration (.cfg) for CSL</font></li>
+   <li> <font size="+1">Analyze the data using CSL</font></li>
+           
+        </ol>
+         
+      </ul>
+  <b><font size="+1"><a href="#3D">III.&nbsp; Displaying Palatometer in 3D</a></font></b>
+       
+      <p><b><font size="+1"><a href="#III.%20%20Domain-initial%20strengthening%20:%20French%20and">IV.
+Some results: Domain-initial strengthening</a></font></b> </p>
+       
+      <ul>
+           
+        <ol>
+  <li> <b><font size="+1">French</font></b></li>
+   <li> <b><font size="+1">Korean</font></b></li>
+           
+        </ol>
+         
+      </ul>
+  <b><font size="+1"><a href="#IV.%20%20Lab%20members%20who%20have"></a></font></b>        
+      <p><b><font size="+1"><a href="#V.%20Some%20References%20of%20EPG%20studies%20done%20at">V. Some 
+References to papers using EPG, done here at UCLA</a></font></b></p>
+     
+    </ul>
+     
+  </ul>
+  </blockquote>
+    
+<h1> <a name="I. Basic Experimental Steps to"></a>I. Basic Experimental Steps
+ to Follow</h1><blockquote><p><b><font color="#990000"><font size="+2">1. Get used to pseudo-palate.</font></font></b>
+   <br>
+   <font size="+1">We usually have our speaker wear his or her pseudo-palate
+ to get used to it; the more the better, but usually for an hour of normal
+ activity to accommodate and diminish any salivation response (Byrd et al.
+ 1995).</font></p>
+ </blockquote>
+    
+<blockquote><b><font color="#990000"><font size="+2">2. Do the experiment.</font></font></b>
+   
+  <ul>
+  <li> <font size="+1">For recording, we need two pieces of hardware, CSL 
+(for audio) and the Palatometer, at the same time, which is the normal setup 
+on Jasmine now in the Physiology Lab (2101E).</font></li>
+   <li> <font size="+1">Detailed procedures of data collection:</font></li>
+        
+    <ol>
+  <li> <font size="+1">Have your subject wear his/her pseudo-palate.</font></li>
+   <li> <font size="+1">Turn off the Palatometer, attach a grounding electrode 
+to the speaker (which can be found in 2101P, the 'cool' room), connect the
+ pseudo-palate to the Palatometer, and turn on the Palatometer.</font></li>
+   <li> <font size="+1">When ready to collect the data, run "pal.exe" (by 
+typing "pal" - you don't have to be in the directory where the program is, 
+which is also "pal"), and do three steps under the 'setup' menu on the screen:</font></li>
+          
+      <ol>
+ &nbsp; <br>
+         <font size="+1">(1) choose the number of users</font> <br>
+         <font size="+1">(2) choose a user name (a user file such as PKEATNG1.USR,
+ THCHO.USR) for each user (back-ups of these files are on a disk kept near
+ the computer, and Pat and Henry both have copies);</font> <br>
+         <font size="+1">(3) check the sensitivity, by turning the small
+knob  while subject talks until the peak value is in the preferred range.</font> 
+      
+      </ol>
+       
+    </ol>
+        
+    <p><br>
+     <font size="+1">&nbsp;&nbsp;&nbsp; 3.&nbsp; Note about choosing a channel.</font>
+     </p>
+     
+    <blockquote><font size="+1">There are two channels to which two pseudo-palates
+ can be connected at the same time. (This normally allows the clinician to 
+demonstrate a particular articulatory action for the client to imitate.)&nbsp;
+ The default setting is to use Channel 1 when there is only one speaker (which 
+is our normal case), but it is possible that some older pseudo-palates may 
+work better with the Channel 2 connetion pins. If you want to use Channel
+ 2, you have to go to the 'setup' menu and choose it, using the 2 users/large
+ views.</font></blockquote>
+        
+    <p><br>
+     <font size="+1">&nbsp;&nbsp;&nbsp; 4. Record prepared speech materials</font>
+     </p>
+     
+    <ol>
+       <font size="+1"><font color="#cc0000">Caution:</font> Since the "pal"
+ program runs under DOS, it can capture data for only about 3 seconds.&nbsp;
+ So, researchers should design their speech corpus accordingly.</font>  
+  
+    </ol>
+  <font size="+1">&nbsp;&nbsp;&nbsp; 5. Two options for the audio signal.</font>
+     
+    <ol>
+         
+      <ol>
+  <li> <font size="+1">One is to use a close-talking head-mounted mike in 
+the Physiology Lab (not kept there, but ask Henry). With this set-up you can
+run an experiment at any time without special preparation or extra help. It
+should be remembered that this room is not sound-treated in any way.&nbsp; 
+Thus, it is recommended to use a close-talking head-mounted mike.</font></li>
+   <li> <font size="+1">The other option is to have the speaker in the sound 
+booth. This gives the best sound, but you must arrange it in advance with 
+Henry, since all the equipment needs to be moved to the general lab. The Palatometer
+also must go into the booth, and the booth microphone must be connected to
+Jasmine's CSL.&nbsp;&nbsp; Also, it may require an additional experimenter:
+one person to operate the program on Jasmine, and one person who can see
+and signal to the subject in the sound booth.</font></li>
+         
+      </ol>
+       
+    </ol>
+     
+  </ul>
+  </blockquote>
+    
+<blockquote><b><font color="#990000"><font size="+2">3. Analyze the data.</font></font></b>
+   <br>
+   <font size="+1">The Palatometer manual contains plenty of information
+on displaying data frames, etc., and on its interactive version of the region 
+definition/percent analysis routine. But the DOS version of this routine, 
+developed here, is what we mostly use, because it allows batch processing
+ and ASCII, as well as binary, output. Experienced people include: Pat K.,
+ Taehong C., Sahyang K.. For a description of indices defined on percent-contact
+ data, see Byrd, Flemming, Mueller &amp; Tan (1995), Using regions and indices
+ in EPG data reduction, J. Sp. Hear. Res. 38, 821-827.</font>    
+  <p><font size="+1"></font><font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/physiology.html">physiology facilities</a></font>
+   <br>
+   <font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/facilities/facilities.html">general facilities</a></font>
+   <br>
+   <font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/">Phonetics Lab Homepage</a></font></p>
+ </blockquote>
+  <a name="II. How we normally analyse EPG"></a><b><font size="+3">II. How
+ we normally analyze EPG data.</font></b>  
+<blockquote><b><font color="#990000"><font size="+2">1. Obtain 'Percent.exe'
+ file.</font></font></b> <br>
+   <font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This software, commissioned
+ by Dani Byrd, calculates contact profiles for user-defined regions of the
+ palate.&nbsp; On Jasmine, it is in the pal\output\ directory</font> <br>
+   <font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>FORMAT:</b>&nbsp;
+ PERCENT [.nsp file name] [.def file name] [.usr file name]</font></blockquote>
+    
+<ul>
+   <b><font color="#990000"><font size="+2">2. Create a .DEF file</font></font></b>
+   
+  <ul>
+     <font size="+1">First, Define regions as needed. The figure below, for
+ example, shows three regions defined: Front Region, Back region, and the
+entire region (Front + Back). Note that you can define as many regions (up
+to 10) as needed, using different and/or overlapping areas of the palate.</font>
+     <br>
+ &nbsp; <li> <font size="+1">There are 96 electrodes and each electrode is 
+assigned its unique number from 1 to 96</font></li>
+        
+    <ul>
+       <font size="+1">- <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/EPG_default.GIF">default layout of numbered
+ electrodes</a> (for English, Zulu)</font> <br>
+       <font size="+1">- <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/EPG_special.GIF">special layout of numbered
+ electrodes</a> (for Korean, French, Taiwanese)</font>     
+    </ul>
+   <li> <font size="+1">Assign electrodes regions.</font></li>
+   <br>
+     <font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - For example,
+ if you want to examine the contact for the coronal [t] in [to] context but 
+want to exclude the contact caused by the coarticulation with the following
+ [o], you first make control tokens with the [o] articulation (e.g., with
+[po]) and subtract the [o] contact from the [t] contact in the [to] context.
+This allows you to define a region just for [t] exclusively.&nbsp; This kind
+of process is usually done by marking contacted electrodes in the printout
+of the layout of numbered electrodes which is downloadable (<a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/EPG_default.GIF">default layout</a>,&nbsp; <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/EPG_special.GIF">special layout</a>).</font> <br>
+ &nbsp; <li> <font size="+1">Using a text editor, make a DEF file.&nbsp;
+See <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/DEF_sample.htm">DEF file sample and explanation.</a></font></li>
+        
+    <ul>
+ &nbsp; <br>
+       <img src="EGP_picture.JPG" align="bottom" border="0" height="302" width="436">
+  <br>
+       <b>Figure 1.&nbsp; Layout of EPG pseudo-palate. An example of regions
+ defined.&nbsp; One can define as many regions (up to 10) as needed, using
+ different or overlapping areas of the palate.</b>     
+    </ul>
+     
+  </ul>
+      
+  <p><br>
+   <b><font color="#990000"><font size="+2">(3) Make a .BAT file (batch file)</font></font></b>
+   </p>
+   
+  <ul>
+     <font size="+1">A batch file can run 'Percent.exe' for all the .NSP
+files  you specify.&nbsp; On Jasmine, samples are in the the pal\output directory.</font>
+     &nbsp;<font size="+1">See <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/BATCH_sample.htm">SAMPLE.BAT </a>and Explanation</font> 
+  
+  </ul>
+      
+  <p><br>
+   <b><font color="#990000"><font size="+2">(4) Do Batch Processing</font></font></b><font size="+1"></font> </p>
+   
+  <p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For batch 
+processing, the following files should be included in the same directory (folder)
+(or, give appropriate path to each file on every line of the batch file):</font>
+  </p>
+   
+  <ul>
+       
+    <ul>
+         
+      <ul>
+  <li> <font size="+1">&nbsp; Percent.exe</font></li>
+   <li> <font size="+1">&nbsp; a user file (e.g., Sample.USR)</font></li>
+   <li> <font size="+1">&nbsp; a def file (e.g.,&nbsp; Sample.DEF)</font></li>
+   <li> <font size="+1">&nbsp; a batch file (e.g., Sample.BAT)</font></li>
+   <li> <font size="+1">&nbsp; all the NSP files that are specified in the 
+batch file&nbsp; (X.nsp, Y.nsp, Z.nsp)</font></li>
+         
+      </ul>
+       
+    </ul>
+        
+    <ul>
+  <li> <font size="+1">Run the batch file (simply type the name of the batch 
+file in the DOS mode inside the directory where the above files are)</font></li>
+       
+    </ul>
+        
+    <ul>
+  <li> <font size="+1">The batch processing will generate two types of files, 
+in the same directory as the NSP data files:</font></li>
+       
+    </ul>
+        
+    <ul>
+         
+      <ol>
+  <li> <font size="+1">ASCII files&nbsp; (.EXP files)</font></li>
+   <br>
+         <font size="+1">- EXP file for each .nsp file (e.g., X.exp, Y.exp, 
+Z.exp)</font> <br>
+         <font size="+1">- numerics of the percent-contact for each regions 
+specified in the course of time</font> <br>
+ &nbsp; <li> <font size="+1">Binary files (.TR0, TR1, TR2, TR3..&nbsp; files)</font></li>
+   <br>
+         <font size="+1">- TR0 files: Percent-contact profiles for the FIRST 
+REGION defined</font> <br>
+         <font size="+1">- TR1 files: Percent-contact profiles for the SECOND
+ REGION defined</font> <br>
+         <font size="+1">- TR2 files: Percent-contact profiles for the THIRD 
+REGION defined</font> <br>
+         <font size="+1">- TR<i>n</i> files: Percent-contact profiles for 
+the <i>N+1</i>th REGION defined</font>       
+      </ol>
+       
+    </ul>
+     
+  </ul>
+  <b><font color="#990000"><font size="+2">(5)&nbsp; Make a configuration 
+file for CSL (.cfg file)</font></font></b> <br>
+ &nbsp;    
+  <ul>
+  <li> <font size="+1">A special configuration file should be used for the 
+display of PALATE and Percent-contact Profiles</font></li>
+   <li> <font size="+1"><a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/CFG_KEY.zip">Download some .cfg and .key 
+files</a> (CFG_KEY.zip)</font></li>
+     
+  </ul>
+      
+  <ul>
+ The following .cfg files were made when there were three regions (TR0, TR1, 
+TR2) defined.      
+    <ul>
+  <li> OneTR.CFG</li>
+   <br>
+ 4 CSL windows -&nbsp; (1) Audio, (2) any one TR file (e.g., TR0), (3)&nbsp;
+ PALATE, (4) Spectrogram <li> TwoTR.CFG</li>
+   <br>
+ 5 CSL windows - (1) Audio, (2)-(3) any two TR files (e.g., TR0, TR1), (4) 
+PALATE, (5) Spectrogram <li> ThreeTR.CFG</li>
+   <br>
+ 6 CSL windows - (1) Audio, (2)-(4) TR0, TR1, TR2, (5) PALATE, (6) Spectrogram 
+    
+    </ul>
+  and also;      
+    <ul>
+  <li> Palate.KEY</li>
+   <br>
+ Keyboard shortcuts useful for analyses; open it with a text editor and print 
+it out for reference.     
+    </ul>
+  <b><font color="#990000">*&nbsp; When you use these cfg files, change the
+ setting for file directory and log directory before using them.</font></b> 
+  
+  </ul>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p><br>
+   <font size="+1">&nbsp;&nbsp;&nbsp; </font><b><font color="#990000"><font size="+2">(6) Analyze the data using CSL</font></font></b> <br>
+ &nbsp; </p>
+   
+  <ul>
+  <li> <font size="+1">Place .cfg and key files in the folder together with 
+other files (.nsp, tr0, exp...)</font></li>
+   <li> <font size="+1">Run CSL (type 'CSL' inside the working folder)</font></li>
+   <li> <font size="+1">Type 'run ThreeTR.cfg' (for example); this will bring 
+you the screen for EPG analysis</font></li>
+     
+  </ul>
+      
+  <p><br>
+   <font size="+1">&nbsp;&nbsp;&nbsp; * Note that EPG data can be analyzed
+ using <b><font color="#cc0000">MultiSpeech</font></b>, but we have usually
+ used CSL due to the convenience of the settings that have already been made 
+for CSL. But certainly one can use MultiSpeech.</font> <br>
+ &nbsp; </p>
+   
+  <p><b><font color="#990000"><font size="+1">&nbsp;&nbsp;&nbsp; &lt;Sample
+ CSL screens with TR0 and TR1 windows&gt;</font></font></b> </p>
+   
+  <ul>
+  <li> Figure 2 shows Contact Profiles for 'Tebebet fed them.'&nbsp; <b><a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/tebebet.WAV">Click here to listen to this file!</a><font color="#cc0000"> </font><font color="#000000">(Pat's voice)</font></b></li>
+   <li> <b>Window B</b> shows percent-contact profile in the entire region 
+with 96 electrodes included.</li>
+   <li> <b>Window E</b> shows percent-contact profile in the Front Region 
+with the front 48 electrodes included.</li>
+   <li> <b>Window C</b> 'PALATOGRAM' shows the contacted electrodes at the 
+red cursor which was placed at the peak contact of the word-initial [t].</li>
+   <li> The value <b>'58' </b>at the right corner of Window B means 58% of 
+the 96 electrodes were contacted at the cursor.</li>
+   <li> The value <b>'62'</b> at the right corner of Window E means 62% of 
+45 electrodes (Front Region) was contacted at the cursor.</li>
+     
+  </ul>
+      
+  <ul>
+ &nbsp;   
+  </ul>
+  <img src="Profile01.GIF" align="bottom" border="0" height="536" width="640">
+  <br>
+   <font size="+1"><b>Figure 2</b>. ( <b><a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/tebebet.WAV">Click here
+to listen to this file!</a><font color="#cc0000"> </font><font color="#000000">) </font></b>Percent-Contact profiles for 'Tebebet fed them.'&nbsp; 
+This was obtained from data collected for the NSF funded 'Prosody Strengthening' 
+project (Pat Keating).&nbsp; This particular sample shows the articulatory 
+difference between sentence-initial onset [t] and word-final coda [t] in 'tebebet':
+greater percent-contact was found for the sentence-initial [t] than word-final
+[t].</font> 
+</ul>
+    
+<p><br>
+ <a name="3D"></a><b><font size="+3">III. Displaying Palatometer in 3-D</font></b>
+ </p>
+ 
+<ul>
+  <li> <font size="+1">Cheng Cheng Saw Tan developed a method of displaying 
+Palatometer data in 3-D, on a wire model palate. These displays are the source 
+of the "Flying Palate" used as a screensaver on some of the Macs in the lab.&nbsp;
+ Her procedures are fully documented in WPP #85 (1993). Pat has all of her
+ QuickTime files, and a video of one of them is in the video cabinet in the 
+lab.</font></li>
+   
+</ul>
+    
+<blockquote>&nbsp; <br>
+   <img src="rot_slow_sm.GIF" height="480" width="640">
+  <br>
+   <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3D Wire Model Palate "Flying Palates"</b> <br>
+ &nbsp;    
+  <p><b><font size="+1">&nbsp;Sample Movies.&nbsp; Click icons to see movies.</font></b>
+   <br>
+ &nbsp;    
+  <table border="1" cols="4" width="56%">
+  <tbody>
+       <tr>
+  <td>          
+        <center><a href="3dmovies/auntie.htm"><img src="auntie_i.GIF" align="bottom" border="2" height="164" width="135">
+         </a></center>
+  </td>
+   <td>          
+        <center><a href="3dmovies/autistic.htm"><img src="autistic_i.GIF" align="bottom" border="2" height="164" width="135">
+         </a></center>
+  </td>
+   <td>          
+        <center><a href="3dmovies/bad_gab.htm"><img src="bad_gab.GIF" align="bottom" border="2" height="164" width="135">
+         </a></center>
+  </td>
+   <td>          
+        <center><a href="3dmovies/pontiac.htm"><img src="pontiac.GIF" align="bottom" border="2" height="164" width="135">
+         </a></center>
+  </td>
+  </tr>
+   <tr>
+  <td>          
+        <center><a href="3dmovies/party.htm"><img src="party_i.GIF" align="bottom" border="2" height="164" width="136">
+         </a></center>
+  </td>
+   <td>          
+        <center><a href="3dmovies/party_slow.htm"><img src="party_sl_i.GIF" align="bottom" border="2" height="164" width="135">
+         </a></center>
+  </td>
+   <td>          
+        <center><a href="3dmovies/petty.htm"><img src="petty.GIF" align="bottom" border="2" height="164" width="135">
+         </a></center>
+  </td>
+   <td>          
+        <center><a href="3dmovies/potty_slow.htm"><img src="potty_sl.GIF" align="bottom" border="2" height="164" width="135">
+         </a></center>
+  </td>
+  </tr>
+       
+    </tbody>   
+  </table>
+   </p>
+   
+  <p> </p>
+   
+  <hr align="center"> <font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/physiology.html">physiology facilities</a></font>
+   <br>
+   <font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/facilities/facilities.html">general facilities</a></font>
+   <br>
+   <font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/">Phonetics Lab Homepage</a></font><font size="+1"><a href="../../uclaplab.html"></a></font></blockquote>
+    
+<p><br>
+ <a name="III.  Domain-initial strengthening : French and"></a><b><font size="+3">IV.&nbsp; Domain-initial strengthening : French and Korean</font></b>
+ </p>
+ 
+<blockquote><font size="+1">Keating et al (1998, LabPhon 6) and many other
+ studies supported by NSF grant #SBR 9511118 (to P. Keating) showed, in their 
+EPG studies of English, French, Korean, and Taiwanese, that consonants have 
+greater linguopalatal contact in a domain-initial position than in a domain-medial 
+position and that this effect is in general cumulative: the linguopalatal 
+contact becomes greater as the domain is higher in the prosodic hierarchy.&nbsp; 
+Such cumulative effect was more pervasive in one language (e.g., Korean) than
+in another (e.g., English).&nbsp; Here, we put some results from French and
+Korean with representative EPG contact figures and sounds (.WAV format).</font></blockquote>
+    
+<blockquote><font color="#990000"><b><font size="+2">(1) French&nbsp; </font></b><font size="+1">[Please scroll down to "examples."]</font></font>    
+  <blockquote>      
+    <ul>
+  <li> <font size="+1">Ui&nbsp;&nbsp; = Utterance-initial,</font></li>
+   <li> <font size="+1">IPi&nbsp; = Intonational Phrase-initial (= Ui-medial)</font></li>
+   <li> <font size="+1">APi = Accentual Phrase-initial (= IP-medial)</font></li>
+   <li> <font size="+1">Wi&nbsp; = Word-initial (= AP-medial)</font></li>
+   <li> <font size="+1">Si&nbsp;&nbsp; = Syllable-initial (= W-medial)</font></li>
+       
+    </ul>
+  </blockquote>
+  <img src="Fr_example2.GIF" align="bottom" border="0" height="204" width="694">
+  <br>
+   <b><font size="+1">Figure 3.&nbsp; Differences in linguopalatal contact
+ for [n] in French as a function of prosodic position.</font></b> <br>
+ &nbsp;    
+  <ul>
+  <li> <font size="+1">As shown in Figure 3, the linguopalatal contact becomes 
+progressively greater as the prosodic position moves up in the prosodic hierarchy, 
+except that there is no substantial difference between Ui and IPi.</font></li>
+   <li> <font size="+1">Note also that each initial position of a prosodic 
+domain is the medial position of the immediately higher prosodic domain (e.g.,
+ Si = Word-medial, Wi = AP-medial, etc.)</font></li>
+     
+  </ul>
+  <b><font size="+2">Examples:</font></b> <br>
+   <b><font size="+1">[n]s in bold are target segments which occur in different
+ prosodic positions.&nbsp; Examine the corpus and click each sentence to
+hear the sound, as you wish.&nbsp; (The Speaker is C. Fougeron.)</font></b></blockquote>
+    
+<blockquote>    
+  <ul>
+  <li> <b><font size="+1">Ui&nbsp;</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/Ui_FR.WAV"><font size="+1">Paul aime Tata.&nbsp; </font><b><font color="#990000"><font size="+2">Na</font></font></b><font size="+1">dia
+les prot�ge en secret.</font></a></li>
+        
+    <ul>
+ &nbsp;&nbsp;&nbsp;&nbsp; 'Paul loves Tata.&nbsp; Nadia protects them in
+secret'     
+    </ul>
+   <li> <b><font size="+1">IPi</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/IPi_Fr.WAV"><font size="+1">La pauvre Tata, </font><b><font color="#990000"><font size="+2">Na</font></font></b><font size="+1">dia
+et Paul n'arriveront que demain</font></a></li>
+        
+    <ul>
+ &nbsp;&nbsp;&nbsp;&nbsp; 'Poor Tata, Nadia and Paul will arrive only tomorrow' 
+    
+    </ul>
+   <li> <b><font size="+1">APi</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/APi_Fr.WAV"><font size="+1">Tonton, Tata, </font><b><font color="#990000"><font size="+2">Na</font></font></b><font size="+1">dia
+et Paul arriveront demain.</font></a></li>
+        
+    <ul>
+ &nbsp;&nbsp;&nbsp;&nbsp; 'Tonton, Tata, Nadia and Paul will arrive tomorrow' 
+    
+    </ul>
+   <li> <b><font size="+1">Wi</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/Wi_Fr.WAV"><font size="+1">Paul et Tata-</font><b><font color="#990000"><font size="+2">Na</font></font></b><font size="+1">dia
+arriveront demain matin.</font></a></li>
+   <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 'Paul and Tata-Nadia will arrive tomorrow morning' <li> <b><font size="+1">Si</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/Si_FR.WAV"><font size="+1">Tonton et A</font><b><font color="#990000"><font size="+2">na</font></font></b><font size="+1">belle
+ arriveront demain matin.</font></a></li>
+   <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 'Tonton and Anabelle will arrive tomorrow morning'   
+  </ul>
+  See
+French references below.    
+  <p><b><font color="#990000"><font size="+2">(2) Korean</font></font></b>
+   <br>
+   <font size="+1"><font color="#000000">The figure below shows that the
+linguopalatal contact varies depending on prosodic position in the direction
+  </font><b><font color="#990000">Ui &gt; IPi &gt; APi &gt; Wi (Wi &gt; Si)</font></b><font color="#000000">.&nbsp; (Note: Wi vs. Si was examined separately.)</font></font></p>
+ </blockquote>
+  <img src="Kr_example2.GIF" align="bottom" border="0" height="179" width="745">
+  <br>
+ <font size="+1"><b>Figure 4.&nbsp; Differences in linguopalatal contact
+for [n] in Korean as a function of prosodic position. </b>Wi vs. Si was examined 
+separately.</font>  
+<blockquote><b><font size="+2">Examples:</font></b> <br>
+   <b><font size="+1">[n]s in bold are target segments which occur in different
+ prosodic positions.</font></b>    
+  <p><img src="Kr_corpus_web.GIF" align="bottom" border="0" height="297" width="487">
+  </p>
+   
+  <p><b><font size="+1">Examine the corpus and click below&nbsp; to hear the
+sound, as you wish.&nbsp; (The voice is T. Cho.)</font></b> </p>
+   
+  <p><b><font size="+2">&nbsp;&nbsp;&nbsp; (a)&nbsp;&nbsp; <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/Ui_kr.WAV">Ui </a><a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/IPi_kr.WAV">IPi </a><a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/APi_Kr.WAV">APi </a><a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/Wi_kr.WAV">Wi</a>&nbsp;&nbsp; (b) <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/Wi_kr2.WAV">Wi </a><a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/EPG_other/Si_kr.WAV">Si</a></font></b> </p>
+   
+  <p>See 
+Korean References below: <br>
+ &nbsp; </p>
+   
+  <p><font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/physiology.html">physiology facilities</a></font>
+   <br>
+   <font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/facilities/facilities.html">general facilities</a></font>
+   <br>
+   <font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/">Phonetics Lab Homepage</a></font><font size="+1"><a href="../../uclaplab.html"></a></font></p>
+ </blockquote><br>
+ &nbsp;  
+<p><a name="V. Some References of EPG studies done at"></a><b><font size="+3">V. Some References of EPG studies done at UCLA</font></b> </p>
+ 
+<ul>
+ Byrd, D. (1994)&nbsp; Articulatory timing in English consonant sequences.
+ UCLA dissertation.&nbsp; In UCLA Working Papers in Phonetics, 86.    
+  <p>Byrd, D. (1995)&nbsp; C-Center revisited.&nbsp; Phonetica, 52, 285-306
+   </p>
+   
+  <p>Byrd, D. (1996)&nbsp; Influences on articulatory timing in consonant
+ sequences.&nbsp; Journal of Phonetics, 24, 209-244. </p>
+   
+  <p>Byrd, D. (1996)&nbsp; A phase window framework for articulatory timing.
+ Phonology,13(2):139-169. </p>
+   
+  <p>Byrd, D. &amp; C. C. Tan. (1996) Saying consonant clusters quickly.
+Journal of Phonetics, 24(2):263-282. </p>
+   
+  <p>Byrd, D, E. Flemming, C. A. Mueller, &amp; C. C. Tan. (1995) Using regions
+ and indices in EPG data reduction. Journal of Speech and Hearing Research,
+ 38:821-827. </p>
+   
+  <p>Cho, T. (1998) Intergestural timing and overlap in Korean palatalization.&nbsp;
+ In David Silva (eds.) Japanese/Korean Linguistic, vol. 8. CSLI: Stanford
+University.    </p>
+   
+  <p>Cho, T. (1998) Domain-initial strengthening in the prosodic hierarchy:
+ an EPG study. Proceedings of 11th International Conference on Korean Linguistics
+ (ICKL 11), July 6-9, 1998.&nbsp; University of Hawaii at Manoa. </p>
+   
+  <p>Cho, T. and P. Keating (1999)&nbsp; Articulatory and acoustic studies
+ of domain-initial strengthening in Korean.&nbsp; J. Phonetics 28:155-190&nbsp;
+ (2001) </p>
+   
+  <p>Fougeron, C. (1999)&nbsp; Articulatory properties of initial segments
+ in several prosodic constituents in French.&nbsp; Journal of Phonetics,
+Vol. 29, No. 2, Apr 2001, pp. 109-135. </p>
+   
+  <p>Fougeron, C. &amp; Keating, P. (1997)&nbsp; Articulatory strengthening
+ at edges of prosodic domains.&nbsp; JASA, 106 (6), 3728 - 3740. </p>
+   
+  <p>Fougeron, C. &amp;&nbsp; Keating, P.&nbsp; (1996) : Variations in velic
+ and lingual articulation depending on prosodic position: Results for 2 French 
+speakers", UCLA Working Papers in Phonetics 92: 88-96 (1996)
+   </p>
+   
+  <p>Fougeron, C. &amp; Keating, P. (1996) Articulatory strengthening in
+prosodic domain-initial position.&nbsp; UCLA Working Papers in Phonetics,
+92, 61-87.    </p>
+   
+  <p>Hayashi, W; Hsu, C; Keating, P.&nbsp; (1999) Domain-initial strengthening
+ in Taiwanese:&nbsp; A follow-up study.&nbsp; UCLA Working Papers in Phonetics,
+ 97, 152-157. </p>
+   
+  <p>Hsu, C. &amp; Jun, S.&nbsp; (1998)&nbsp; Prosodic strengthening in Taiwanese:
+ Syntagmatic or paradigmatic ?&nbsp; UCLA Working Papers in Phonetics, 96,
+ 69-89. </p>
+   
+  <p>Keating, P; Cho, T; Fougeron, C; Hsu, C.&nbsp; (1999)&nbsp; Domain-initial
+ articulatory strengthening in four languages.&nbsp; UCLA Working Papers
+in Phonetics, 97, 139-151.&nbsp; (To appear in LabPhon 6)&nbsp;<a href="http://www.humnet.ucla.edu/humnet/linguistics/people/keating/lpfinal.pdf"></a> </p>
+   
+  <p>Keating, P; Wright, R; Zhang, J.&nbsp; (1999)&nbsp; Word-level asymmetries
+ in consonant articulation.&nbsp; UCLA Working Papers in Phonetics, 97, 152-157.
+   </p>
+   
+  <p>Saw, Cheng Cheng&nbsp; (1993)&nbsp; Customized 3-D Electropalatography
+ Display.&nbsp; UCLA Working Papers in Phonetics, 85, 71-96. </p>
+   
+  <p>Thomas, Kim.&nbsp; (1999)&nbsp; Coproduction and Coarticulation in IsiZulu
+ Clicks. PhD. dissertation. UCLA. <br>
+ (her name is officially listed as Kimberly Diane Thomas-Vilakati)</p>
+ 
+</ul>
+    
+<hr align="center"><font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/facilities/physiology/physiology.html">physiology facilities</a></font>
+   <br>
+   <font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/facilities/facilities.html">general facilities</a></font>
+   <br>
+   <font size="+1">Back to <a href="http://phonetics.linguistics.ucla.edu/">Phonetics Lab Homepage</a></font><blockquote><font size="+1"><a href="../../uclaplab.html"></a></font>
+   
+  <p>Last updated: Oct. 2017 by P. Keating</p>
+ </blockquote>
+   <br>
+ <br>
+</body></html>

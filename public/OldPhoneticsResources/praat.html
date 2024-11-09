@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  
+  <title>Praat script resources</title><style type="text/css">
+     body { font: 100% Georgia, helvetica, sans-serif; color: black; background-color: #F2F2FD; }
+     h1 { margin-top: 0px; margin-bottom: 5px; text-align: center; font-size: 175%; font-weight: bold; padding: 0em; color: #151590; }
+     h2 { color: #000000;
+ margin-top: 20px;
+ margin-bottom: 2px;
+ font-size: 120%;
+ border-style: solid;
+ padding: 0.2em;
+ border-width: 2px;
+ background-color: #b7b0fe; }
+
+     h3 { margin-top: 14pt;
+ margin-bottom: 2pt;
+ font-size: 125%; color: #009; }
+     hr { height: 2px; border: 0; width: 100%; margin-top: 10pt;
+ margin-bottom: 5pt; 
+background-color: black; color: black; }
+     p { font-family: Georgia; margin-top: 25px;
+ margin-bottom: 2px;
+ font-size: 100%;
+ border-style: dashed;
+ padding: 0.7em;
+ border-width: 1px;
+ background-color: #ffffbb }
+
+     address { font-size: 75%;
+ text-align: right }
+     a { color: #306; font-weight: bold }
+     a:hover { background-color: #CACAFC; text-decoration: underline; }
+     em { font-style: normal;
+ color: #306525; font-weight: bold }
+
+  </style></head>
+
+<body>
+       
+<h1>Praat script resources</h1>
+       
+<p><b>Page contents</b><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#howto">How to use this page</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#directory">Directory of scripts by type and description</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#links">Links: other online collections of Praat scripts</a>
+</p>
+       
+<h2><a name="howto"></a>How to use this page</h2>
+       
+<dl>
+  <b><em>How to run a script</em></b>
+  <ul>
+    Scripts save <a href="http://www.fon.hum.uva.nl/praat/">Praat</a> users time and effort by automating a sequence of operations. To run a Praat script, go to the <b>Control</b> menu in the <b>Praat objects</b> window and select <b>New Praat script</b>.
+Then pull up the code for the desired script by clicking on one of the
+links below. Copy all the code there (e.g. highlight and <b>Ctrl-C</b> on a PC) and paste it into the new <b>untitled script</b> window. Finally, select <b>Run &gt; Run</b> (or type <b>Ctrl-R</b>) in the <b>untitled script</b> window to execute the  script.  
+  </ul>
+
+  <br>
+
+  <b><em>How to save a script or add it to the menu</em></b>
+  <ul>
+    In the open <b>untitled script</b> window with the new script pasted in the text box, go to the <b>File</b> menu to <b>Save</b> the script to a convenient location. The <b>Add to fixed menu...</b> command under <b>File</b> can be used to add the current script to one of the head menus in the <b>Praat objects</b> window.  Menus can be edited (e.g. to remove previously added scripts) by going to  <b>Control &gt; Preferences &gt; Buttons</b> and clicking on the desired command.         
+  </ul>
+
+  <br>
+
+  <b><em>How to script in Praat</em></b>
+  <ul>
+    See the <b>Scripting tutorial</b> under <b>Help</b> in <b>Praat objects</b> or try any of the many online tutorials.          
+  </ul>
+</dl>
+
+<br>
+     
+<br>
+     
+<h2><a name="directory"></a>Praat script directory by type and description</h2>
+       
+<p><b>Directory categories</b><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#filemanagement">Sound file management</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#textgridmanagement">Text grid management</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#textgridanalysis">Analysis of sounds using text grids</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#segmentation">Segmentation and extraction</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#pictures">Drawing pictures</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#noisespeech">Noise and speech manipulation</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#other">More sound analysis</a>
+</p>
+       
+<dl>
+  <h3><a name="filemanagement"></a>Sound file management</h3>
+  <ul>
+    <li><a2><a href="get-files.praat">get-files</a></a2> (<em>Kevin Ryan</em>)<br>
+       Open multiple files from the specified directory at once. </li>
+    <li><a2><a href="http://www.ling.ed.ac.uk/%7Ebert/openlist.psc">get-files-from-list</a></a2> (<em>Bert Remijsen</em>, back up <a href="openlist.txt">here</a>)<br>
+       Open multiple files enumerated in a list in the specified text file (BR's <a href="http://www.ling.ed.ac.uk/%7Ebert/praatscripts.html">description</a>).</li>
+    <li><a href="remove-all.praat"><a2>remove-all</a2></a> (<em>Kevin Ryan</em>)<br>
+       Remove all objects from object list. </li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/change_sample_rate_of_sound_files.praat">change-sample-rate-or-format</a></a2> (<em>Mietta Lennes</em>, back up <a href="change_sample_rate_of_sound_files.txt">here</a>)<br>
+       Resample and/or change the format of a set of sound files (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/">description</a>).</li>
+    <li><a2><a href="Concatenator.txt">concatenate-sounds</a></a2> (<em>Chad Vicenik</em>)<br>
+       Concatenate (daisy-chain) two or more selected Sound objects into one Sound object. </li>
+    <li><a href="Duplicator.txt"><a2>duplicate-sound</a2></a> (<em>Chad Vicenik</em>)<br>
+       Concatenate (daisy-chain) a Sound object with itself the specified number of times. </li>
+    <li><a2><a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/Praatscripts/Add2_variable">combine-sounds</a></a2> (<em>Chris Darwin</em>, back up <a href="Add2_variable.txt">here</a>)<br>
+       Combine (merge) two Sounds with specified gains. </li>
+    <li><a2><a href="install.txt">script-installation-script</a></a2> (<em>Niels Petersen</em>)<br>
+       An example of a script used to install several scripts to the Praat menus. </li>
+    <li><a href="wave-maker.praat"><a2>wave-maker</a2></a> (<em>Kevin Ryan</em>)<br>
+       Create multiple varied sine waves at once in the object list and/or a directory (useful for testing scripts).</li>           
+  </ul>
+
+  <h3><a name="textgridmanagement"></a>Text grid management</h3>
+  <ul>
+    <li><a href="grid-maker.praat"><a2>grid-maker</a2></a> (<em>Kevin Ryan</em>)<br>
+       Make or edit text grids for a set of sound files.<br>
+       <ul><li>See also <em>K. Crosswhite</em>'s amply commented grid <a href="text_grid_maker.txt">maker</a> and <a href="text_grid_reviewer.txt">reviewer</a> scripts (and their <a href="http://web.archive.org/web/20030620172734/ling.rochester.edu/people/cross/scripts.html">descriptions</a>).</li>
+       <li><em2>KR's version improves on these mainly by combining them: if a grid exists, it opens it, otherwise it sets up a new one.</em2></li></ul></li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/label_from_text_file.praat">label-from-text-file</a></a2> (<em>Mietta Lennes</em>, back up <a href="label_from_text_file.txt">here</a>)<br>
+       Replace interval labels in selected TextGrid with labeled text from a file (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#labeling">description</a> and a <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/label_quickly_from_text_file.praat">streamlined version</a> (back up <a href="label_quickly_from_text_file.txt">here</a>)). </li>
+    <li><a2><a href="open_many_textgrids.txt">open-multiple-textgrids</a></a2> (<em>John  Tøndering</em>)<br>
+       Open multiple text grids from a directory at once. </li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/mark_pauses.praat">mark-pauses</a></a2> (<em>Mietta Lennes</em>, back up <a href="mark_pauses.txt">here</a>)<br>
+       Mark pauses in a LongSound (can then run segmenter to get separate files) (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#views">description</a>); cf.<a href="https://sites.google.com/site/praatscripts/"> </a><a href="https://sites.google.com/site/praatscripts/">word-chomper</a><a href="https://sites.google.com/site/praatscripts/">.</a></li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/total_duration_of_labeled_segments.praat">total-duration-of-labeled-segments</a></a2> (<em>Mietta Lennes</em>, back up <a href="total_duration_of_labeled_segments.txt">here</a>)<br>
+       Total the duration of labeled segments of a TextGrid (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#labeling">description</a>).</li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/align_boundaries_in_two_interval_tiers.praat">align-textgrid-markers</a></a2> (<em>Mietta Lennes</em>, back up <a href="align_boundaries_in_two_interval_tiers.txt">here</a>)<br>
+       Align TextGrid interval markers in tier one to those in tier two if they are sufficiently close (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#labeling">description</a>).</li>
+  </ul>
+
+  <h3><a name="textgridanalysis"></a>Analysis of sounds using text grids</h3>
+  <ul>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/calculate_segment_durations.praat">calculate-segment-durations</a></a2> (<em>Mietta Lennes</em>, back up <a href="calculate_segment_durations.txt">here</a>)<br>
+       Log durations between labeled markers in a set of text grids.  (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#calculate">description</a>).</li>
+       <ul><li>See also Katherine Crosswhite's <a href="duration_logger.txt">duration-logger</a></li></ul>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/save_interval_data_to_text_file.praat">startpoint-logger</a></a2> (<em>Mietta Lennes</em>, back up <a href="save_interval_data_to_text_file.txt">here</a>)<br>
+       Similar to the above script, but make file with startpoint of each labeled interval (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#labeling">description</a>).</li>
+    <li><a2><a href="formant_logging.txt">formant-logger</a></a2> (<em>Katherine Crosswhite</em>)<br>
+       Log midpoint F0-F3 and duration of vowels delimited by labeled markers in a set of text grids (KC's <a href="http://web.archive.org/web/20030620172734/ling.rochester.edu/people/cross/scripts.html">description</a>). </li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/collect_formant_data_from_files.praat">formant-logger</a></a2> (<em>Mietta Lennes</em>, back up <a href="collect_formant_data_from_files.txt">here</a>)<br>
+       Log midpoint F1-F3 of text grid labeled intervals for a set of Sound/TextGrid pairs (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#calculate">description</a>).</li>
+       <ul><li>For F1/F2 logging, see also <em>Bert Remijsen</em>'s <a href="http://www.ling.ed.ac.uk/%7Ebert/praatscripts.html">scripts</a> for using either the point tier or the interval tier to mark vowels.</li></ul>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/draw_formant_chart.praat">draw-formant-chart</a></a2> (<em>Mietta Lennes</em>, back up <a href="draw_formant_chart.txt">here</a>)<br>
+       Reports and logs midpoint F1-F2 of vowels delimited by labeled markers in  a set of text grids (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#views">description</a>).</li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/collect_pitch_data_from_files.praat">log-pitch-maxima</a></a2> (<em>Mietta Lennes</em>, back up <a href="collect_pitch_data_from_files.txt">here</a>)<br>
+       Get F0 maxima of all text grid labeled intervals for a number of Sound-TextGrid pairs (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#calculate">description</a>).<br>
+       <ul><li>See also ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/collect_data_from_two_tiers_in_files.praat">log-data-from-two-tiers</a> (back up <a href="collect_data_from_two_tiers_in_files.txt">here</a>), which gets pitch maxima and corresponding syllable durations (<a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#calculate">description</a>).</li></ul></li>
+    <li><a2><a href="http://www.ling.ed.ac.uk/%7Ebert/momel_modif.psc">log-f0-extrema-using-momel</a></a2> (<em>Bert Remijsen</em> et al., back up <a href="momel_modif.txt">here</a>)<br>
+       Use the MOMEL (Hirst &amp; Espesser) algorithm to log pitch turning points to TextGrid (BR's <a href="http://www.ling.ed.ac.uk/%7Ebert/praatscripts.html">description</a>).</li>   
+    <li><a2><a href="PraatVoiceSauceImitator.txt">phonation-measurements</a></a2> (<em>Chad Vicenik</em>) <br>
+       Makes various measurements, including H1-H2, H1-A1, H1-A2, and H1-A3. </li>
+  </ul>
+
+  <h3><a name="segmentation"></a>Segmentation and extraction</h3>
+  <ul>
+    <li><a2><a href="Segmenter.txt">segmenter</a></a2> (<em>Katherine Crosswhite</em>)<br>
+       Extract clips demarcated by labeled markers into individual AIFF or WAV files (KC's <a href="http://web.archive.org/web/20030620172734/ling.rochester.edu/people/cross/scripts.html">description</a>). </li>
+    <li><a2><a href="https://sites.google.com/site/praatscripts/">word-chomper</a></a2> (<em>Joe  Toscano</em>, back up <a href="word_chomper.txt">here</a>)<br>
+       Take a WAV file and split it into smaller files corresponding to utterances.</li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/save_intervals_to_aiff_sound_files.praat">segment-to-aiffs-and-log</a></a2>, <a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/save_intervals_to_wav_sound_files.praat">segment-to-wavs-and-log</a></a2> (<em>Mietta Lennes</em>, back ups <a href="save_intervals_to_aiff_sound_files.txt">here</a> and <a href="save_intervals_to_wav_sound_files.txt">here</a>)<br>
+       Extract textgrid-demarcated clips from LongSound into numbered files and log markers (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#cutting">description</a>).<br></li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/save_labeled_intervals_to_aiff_sound_files.praat">segment-to-labeled-aiffs</a></a2>, <a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/save_labeled_intervals_to_wav_sound_files.praat">segment-to-labeled-wavs</a></a2> (<em>Mietta Lennes</em>, back ups <a href="save_labeled_intervals_to_aiff_sound_files.txt">here</a> and <a href="save_labeled_intervals_to_wav_sound_files.txt">here</a>)<br>
+       Extract textgrid-demarcated clips from LongSound into files named after textgrid markers (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#cutting">description</a>).<br></li>
+    <li><a2><a href="voiced_extract_auto.txt">extract-voiced-portions</a></a2> (<em>John  Tøndering</em>)<br>
+       Extract and concatenate voiced portions of selected Sound to create new  voiced-portions-only Sound. </li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/save_selection_to_sound_and_textgrid.praat">save-selection-to-sound-and-textgrid</a></a2> (<em>Mietta Lennes</em>, back up <a href="save_selection_to_sound_and_textgrid.txt">here</a>)<br>
+       From an open LongSound TextGrid, save selected portion of LongSound and its TextGrid  (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#cutting">description</a>).</li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/make_textgrid_from_segment_data.praat">from-segmentation-data-files-to-text-grids</a></a2> (<em>Mietta Lennes</em>, back up <a href="make_textgrid_from_segment_data.txt">here</a>)<br>
+       Convert data files listing segment startpoints and labels to TextGrids; cf. <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/make_textgrid_from_segment_data_endpoints.praat">endpoint</a> version (back up <a href="make_textgrid_from_segment_data_endpoints.txt">here</a>, ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#labeling">description</a>).</li>
+  </ul>
+
+  <h3><a name="pictures"></a>Drawing pictures</h3>
+  <ul>
+    <li><a2><a href="http://www.let.uu.nl/%7EHugo.Quene/personal/tools/figure.praat">draw-sample-figure</a></a2> (<em>Hugo Quené</em>, back up <a href="figure.txt">here</a>)<br>
+       Demonstrates how to draw a figure (graph) using a script (HQ's <a href="http://www.let.uu.nl/%7EHugo.Quene/personal/tools/">scripts</a>).</li>
+    <li><a2><a href="http://www.fon.hum.uva.nl/paul/diss/">Functional phonology</a></a2>, <em>Paul Boersma</em>'s 1998 dissertation, has a number of sophisticated figure drawing scripts,<br>
+       <ul><li>e.g., <a href="http://www.fon.hum.uva.nl/paul/diss/ch2/lungs.draw">draw-lungs</a> and <a href="http://www.fon.hum.uva.nl/paul/diss/ch2/muscles.draw">draw-muscle-effects</a> in <a href="http://www.fon.hum.uva.nl/paul/diss/ch2/">Chapter 2: Articulation model</a> (back ups <a href="lungs_draw.txt">here</a> and <a href="muscles_draw.txt">here</a>). </li></ul></li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/draw_distribution_bar_from_data_file.praat">draw-distribution-bar</a></a2> (<em>Mietta Lennes</em>, back up <a href="draw_distribution_bar_from_data_file.txt">here</a>)<br>
+       Draw a makeshift bar showing distribution of labeled intervals from a file of timepoint, label pairs (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#pictures">description</a>).</li>
+    <li><a2><a href="draw_source_filter_model.txt">draw-source-filter-model</a></a2> (<em>Niels  Petersen</em>)<br>
+       Draw the components of the source-filter model of vowel production to the Picture window. </li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/draw_formant_point_to_Bark_chart.praat">draw-formant-point-to-bark-chart</a></a2> (possibly buggy; <em>Mietta Lennes</em>, back up <a href="draw_formant_point_to_Bark_chart.txt">here</a>)<br>
+       Draw a one-Bark vowel circle from given formant values (Hz) on a Bark-scale F1/F2 chart.<br>
+       <ul><li>Cf. <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/draw_formant_point_to_ERB_chart.praat">draw-formant-point-to-erb-chart</a>: same as above script except Erb-scale chart (back up <a href="draw_formant_point_to_ERB_chart.txt">here</a>, ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/#pictures">descriptions</a>).</li></ul></li>
+    <li><a2><a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/Praatscripts/mxn%20plot">make-matrix-of-plots</a></a2> (<em>Chris Darwin</em>, back up <a href="mxn_plot.txt">here</a>)<br>
+       Create a matrix of plots; format these plots by changing the script code (try it with the defaults).</li>
+  </ul>
+
+  <h3><a name="noisespeech"></a>Noise and speech manipulation</h3>
+  <ul>
+    <li><a2><a href="FlatIntonationSynthesizer.txt">flat-intonation-resynthesizer</a></a2> (<em>Chad Vicenik</em>)<br>
+       Resynthesizes all files in a directory to have flat pitch of a given frequency. </li>
+    <li><a2><a href="adjust_intensity_whole_file.txt">adjust-intensity</a></a2> (<em>Katherine Crosswhite</em>)<br>
+       Scale a set of sounds so that their peak amplitudes are identical (KC's <a href="http://web.archive.org/web/20030620172734/ling.rochester.edu/people/cross/scripts.html">description</a>). </li>
+    <li><a2><a href="IntensityScaler.txt">intensity-scaler</a></a2> (<em>Chad Vicenik</em>)<br>
+       Scales the intensity of all files in a directory to the same value. </li>
+    <li><a2><a href="IntensityNeutralizer.txt">intensity-neutralizer</a></a2> (<em>Chad Vicenik</em>)<br>
+       Flattens the intensity curve of all files in a directory.</li>
+    <li><a2><a href="resampler.txt">file-resampler</a></a2> (<em>Chad Vicenik</em>)<br>
+       Resamples all the files in a directory.</li>
+    <li><a2><a href="LowPassFilter.txt">low-pass-filter</a></a2> (<em>Chad Vicenik</em>)<br>
+       Low-pass filters all files in a directory.</li>
+    <li><a2><a href="create_sustained_vowel_lpc.txt">create-sustained-vowel</a></a2> (<em>Niels  Petersen</em>)<br>
+       Create a sustained vowel of the specified type using the LF source model. </li>
+    <li><a2><a href="create_waveforms.txt">create-waveforms</a></a2> (<em>Niels Petersen</em>)<br>
+       Create various kinds of waveforms (sawtooth, square, sine, white noise, pink noise, etc.). </li>
+    <li><a2><a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/Praatscripts/comb%20filter">comb-filter-noise</a></a2> (<em>Chris Darwin</em>, back up <a href="comb_filter.txt">here</a>)<br>
+       Generate and comb-filter white noise. </li>
+    <li><a2><a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/Praatscripts/Shannon">shannon-am-noise</a></a2> (<em>Chris Darwin</em>, back up <a href="Shannon.txt">here</a>)<br>
+       Produce Shannon-type AM noise from a selected Sound file using four bands.</li>
+    <li><a2><a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/Praatscripts/VTchange">vocal-tract-change</a></a2> (<em>Chris Darwin</em>, back up <a href="VTchange.txt">here</a>)<br>
+       Change size of vocal tract (formants, but not duration/pitch); cf. <a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/Praatscripts/VTchange-dynamic">vocal-tract-change-dynamic</a>, which leaves the F0 altered. </li>
+    <li><a2><a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/Praatscripts/SWS">sine-wave-speech</a></a2> (<em>Chris Darwin</em>, back up <a href="SWS.txt">here</a>)<br>
+       Create three-formant sine-wave speech using selected Sound object. </li>
+    <li><a2><a href="http://www.let.uu.nl/%7EHugo.Quene/personal/tools/metronomeL000.praat">metronome</a></a2> (<em>Hugo Quené</em>, back up <a href="metronomeL000.txt">here</a>)<br>
+       Simple one-beat metronome; see HQ's <a href="http://www.let.uu.nl/%7EHugo.Quene/personal/tools/">scripts</a> page for several more complex metronomes.<br>
+       <ul><li>Careful:
+the default durations are very long; they should be set shorter before
+testing, lest Praat be tied up for minutes. Also, references to
+mywhoosh.wav should be changed to some extant WAV or removed.</li></ul></li>
+  </ul>
+
+  <h3><a name="other"></a>More sound analysis</h3>
+  <ul>
+    <li><a2><a href="amplitude_gating.txt">amplitude-gating</a></a2> (<em>Niels Petersen</em>)<br>
+       Gates the selected Sound object in and out (in intensity) using specified rise and fall times. </li>
+    <li><a2><a href="voice_rep_from_object_window.txt">voice-report</a></a2> (<em>Niels  Petersen</em>)<br>
+       Generate a customized &#8220;voice report&#8221; for the selected Sound. </li>
+    <li><a2><a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/Praatscripts/Fodurndynamic">adjust-f0-and-duration</a></a2> (<em>Chris Darwin</em>, back up <a href="Fodurndynamic.txt">here</a>)<br>
+       Globally alter fundamental frequency and/or duration of all selected Sound objects. </li>
+    <li><a2><a href="http://www.let.uu.nl/%7EHugo.Quene/personal/tools/vowelonset.v3.praat">mark-vowel-onsets</a></a2> (<em>Hugo Quené</em>, back up <a href="vowelonset_v3_praat.txt">here</a>)<br>
+       Find the vowel onsets in a selected Sound and log their timepoints in a new PointProcess; can then use HQ's <a href="http://www.let.uu.nl/%7EHugo.Quene/personal/tools/writePP.praat">write-pp</a> (back up <a href="writePP.txt">here</a>) to record the PointProcess timepoints in a data file (HQ's <a href="http://www.let.uu.nl/%7EHugo.Quene/personal/tools/">scripts</a>).</li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/draw_spectrum_from_selection.praat">draw-fft-spectrum</a></a2> (<em>Mietta Lennes</em>, back up <a href="draw_spectrum_from_selection.txt">here</a>)<br>
+       Draw and save FFT spectrum for 40 ms window around cursor; run from sound editor (ML's <a href="http://www.helsinki.fi/%7Elennes/praat-scripts/">description</a>).</li>
+    <li><a2><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/public/draw_LPC_spectrum_from_selection.praat">draw-lpc-spectrum</a></a2> (<em>Mietta Lennes</em>, back up <a href="draw_LPC_spectrum_from_selection.txt">here</a>)<br>
+       Like draw-fft-spectrum above, but LPC spectrum.</li>
+    <li><a2>create-analysis-table</a2> (<em>Setsuko Shirai</em>, back up <a href="CreateTable.txt">here</a>)<br>
+       Create a table showing pitch, intensity, and formants every 10 ms for a set of WAVs (untested). </li>
+    <li><a2><a href="pitch_unit_conversion.txt">pitch-unit-conversion</a></a2> (<em>Niels  Petersen</em>)<br>
+       Convert between different types of units, e.g. Hertz to Semitones, Bark, or Mel. </li>
+    <li><a2><a href="label_man.zip">annotate-using-manpage</a></a2> (<em>John Tøndering</em>)<br>
+       Annotate a TextGrid with phonetic symbols using ManPage (see JT's <a href="http://web.archive.org/web/20080104122516/http://www.cphling.dk/pers/johtnd/praat/my_praat.htm">description</a>). </li>
+    <li><a2><a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/Praatscripts/Make%20stereo">make-stereo</a></a2> (<em>Chris Darwin</em>, back up <a href="Make_stereo.txt">here</a>)<br>
+       Combine selected Sounds to make a stereo Sound file. </li>
+    <li><a2><a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/Praatscripts/Spectral%20Rotation">spectral-rotation</a></a2> (<em>Chris Darwin</em>, back up <a href="Spectral_Rotation.txt">here</a>) </li>
+  </ul>
+</dl>
+
+<br>
+     
+<h2><a name="links"></a>Praat scripts: links and online collections</h2>
+       
+<dl>
+In no particular order:<br>
+  <ul>
+    <li><a href="http://www.fon.hum.uva.nl/praat/">Praat</a>: main Praat website (e.g. download the program). </li>
+    <li><a href="http://uk.groups.yahoo.com/group/praat-users/">Praat users group</a>: Yahoo! discussion group for Praat users; some scripts available in database. </li>
+    <li><a href="http://www.helsinki.fi/%7Elennes/praat-scripts/">Mietta Lennes</a>: a large number of scripts, many quite involved, with very informative descriptions. </li>
+    
+    <li><a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/Praatscripts/">Chris Darwin</a>: <a href="http://www.lifesci.sussex.ac.uk/home/Chris_Darwin/">CD</a>'s advanced scripts for e.g. sine-wave speech, Shannon AM-noise speech, resizing vocal tract, etc. </li>
+    <li><a href="http://www.fon.hum.uva.nl/paul/diss/">Paul Boersma</a>: explore links for various highly tailored scripts associated with  PB's 1998 dissertation. </li>
+    <li><a href="http://web.archive.org/web/20030620172734/ling.rochester.edu/people/cross/scripts.html">Katherine Crosswhite</a>: the code of the first few scripts is very well documented; good for learning Praat scripting. </li>
+    <li><a href="http://web.archive.org/web/20070208013222/http://www.cphling.dk/pers/nrp/akustik/akustik.html">Niels Petersen</a>: 20-some scripts at the bottom. </li>
+    <li><a href="http://www.let.uu.nl/%7EHugo.Quene/personal/tools/">Hugo Quené</a>: some neat scripts, including several metronomes. </li>
+    <li><a href="http://www.ling.ed.ac.uk/%7Ebert/praatscripts.html">Bert Remijsen</a>: some very well explained scripts, with sample input. </li>
+    <li><a href="http://web.archive.org/web/20080104122516/http://www.cphling.dk/pers/johtnd/praat/my_praat.htm">John  Tøndering</a>:a &#8220;Label.man&#8221; (annotate from ManPage) package plus a few other common scripts. </li>
+    <li><a href="https://sites.google.com/site/praatscripts/">Joe Toscano:</a> archived scripts, including his own </li>
+    
+  </ul>
+
+  <br>
+
+  <hr>
+  <ul>
+   &nbsp;[This page is infrequently updated. Links are not guaranteed.]   
+  </ul>
+</dl>
+       
+<address>
+   Created 2005 by Kevin Ryan <br>
+   Updated July 2008 by Pat Keating<br>
+   Updated August 2009 by Chad Vicenik<br>
+</address>
+     
+<div align="left"><small>
+	Return to UCLA Phonetics Lab <a href="http://www.linguistics.ucla.edu/faciliti/facilities/acoustic/acoustic.html">Acoustic Analysis</a><br>
+	<br>
+	Return to UCLA Phonetics Lab <a href="http://www.linguistics.ucla.edu/faciliti/facilities/facilities.html">Facilities</a><br>
+	<br>
+	Return to <a href="http://www.linguistics.ucla.edu/faciliti/uclaplab.html">UCLA Phonetics Lab</a></small><br>
+</div>
+     
+<address><br>
+   </address>
+    <br>
+   <br>
+   <br>
+</body></html>

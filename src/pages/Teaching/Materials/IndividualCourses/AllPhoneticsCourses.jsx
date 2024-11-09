@@ -35,12 +35,12 @@ const AllPhoneticsCourses = () => {
           in the lab kitchen
         </li>
         <li>
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/facilities/databases/Videos.html">
+          <CustomLink href="../../../../../OldPhoneticsResources/Videos.html">
             Videos etc. in phonetics lab.
           </CustomLink>{" "}
           Note that many of these have been digitized, and are on the hard drive
           in the cabinet. Some are also{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/facilities/physiology/physiologyfilms.html">
+          <CustomLink href="../../../../../OldPhoneticsResources/physiologyfilms.html">
             online
           </CustomLink>
         </li>
@@ -54,14 +54,14 @@ const AllPhoneticsCourses = () => {
         </li>
         <li>
           A slow-motion{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/demos/vocalfolds/vocalfolds.htm">
+          <CustomLink href="../../../../../OldPhoneticsResources/vocalfolds/vocalfolds.htm">
             animation of the vocal folds
           </CustomLink>{" "}
           vibrating during speech, contributed by Peter Ladefoged.
         </li>
         <li>
           An{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/demos/croatian/index.html">
+          <CustomLink href="../../../../../OldPhoneticsResources/croatian/index.html">
             animation of articulators
           </CustomLink>{" "}
           in motion during speech, created from Electromagnetic Articulography
@@ -69,10 +69,7 @@ const AllPhoneticsCourses = () => {
         </li>
 
         <li>
-          <CustomLink
-            href="          https://phonetics.linguistics.ucla.edu/facilities/physiology/epg.html#3D
-"
-          >
+          <CustomLink href="https://phonetics.linguistics.ucla.edu/facilities/physiology/epg.html#3D">
             Displaying Palatometer
           </CustomLink>{" "}
           data in 3-D, by former undergrad Cheng Cheng Saw Tan
