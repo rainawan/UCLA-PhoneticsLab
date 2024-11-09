@@ -24,7 +24,7 @@ const Ling422 = () => {
         </li>
         <li>
           Rob Hagiwara's{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/teaching/111Win06Jun.pdf">
+          <CustomLink href="https://home.cc.umanitoba.ca/%7Erobh/howto.html">
             Monthly Mystery Spectrogram page
           </CustomLink>{" "}
           at the U. of Manitoba

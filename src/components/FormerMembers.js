@@ -661,7 +661,7 @@ export const rows = [
   {
     key: "104",
     name: "Jonas Nartey (or Akpanglo-Nartey)",
-    status: "Professor, University of Education, Winneba, Ghana.",
+    status: "Professor, University of Education, Winneba, Ghana",
     website: "https://wikieducator.org/UEW/JONAS",
   },
   {
@@ -774,8 +774,8 @@ export const rows = [
   {
     key: "122",
     name: "Adrienne Scutellaro",
-    status: "",
-    website: "",
+    status: "Software Engineer and Full Stack Engineer",
+    website: "https://www.linkedin.com/in/adrienne-scutellaro/",
   },
   {
     key: "123",
@@ -823,7 +823,7 @@ export const rows = [
   {
     key: "130",
     name: "Aaron Shryock",
-    status: "Ministry of Bible translation",
+    status: "Ministry of Bible translation, Grace Community Church",
     website: "https://www.gracechurch.org/shryock",
   },
   {
@@ -853,8 +853,8 @@ export const rows = [
   },
   {
     key: "135",
-    name: "Cheng Cheng Saw Tan",
-    status: "Tan, Senior Communications Specialist at FAR AI",
+    name: "Cheng Cheng Tan",
+    status: "Senior Communications Specialist at FAR AI",
     website: "https://far.ai/author/chengcheng-tan/",
   },
   {
@@ -892,7 +892,7 @@ export const rows = [
     key: "141",
     name: "Kimberly Thomas (Thomas-Vilakati)",
     status: "San Bernardino City Unified School District",
-    website: "",
+    website: "https://www.linkedin.com/in/kimberly-thomas-b80b6957/",
   },
   {
     key: "142",
@@ -1007,9 +1007,8 @@ export const rows = [
   {
     key: "158",
     name: "Meng Yang",
-    status: "UCLA Linguistics",
-    website:
-      "https://linguistics.ucla.edu/wp-content/uploads/2019/09/Yang_Dissertation_final.pdf",
+    status: "BeMo Academic Consulting",
+    website: "https://bemoacademicconsulting.com/medical-experts",
   },
   {
     key: "159",

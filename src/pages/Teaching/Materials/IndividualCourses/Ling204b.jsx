@@ -36,7 +36,7 @@ const Ling204b = () => {
           </CustomLink>
         </li>
         <li>
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/facilities/physiology/epg.html#III.%20%20Domain-initial%20strengthening%20:%20French%20and">
+          <CustomLink href="../../../../../OldPhoneticsResources/physiology/epg.html#III.%20%20Domain-initial%20strengthening%20:%20French%20and">
             Domain Initial Strengthening
           </CustomLink>
           - sample audio files and EPG data, prepared by Taehong Cho

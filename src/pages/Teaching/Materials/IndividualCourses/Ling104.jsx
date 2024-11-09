@@ -20,7 +20,7 @@ const Ling104 = () => {
         </li>
         <li>
           Link to our page of{" "}
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/facilities/acoustic/praat.html">
+          <CustomLink href="../../../../../OldPhoneticsResources/praat.html">
             Praat resources{" "}
           </CustomLink>
         </li>
