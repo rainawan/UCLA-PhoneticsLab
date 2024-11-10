@@ -70,7 +70,7 @@ const AllPhoneticsCourses = () => {
 
         <li>
           <CustomLink
-            href="https://phonetics.linguistics.ucla.edu/facilities/physiology/epg.html#3D
+            href="          https://phonetics.linguistics.ucla.edu/facilities/physiology/epg.html#3D
 "
           >
             Displaying Palatometer
