@@ -69,7 +69,7 @@ const AllPhoneticsCourses = () => {
         </li>
 
         <li>
-          <CustomLink href="https://phonetics.linguistics.ucla.edu/facilities/physiology/epg.html#3D">
+          <CustomLink href="../../../../../OldPhoneticsResources/epg/epg.html#3D">
             Displaying Palatometer
           </CustomLink>{" "}
           data in 3-D, by former undergrad Cheng Cheng Saw Tan
