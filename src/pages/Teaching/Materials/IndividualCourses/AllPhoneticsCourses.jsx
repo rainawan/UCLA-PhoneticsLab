@@ -40,7 +40,7 @@ const AllPhoneticsCourses = () => {
           </CustomLink>{" "}
           Note that many of these have been digitized, and are on the hard drive
           in the cabinet. Some are also{" "}
-          <CustomLink href="../../../../../OldPhoneticsResources/test2.html">
+          <CustomLink href="../../../../../OldPhoneticsResources/physiologyfilms.html">
             online
           </CustomLink>
         </li>
@@ -61,9 +61,9 @@ const AllPhoneticsCourses = () => {
         </li>
         <li>
           An{" "}
-          {/* <CustomLink href="../../../../../OldPhoneticsResources/croatian/index.html">
+          <CustomLink href="../../../../../OldPhoneticsResources/croatian/index.html">
             animation of articulators
-          </CustomLink>{" "} */}
+          </CustomLink>{" "}
           in motion during speech, created from Electromagnetic Articulography
           data by Adam Albright (about 200k)
         </li>
