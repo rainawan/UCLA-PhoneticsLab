@@ -40,7 +40,7 @@ const AllPhoneticsCourses = () => {
           </CustomLink>{" "}
           Note that many of these have been digitized, and are on the hard drive
           in the cabinet. Some are also{" "}
-          <CustomLink href="../../../../../OldPhoneticsResources/test2.html">
+          <CustomLink href="../../../../../OldPhoneticsResources/physiologyfilms.html">
             online
           </CustomLink>
         </li>
