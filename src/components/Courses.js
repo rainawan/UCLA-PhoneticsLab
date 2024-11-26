@@ -51,7 +51,7 @@ export const undergradRows = [
 export const gradRows = [
   {
     key: "1",
-    course: "CLING 204A",
+    course: "LING 204A",
     name: "Experimental Phonetics",
     offered: "Every winter",
     details: "Co-listed with Ling C104",

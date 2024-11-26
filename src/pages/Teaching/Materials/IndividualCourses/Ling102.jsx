@@ -38,8 +38,8 @@ const Ling102 = () => {
           <CustomLink href="https://media.dymaxion.ca/display/214/wwk770">
             IML
           </CustomLink>{" "}
-          (retired film copy is in cabinet in General Lab) - but now freely
-          available online at the{" "}
+          (retired film copy is in General Lab) - but now freely available
+          online at the{" "}
           <CustomLink href="https://archive.org/details/normalspeecharticulation">
             Internet Archive
           </CustomLink>
@@ -101,13 +101,9 @@ const Ling102 = () => {
           <CustomLink href="https://ipa.typeit.org/full/">typeit</CustomLink>
         </li>
         <li>
-          IPA: CD{" "}
-          <CustomLink href="https://www.ethnologue.com/show_product.asp?isbn=1556711360">
-            "The Phonicon 1.0"
-          </CustomLink>{" "}
-          by M. Stanley Whitley; an entire course and reference materials but
-          the license does not permit putting it on the CLICC server for general
-          student use; on the shelf in the General Lab
+          IPA: CD "The Phonicon 1.0" by M. Stanley Whitley; an entire course and
+          reference materials but the license does not permit putting it on the
+          CLICC server for general student use; on the shelf in the General Lab
         </li>
         <li>
           IPA: Cascadilla's{" "}
