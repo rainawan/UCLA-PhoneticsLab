@@ -59,12 +59,6 @@ export const members = [
     link: "https://linguistics.ucla.edu/people/hayes/index.htm",
   },
   {
-    name: "Jinyoung Jo",
-    occupation: "Graduate Student",
-    imgSrc: Jinyoung_Jo,
-    link: "https://jinyoungjo.com/",
-  },
-  {
     name: "Sun-Ah Jun",
     occupation: "Faculty | Lab Director",
     imgSrc: Sun_Ah_Jun,
