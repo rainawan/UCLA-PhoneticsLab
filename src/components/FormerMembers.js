@@ -450,6 +450,13 @@ export const rows = [
       "https://www.researchgate.net/scientific-contributions/Hector-Javkin-70784618",
   },
   {
+    key: "70",
+    name: "Jinyoung Jo",
+    status:
+      "Social Science Research Professional, Department of Linguistics, Stanford University",
+    website: "https://jinyoungjo.com/",
+  },
+  {
     key: "71",
     name: "Amanda Jones",
     status: "Professional Services Group, Associate Director",
