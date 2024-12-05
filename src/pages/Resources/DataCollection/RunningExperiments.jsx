@@ -16,9 +16,8 @@ const RunningExperiments = () => {
         EGG, Aerodynamic equipment), please consult information under other
         sub-menus under '<span className="font-bold">Resources</span>
         '. If you want to use a soundbooth/room or eye-tracker, etc., please
-        reserve your time online in each sign-up calendar via the{" "}
-        <span className="font-bold">Data Collection</span> submenu page under '
-        <span className="font-bold">Resources</span>'.
+        reserve your time online in each sign-up calendar linked to the
+        'Reserve' button in each booth or room shown at the top of this webpage.
       </p>
       <p>&nbsp;</p>
       <p>
