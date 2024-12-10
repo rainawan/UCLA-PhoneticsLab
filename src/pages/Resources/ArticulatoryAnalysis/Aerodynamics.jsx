@@ -1,10 +1,10 @@
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import Text from "../../../components/Text";
-import aerodynamics_fig_1 from "../../../components/resources/aerodynamics/aerodynamics_fig_1.jpeg";
-import aerodynamics_fig_2 from "../../../components/resources/aerodynamics/aerodynamics_fig_2.gif";
-import computer from "../../../components/resources/aerodynamics/computer.png";
+import figure1 from "../../../components/resources/aerodynamics/figure1.png";
 import figure2 from "../../../components/resources/aerodynamics/figure2.png";
 import figure3 from "../../../components/resources/aerodynamics/figure3.png";
+import figure4 from "../../../components/resources/aerodynamics/figure4.png";
+import figure5 from "../../../components/resources/aerodynamics/figure5.png";
 
 import CustomLink from "../../../components/CustomLink";
 
@@ -18,8 +18,8 @@ const Aerodynamics = () => {
             title={<span className="text-xl">1) Introduction</span>}
           >
             <div className="pb-10 px-4">
-              <Text h4>Recording</Text>
-              <Text p className="pb-10">
+              <Text h4>Introduction</Text>
+              <Text p>
                 The UCLA Phonetics Lab has equipment to record the airflow from
                 the mouth and nose. In addition, it can record the air pressure
                 in the oral cavity. To measure oral and nasal airflow (measured
@@ -33,37 +33,39 @@ const Aerodynamics = () => {
                 Siah.)
                 <br />
                 <br />
-                <Text h4>Equipment Required</Text>
-                <p>☐ A computer compatible with windows software</p>
-                <p>
-                  ☐ Transducer and Analog Data Computer Interface Model MS-100
-                </p>
-                <p>
-                  ☐ (Up to) two Glottal Enterprises PT-series pressure
-                  transducers
-                </p>
-                <p>☐ PC-1 pressure calibrator</p>
-                <p>
-                  ☐ At least one OroNasal mask, available in two standard sizes:
-                  adult size and child size
-                </p>
-                <p>
-                  ☐ Red plastic plugs for plugging any open transducer-mounting
-                  holes in an OroNasal mask
-                </p>
-                <p>
-                  ☐ Replacement stainless steel mesh screen rings and solid
-                  discs for OroNasal masks
-                </p>
-                <p>☐ A microphone for audio collection</p>
-                <p>☐ An EGG unit for vocal fold measurements (optional)</p>
-                <p>
-                  ☐ AeroView software or Berkeley Wiki page for data
-                  post-processing{" "}
-                  <CustomLink href="https://linguistics.berkeley.edu/plab/guestwiki/index.php?title=EGG-D800">
-                    (link)
-                  </CustomLink>
-                </p>
+                <div className="pl-4">
+                  <Text pbold>Equipment Required</Text>
+                  <p>☐ A computer compatible with windows software</p>
+                  <p>
+                    ☐ Transducer and Analog Data Computer Interface Model MS-100
+                  </p>
+                  <p>
+                    ☐ (Up to) two Glottal Enterprises PT-series pressure
+                    transducers
+                  </p>
+                  <p>☐ PC-1 pressure calibrator</p>
+                  <p>
+                    ☐ At least one OroNasal mask, available in two standard
+                    sizes: adult size and child size
+                  </p>
+                  <p>
+                    ☐ Red plastic plugs for plugging any open
+                    transducer-mounting holes in an OroNasal mask
+                  </p>
+                  <p>
+                    ☐ Replacement stainless steel mesh screen rings and solid
+                    discs for OroNasal masks
+                  </p>
+                  <p>☐ A microphone for audio collection</p>
+                  <p>☐ An EGG unit for vocal fold measurements (optional)</p>
+                  <p>
+                    ☐ AeroView software or Berkeley Wiki page for data
+                    post-processing{" "}
+                    <CustomLink href="https://linguistics.berkeley.edu/plab/guestwiki/index.php?title=EGG-D800">
+                      (link)
+                    </CustomLink>
+                  </p>
+                </div>
               </Text>
               {/* <Accordion isCompact variant="bordered">
                 <AccordionItem title="View Figure 1">
@@ -102,28 +104,21 @@ const Aerodynamics = () => {
                     </li>
                   </ul>
                   <br></br>
-                  {/* <div className="flex flex-col items-center justify-center">
-                    <img src={computer} alt="computer" className="shadow" />
-                    <p className="pt-4 text-center italic">
-                      Figure 1: Connections between MS-110 unit, computer, and
-                      transducers
-                    </p>
-                  </div> */}
                   <div class="flex justify-center w-full">
                     <img
-                      src={computer}
-                      alt="computer"
+                      src={figure1}
+                      alt="figure1"
                       className="md:w-1/2 p-2 shadow-md"
                     />
                   </div>
                   <div className="flex justify-center">
                     <Text p className="md:w-1/2 text-center italic">
-                      Figure 1: Two-channel EGG
+                      Figure 1: Connections between MS-110 unit, computer, and
+                      transducers
                     </Text>
                   </div>
                 </div>
               </Text>
-              <br></br>
 
               <Text h4>Maintenance and Preparation of OroNasal Masks:</Text>
               <Text p>
@@ -134,17 +129,17 @@ const Aerodynamics = () => {
                       not dirty, obstructed, or damaged.
                     </li>
                     <li>
-                      Clean dirty and/or obstructed area(s) with soap and water
-                      and dry with a stream of cleanair.
+                      Clean, dirty and/or obstructed area(s) with soap and water
+                      and dry with a stream of clean air.
                     </li>
                     <li>
                       Extensively damaged and/or perforated components and masks
-                      should be replaced
+                      should be replaced.
                     </li>
                     <li>
                       Before application, sterilize the surfaces of the mask
                       with alcohol wipes.
-                      <div>
+                      <div className="pl-4">
                         - Repeat this procedure between acquisitions to minimize
                         contact between consultants and surfaces contaminated
                         with human saliva, mucus, etc. which may result from
@@ -156,6 +151,20 @@ const Aerodynamics = () => {
                       transducers to the mask through two transducer-mounting
                       holes found on the mask (see Figure 2 on next page)
                     </li>
+                    <li>
+                      One transducer is laterally located which records oral
+                      pressure measurements.
+                    </li>
+                    <li>
+                      One is located in the handle whose orientation can be
+                      modified to record oral or nasal airflow.
+                      <div className="pl-4">
+                        - If the handle is oriented over the transducer, it will
+                        record oral airflow. The opposite orientation will
+                        record nasal airflow.
+                      </div>
+                    </li>
+
                     <li>
                       Dimples around the mask can be opened with a scalpel for
                       mounting additional transducers.
@@ -178,13 +187,14 @@ const Aerodynamics = () => {
                   </div>
                   <div className="flex justify-center">
                     <Text p className="md:w-1/2 text-center italic">
-                      Figure 1: Two-channel EGG
+                      Figure 2: Front view of adult-sized Oro- Nasal mask with
+                      attached transducers
                     </Text>
                   </div>
                 </div>
               </Text>
               <br></br>
-              <Text h4>Mask Application</Text>
+              <Text h4>Mask Application: </Text>
               <Text p>
                 <div className="pl-10">
                   <ul className="list-disc">
@@ -198,7 +208,7 @@ const Aerodynamics = () => {
                       There should be no gaps around the mouth, cheeks, nose,
                       lips, and chin, preventing the exchange of airflow between
                       the oral and nasal chambers of the mask and any leakage
-                      through gaps between the periphery of the mask and skin
+                      through gaps between the periphery of the mask and skin.
                     </li>
                     <li>
                       To maintain a tight seal, hold the rubber handle in one
@@ -232,9 +242,11 @@ const Aerodynamics = () => {
                       desktop.
                     </li>
                     <li>Select “Recording devices” from the options.</li>
+                    <li>Double-left-click on the iMic USB audio system</li>
+
                     <li>
                       Select “Advanced” {">"} “2 channel, 16 bit, 22050 Hz”
-                      “Apply” on the bottomright
+                      “Apply” on the bottom right window.
                     </li>
                   </ul>
                 </div>
@@ -244,8 +256,7 @@ const Aerodynamics = () => {
           <AccordionItem
             title={<span className="text-xl">3) Calibration</span>}
           >
-            <div className="pb-10 px-4">
-              <Text h4>Recording the Airflow</Text>
+            <div className=" px-4">
               <Text p>
                 First, ensure that the rear-panel switches are set to “Modulator
                 On.”
@@ -253,36 +264,127 @@ const Aerodynamics = () => {
                   Airflow Calibrator
                 </Text>
                 <div className="pl-10">
-                  <ul className="list-disc">
-                    <p>
+                  <ul className="pl-10">
+                    <li>
                       ➢ Plug airflow transducer into Channel A connector using Y
                       input cable of MS-110.
-                    </p>
-                    <p>
+                    </li>
+                    <li>
                       ➢ Open Aeroview and set Airflow low pass filter to 400 Hz.
-                    </p>
-                    <p>
+                    </li>
+                    <li>
                       ➢ Select “Calibration” {">"} “Record Airflow Calibration
                       Signal” from the menu.
-                    </p>
-                    <p>
+                    </li>
+                    <li>
                       ➢ Turn on Channel A’s Demodulation box and set the record
                       level to 40.
-                    </p>
-                    <Text className="pl-12">1a. Setting the Zero Level:</Text>
+                      <ul className="pl-10">
+                        <li>
+                          <Text pbold>1a. Setting the Zero Level:</Text>
+                        </li>
+                        <ul className="pl-10">
+                          <li>- Check the signal levels:</li>
+                          <ul className="pl-10">
+                            - The red bar should cover just less than half of
+                            the window and the green meter should have four
+                            bars.
+                          </ul>
+                        </ul>
+                      </ul>
+                      <ul className="pl-10">
+                        <li>
+                          <Text pbold>1b. Setting the Gain Adjust:</Text>
+                        </li>
+                        <ul className="pl-10">
+                          <li>
+                            -{" "}
+                            <span className="underline">
+                              Check the red bar:
+                            </span>{" "}
+                            When speaking, the bar should retain its red color
+                            and not reach the top and bottom of the record
+                            window. Refer to Figure 4 below:
+                          </li>
+                        </ul>
+                      </ul>
+                    </li>
                   </ul>
+
+                  <div class="flex justify-center w-full py-4">
+                    <img
+                      src={figure4}
+                      alt="figure4"
+                      className=" p-2 shadow-md"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <Text p className="md:w-1/2 text-center italic">
+                      Figure 4: Gain Adjust Levels
+                    </Text>
+                  </div>
+                </div>
+                <Text pbold className="pl-4">
+                  Pressure Calibrator
+                </Text>
+                <div className="pl-10">
+                  <ul className="pl-10">
+                    <li>
+                      ➢ Plug the pressure transducer into Channel B using the Y
+                      input cable of MS-110.
+                    </li>
+                    <li>
+                      ➢ Open Aeroview and select “Record Pressure Calibration”
+                      under the “Calibration” top-down menu. Ensure the record
+                      level is 35.
+                    </li>
+                    <li>➢ Set the MS-100 front panel controls for offset.</li>
+                    <li>
+                      ➢ Lift the syringe plunger with the “Pressure Release”
+                      button depressed.
+                    </li>
+                    <li>
+                      ➢ Click on “Set Zero” in the Record window until the
+                      Record button is highlighted.
+                    </li>
+                    <li>
+                      ➢ Release the Pressure Release button and depress the
+                      plunger until the pressure meter reaches 10 cm H20.
+                    </li>
+                    <li>
+                      ➢ Click “Record” and after one second press and hold the
+                      “Pressure Release” button.
+                    </li>
+                    <li>
+                      ➢ Close the Record window after the recording stops.
+                    </li>
+                    <li>
+                      ➢ The airflow after calibration should look similar to
+                      that depicted in Figure 5 below:
+                    </li>
+                  </ul>
+
+                  <div class="flex justify-center w-full py-4">
+                    <img
+                      src={figure5}
+                      alt="figure5"
+                      className="md:w-1/2 p-2 shadow-md"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <Text p className="md:w-1/2 text-center italic">
+                      Figure 5: Airflow display after pressure calibration
+                    </Text>
+                  </div>
                 </div>
               </Text>
-              <br />
             </div>
           </AccordionItem>
           <AccordionItem
             title={<span className="text-xl">4) Data Collection Steps</span>}
           >
             <div className="pb-10 px-4">
-              <Text h4>Data Analysis</Text>
-              <Text p className="pb-10 pl-4 ">
-                <br></br>
+              <Text p className="pl-4 ">
                 <ol>
                   <li>
                     1. Calibrate both the airflow (Channel A) and pressure
@@ -298,11 +400,11 @@ const Aerodynamics = () => {
                   </li>
                   <li>
                     4. Initiate recording by selecting “Record” in the “File”
-                    pull-down menu or by clicking onthe microphone icon.
+                    pull-down menu or by clicking on the microphone icon.
                   </li>
                   <li>
                     5. Check if the parameters “Demod Ch A,” “Demod Ch B,” and
-                    “Close Recordings” onthe bottom right corner are selected.
+                    “Close Recordings” on the bottom right corner are selected.
                   </li>
                   <li>
                     6. Click on “Set Zero” and the Record button will become
@@ -310,11 +412,11 @@ const Aerodynamics = () => {
                   </li>
                   <li>
                     7. Click “Record” (or tap on the spacebar) and begin
-                    speaking
+                    speaking.
                   </li>
                   <li>
                     8. When the recording is done, click on Stop (or tap on the
-                    spacebar again)
+                    spacebar again).
                   </li>
                   <li>9. Repeat Steps 5-7 to collect additional data.</li>
                 </ol>
@@ -336,14 +438,14 @@ const Aerodynamics = () => {
                     <li>
                       Airflow leakage between the mask and participant can
                       result in inaccurate airflow measurements. Refer back to
-                      “Mask Application” on p. 2 to ensure proper application
+                      “Mask Application” on p. 2 to ensure proper application.
                     </li>
                   </ul>
                 </div>
               </Text>
             </div>
 
-            <div className="pb-10 px-4">
+            <div className="px-4">
               <Text h4>Environment Changes</Text>
               <Text p>
                 <div className="pl-10">
@@ -375,12 +477,12 @@ const Aerodynamics = () => {
                     <ul className="list-disc">
                       <li>
                         This is likely an issue with newer Windows operating
-                        systems like Windows 11
+                        systems like Windows 11.
                       </li>
                       <li>
                         Go to Settings {">"} System {">"} Sound {">"} Properties
                       </li>
-                      <li>Turn off “Audio enhancements”</li>
+                      <li>Turn off “Audio enhancements”.</li>
                     </ul>
                   </div>
                 </Text>
