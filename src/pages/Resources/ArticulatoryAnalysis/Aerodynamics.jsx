@@ -1,7 +1,12 @@
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import Text from "../../../components/Text";
-import aerodynamics_fig_1 from "../../../components/resources/aerodynamics/aerodynamics_fig_1.jpeg";
-import aerodynamics_fig_2 from "../../../components/resources/aerodynamics/aerodynamics_fig_2.gif";
+import figure1 from "../../../components/resources/aerodynamics/figure1.png";
+import figure2 from "../../../components/resources/aerodynamics/figure2.png";
+import figure3 from "../../../components/resources/aerodynamics/figure3.png";
+import figure4 from "../../../components/resources/aerodynamics/figure4.png";
+import figure5 from "../../../components/resources/aerodynamics/figure5.png";
+
+import CustomLink from "../../../components/CustomLink";
 
 const Aerodynamics = () => {
   return (
@@ -10,38 +15,59 @@ const Aerodynamics = () => {
         <Text h3>Aerodynamics</Text>
         <Accordion variant="shadow">
           <AccordionItem
-            title={
-              <span className="text-xl">
-                1) Recording Air Pressure and Airflow
-              </span>
-            }
+            title={<span className="text-xl">1) Introduction</span>}
           >
             <div className="pb-10 px-4">
-              <Text h4>Recording</Text>
-              <Text p className="pb-10">
+              <Text h4>Introduction</Text>
+              <Text p>
                 The UCLA Phonetics Lab has equipment to record the airflow from
-                the mouth and nose. In addition, it can record the pressure of
-                the air in the front of the mouth and in the pharynx. The system
-                is illustrated in Figure 1. It consists of a data acquisition
-                system (small box at the bottom left of the picture) connected
-                to a laptop or desktop computer (bottom right), and an assembly
-                with oral and nasal masks and pressure tubes held by the
-                speaker, together with a microphone that records the sound.At
-                the UCLA Phonetics Lab, we have the equipment shown in Figure 1
-                (oral and nasal masks, analysis box, and tubing), as well as a
-                Rothenberg mask.Any of these masks can also be used with the
-                4-channel CSL box, but this set-up will not be discussed here.{" "}
+                the mouth and nose. In addition, it can record the air pressure
+                in the oral cavity. To measure oral and nasal airflow (measured
+                in mL/s (milliliters per second)) and air pressure, you can use
+                the aerodynamic equipment and software made by Glottal
+                Enterprises (the equipment is located in the Room F cabinet in
+                the Phonetics Lab). This page provides the steps needed to
+                collect aerodynamic data, how to calibrate airflow and air
+                pressure, and how to troubleshoot potential issues. (This manual
+                is prepared by Nicholas Guymon, Atlas Boulom, and Jian-Leat
+                Siah.)
                 <br />
                 <br />
-                The mask for capturing the oral airflow fits around the mouth
-                and below the jaw. The nasal airflow mask is fastened over the
-                nose by a band that goes around the head. Both masks are joined
-                to the assembly by small tubes. The masks can be used either
-                together or independently (though the oral airflow apparatus
-                must be present, over the mouth or not, in any set-up, since it
-                contains the pressure transducers).
+                <div className="pl-4">
+                  <Text pbold>Equipment Required</Text>
+                  <p>☐ A computer compatible with windows software</p>
+                  <p>
+                    ☐ Transducer and Analog Data Computer Interface Model MS-100
+                  </p>
+                  <p>
+                    ☐ (Up to) two Glottal Enterprises PT-series pressure
+                    transducers
+                  </p>
+                  <p>☐ PC-1 pressure calibrator</p>
+                  <p>
+                    ☐ At least one OroNasal mask, available in two standard
+                    sizes: adult size and child size
+                  </p>
+                  <p>
+                    ☐ Red plastic plugs for plugging any open
+                    transducer-mounting holes in an OroNasal mask
+                  </p>
+                  <p>
+                    ☐ Replacement stainless steel mesh screen rings and solid
+                    discs for OroNasal masks
+                  </p>
+                  <p>☐ A microphone for audio collection</p>
+                  <p>☐ An EGG unit for vocal fold measurements (optional)</p>
+                  <p>
+                    ☐ AeroView software or Berkeley Wiki page for data
+                    post-processing{" "}
+                    <CustomLink href="https://linguistics.berkeley.edu/plab/guestwiki/index.php?title=EGG-D800">
+                      (link)
+                    </CustomLink>
+                  </p>
+                </div>
               </Text>
-              <Accordion isCompact variant="bordered">
+              {/* <Accordion isCompact variant="bordered">
                 <AccordionItem title="View Figure 1">
                   <div className="flex flex-wrap">
                     <div class="w-full md:w-1/2 p-2">
@@ -53,25 +79,174 @@ const Aerodynamics = () => {
                     </div>
                   </div>
                 </AccordionItem>
-              </Accordion>
+              </Accordion> */}
             </div>
           </AccordionItem>
           <AccordionItem
-            title={<span className="text-xl">2) Setting up the assembly</span>}
+            title={<span className="text-xl">2) Equipment Setup</span>}
           >
             <div className="pb-10 px-4">
-              <Text h4>Notes on Reconnecting the Assembly</Text>
+              <Text h4>
+                Transducer and Analog Data Computer Interface (Model MS-110):
+              </Text>
               <Text p>
                 <div className="pl-10">
                   <ul className="list-disc">
                     <li>
-                      Make sure the tubes for pressure and flow are placed over
-                      the corresponding pressure and flow ports.
+                      Connect the Model MS-110 to a computer with a USB cable or
+                      a separate 5Vdc power pack and switch the power switch on
+                      the rear panel to “USB” or “EXT,” respectively.
                     </li>
                     <li>
-                      The nasal mask has only one tube. This should be placed
-                      over the flow port. (There is no nasal pressure to be
-                      measured.)
+                      The Model MS-110 can operate two PT-series pressure
+                      transducers simultaneously with a connection through a DIN
+                      jack port located on the center of the front panel.
+                    </li>
+                  </ul>
+                  <br></br>
+                  <div class="flex justify-center w-full">
+                    <img
+                      src={figure1}
+                      alt="figure1"
+                      className="md:w-1/2 p-2 shadow-md"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <Text p className="md:w-1/2 text-center italic">
+                      Figure 1: Connections between MS-110 unit, computer, and
+                      transducers
+                    </Text>
+                  </div>
+                </div>
+              </Text>
+
+              <Text h4>Maintenance and Preparation of OroNasal Masks:</Text>
+              <Text p>
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    <li>
+                      Before use, visibly inspect the mask to ensure that it is
+                      not dirty, obstructed, or damaged.
+                    </li>
+                    <li>
+                      Clean, dirty and/or obstructed area(s) with soap and water
+                      and dry with a stream of clean air.
+                    </li>
+                    <li>
+                      Extensively damaged and/or perforated components and masks
+                      should be replaced.
+                    </li>
+                    <li>
+                      Before application, sterilize the surfaces of the mask
+                      with alcohol wipes.
+                      <div className="pl-4">
+                        - Repeat this procedure between acquisitions to minimize
+                        contact between consultants and surfaces contaminated
+                        with human saliva, mucus, etc. which may result from
+                        use.
+                      </div>
+                    </li>
+                    <li>
+                      After inspection and cleaning, attach up to two pressure
+                      transducers to the mask through two transducer-mounting
+                      holes found on the mask (see Figure 2 on next page)
+                    </li>
+                    <li>
+                      One transducer is laterally located which records oral
+                      pressure measurements.
+                    </li>
+                    <li>
+                      One is located in the handle whose orientation can be
+                      modified to record oral or nasal airflow.
+                      <div className="pl-4">
+                        - If the handle is oriented over the transducer, it will
+                        record oral airflow. The opposite orientation will
+                        record nasal airflow.
+                      </div>
+                    </li>
+
+                    <li>
+                      Dimples around the mask can be opened with a scalpel for
+                      mounting additional transducers.
+                    </li>
+                    <li>
+                      Any open, unused transducer-mounting holes should be
+                      sealed with red plastic plugs provided, including the hole
+                      in the grommet in the handle if it is not used (see Figure
+                      3 below).
+                    </li>
+                  </ul>
+                  <br></br>
+
+                  <div class="flex justify-center w-full">
+                    <img
+                      src={figure2}
+                      alt="figure2"
+                      className="md:w-1/2 p-2 shadow-md"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <Text p className="md:w-1/2 text-center italic">
+                      Figure 2: Front view of adult-sized Oro- Nasal mask with
+                      attached transducers
+                    </Text>
+                  </div>
+                </div>
+              </Text>
+              <br></br>
+              <Text h4>Mask Application: </Text>
+              <Text p>
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    <li>
+                      Place the mask snugly over the nose and mouth with the
+                      rubber partition which divides the mask into nasal and
+                      oral chambers firmly pressed against the face above the
+                      vermilion border, forming a tight seal.
+                    </li>
+                    <li>
+                      There should be no gaps around the mouth, cheeks, nose,
+                      lips, and chin, preventing the exchange of airflow between
+                      the oral and nasal chambers of the mask and any leakage
+                      through gaps between the periphery of the mask and skin.
+                    </li>
+                    <li>
+                      To maintain a tight seal, hold the rubber handle in one
+                      hand and apply pressure against the face.
+                    </li>
+                  </ul>
+                  <br></br>
+
+                  <div class="flex justify-center w-full">
+                    <img
+                      src={figure3}
+                      alt="figure3"
+                      className="md:w-1/2 p-2 shadow-md"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <Text p className="md:w-1/2 text-center italic">
+                      Figure 3: Application of OroNasal mask with unused hole
+                      sealed by plug
+                    </Text>
+                  </div>
+                </div>
+              </Text>
+              <br></br>
+              <Text h4>Windows Operating System (Vista):</Text>
+              <Text p>
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    <li>
+                      Right-click on the speaker icon at the bottom right of the
+                      desktop.
+                    </li>
+                    <li>Select “Recording devices” from the options.</li>
+                    <li>Double-left-click on the iMic USB audio system</li>
+
+                    <li>
+                      Select “Advanced” {">"} “2 channel, 16 bit, 22050 Hz”
+                      “Apply” on the bottom right window.
                     </li>
                   </ul>
                 </div>
@@ -79,176 +254,240 @@ const Aerodynamics = () => {
             </div>
           </AccordionItem>
           <AccordionItem
-            title={
-              <span className="text-xl">3) Using the airflow equipment</span>
-            }
+            title={<span className="text-xl">3) Calibration</span>}
           >
-            <div className="pb-10 px-4">
-              <Text h4>Recording the Airflow</Text>
+            <div className=" px-4">
               <Text p>
-                While talking, press the masks firmly against the face, making
-                sure that there are no leaks.
+                First, ensure that the rear-panel switches are set to “Modulator
+                On.”
+                <Text pbold className="pl-4">
+                  Airflow Calibrator
+                </Text>
                 <div className="pl-10">
-                  <br />
-                  <ul className="list-disc">
+                  <ul className="pl-10">
                     <li>
-                      To record the pressure of the air in the mouth, hold a
-                      small tube between the lips while speaking. (If the tube
-                      is small enough it will not interfere too much with
-                      speaking.)
+                      ➢ Plug airflow transducer into Channel A connector using Y
+                      input cable of MS-110.
                     </li>
                     <li>
-                      The pressure of the air behind a velar closure can be
-                      measured using a small tube passed through the nose, with
-                      its open end in the pharynx. However, this will not be
-                      discussed.
+                      ➢ Open Aeroview and set Airflow low pass filter to 400 Hz.
+                    </li>
+                    <li>
+                      ➢ Select “Calibration” {">"} “Record Airflow Calibration
+                      Signal” from the menu.
+                    </li>
+                    <li>
+                      ➢ Turn on Channel A’s Demodulation box and set the record
+                      level to 40.
+                      <ul className="pl-10">
+                        <li>
+                          <Text pbold>1a. Setting the Zero Level:</Text>
+                        </li>
+                        <ul className="pl-10">
+                          <li>- Check the signal levels:</li>
+                          <ul className="pl-10">
+                            - The red bar should cover just less than half of
+                            the window and the green meter should have four
+                            bars.
+                          </ul>
+                        </ul>
+                      </ul>
+                      <ul className="pl-10">
+                        <li>
+                          <Text pbold>1b. Setting the Gain Adjust:</Text>
+                        </li>
+                        <ul className="pl-10">
+                          <li>
+                            -{" "}
+                            <span className="underline">
+                              Check the red bar:
+                            </span>{" "}
+                            When speaking, the bar should retain its red color
+                            and not reach the top and bottom of the record
+                            window. Refer to Figure 4 below:
+                          </li>
+                        </ul>
+                      </ul>
                     </li>
                   </ul>
+
+                  <div class="flex justify-center w-full py-4">
+                    <img
+                      src={figure4}
+                      alt="figure4"
+                      className=" p-2 shadow-md"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <Text p className="md:w-1/2 text-center italic">
+                      Figure 4: Gain Adjust Levels
+                    </Text>
+                  </div>
                 </div>
-              </Text>
-              <br />
-              <Text h4>Tips for Recording</Text>
-              <Text p>
+                <Text pbold className="pl-4">
+                  Pressure Calibrator
+                </Text>
                 <div className="pl-10">
-                  <ul className="list-disc">
+                  <ul className="pl-10">
                     <li>
-                      When recording air pressure in the mouth, it is important
-                      to keep the tubes free of saliva. The tubes should be
-                      blown clear at frequent intervals.
+                      ➢ Plug the pressure transducer into Channel B using the Y
+                      input cable of MS-110.
                     </li>
                     <li>
-                      If you want to record the changes in pressure and flow
-                      that occur as a result of the vibrations of the vocal
-                      folds, you will need to use tubes with an internal
-                      diameter of at least 2mm.
+                      ➢ Open Aeroview and select “Record Pressure Calibration”
+                      under the “Calibration” top-down menu. Ensure the record
+                      level is 35.
+                    </li>
+                    <li>➢ Set the MS-100 front panel controls for offset.</li>
+                    <li>
+                      ➢ Lift the syringe plunger with the “Pressure Release”
+                      button depressed.
+                    </li>
+                    <li>
+                      ➢ Click on “Set Zero” in the Record window until the
+                      Record button is highlighted.
+                    </li>
+                    <li>
+                      ➢ Release the Pressure Release button and depress the
+                      plunger until the pressure meter reaches 10 cm H20.
+                    </li>
+                    <li>
+                      ➢ Click “Record” and after one second press and hold the
+                      “Pressure Release” button.
+                    </li>
+                    <li>
+                      ➢ Close the Record window after the recording stops.
+                    </li>
+                    <li>
+                      ➢ The airflow after calibration should look similar to
+                      that depicted in Figure 5 below:
                     </li>
                   </ul>
+
+                  <div class="flex justify-center w-full py-4">
+                    <img
+                      src={figure5}
+                      alt="figure5"
+                      className="md:w-1/2 p-2 shadow-md"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <Text p className="md:w-1/2 text-center italic">
+                      Figure 5: Airflow display after pressure calibration
+                    </Text>
+                  </div>
                 </div>
               </Text>
             </div>
           </AccordionItem>
           <AccordionItem
-            title={<span className="text-xl">4) Analyzing the data</span>}
+            title={<span className="text-xl">4) Data Collection Steps</span>}
           >
             <div className="pb-10 px-4">
-              <Text h4>Data Analysis</Text>
-              <Text p className="pb-10">
-                The data can be analyzed using the Macquirer or PCquirer
-                software (or CSL).If the acquisition box is connected to a
-                computer running Macquirer or PCquirer, the program will
-                automatically display the data, as shown in Figure 2, which
-                contains three records made of "He paid the price."
-                <div className="pl-10">
-                  <br />
-                  <ul className="list-disc">
-                    <li>
-                      The top display (Audio) is the record produced by the
-                      microphone. The sound is a little distorted due to
-                      muffling from the mask, but it shows the number of
-                      syllables and which ones are relatively weaker or
-                      stronger.
-                    </li>
-                    <li>
-                      The second display (Oral flow) shows the bursts of air due
-                      to the aspiration of stops.It also shows variations in
-                      flow due to vocal fold vibration.
-                    </li>
-                    <li>
-                      The third display (Oral pressure) shows the increase in
-                      the pressure of the air in the mouth for each of the
-                      stops. It also show the variations in pressure associated
-                      with vocal fold vibration.
-                    </li>
-                  </ul>
-                </div>
+              <Text p className="pl-4 ">
+                <ol>
+                  <li>
+                    1. Calibrate both the airflow (Channel A) and pressure
+                    (Channel B) as detailed above.{" "}
+                  </li>
+                  <li>
+                    2. Have the subject place the OroNasal mask over his/her
+                    nose and mouth.
+                  </li>
+                  <li>
+                    3. Seal any unused transducer-mounting holes with red
+                    plastic plugs.
+                  </li>
+                  <li>
+                    4. Initiate recording by selecting “Record” in the “File”
+                    pull-down menu or by clicking on the microphone icon.
+                  </li>
+                  <li>
+                    5. Check if the parameters “Demod Ch A,” “Demod Ch B,” and
+                    “Close Recordings” on the bottom right corner are selected.
+                  </li>
+                  <li>
+                    6. Click on “Set Zero” and the Record button will become
+                    active after one or two seconds.
+                  </li>
+                  <li>
+                    7. Click “Record” (or tap on the spacebar) and begin
+                    speaking.
+                  </li>
+                  <li>
+                    8. When the recording is done, click on Stop (or tap on the
+                    spacebar again).
+                  </li>
+                  <li>9. Repeat Steps 5-7 to collect additional data.</li>
+                </ol>
               </Text>
-              <img
-                src={aerodynamics_fig_2}
-                alt="aerodynamics_fig_2"
-                className="shadow"
-              />
-              <h1 className="pt-4">
-                Figure 2: Audio, oral flow, and pressure records during the
-                sentence "He paid the price".
-              </h1>
             </div>
           </AccordionItem>
           <AccordionItem
             title={
               <span className="text-xl">
-                5) Measuring air pressure and airflow
+                5) Potential Issues and Troubleshooting
               </span>
             }
           >
-            <div className="pb-10 px-4">
-              <Text h4>Measuring</Text>
-              <Text p className="pb-10">
-                To quantify the differences between sentences, we can measure
-                the airflow and pressure data using scales such as those shown
-                on the y-axes in Figure 2.The unit for airflow is milliliters
-                per second (ml/s), and the unit for pressure is centimeters of
-                water (cm H2O).
-                <br />
-                <br />
-                Flow is measured in terms of the volume of air that passes a
-                given point in a second (ml/s). To make sure that your data is
-                measured in standard units (ml/s or cm H2O, rather than in the
-                volts that the transducers actually measure), it is necessary to
-                calibrate the equipment (especially if the equipment has been
-                recently moved). Calibrating the rate of flow requires an
-                apparatus like the one shown in Figure 3. A fan produces a
-                steady stream of air that flows through the mask and then on
-                through a special flow calibration tube.The tube contains a ball
-                that is blown higher in the tube as the flow is increased.In the
-                UCLA Phonetics Lab, this apparatus is part of a wooden
-                calibration box stored with the aerodynamics equipment, as shown
-                in Figure 3.
-                <br />
-                <br />
-                Pressure is measured as the force required to raise or lower the
-                height of a column of water by a certain amount. In terms of
-                oral air pressure, this corresponds to how much effort you would
-                have to use to blow bubbles out of a tube immersed in water.
-                <br />
-                <br />
-                To ensure standard units, the system can be calibrated with the
-                U-tube shown in Figure 3. When the tap is open, the tube can be
-                filled with water to the zero level, with the water level
-                reaching the same height in both branches. The figure shows what
-                happens when the tap is closed and pressure is applied by
-                pushing the syringe down. In this case the level has gone up by
-                5 cm on the one side and gone down by 5 cm on the other side, so
-                that the pressure being applied is 10 cm H2O.This apparatus is
-                also found on the wooden calibration box in the UCLA Phonetics
-                Lab.
-              </Text>
-              <img
-                src={aerodynamics_fig_2}
-                alt="aerodynamics_fig_2"
-                className="shadow"
-              />
-              <h1 className="pt-4">
-                Figure 3: A system for calibrating airflow. Uses a U-tube to
-                calibrate pressure.
-              </h1>
-              <Text p className="font-semibold">
-                About This Page
-              </Text>
+            <div className="pb-4 px-4">
+              <Text h4>Poor Mask Fit</Text>
               <Text p>
-                The information on this page has been adapted from the
-                forthcoming book, Phonetic Data Analysis: An introduction to
-                phonetic fieldwork and instrumental techniques by{" "}
-                <a
-                  href="https://linguistics.ucla.edu/people/ladefoge/"
-                  className="text-blue hover:underline"
-                  target="_blank"
-                >
-                  Peter Ladefoged
-                </a>
-                . For more information on aerodynamic techniques, refer to this
-                book. This page was created by Rebecca Scarborough and Christina
-                Esposito.
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    <li>
+                      Airflow leakage between the mask and participant can
+                      result in inaccurate airflow measurements. Refer back to
+                      “Mask Application” on p. 2 to ensure proper application.
+                    </li>
+                  </ul>
+                </div>
               </Text>
+            </div>
+
+            <div className="px-4">
+              <Text h4>Environment Changes</Text>
+              <Text p>
+                <div className="pl-10">
+                  <ul className="list-disc">
+                    <li>
+                      Changes in elevation, temperature, and humidity can affect
+                      air pressure, mass, volume, density, viscosity, and flow
+                      which can impact the pressure sensors of recording
+                      instruments and may cause signal drift over the course of
+                      an experiment.
+                    </li>
+                    <li>
+                      Calibrate equipment before experiments, especially if
+                      environment conditions change significantly between
+                      acquisitions, and note ambient conditions before and after
+                      recordings.
+                    </li>
+                    <li>
+                      Whenever possible, record in a climate-controlled
+                      environment and allow equipment to reach room temperature
+                      before calibration.
+                    </li>
+                  </ul>
+                  <br></br>
+                </div>
+                <Text h4>No Signal on Aeroview Software:</Text>
+                <Text p>
+                  <div className="pl-10">
+                    <ul className="list-disc">
+                      <li>
+                        This is likely an issue with newer Windows operating
+                        systems like Windows 11.
+                      </li>
+                      <li>
+                        Go to Settings {">"} System {">"} Sound {">"} Properties
+                      </li>
+                      <li>Turn off “Audio enhancements”.</li>
+                    </ul>
+                  </div>
+                </Text>
+              </Text>
+              <br></br>
             </div>
           </AccordionItem>
         </Accordion>
