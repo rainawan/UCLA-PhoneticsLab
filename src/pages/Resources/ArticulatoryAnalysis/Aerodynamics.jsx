@@ -102,12 +102,24 @@ const Aerodynamics = () => {
                     </li>
                   </ul>
                   <br></br>
-                  <div className="flex flex-col items-center justify-center">
+                  {/* <div className="flex flex-col items-center justify-center">
                     <img src={computer} alt="computer" className="shadow" />
                     <p className="pt-4 text-center italic">
                       Figure 1: Connections between MS-110 unit, computer, and
                       transducers
                     </p>
+                  </div> */}
+                  <div class="flex justify-center w-full">
+                    <img
+                      src={computer}
+                      alt="computer"
+                      className="md:w-1/2 p-2 shadow-md"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <Text p className="md:w-1/2 text-center italic">
+                      Figure 1: Two-channel EGG
+                    </Text>
                   </div>
                 </div>
               </Text>
@@ -156,12 +168,18 @@ const Aerodynamics = () => {
                     </li>
                   </ul>
                   <br></br>
-                  <div className="flex flex-col items-center justify-center">
-                    <img src={figure2} alt="figure2" className="shadow" />
-                    <p className="pt-4 text-center italic">
-                      Figure 2: Front view of adult-sized Oro- Nasal mask with
-                      attached transducers
-                    </p>
+
+                  <div class="flex justify-center w-full">
+                    <img
+                      src={figure2}
+                      alt="figure2"
+                      className="md:w-1/2 p-2 shadow-md"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <Text p className="md:w-1/2 text-center italic">
+                      Figure 1: Two-channel EGG
+                    </Text>
                   </div>
                 </div>
               </Text>
@@ -188,12 +206,19 @@ const Aerodynamics = () => {
                     </li>
                   </ul>
                   <br></br>
-                  <div className="flex flex-col items-center justify-center">
-                    <img src={figure3} alt="figure3" className="shadow" />
-                    <p className="pt-4 text-center italic">
+
+                  <div class="flex justify-center w-full">
+                    <img
+                      src={figure3}
+                      alt="figure3"
+                      className="md:w-1/2 p-2 shadow-md"
+                    />
+                  </div>
+                  <div className="flex justify-center">
+                    <Text p className="md:w-1/2 text-center italic">
                       Figure 3: Application of OroNasal mask with unused hole
                       sealed by plug
-                    </p>
+                    </Text>
                   </div>
                 </div>
               </Text>
