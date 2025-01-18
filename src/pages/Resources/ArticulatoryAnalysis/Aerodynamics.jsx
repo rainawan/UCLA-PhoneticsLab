@@ -13,7 +13,7 @@ const Aerodynamics = () => {
     <div>
       <div>
         <Text h3>Aerodynamics</Text>
-        <Accordion variant="shadow">
+        <Accordion variant="shadow" selectionMode="multiple">
           <AccordionItem
             title={<span className="text-xl">1) Introduction</span>}
           >
