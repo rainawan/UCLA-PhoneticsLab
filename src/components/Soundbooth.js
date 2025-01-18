@@ -27,7 +27,7 @@ export const cards = [
     id: 3,
     alt: "Infant_Lab_Soundbooth",
     src: Infant_Lab_Soundbooth,
-    room_name: "Infant Lab Soundbooth (2101C)",
+    room_name: "Castle Sound booth (2101C)",
     button: "Reserve",
     link: "https://calendar.app.google/N4AP3QWBvGrKkC4eA",
   },

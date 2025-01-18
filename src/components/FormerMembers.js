@@ -186,7 +186,7 @@ export const rows = [
     key: "30",
     name: "Adam Chong",
     status:
-      "Senior Lecturer in Linguistics, Director - QMUL Phonetics Lab, Queen Mary University of London",
+      "Reader in Linguistics, Director - QMUL Phonetics Lab, Queen Mary University of London",
     website: "https://www.adamjchong.com/",
   },
   {
@@ -949,7 +949,7 @@ export const rows = [
   {
     key: "149",
     name: "Chad Vicenik",
-    status: "high school teacher, U.K.",
+    status: "High School Physics Teacher, The Godolphin and Latymer School, UK",
     website:
       "https://www.researchgate.net/scientific-contributions/Chad-Vicenik-58926474",
   },
