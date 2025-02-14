@@ -30,13 +30,13 @@ export const members = [
   },
   {
     name: "Jake Aziz",
-    occupation: "Graduate Student",
+    occupation: "Lecturer",
     imgSrc: Jake_Aziz,
     link: "https://linguistics.ucla.edu/person/jake-aziz/",
   },
   {
     name: "Elise Bell",
-    occupation: "Faculty/Lab Support Staff",
+    occupation: "Lecturer/Lab Support Staff",
     imgSrc: Elise_Bell,
     link: "https://elisebell.github.io/",
   },
