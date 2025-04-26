@@ -1,0 +1,95 @@
+# This script will add the two  selected sounds with variable gains
+
+# To make this script dynamic under the "Combine Sounds -" button run the next line:
+# Buttons... Sound 2 "" 0 "" 0 Add2... Add... 1 yourdisk:yourfolder:scripts:Add2_variable
+
+# The "Preserve real time" option keeps the samples that are added together in their absolute time positions. 
+# If sounds have been Extracted from another Sound, then their absolute time position will ONLY have been preserved
+#      if you have used "Extract windowed selection..." with the "Preserve times" option checked.  
+#  To preserve absolute times when you extract an UNwindowed waveform you should use "Extract windowed selection..." 
+#      with a Rectangular window with "Relative width"=1.0, since "Extract selection" does not have a "Preserve time" option.
+#  Sampling frequency is set to that of the last-finishing sound
+
+form Add Sounds
+   boolean Play_after_synthesis 1
+		comment  ===========================
+   real Scaling_factor_1 1.0
+   real Scaling_factor_2 1.0
+		comment  ===========================
+    comment  Use "Real time"  to preserve real time
+		comment  across different  time domains and sampling rates (beware distortion)
+			choice  Mode: 1
+        button  Point-by-point values
+				button  Real time
+		comment  ===========================
+		comment Sampling frequency and duration of sum become that of longest sound
+		comment  
+endform
+
+#find out how many Sounds have been selected
+numberOfSounds = numberOfSelected("Sound")
+if  numberOfSounds <> 2
+	exit this script only runs when two sounds have been selected
+endif
+
+#set up arrays with names and IDs of selected Sounds
+for ifile from 1 to numberOfSounds
+   sound$ = selected$("Sound",'ifile')
+   soundID = selected("Sound",'ifile')
+   ids'ifile' = soundID
+   names'ifile'$ = sound$
+endfor 
+if  names1$ = names2$
+	exit "The two sound files must have different names"
+endif
+
+#   find the file with the most samples or longest duration
+maxduration = 0
+for ifile from 1 to numberOfSounds
+		filenum = ids'ifile'
+		select 'filenum'
+if mode = 1
+	  duration = Get number of samples
+elsif mode = 2
+# get finishing time of sound
+		duration = Get finishing time
+endif
+	  if  duration > maxduration
+		 	maxID = filenum
+			 maxduration = duration
+	  endif
+endfor
+
+# create a blank file that will run from zero to the end of the latest finishing time
+# with a sampling frequency that is the same as that of the last-finishing sound
+select 'maxID'
+sf = Get sample rate
+if mode = 1
+		Create Sound... sum 0 (maxduration/sf) sf 0
+elsif mode =2
+		Create Sound... sum 0 maxduration sf 0
+endif
+
+#now cycle through all selected files, add to sum
+for ifile from 1 to numberOfSounds
+    sound$ = names'ifile'$  
+		if ifile = 1 
+			amp = 'Scaling_factor_1'
+		else
+			amp = 'Scaling_factor_2'
+		endif
+   if mode = 1
+			Formula...  self + 'amp'*Sound_'sound$'[]
+		else
+			Formula...  self + 'amp'*Sound_'sound$'()
+		endif
+endfor
+
+if play_after_synthesis
+	Play
+endif
+
+
+
+
+

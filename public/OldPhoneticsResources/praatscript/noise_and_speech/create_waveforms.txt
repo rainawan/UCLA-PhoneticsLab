@@ -1,0 +1,134 @@
+#Create different types of waveforms
+#Niels Reinholt Petersen 20040820, modified 050823
+
+form Create waveforms
+	optionmenu Type: 1
+		option Sawtooth
+		option Square
+		option Triangle
+		option Pulse train
+		option Sine
+		option One_sample_pulse
+		option White noise (Gaussian)
+		option Pink noise (Gaussian)
+		option White noise (uniform)
+		option Pink noise (uniform)
+		option Silence
+	real Duration_(sec.) 1
+	real Sampling_rate_(Hz) 16000
+	real F0_(Hz) 100
+	real Amplitude 0.5
+	real Triangle_skewness_(%) 50
+	comment in order to avoid subharmonics, adjust sampling rate to 
+	comment nearest whole multiplum of F0 below the specified rate
+	boolean adjust 1
+endform
+
+# if required, adjust sampling rate to the nearest multiplum of F0 below the specified sampling rate
+#in order to avoid subharmonics
+if adjust = 1 and type < 6
+	adjust_sampling_rate = sampling_rate - ((sampling_rate/f0)
+		...- floor(sampling_rate/f0))*f0
+else
+	adjust_sampling_rate = sampling_rate
+endif
+
+#create an empty sound
+Create Sound... 'name$' 0 duration adjust_sampling_rate 0
+#t = Get time from sample number... 1
+#t = 0.5/adjust_sampling_rate
+t = 0
+period = 1/f0
+
+#sawtooth
+if type = 1
+	while t < duration
+		end = t + period
+		Formula... if x >= t and x < end  then (x-t) else self fi
+		t = t + period
+	endwhile
+	Rename... sawtooth
+endif
+
+#square wave
+if type = 2
+	while t < duration
+		end = t + period/2
+		Formula... if x >= t and x < end  then 1 else self fi
+		t = t + period
+	endwhile
+	Rename... square
+endif
+
+#triangular wave
+if type = 3
+	while t < duration
+		end = t + period
+		mid = t + triangle_skewness*period/100
+		Formula... if x >= t and x < end  then if x < mid then (x-t)/(mid-t) else 1-(x-mid)/(end-mid) fi else self fi
+#		Formula... if x >= t and x < end  then if x < mid then (x-t) else (end-x) fi else self fi
+		t = t + period
+	endwhile
+	Rename... triangular
+endif
+
+#pulse train
+if type = 4
+	samples_per_period = adjust_sampling_rate*period
+	number_of_samples = Get number of samples
+	for sample_number from 1 to number_of_samples
+		Set value at sample number... 'sample_number' 1
+		sample_number = sample_number + samples_per_period
+	endfor
+	Rename... pulsetrain
+endif
+
+#sine
+if type = 5
+	Formula... sin(2*pi*'f0'*x)
+	Rename... sine_'f0'
+endif
+
+#one sample pulse
+if type = 6
+	number_of_samples = Get number of samples
+	sample_number = number_of_samples/2
+	Set value at sample number... sample_number 1
+	Rename... one_sample_pulse
+endif
+
+#white Gaussian noise
+if type =  7
+	Formula...  randomGauss(0, 1)
+	Rename... white_Gaussian_noise
+endif
+
+#pink Gaussian noise
+if type = 8
+	Formula...  randomGauss(0, 1)
+	De-emphasize (in-line)... 50
+	Rename... pink_Gaussian_noise
+endif
+
+#white uniform noise
+if type =  9
+	Formula...  randomUniform(-1, 1)
+	Rename... white_uniform_noise
+endif
+
+#pink uniform noise
+if type =  10
+	Formula...  randomUniform(-1, 1)
+	De-emphasize (in-line)... 50
+	Rename... pink_uniform_noise
+endif
+
+#silence
+if type =  11
+	Formula...  0
+	Rename... silence
+endif
+
+Subtract mean
+
+Scale peak... amplitude

@@ -1,0 +1,94 @@
+# Add to dynamic menu... Sound 0 “” 0 “” 0 “Fo & Length...” “Lengthen (PSOLA)...” 1  cjdisk:Applications:Sound:speech:Praat:scripts:Fodurndynamic
+# This script will globally change the pitch and duration of all the  the selected sounds
+#  by the factors  given in the dialogue box.
+# If the quality is bad try changing the minimum pitch  or maximum pitch
+
+form Change to Fo and duration
+   sentence Fo_expression self*1.0
+   positive Duration_factor 1.0
+   comment Analysis parameters for Fo
+   positive minimum_Fo 75
+   positive maximum_Fo 300
+   boolean Play_after_synthesis 1
+   boolean Delete_Manipulation_file 1
+endform
+
+fomin = 'minimum_Fo'
+fomax = 'maximum_Fo'
+
+#find out how many Sounds have been selected
+numberOfSounds = numberOfSelected  ("Sound")
+
+#set up arrays with names and IDs of selected Sounds
+#this is necessary because vtchange changes the selections
+for ifile from 1 to numberOfSounds
+   sound$ = selected$  ("Sound", 'ifile' )
+   soundID = selected  ("Sound", 'ifile')
+   ids'ifile' = soundID
+   names'ifile'$ = sound$
+endfor
+
+#now get down to business
+for ifile from 1 to numberOfSounds
+   soundID = ids'ifile'
+   sound$ = names'ifile'$
+   call fodurnchange
+endfor
+
+
+procedure fodurnchange
+#
+#initial analysis locating pitch pulses etc
+select 'soundID'
+durn = Get duration
+#create a Pitch object
+select Sound 'sound$'
+To Pitch... 0.01 fomin fomax
+plus Sound 'sound$'
+To Manipulation
+select Pitch 'sound$'
+#apply the appropriate transformation to the Pitch object
+Formula... 'fo_expression$'
+
+#turn it into a PitchTier and place it into the Analysis object
+Down to PitchTier
+select Manipulation 'sound$'
+plus PitchTier 'sound$'
+Replace pitch tier
+select Pitch 'sound$'
+plus PitchTier 'sound$'
+Remove
+
+if duration_factor <> 1.0
+	Create DurationTier... 'sound$' 0 'durn'
+	Add point... 0 'duration_factor'
+	select Manipulation 'sound$'
+	plus DurationTier 'sound$'
+	Replace duration tier
+	select DurationTier 'sound$'
+	Remove
+endif
+
+
+#resynthesise with new pitch and duration contour
+select Manipulation 'sound$'
+Get resynthesis (PSOLA)
+if play_after_synthesis = 1
+   Play
+endif
+
+Rename... 'sound$'.f'fo_expression$'.d'duration_factor'
+name$ = selected$("Sound", -1)
+
+if delete_Manipulation_file = 1
+   select Manipulation 'sound$'
+   Remove
+endif
+
+select Sound 'name$'
+
+endproc
+
+
+
+

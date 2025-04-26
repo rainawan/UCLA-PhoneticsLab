@@ -1,0 +1,96 @@
+# The script installs the scripts listed below
+#
+#
+#
+# Under the fixed menu New-->Sound
+#	Create one LF pulse
+#	Create a sustained vowel lpc synthesis
+#	Create a sustained vowel cascade synthesis -- temporarily withdrawn
+#	Create waveforms
+#	Create sine sweep
+#	Draw source filter model
+#
+#Under the dynamic menu Sound
+#	Voice report
+#	Extract voiced intervals
+#	LTAS voiced and unvoiced intervals
+#	LTAS voiced intervals only
+#	Draw F0 distribution
+#	H1 minus H2
+#	Subharmonics detector
+#
+#Under the dynamic menu Sound-->Query -
+#	Overload detector
+#
+#Under the dynamic menu Sound-->Modify -
+#	Amplitude gating
+#	Reduce bit rate
+#
+#Under the dynamic menu Sound-->Spectrum -
+#	Windowed spectrum
+#
+#Under the dynamic menu Sound-->Combine sounds -
+#	Add two sounds
+#
+#Under Sound Editor-->Spectrum
+#	FFT at cursor
+#	FFT within selection
+#	LPC at cursor
+#	LPC within selection
+#	H1 minus H2 at cursor
+#
+#Under Sound Editor-->Pitch
+#	Check pitch with narrow band spectrogram
+#	Syntesize visible pitch contour
+#
+#Under Sound Editor-->Pulses
+#	Custom voice report
+#
+#Under the fixed menu Help
+#	Pitch unit conversion
+#
+#Under the fixed menu Praat-->Goodies
+#	Pitch unit conversion
+#
+#Under Picture-->Select
+#	Select outer viewport (cm)
+
+Add menu command... "Objects" "New" "Create one LF pulse..." "Create Sound from Shepard tone..." 1 C:\praat\create_one_LF_pulse.psc
+Add menu command... "Objects" "New" "Create a sustained vowel LPC synth..." "Create Sound from Shepard tone..." 1 C:\praat\create_sustained_vowel_lpc.psc
+#Add menu command... "Objects" "New" "Create a sustained vowel cascade synth..." "Create Sound from Shepard tone..." 1 C:\praat\create_sustained_vowel_cascade.psc
+Add menu command... "Objects" "New" "Create waveforms..." "Create Sound from Shepard tone..." 1 C:\praat\create_waveforms.psc
+Add menu command... "Objects" "New" "Create sine sweep..." "Create waveforms..." 1 sine_sweep.psc
+Add menu command... "Objects" "New" "Draw source filter model..." "Create waveforms..." 1 C:\praat\draw_source_filter_model.psc
+
+Add action command... Sound 0 "" 0 "" 0 "Overload detector" "Get intensity (dB)" 1 C:\praat\overload_detector.psc
+
+Add action command... Sound 0 "" 0 "" 0 "Amplitude gating..." "Scale..." 1 C:\praat\amplitude_gating.psc
+Add action command... Sound 0 "" 0 "" 0 "Reduce bit rate..." "Scale..." 1 C:\praat\reduce_bit_rate.psc
+
+Add action command... Sound 0 "" 0 "" 0 "Windowed Spectrum..." "To Spectrum..." 1 C:\praat\fft_spectrum_from_windowed_sound_obj_window.psc
+Add action command... Sound 0 "" 0 "" 0 "Voice report..." "To Intensity..." 0 C:\praat\voice_rep_from_object_window.psc
+Add action command... Sound 0 "" 0 "" 0 "Extract voiced intervals..." "To Intensity..." 0 C:\praat\voiced_extract.psc
+Add action command... Sound 0 "" 0 "" 0 "LTAS entire signal..." "To Intensity..." 0 C:\praat\ltas_voiced_and_unvoiced.psc
+Add action command... Sound 0 "" 0 "" 0 "LTAS voiced intervals only..." "To Intensity..." 0 C:\praat\ltas_voiced_only.psc
+Add action command... Sound 0 "" 0 "" 0 "Draw F0 distribution..." "To Intensity..." 0 C:\praat\draw_f0_distribution.psc
+Add action command... Sound 0 "" 0 "" 0 "H1 minus H2..." "To Intensity..." 0 C:\praat\h1-h2_average.psc
+Add action command... Sound 0 "" 0 "" 0 "Subharmonics detector..." "To Intensity..." 0 C:\praat\subharmonics_detector.psc
+
+Add action command... Sound 0 "" 0 "" 0 "Add two sounds..." "Concatenate recoverably" 1 C:\praat\Add2_variable.psc
+
+Add menu command... "SoundEditor" "Spectrum" "FFT spectrum at cursor..." "Get frequency" 0 C:\praat\fft.psc
+Add menu command... "SoundEditor" "Spectrum" "FFT spectrum within selection..." "Get frequency" 0 C:\praat\fft_sel.psc
+Add menu command... "SoundEditor" "Spectrum" "LPC spectrum at cursor..." "Get frequency" 0 C:\praat\lpc.psc
+Add menu command... "SoundEditor" "Spectrum" "LPC spectrum within selection..." "Get frequency" 0 C:\praat\lpc_sel.psc
+Add menu command... "SoundEditor" "Spectrum" "H1 minus H2 at cursor..." "Get frequency" 0 C:\praat\h1_minus_h2.psc
+Add menu command... "SoundEditor" "Pulses" "Custom voice report..." "Pulse listing" 0 C:\praat\custom_voice_rep_from_editor.psc
+Add menu command... "SoundEditor" "Pitch" "Check pitch with narrow band spectrogram..." "Extract visible pitch contour" 0 C:\praat\check_pitch_with_spectrogram.psc
+Add menu command... "SoundEditor" "Pitch" "Synthesize visible pitch contour" "Extract visible pitch contour" 0 C:\praat\Synthesize_visible_pitch_contour.psc
+
+Add menu command... "Objects" "Goodies" "Pitch unit conversion..." "Report floating point properties" 0 C:\praat\pitch_unit_conversion.psc
+Add menu command... "Objects" "Help" "Pitch unit conversion..." "About Praat..." 0 C:\praat\pitch_unit_conversion.psc
+
+Add menu command... "Picture" "Select" "Select outer viewport (cm)..." "Select outer viewport..." 0 C:\praat\select_outer_viewport_cm.psc
+
+echo The scripts have been sucessfully installed
+

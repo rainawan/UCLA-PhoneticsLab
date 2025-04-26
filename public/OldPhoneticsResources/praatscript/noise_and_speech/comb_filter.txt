@@ -1,0 +1,25 @@
+# generates and combfilters white noise ntimes with a delay of delay.
+
+form comb filtering
+	integer Ntimes 1
+	positive Delay_(ms) 5.0
+	integer Sampling_frequency 44100
+	real Gain_(linear) 1.0
+	positive Duration_(s) 1.0
+endform
+
+Create Sound... noise 0 'duration' 'sampling_frequency' randomGauss(0,0.2)
+sdelay = round(delay*sampling_frequency/1000)
+Copy... noise'sdelay'samps'ntimes'x
+
+#do the comb filtering
+for i from 1 to ntimes
+	Formula... self+'gain'*self[col+'sdelay']
+endfor
+
+# normalise back to original peak spectral level
+Formula... self/(2^'ntimes')
+To Spectrum
+Edit
+
+

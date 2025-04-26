@@ -1,0 +1,400 @@
+#Create a sustained vowel using the LF source model
+#Niels Reinholt Petersen 20040820, modif 20050225
+
+form create a sustained vowel LF source LPC synthesis
+	word name vowel
+	positive F0 100
+	positive duration_(sec.) 0.3
+	real Rg_(1_-_inf) 1.7
+	real Rk_(0_-_1) 0.3
+	real Fa 2000
+	real F0_flutter_(%_of_F0) 0
+	real Amplitude_flutter_(%_of_E0) 0
+	real HNR_(dB) 25
+	real Odd_pulse_amplitude_(in_%_of_even) 100
+	real Odd_pulse_F0_(in_%_of_even) 100
+	optionmenu vowel_quality: 6
+		option User specified
+		option Preset i keyword mile
+		option Preset e keyword mele
+		option Preset æ keyword mæle
+		option Preset a keyword male
+		option Preset ar keyword larme
+		option Preset y keyword hyle
+		option Preset ø keyword køle
+		option Preset øe keyword høne
+		option Preset u keyword mule
+		option Preset o keyword mole
+		option Preset å keyword måle
+		option Preset år keyword årle
+		option Preset standard shwa
+	real left_F1_and_B1 750
+	real right_F1_and_B1 80
+	real left_F2_and_B2 1250
+	real right_F2_and_B2 110
+	real left_F3_and_B3 2500
+	real right_F3_and_B3 130
+	real left_F4_and_B4 3500
+	real right_F4_and_B4 180
+	real Formant_shift_(%_100=no_shift) 100
+	boolean Keep_pulse_shape_constant 1
+	boolean Remove_intermediary_objects 1
+	boolean Resample_to_44100_Hz 0
+endform
+
+
+############# set formant frequencies and vowel names
+# set formant frequencies and bandwiths of the four lower formants
+#user specified vowel quality
+if vowel_quality = 1
+	f1 = left_F1_and_B1
+	b1 = right_F1_and_B1
+	f2 = left_F2_and_B2
+	b2 = right_F2_and_B2
+	f3 = left_F3_and_B3
+	b3 = right_F3_and_B3
+	f4 = left_F4_and_B4
+	b4 = right_F4_and_B4
+endif
+
+#vowel quality: mile
+if vowel_quality = 2
+	f1 = 225
+	b1 = 80
+	f2 = 2000
+	b2 = 110
+	f3 = 3000
+	b3 = 130
+	f4 = 3700
+	b4 = 180
+	name$ = name$ + "_i"
+endif
+
+#vowel quality: mele
+if vowel_quality = 3
+	f1 = 270
+	b1 = 80
+	f2 = 2150
+	b2 = 110
+	f3 = 2600
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+	name$ = name$ + "_e"
+endif
+
+#vowel quality: mæle
+if vowel_quality = 4
+	f1 = 350
+	b1 = 80
+	f2 = 2000
+	b2 = 110
+	f3 = 2500
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+	name$ = name$ + "_ae"
+endif
+
+#vowel quality: male
+if vowel_quality = 5
+	f1 = 480
+	b1 = 80
+	f2 = 2000
+	b2 = 110
+	f3 = 2500
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+	name$ = name$ + "_a"
+endif
+
+#vowel quality: larme
+if vowel_quality = 6
+	f1 = 750
+	b1 = 80
+	f2 = 1250
+	b2 = 110
+	f3 = 2500
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+	name$ = name$ + "_ar"
+endif
+
+#vowel quality: hyle
+if vowel_quality = 7
+	f1 = 200
+	b1 = 80
+	f2 = 1850
+	b2 = 110
+	f3 = 2050
+	b3 = 130
+	f4 = 3300
+	b4 = 180
+	name$ = name$ + "_y"
+endif
+
+#vowel quality: køle
+if vowel_quality = 8
+	f1 = 350
+	b1 = 80
+	f2 = 1600
+	b2 = 110
+	f3 = 2000
+	b3 = 130
+	f4 = 3300
+	b4 = 180
+	name$ = name$ + "_oe"
+endif
+
+#vowel quality: høne
+if vowel_quality = 9
+	f1 = 400
+	b1 = 80
+	f2 = 1600
+	b2 = 110
+	f3 = 2000
+	b3 = 130
+	f4 = 3300
+	b4 = 180
+	name$ = name$ + "_OE"
+endif
+
+#vowel quality: mule
+if vowel_quality = 10
+	f1 = 225
+	b1 = 80
+	f2 = 800
+	b2 = 110
+	f3 = 2300
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+	name$ = name$ + "_u"
+endif
+
+#vowel quality: mole
+if vowel_quality = 11
+	f1 = 300
+	b1 = 80
+	f2 = 650
+	b2 = 110
+	f3 = 2200
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+	name$ = name$ + "_o"
+endif
+
+#vowel quality: måle
+if vowel_quality = 12
+	f1 = 400
+	b1 = 80
+	f2 = 1000
+	b2 = 110
+	f3 = 2300
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+	name$ = name$ + "_aa"
+endif
+
+#vowel quality: årle
+if vowel_quality = 13
+	f1 = 600
+	b1 = 80
+	f2 = 1000
+	b2 = 110
+	f3 = 2300
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+	name$ = name$ + "_aar"
+endif
+
+#vowel quality: shwa
+if vowel_quality = 14
+	f1 = 500
+	b1 = 100
+	f2 = 1500
+	b2 = 100
+	f3 = 2500
+	b3 = 100
+	f4 = 3500
+	b4 = 100
+	name$ = name$ + "_shwa"
+endif
+
+#set higher formant frequencies and bandwidths
+if vowel_quality = 14
+	 f5 = 4500
+	 b5 = 100
+	 f6 = 5500
+	 b6 = 100
+	 f7 = 6500
+	 b7 = 100
+	 f8 = 7500
+	 b8 = 100
+	 f9 = 8500
+	 b9 = 100
+else
+	 f5 = 4500
+	 b5 = 250
+	 f6 = 5500
+	 b6 = 250
+	 f7 = 6500
+	 b7 = 300
+	 f8 = 7500
+	 b8 = 300
+	 f9 = 8500
+	 b9 = 300
+endif
+
+#shift formants
+formant_shift = formant_shift/100
+f1 = f1*formant_shift
+f2 = f2*formant_shift
+f3 = f3*formant_shift
+f4 = f4*formant_shift
+f5 = f5*formant_shift
+f6 = f6*formant_shift
+f7 = f7*formant_shift
+f8 = f8*formant_shift
+f9 = f9*formant_shift
+
+
+# set sampling rate as a function formant shift in order to avoid f9 to become too close to the Nyquist frequency
+sampling_rate = 18000*formant_shift
+#sampling_rate = f9*2 + 1000
+#adjust sampling rate to a whole multiplum of f0 just below the rate specified above
+sampling_rate = sampling_rate - ((sampling_rate/f0) - floor(sampling_rate/f0))*f0
+
+##########    create source   ###########################################
+#echo ---
+
+alpha = 165
+e0 = 0.3
+ra=f0/(2*pi*fa)
+t0 = 1/f0
+
+Create Sound... a_prel 0 duration sampling_rate 0
+
+t = Get time from sample number... 1
+pulse_number = 1
+while t < duration
+#odd pulses
+	if floor(pulse_number/2) <> pulse_number/2
+		e0_rnd = e0*odd_pulse_amplitude/100+e0*randomGauss(0,amplitude_flutter)/100
+		f0_rnd = f0*odd_pulse_F0/100 + f0*randomGauss(0,f0_flutter)/100
+		t0_rnd = 1/f0_rnd
+		t_end = t + t0_rnd
+	else
+		f0_rnd = f0 + f0*randomGauss(0,f0_flutter)/100
+		t0_rnd = 1/f0_rnd
+		e0_rnd = e0 + e0*randomGauss(0,amplitude_flutter)/100
+		t_end = t + t0_rnd
+	endif
+
+	pulse_number = pulse_number+1
+	if keep_pulse_shape_constant = 1
+		tp = t0/(2*rg) 
+		te = tp*(1+rk) 
+		ta = t0*ra
+	else     
+		tp = t0_rnd/(2*rg)
+		te = tp*(1 + rk)
+		ta = t0_rnd*ra
+	endif
+
+	t_discont = t + te
+	ee = e0_rnd*exp(alpha*(te))*sin(pi*((te)/(tp)))
+
+	Formula... if x >= t and x < t_end then if x < t_discont
+	... then e0_rnd*sin(pi*((x-t)/tp))*exp(alpha*(x-t))
+	... else ee*(exp((te-(x-t))/ta) - exp((te-t0_rnd)/ta))  fi else self fi
+#printline 'ee' 't0_rnd'
+	t = t_end
+endwhile
+
+Scale... 0.9999
+
+Rename... source_'name$'
+
+##########   create LPC-filter for harmonic part    ###############################
+
+endif
+select Sound source_'name$'
+end = Get duration
+
+#create a formant filter from the formant frequencies and bandwidths specified
+#and filter the source
+
+
+Create FormantTier... harmonic 0 end
+Add point... 0 'f1' 'b1' 'f2' 'b2' 'f3' 'b3' 'f4' 'b4' 'f5' 'b5' 'f6' 'b6' 'f7' 'b7' 'f8' 'b8' 'f9' 'b9'
+Add point... end 'f1' 'b1' 'f2' 'b2' 'f3' 'b3' 'f4' 'b4' 'f5' 'b5' 'f6' 'b6' 'f7' 'b7' 'f8' 'b8' 'f9' 'b9'
+
+plus Sound source_'name$'
+Filter
+Rename... harmonic
+Scale intensity... 70
+
+
+##############   create the glottal noise component   ##########################
+
+#create the noise source
+Create Sound... noise_white 0 end sampling_rate randomGauss(0,0.1)
+Filter (pass Hann band)... 1000 6000 2000
+Rename... noise_source
+
+#create a formant filter and filter the noise source
+#Note that the formant filter will be identical to the one used for filtering the harmonic component,
+#but you may change it by specifying new formant frequencies and bandwidths here
+Create FormantTier... noise 0 end
+Add point... 0 'f1' 'b1' 'f2' 'b2' 'f3' 'b3' 'f4' 'b4' 'f5' 'b5' 'f6' 'b6' 'f7' 'b7' 'f8' 'b8' 'f9' 'b9'
+Add point... end 'f1' 'b1' 'f2' 'b2' 'f3' 'b3' 'f4' 'b4' 'f5' 'b5' 'f6' 'b6' 'f7' 'b7' 'f8' 'b8' 'f9' 'b9'
+
+plus Sound noise_source
+Filter
+
+#attenuate the noise level by the chosen value of HNR
+Scale intensity... 70-hNR
+
+Rename... noise
+
+#add harmonic and noise components
+select Sound harmonic
+Copy... harmonic_plus_noise_18000
+Formula... self + Sound_noise (x)
+
+#make a resampling to 44100 Hz. This is necessary if you want to analyse the vowel using the MDVP-program
+if resample_to_44100_Hz = 1
+Resample... 44100 50
+endif
+Rename... 'name$'
+
+Scale intensity... 80
+
+#removed the intermediary objects 
+if remove_intermediary_objects = 1
+	select FormantTier harmonic
+	Remove
+	select Sound harmonic
+	Remove
+	select Sound noise_white
+	Remove
+	select FormantTier noise
+	Remove
+	select Sound noise_source
+	Remove
+	select Sound noise
+	Remove
+	if resample_to_44100_Hz = 1
+		select Sound harmonic_plus_noise_18000
+		Remove
+	endif
+endif
+
+select Sound 'name$'
+Subtract mean
