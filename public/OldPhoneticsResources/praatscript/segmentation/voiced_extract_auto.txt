@@ -1,0 +1,44 @@
+# This script extracts voiced intervals from a selected Sound object.
+#
+# The extraction is made without the user having to specify arguments for the "To Pitch (ac)"
+# and "To TextGrid" commands.
+# Testing the script on a number of sentences 15 - 20 seconds long spoken by normal and pathological
+# voices has shown that a reasonably correct extraction of voiced intervals can be achieved
+# by the values of arguments specified below for the To Pitch (ac) and To TextGrid (vuv)
+# commands if the mean_period (To TextGrid (vuv)) varies as a function of the median F0 of the Sound
+# object. The script will handle fundamental frequencies between 60 and 400 Hz. If F0 is lower
+# (e.g. in a creaky male voice) og higher (e.g. in a voice using the falsetto register) the
+# 'manually operated' version voiced_extract.psc should be used.
+
+# 20020423 John Tndering, modified quite a lot by Niels Reinholt Petersen
+
+name$ = selected$("Sound")
+
+To Pitch (ac)... 0.01 60 15 no 0.03 0.7 0.01 0.35 0.14 400
+
+median_f0 = Get quantile... 0 0 0.5 Hertz
+mean_period = 1/median_f0
+
+select Sound 'name$'
+plus Pitch 'name$'
+
+To PointProcess
+To TextGrid (vuv)... 0.02 mean_period
+
+select Sound 'name$'
+plus TextGrid 'name$'
+Extract intervals... 1 no V
+numberOfSelectedSounds = numberOfSelected ("Sound")
+Concatenate
+
+for i from 1 to 'numberOfSelectedSounds'
+slet_fil$ = "'name$'_V_'i'"
+select Sound 'slet_fil$'
+Remove
+endfor
+
+nytnavn$ = "'name$'_voiced"
+select Sound chain
+Rename... 'nytnavn$'
+select PointProcess 'name$'
+Remove

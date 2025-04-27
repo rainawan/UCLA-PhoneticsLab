@@ -86,7 +86,7 @@ const PraatScript = () => {
                   <ul className="list-disc">
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/grid-maker.praat"
+                        href="../../../../../OldPhoneticsResources/praatscript/text_grids/grid-maker.praat"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -98,7 +98,7 @@ const PraatScript = () => {
                       <br />
                       See also K. Crosswhite's amply commented grid{" "}
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/text_grid_maker.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/text_grids/text_grid_maker.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -106,7 +106,7 @@ const PraatScript = () => {
                       </a>{" "}
                       and{" "}
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/text_grid_reviewer.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/text_grids/text_grid_reviewer.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -124,7 +124,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/label_from_text_file.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/text_grids/label_from_text_file.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -135,7 +135,7 @@ const PraatScript = () => {
                       Replace interval labels in selected TextGrid with labeled
                       text from a file {"("}ML's{" "}
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/label_quickly_from_text_file.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/text_grids/label_quickly_from_text_file.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -171,7 +171,7 @@ const PraatScript = () => {
                   <ul className="list-disc">
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/calculate_segment_durations.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sounds_text_grids/calculate_segment_durations.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -182,7 +182,7 @@ const PraatScript = () => {
                       Log durations between labeled markers in a set of text
                       grids. See also Katherine Crosswhite's{" "}
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/duration_logger.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sounds_text_grids/duration_logger.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -192,7 +192,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/save_interval_data_to_text_file.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sounds_text_grids/save_interval_data_to_text_file.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -205,7 +205,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/formant_logging.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sounds_text_grids/formant_logging.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -226,7 +226,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/collect_formant_data_from_files.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sounds_text_grids/collect_formant_data_from_files.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -239,7 +239,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/draw_formant_chart.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sounds_text_grids/draw_formant_chart.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -252,7 +252,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/collect_pitch_data_from_files.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sounds_text_grids/formant_logging.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -263,7 +263,7 @@ const PraatScript = () => {
                       Get F0 maxima of all text grid labeled intervals for a
                       number of Sound-TextGrid pairs. See also ML's{" "}
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/collect_data_from_two_tiers_in_files.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sounds_text_grids/collect_data_from_two_tiers_in_files.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -274,7 +274,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/momel_modif.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sounds_text_grids/momel_modif.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -287,7 +287,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/PraatVoiceSauceImitator.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sounds_text_grids/PraatVoiceSauceImitator.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -311,7 +311,7 @@ const PraatScript = () => {
                   <ul className="list-disc">
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/Segmenter.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/segmentation/Segmenter.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -332,7 +332,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/word_chomper.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/segmentation/word_chomper.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -345,7 +345,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/save_intervals_to_aiff_sound_files.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/segmentation/save_intervals_to_aiff_sound_files.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -353,7 +353,7 @@ const PraatScript = () => {
                       </a>
                       {" | "}
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/save_intervals_to_wav_sound_files.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/segmentation/save_intervals_to_wav_sound_files.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -366,7 +366,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/save_labeled_intervals_to_aiff_sound_files.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/segmentation/save_labeled_intervals_to_aiff_sound_files.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -374,7 +374,7 @@ const PraatScript = () => {
                       </a>
                       {" | "}
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/save_labeled_intervals_to_wav_sound_files.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/segmentation/save_labeled_intervals_to_wav_sound_files.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -387,7 +387,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/voiced_extract_auto.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/segmentation/voiced_extract_auto.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -400,7 +400,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/save_selection_to_sound_and_textgrid.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/segmentation/save_selection_to_sound_and_textgrid.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -411,7 +411,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/make_textgrid_from_segment_data.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/segmentation/make_textgrid_from_segment_data.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -422,7 +422,7 @@ const PraatScript = () => {
                       Convert data files listing segment startpoints and labels
                       to TextGrids; cf.{" "}
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/make_textgrid_from_segment_data_endpoints.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/segmentation/make_textgrid_from_segment_data_endpoints.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -443,7 +443,7 @@ const PraatScript = () => {
                   <ul className="list-disc">
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/figure.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/drawing_pictures/figure.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -502,7 +502,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/draw_distribution_bar_from_data_file.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/drawing_pictures/draw_distribution_bar_from_data_file.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -515,7 +515,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/draw_source_filter_model.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/drawing_pictures/draw_source_filter_model.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -528,7 +528,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/draw_formant_point_to_Bark_chart.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/drawing_pictures/draw_formant_point_to_Bark_chart.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -539,7 +539,7 @@ const PraatScript = () => {
                       Draw a one-Bark vowel circle from given formant values
                       (Hz) on a Bark-scale F1/F2 chart. Cf.{" "}
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/draw_formant_point_to_ERB_chart.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/drawing_pictures/draw_formant_point_to_ERB_chart.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -549,7 +549,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/mxn_plot.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/drawing_pictures/mxn_plot.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -614,7 +614,7 @@ const PraatScript = () => {
                   <ul className="list-disc">
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/vowelonset_v3_praat.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sound_analysis/vowelonset_v3_praat.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -625,7 +625,7 @@ const PraatScript = () => {
                       Find the vowel onsets in a selected Sound and log their
                       timepoints in a new PointProcess; can then use HQ's{" "}
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/writePP.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sound_analysis/writePP.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >
@@ -635,7 +635,7 @@ const PraatScript = () => {
                     </li>
                     <li>
                       <a
-                        href="http://phonetics.linguistics.ucla.edu/facilities/acoustic/mxn_plot.txt"
+                        href="../../../../../OldPhoneticsResources/praatscript/sound_analysis/mxn_plot.txt"
                         className="text-blue hover:underline"
                         target="_blank"
                       >

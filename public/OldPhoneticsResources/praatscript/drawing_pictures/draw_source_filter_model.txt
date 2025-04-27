@@ -1,0 +1,385 @@
+#Draws the components of the source-filter model of vowel production
+#to the picture window
+#Niels Reinholt Petersen 050511
+
+form Draw Source filter model
+	positive F0_(Hz) 133
+	optionmenu voice_quality: 1
+		option normal (-12 dB/oct.)
+		option hyperfunctional (-6 dB/oct.)
+		option hypofunctional (-18 dB/oct.)
+	optionmenu vowel_quality: 8
+		option User specified
+		option Preset i keyword mile
+		option Preset ae keyword male
+		option Preset ar keyword larme
+		option Preset u keyword mule
+		option Preset å keyword måle
+		option Preset år keyword årle
+		option Preset standard shwa
+	real left_F1_and_B1_(Hz) 480
+	real right_F1_and_B1 80
+	real left_F2_and_B2_(Hz) 2000
+	real right_F2_and_B2 110
+	real left_F3_and_B3_(Hz) 2500
+	real right_F3_and_B3 130
+	real left_F4_and_B4_(Hz) 3500
+	real right_F4_and_B4 180
+	real Vertical_pos_(inches) 0
+	boolean Erase_pictures 1
+	boolean Remove_intermediary_objects 1
+endform
+
+if vowel_quality = 1
+	f1 = left_F1_and_B1
+	b1 = right_F1_and_B1
+	f2 = left_F2_and_B2
+	b2 = right_F2_and_B2
+	f3 = left_F3_and_B3
+	b3 = right_F3_and_B3
+	f4 = left_F4_and_B4
+	b4 = right_F4_and_B4
+endif
+
+#vowel quality: mile
+if vowel_quality = 2
+	f1 = 225
+	b1 = 80
+	f2 = 2000
+	b2 = 110
+	f3 = 3000
+	b3 = 130
+	f4 = 3700
+	b4 = 180
+endif
+
+#vowel quality: male
+if vowel_quality = 3
+	f1 = 480
+	b1 = 80
+	f2 = 2000
+	b2 = 110
+	f3 = 2500
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+endif
+
+#vowel quality: larme
+if vowel_quality = 4
+	f1 = 750
+	b1 = 80
+	f2 = 1250
+	b2 = 110
+	f3 = 2500
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+endif
+
+#vowel quality: mule
+if vowel_quality = 5
+	f1 = 225
+	b1 = 80
+	f2 = 800
+	b2 = 110
+	f3 = 2300
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+endif
+
+#vowel quality: måle
+if vowel_quality = 6
+	f1 = 400
+	b1 = 80
+	f2 = 1000
+	b2 = 110
+	f3 = 2300
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+endif
+
+#vowel quality: årle
+if vowel_quality = 7
+	f1 = 600
+	b1 = 80
+	f2 = 1000
+	b2 = 110
+	f3 = 2300
+	b3 = 130
+	f4 = 3500
+	b4 = 180
+endif
+
+#vowel quality: shwa
+if vowel_quality = 8
+	f1 = 500
+	b1 = 100
+	f2 = 1500
+	b2 = 100
+	f3 = 2500
+	b3 = 100
+	f4 = 3500
+	b4 = 100
+endif
+
+#set higher formant frequencies and bandwidths
+	 f5 = 4500
+	 b5 = 250
+	 f6 = 5500
+	 b6 = 250
+	 f7 = 6500
+	 b7 = 300
+	 f8 = 7500
+	 b8 = 300
+
+#set higher bandwidths for shwa
+if vowel_quality = 8
+	b5 = 100
+	b6 = 100
+	b7 = 100
+	b8 = 100
+endif
+
+#Create a formant tier
+Create FormantTier... vowel 0 1
+Add point... 0 'f1' 'b1' 'f2' 'b2' 'f3' 'b3' 'f4' 'b4' 'f5' 'b5' 'f6' 'b6' 'f7' 'b7' 'f8' 'b8'
+Add point... 1 'f1' 'b1' 'f2' 'b2' 'f3' 'b3' 'f4' 'b4' 'f5' 'b5' 'f6' 'b6' 'f7' 'b7' 'f8' 'b8'
+
+# Create a click for pictures of transfer function and radiation
+Create Sound... click 0 0.5 16000 0
+Set value at sample number... 2000 1
+Copy... radiation_pic
+Pre-emphasize (in-line)... 50
+To Spectrum... yes
+
+#select Sound click
+select FormantTier vowel
+plus Sound click
+Filter (no scale)
+Rename... transfer_pic
+To Spectrum... yes
+
+
+
+#Create a pulse train for source and resulting spectrum
+# compute sample rate
+sample_rate = 16000 - ((16000/f0) - floor(16000/f0))*f0
+#echo ---
+#printline 'sample_rate'
+Create Sound... pulse_train 0 1.2 sample_rate 0
+period = 1/f0
+samples_per_period = sample_rate*period
+number_of_samples = Get number of samples
+for sample_number from 1 to number_of_samples
+	Set value at sample number... 'sample_number' 0.5
+	sample_number = sample_number + samples_per_period
+endfor
+
+#Create sounds source, source+transfer, source+transfer+radiation
+#First source according to voice quality
+#normal
+if voice_quality = 1
+	De-emphasize (in-line)... 50
+	De-emphasize (in-line)... 50
+endif
+#hyper
+if voice_quality = 2
+	De-emphasize (in-line)... 50
+endif
+#hypo
+if voice_quality = 3
+	De-emphasize (in-line)... 50
+	De-emphasize (in-line)... 50
+	De-emphasize (in-line)... 50
+endif
+Subtract mean
+Rename... source1
+
+#then source+transfer
+select FormantTier vowel
+plus Sound source1
+Filter (no scale)
+Subtract mean
+Rename... source+transfer1
+
+#then source+transfer+radiation
+Copy... source+transfer+radiation1
+Pre-emphasize (in-line)... 50
+Subtract mean
+
+#remove the veird periods at the beginning and scale
+select Sound source1
+Extract part... 0.2 1.2 Rectangular 1 no
+Rename... source
+Scale... 0.99
+
+select Sound source+transfer1
+Extract part... 0.2 1.2 Rectangular 1 no
+Rename... source+transfer
+Scale... 0.99
+select Sound source+transfer+radiation1
+Extract part... 0.2 1.2 Rectangular 1 no
+Rename... source+transfer+radiation
+Scale... 0.99
+
+#make spectra of source and source+transfer+radiation
+select Sound source1
+Multiply by window... Hanning
+To Spectrum... yes
+select Sound source+transfer+radiation1
+Multiply by window... Hanning
+To Spectrum... yes
+
+
+
+
+
+#######
+if erase_pictures = 1
+Erase all
+endif
+
+Font size... 8
+
+#viewport coordinates
+w = 3.15
+h = 2
+w_all = 6
+h_all = 6
+
+w1_src = 0
+w2_src = w1_src + w
+h1_src = vertical_pos
+h2_src = h1_src + h
+
+w1_rad = 0
+w2_rad = w1_rad + w
+h1_rad = vertical_pos + 1.9
+h2_rad = h1_rad + h
+
+w1_trf = 2.35
+w2_trf = w1_trf + w
+h1_trf = vertical_pos
+h2_trf = h1_trf + h
+
+w1_res = 2.35
+w2_res = w1_res + w
+h1_res = vertical_pos + 1.9
+h2_res = h1_res + h
+
+
+
+Viewport... w1_src w2_src h1_src h2_src
+select Spectrum source1
+Draw... 0 4000 0 0 no
+Text top... no source spectrum
+
+Viewport... w1_rad w2_rad h1_rad h2_rad
+select Spectrum radiation_pic
+Draw... 0 4000 0 0 no
+Text top... no + radiation
+
+Viewport... w1_trf w2_trf h1_trf h2_trf
+select Spectrum transfer_pic
+Draw... 0 4000 0 0 no
+Text top... no + transfer function
+
+Viewport... w1_res w2_res h1_res h2_res
+select Spectrum source+transfer+radiation1
+Draw... 0 4000 0 0 no
+Text top... no = resulting spectrum
+Draw inner box
+Marks left every... 1 10 no yes no
+Marks bottom every... 1000 1 yes yes no
+Text bottom... yes kHz
+
+#radiation
+
+Viewport... w1_rad w2_rad h1_rad h2_rad
+Draw inner box
+Text left... yes dB
+Marks left every... 1 10 yes yes no
+Marks bottom every... 1000 1 yes yes no
+Text bottom... yes kHz
+
+#source
+Viewport... w1_src w2_src h1_src h2_src
+Draw inner box
+Text left... yes dB
+Marks left every... 1 10 yes yes no
+Text bottom... yes kHz
+Text bottom... yes kHz
+Marks bottom every... 1000 1 yes yes no
+
+#transfer
+#Viewport... 2.5 6 0 3
+Viewport... w1_trf w2_trf h1_trf h2_trf
+Draw inner box
+Text bottom... yes kHz
+Marks left every... 1 10 no yes no
+Marks bottom every... 1000 1 yes yes no
+
+Viewport... 0 w2_res 0 h2_res
+
+
+
+if vowel_quality = 1
+	name$ = "user_specified"
+endif
+if vowel_quality = 2
+	name$ = "mile"
+endif
+if vowel_quality = 3
+	name$ = "male"
+endif
+if vowel_quality = 4
+	name$ = "larme"
+endif
+if vowel_quality = 5
+	name$ = "mule"
+endif
+if vowel_quality = 6
+	name$ = "maale"
+endif
+if vowel_quality = 7
+	name$ = "aarle"
+endif
+if vowel_quality = 8
+	name$ = "shwa"
+endif
+
+if remove_intermediary_objects = 1
+select FormantTier vowel
+Remove
+select Sound click
+Remove
+select Sound radiation_pic
+Remove
+select Spectrum radiation_pic
+Remove
+select Sound transfer_pic
+Remove
+select Spectrum transfer_pic
+Remove
+select Spectrum source1
+Remove
+select Spectrum source+transfer+radiation1
+Remove
+select Sound source1
+Remove
+select Sound source+transfer1
+Remove
+select Sound source+transfer+radiation1
+Remove
+endif
+
+select Sound source
+Rename... 'name$'_source
+select Sound source+transfer
+Rename... 'name$'_source+transfer
+select Sound source+transfer+radiation
+Rename... 'name$'_source+transfer+radiation
+

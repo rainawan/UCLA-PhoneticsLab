@@ -1,0 +1,36 @@
+# WritePP.praat
+# write the contents of a PointProcess object to file
+#
+# (c)2001 Hugo Quené
+# hquene@indiana.edu
+
+ppid = selected("PointProcess")
+name$ = selected$("PointProcess")
+# Into TextGrid
+
+form Enter directory path for output file
+   comment This script writes the content of the selected PointProcess
+   comment to a text file. Specify the desired LOCATION of that file:
+   sentence Path F:\
+   boolean Overwrite_existing_file 0
+endform
+
+file$ = "'path$''name$'.dat"
+if overwrite_existing_file
+   filedelete 'file$'
+elsif fileReadable(file$)
+   exit File 'file$' already exists, data from PointProcess 'name$' were NOT written to file
+endif
+
+n = Get number of points
+for i to n
+   abstime1 = Get time from index... 'i'
+   fileappend 'file$' 'i' 'abstime1:6' 'newline$'
+endfor
+printline Data from PointProcess 'name$' were written to 'file$'
+
+# cleanup
+# no stray objects left... nothing to clean up
+
+# end of script
+
