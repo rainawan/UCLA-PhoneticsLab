@@ -1,0 +1,35 @@
+########################
+#
+#  This script takes all the selected sound file
+#  and concatenates it a specified number of times
+#  into a single soundfile.  The final file is saved 
+#  as specified.
+#
+########################
+
+form Duplicate a sound file
+	comment Location of the input sound files
+	text File_directory C:\temp\temp.wav
+	comment Duplicate how many times?
+	integer repetitions
+	comment Save the final file as
+	text Save_as C:\temp\temp.wav
+endform
+
+# Here, open the file the specified number of times.
+
+for counter from 1 to repetitions
+	Read from file... 'file_directory$'
+endfor
+
+# Now, concatenate all files into a single file
+
+select all
+Concatenate
+
+# And save the resulting file
+
+Write to WAV file... 'save_as$'
+
+select all
+Remove

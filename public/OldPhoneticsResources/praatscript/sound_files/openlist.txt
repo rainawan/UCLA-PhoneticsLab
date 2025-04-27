@@ -1,0 +1,68 @@
+############################################################
+#
+# name: openlist.psc
+#
+# description: This script opens selected objects associated 
+#       with items in a list.
+#
+# last change: 28-09-04
+#
+# by: Bert Remijsen
+#
+############################################################
+
+
+# name: openlist.scr
+# description: Script to open files
+# date: 20 oktober 1998
+# update: 20-01-03
+# by: Bert Remijsen
+
+form Read list
+word location M:\public_html\testdata1
+comment filenaam (zonder extensie .txt)
+text listfile testlist1
+comment Items from ... to ... (if from eq 0 => 1; if until eq 0 => last):
+integer from 1
+integer until 0
+comment Choose object types
+boolean aiff 1
+boolean TextGrid 1
+boolean Pitch 0
+boolean Formant 0
+endform
+
+Read Strings from raw text file... 'location$'\'listfile$'.txt
+last = Get number of strings
+
+if (until = 0)
+   tmp = 'last'
+   else
+   tmp = until
+endif
+
+for fileteller from 'from' to 'tmp'
+select Strings 'listfile$'
+stringx$ = Get string... 'fileteller'
+
+if 'aiff'=1
+   Read from file... 'location$'\'stringx$'.aiff
+endif
+
+if 'TextGrid'=1
+   Read from file... 'location$'\'stringx$'.TextGrid
+endif
+
+if 'Pitch'=1
+   Read from file... 'location$'\'stringx$'.Pitch
+endif
+
+if 'Formant'=1
+   Read from file... 'location$'\'stringx$'.Formant
+endif
+
+endfor
+
+select Strings 'listfile$'
+Remove
+

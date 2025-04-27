@@ -1,0 +1,117 @@
+# This script will create a stereo file with specificable ILDs and ITDs from upto two  selected sounds
+# corrected to contain new-style syntax 1/9/00 - cjd
+
+# To make this script dynamic under the "Combine Sounds -" button run the next line:
+# Buttons... Sound 0 "" 0 "" 0 Make stereo file... Concatenate 1 yourdisk:yourfolder:scripts:Make_stereo
+
+form Make an AIFF stereo file
+comment Delays are in samples (positive value delays right channel)
+integer Delay_sound_1_(samples) 15
+integer Delay_sound_2_(samples) -15
+comment -------
+comment Gain in dB (negative value attenuates: -100 produces silence)
+comment Sound 1
+real Gain_L1_(dB) 0
+real Gain_R1_(dB) -100
+comment -------
+comment Sound 2
+real Gain_L2_(dB) -100
+real Gain_R2_(dB) 0
+comment -------
+comment Save stereo AIFF file in:
+sentence file_suffix_(optional)
+boolean remove_left_right_objects 1
+sentence folder cjdisk:Desktop Folder
+comment Sampling frequency of both files should be the same
+comment Duration  of stereo file set to that of longer sound
+endform
+
+#find out how many Sounds have been selected
+numberOfSounds = numberOfSelected ("Sound")
+if numberOfSounds = 0
+	exit You must select either 1 or 2 sounds
+elsif numberOfSounds > 2
+	exit You must select either 1 or 2 sounds
+endif
+
+#set up arrays with names and IDs of selected Sounds
+for ifile from 1 to numberOfSounds
+   sound$ = selected$ ("Sound",'ifile')
+   soundID = selected ("Sound",'ifile')
+   ids'ifile' = soundID
+   names'ifile'$ = sound$
+endfor 
+
+#   find the file with the most samples or longest duration
+maxduration = 0
+for ifile from 1 to numberOfSounds
+		filenum = ids'ifile'
+		select 'filenum'
+	  duration = Get duration
+	  if  duration > maxduration
+		 	maxID = filenum
+			 maxduration = duration
+	  endif
+endfor
+
+# create two blank files that will run from zero to the end of the latest finishing time
+# with a sampling frequency that is the same as that of the last-finishing sound
+select 'maxID'
+sf = Get sample rate
+Create Sound... left 0 maxduration sf 0
+Copy... right
+
+select Sound left
+#now cycle through all selected files, add to left
+for ifile from 1 to numberOfSounds
+    sound$ = names'ifile'$  
+		delay = delay_sound_'ifile'  
+		if delay > 0
+			delay = 0
+		endif
+		gain = gain_L'ifile' 
+		if  gain = -100
+					scale = 0
+		else
+					scale = 10^(gain/20)
+		endif
+		Formula...  self + 'scale'*Sound_'sound$'[col+'delay']
+endfor
+
+select Sound right
+#now cycle through all selected files, add to right
+for ifile from 1 to numberOfSounds
+    sound$ = names'ifile'$  
+		delay = delay_sound_'ifile'  
+		if delay < 0
+			delay = 0
+		endif
+		gain = gain_R'ifile' 
+		if  gain = -100
+					scale = 0
+		else
+					scale = 10^(gain/20)
+		endif
+		Formula...  self + 'scale'*Sound_'sound$'[col-'delay']
+endfor
+
+# select both the left and right channels
+plus Sound left
+
+# write stereo file
+if numberOfSounds = 2
+  Write to stereo AIFF file... 'folder$':'names1$'.'names2$'.'file_suffix$'
+else
+  Write to stereo AIFF file... 'folder$':'names1$'.'file_suffix$'
+endif
+
+# remove left and right intermediate sounds
+if remove_left_right_objects
+ Remove
+endif
+
+
+
+
+
+

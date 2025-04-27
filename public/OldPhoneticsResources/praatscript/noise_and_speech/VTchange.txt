@@ -1,0 +1,115 @@
+# This script will change the "vocal tract size" of all the readable waveform files (with no extension) in the given directory
+#  by the factor which is given in the dialogue box.
+
+# If the quality is bad try changing the minimum pitch  or maximum pitch
+
+# the script changes pitch and duration and then resamples to bring them back to original values, 
+# leaving the formants etc  changed.
+
+
+form Change vocal tract size
+   sentence Directory_with_waveform_files  cjdisk:test:
+   sentence Directory_for_output_files  cjdisk:testout:
+    choice  Output_format: 1
+       button  AIFF
+       button  AIFC
+       button  WAV
+	positive Lengthening_factor 1.0
+   sentence Fo_expression self*1.0
+   comment Analysis parameters
+   positive minimum_Fo 75
+   positive maximum_Fo 300
+   boolean Play_after_synthesis 0
+endform
+
+vtfactor = 'Lengthening_factor'
+directory$ = directory_with_waveform_files$
+directoryo$ = directory_for_output_files$
+fomin = 'minimum_Fo'
+fomax = 'maximum_Fo'
+
+Create Strings as file list... list 'directory$'*
+numberOfFiles = Get number of strings
+for ifile to numberOfFiles
+   select Strings list
+   sound$ = Get string... ifile
+   call vtchange
+endfor
+select Strings list
+Remove
+
+
+procedure vtchange
+#
+Read from file... 'directory$''sound$'
+#initial analysis locating pitch pulses etc
+#strip off extension (defined as everything after last .
+if rindex(sound$,".") > 0
+	sound$ = left$(sound$,rindex(sound$,".")-1)
+endif
+select Sound 'sound$'
+durn = Get duration
+
+#create Pitch & Manipulation objects
+select Sound 'sound$'
+To Pitch... 0.01 fomin fomax
+plus Sound 'sound$'
+To Manipulation
+select Pitch 'sound$'
+#apply the appropriate transformation to the Pitch object
+Formula... 'fo_expression$'*'vtfactor'
+
+#turn it into a PitchTier and place it into the Analysis object
+select Pitch 'sound$'
+Down to PitchTier
+select Manipulation 'sound$'
+plus PitchTier 'sound$'
+Replace pitch tier
+
+Create DurationTier... newdurn 0 'durn'
+Add point... 0 1/'vtfactor'
+select Manipulation 'sound$'
+plus DurationTier newdurn
+Replace duration tier
+
+#resynthesise with new pitch and duration contour
+select Manipulation 'sound$'
+Get resynthesis (PSOLA)
+
+
+#resample and force return of sample rate to original
+fsamp = Get sample rate
+Resample... fsamp*vtfactor 50
+Override sample rate... fsamp
+if play_after_synthesis = 1
+   Play
+endif
+
+#tidy up decimal representation in name
+vtf$ = fixed$(vtfactor,2)
+
+# remove self* string if it is there
+pos = index (fo_expression$,"self*")
+if pos > 0
+eleng = length (fo_expression$)
+foe$ = left$ (fo_expression$, pos -1) + right$(fo_expression$,eleng-pos-4)
+else
+foe$ = fo_expression$
+endif
+
+if output_format = 1
+	Write to AIFF file... 'directoryo$''sound$'.'vtf$'.'foe$'.aiff
+elsif output_format = 2
+	Write to AIFC file... 'directoryo$''sound$'.'vtf$'.'foe$'.aifc
+else
+	Write to WAV file... 'directoryo$''sound$'.'vtf$'.'foe$'.wav
+endif
+
+select all
+minus Strings list
+Remove
+endproc
+
+
+
+

@@ -1,0 +1,36 @@
+form Pitch unit conversion
+	optionmenu Convert_from: 1
+		option Hertz to Semitones
+		option Semitones to Hertz
+		option Hertz to Bark
+		option Bark to Hertz
+		option Hertz to Mel
+		option Mel to Hertz
+	real Value 100
+	positive Reference_(Hz) 100
+	boolean Clear_info_window 1
+endform
+
+if clear_info_window = 1
+	clearinfo
+endif
+
+if convert_from = 1
+	semitones = 12*ln(value/reference)/ln(2)
+	printline 'value' Hz = 'semitones:3' semitones re 'reference' Hz
+elsif convert_from = 2
+	hz = reference*exp(value*ln(2)/12)
+	printline 'value:3' semitones  re 'reference' Hz = 'hz:3' Hz
+elsif convert_from = 3
+	bark = hertzToBark(value)
+	printline 'value' Hz = 'bark:3' Bark
+elsif convert_from = 4
+	hz = barkToHertz(value)
+	printline 'value:3' Bark = 'hz:3' Hz
+elsif convert_from = 5
+	mel = hertzToMel(value)
+	printline 'value:3' Hz = 'mel:3' Mel
+elsif convert_from = 6
+	hz = melToHertz(value)
+	printline 'value:3' = 'hz:3' Hz
+endif

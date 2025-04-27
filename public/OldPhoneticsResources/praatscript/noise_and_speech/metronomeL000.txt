@@ -1,0 +1,82 @@
+# this is a one-beat metronome
+# for use in Exp.1, part G, H
+# Hugo Quené, hquene@indiana.edu, Nov 2001, May 2002
+
+form One-Beat Metronome
+   comment This metronome generates a 1-beat pattern, with
+   comment a mid tone on the beat. 
+   positive Rate_(bpm) 43
+   positive Duration_(s) 120
+endform
+
+# for debugging
+# rate = 28
+cycletime = 60/'Rate'
+# quartcycletime = 15/'Rate'
+tonetime = 0.040
+pausetime = 'cycletime'-'tonetime'
+
+# for debugging
+# printline Cycle time is 'cycletime'
+# printline Half-cycle time is 'halfcycletime'
+# printline Pausetime per half-cycle is 'pausetime'
+
+# Create Sound... Ltone 0 'tonetime' 44100  3/4 * sin(2*pi*400*x)
+Create Sound... Ltone 0 'tonetime' 44100  3/4 * sin(2*pi*600*x)
+# Create Sound... Htone 0 'tonetime' 44100 1/4 * sin(2*pi*800*x)
+Create Sound... Notone 0 'tonetime' 44100 0
+Create Sound... stil 0 'pausetime' 44100 0
+
+select Sound Ltone
+plus Sound stil
+Concatenate
+Rename... part1
+
+# select Sound Htone
+# plus Sound stil
+#Concatenate
+# Rename... part2
+
+#select Sound Notone
+#plus Sound stil
+#Concatenate
+#Rename... part2
+#Copy... part3
+#Copy... part4
+
+select Sound part1
+#plus Sound part2
+#plus Sound part3
+#plus Sound part4
+#Concatenate
+chainid = selected("Sound")
+
+# prepare something special for last cycle
+Read from file... E:\Hugo\rhythm\mywhoosh.wav
+mywhooshid = selected("Sound")
+
+select 'chainid'
+
+cycles = floor( 'Duration'/'cycletime' )
+# printline 'cycles'
+while cycles>1
+   Play
+   cycles = cycles-1
+endwhile
+
+# something special for last beep
+select 'mywhooshid'
+Play
+
+select 'chainid'
+plus Sound Ltone
+# plus Sound Htone
+plus Sound Notone
+plus Sound stil
+plus Sound part1
+#plus Sound part2
+#plus Sound part3
+#plus Sound part4
+plus Sound mywhoosh
+Remove
+

@@ -1,0 +1,25 @@
+#Gates a Sound Object in and out using a rise and fall time specified by the user
+#Niels Reinholt Petersen 20040820
+
+form gating in and out
+	positive Rise_time_(sec.) 0.1
+	positive Fall_time_(sec.) 0.1
+              boolean Copy_gated_signal_to_new_sound 1
+endform
+
+name$ = selected$ ("Sound")
+
+if copy_gated_signal_to_new_sound =1
+	Copy... 'name$'_gated
+endif
+
+#compute rates of rise and fall
+duration = Get total duration
+fall_start = duration - fall_time
+rate_of_rise = 1/rise_time
+rate_of_fall = 1/fall_time
+
+Formula... if x <= rise_time then self*x*rate_of_rise else self fi
+Formula... if x >= fall_start then self*(duration-x)*(rate_of_fall) else self fi
+
+
