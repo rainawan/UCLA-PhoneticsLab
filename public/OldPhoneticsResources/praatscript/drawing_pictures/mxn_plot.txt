@@ -1,0 +1,82 @@
+#this code creates a matrix of plots with external, but no internal labels
+#overall plot size adjustable but starts optimised for landscape A4
+
+nx = 3; number of plots across (m) by
+ny = 4; number of plots down (n)
+
+# total drawing area (ins)
+#9x6 gives reasonable size for landscape A4
+totalx = 9
+totaly = 6
+
+#origin for drawing (ins)
+xorig = 0.5
+yorig = 0.75
+
+Font size... 10
+#Viewport overlap in inches - font specific - adjust if you change font size
+#increase overlap to bring the plots closer together
+xlap = 1.0
+ylap = 0.6
+
+#number of yaxis marks
+nyticks = 3
+#number of xaxis marks
+nxticks = 3
+
+#=======================================
+#  Start of program
+#=======================================
+
+Erase all
+
+#size of single drawing becomes
+xlen = (totalx+(nx-1)*xlap)/nx
+ylen = (totaly+(ny-1)*ylap)/ny
+
+y1 = yorig
+y2 = y1 + ylen
+for j from 1 to ny
+	x1 = xorig
+	x2 = x1+xlen
+	for i from 1 to nx
+		Viewport... x1 x2 y1 y2
+		Draw inner box
+#=======================================
+#put your Draw command for data plotting in here; next three lines are an example
+#=======================================
+Create Sound... sine 0 1 100 1/2 * sin(2*pi*('nx'*('j'-1)+'i')*x)
+Draw... 0 1 -1 1 no
+Remove
+#=======================================
+		if i=1
+			Marks left... 'nyticks' yes yes yes
+#=======================================
+			ylabel$="Row "+  fixed$(j,0)
+#=======================================
+			Text left... yes 'ylabel$'
+		else
+			Marks left... 'nyticks' no yes yes
+		endif
+		if j=1
+#=======================================
+			header$ = "Column " + fixed$(i,0)
+#=======================================
+			Text top... no 'header$'
+			Marks bottom... 'nxticks' no yes no
+		endif
+		if j = ny
+			Marks bottom... 'nxticks' yes yes no
+#=======================================
+			xlabel$ = "Time (s)"
+#=======================================
+			Text bottom... yes 'xlabel$'
+		endif
+		x1 = x1+xlen-xlap
+		x2 = x1 + xlen
+	endfor
+	y1 = y1 +ylen - ylap
+	y2 = y1 + ylen
+endfor
+
+

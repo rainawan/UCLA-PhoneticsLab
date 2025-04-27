@@ -1,0 +1,158 @@
+#
+# VowelOnset.Praat
+#
+# This script runs in the Praat speech analysis program;
+# 	see  www.praat.org  for more details
+# It starts with one Sound object selected.
+# The purpose of the script is to find vowel onsets in the Sound,
+# using a procedure similar to Cummins & Port 1998 J.Phonetics
+# 
+# (c) Hugo Quené, May-June 2001, <Hugo.Quene@let.uu.nl>
+# with thanks to Paul Boersma for useful hints and suggestions! 
+#
+# adjusted Sep 2001 for improved performance, hquene@indiana.edu
+#
+# lines starting with # are comment
+
+# make sure that a single sound is selected
+aantalselect = numberOfSelected ("Sound")
+# obsolete... getnumberofselected aantalselect Sound
+if 'aantalselect'!=1
+   print Failure: exactly 1 Sound object should be selected!
+   printline
+else
+
+# peak must be higher than preceding trough by 'delta' in dB, to qualify as peak
+# disregard bottom and top 10% of intensity rise, in dB
+form Analysis parameters
+   comment A vowel is characterised by a peak in the intensity contour.
+   comment Such an intensity peak must be at least -`threshold` dB 
+   comment relative to the maximum intensity, to qualify as an interesting peak.
+   comment (Note that the signal is filtered with C=1000, B=500 Hz
+   comment before the intensity contour is calculated).
+   positive threshold_(dB) 21
+endform
+#   comment For determining the midpoint of the rise, the bottom and top parts are ignored.
+#   comment This focuses on the central (and often steepest) part of the rise. 
+#   comment These ignored margins are defined as the bottom and top `margin` of the rise.
+#   positive margin_(proportion) 0.20
+
+# obsolete ... getnameofselected geluid1 Sound 1
+name1$ = selected$ ("Sound")
+# not necessary ... getidofselected geluidid1 Sound 1
+
+# select selected Sound... not necessary... select 'geluidid1'
+# copy object name to 'temp' to avoid resampling of original Sound! 
+Copy... temp
+
+# downsample 
+## check current Fs before downsampling # 
+fs = Get sample rate
+if fs>11025
+  Resample... 11025 1
+  Rename... temp
+endif
+
+# filter with CF=1000, B=600, hi-freq attentuation, vowel-freq boost
+# sharpen filter to discard more hi-freq components, B=500
+Filter (one pole)... 1000 500
+
+# calculate intensity contour
+# minimum F0 is set to long time window, as suggested by PB, to avoid shimmer and AM
+# smooth over 80 ms time window, as suggested by Port
+# smooth here over 25 ms time window, also smoothing later when taking derivative
+framelength = 0.01
+# To Intensity... 12.5 'framelength'
+To Intensity... 40 'framelength'
+maxint = Get maximum... 0 0 Cubic
+t1 = Get time from frame... 1
+
+Down to Matrix
+Rename... temp
+endtime = Get highest x
+ncol = Get number of columns
+coldist = Get column distance
+
+# calculate derivative over window of length 2h+1
+# Press, Teukolsky, Vetterling & Flannery 1992 "Numerical Recipes in C" par.5.7
+# interval length MUST be an odd number of frames -- otherwise timing points are not correct! 
+h=1 
+newt1 = 't1'+('h'*'framelength')
+ncol = 'ncol'-(2*'h')
+# obtain derivative of Intensity matrix here.
+# note that frames are NOT aligned between temp and intdot matrices;
+# derivative of interval temp[col-h],temp[col+h] corresponds to temp frame 'col'
+# but to intdot frame 'col-h' because intdot frames "start later" and end earlier by 'h' frames ;
+# hence intdot frame 'col' corresponds to temp frame 'col'+h in time
+# so derivative is taken over interval (col+h-h,col+h+h)
+Create Matrix... intdot 0 'endtime' 'ncol' 'coldist' 'newt1' 1 1 1 1 1 (Matrix_temp[1,col+'h'+'h']-Matrix_temp[1,col]) / (2*'h'*dx)
+
+# to make the above work, you have to make sure that there is no speech signal
+# in the initial and final portions with duration  h*framelength
+
+# convert derivative of Intensity to Sound # hack from PB
+To Sound (slice)... 1
+Rename... temp_IntDot
+
+# select this Sound 
+select Sound temp_IntDot
+# find positive extrema, maxima, in derivative of Intensity,
+# which correspond to steepest rises in Intensity;
+# typically occurring just BEFORE vowel activity in oscillogram
+To PointProcess (extrema)... yes no Sinc70
+Rename... temp_rises
+
+select Sound temp_IntDot
+# find negative zero-crossings, or falling zero points, in deriv of Int,
+# which correspond to peaks in Intensity;
+# typically occurring at MAX vowel amplitude in oscillogram
+select Sound temp_IntDot
+To PointProcess (zeroes)... no yes
+Rename... temp_peaks
+
+# assume that true vowel onsets actually occur between moment of steepest rise
+# and moment of maximum amplitude.
+# 'between' is initially defined as 'halfway in time' between the points.
+
+select PointProcess temp_peaks
+Copy... temp_onsets
+Remove points between... 0 'endtime'
+
+select PointProcess temp_peaks
+npeaks = Get number of points
+for pindex from 1 to 'npeaks'
+	select PointProcess temp_peaks
+	ptime = Get time from index... 'pindex'
+	select Intensity temp
+	pint = Get value at time... 'ptime' Nearest
+	if pint > (maxint-threshold) 
+		select PointProcess temp_rises
+		rindex = Get low index... 'ptime'
+		rtime = Get time from index... 'rindex'
+		# onsettime is halfway in time between steepest-rise-moment and peak-moment
+		otime = ('rtime'+'ptime')/2
+		select PointProcess temp_onsets
+		Add point... 'otime'
+	endif # pint>threshold
+endfor # pindex from 1 to npeaks
+
+# cleanup
+select Sound temp
+# select Sound temp_rsm
+plus Intensity temp
+plus Matrix temp
+plus Matrix intdot
+plus Sound temp_IntDot
+plus PointProcess temp_rises
+plus PointProcess temp_peaks
+Remove
+#select Sound temp
+#Remove
+
+# rename final PointProcess to useful name
+select PointProcess temp_onsets
+Rename... 'name1$'_onsets'threshold'
+
+# was 1 Sound selected ? 
+endif 
+

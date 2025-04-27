@@ -1,0 +1,120 @@
+# This praat script generates an example figure.
+# 	see www.praat.org
+# (c) 2004 by Hugo Quené, Utrecht University.
+# HQ 2004.04.05
+#
+
+# a figure of 6x4 inch fits nicely on an A4 sheet in portrait mode.
+viewx = 6
+viewy = 4
+Viewport... 0 'viewx' 0 'viewy'
+Erase all
+# use Helvetica = Arial font everywhere
+Helvetica
+# size 12 for axis labels
+12
+# set up axes and axis titles
+Line width... 1
+Axes... -0.1 1 0 264
+Draw inner box
+One mark bottom... 0.0 yes yes no
+One mark bottom... 0.3 yes yes no
+One mark bottom... 0.5 yes yes no
+One mark bottom... 0.7 yes yes no
+Marks left every... 1 50 no yes no
+Marks right every... 1 50 yes yes no
+
+12
+# within subject
+Draw line... 0 64 0.3 45
+Draw line... 0.3 45 0.5 32
+Draw line... 0.5 32 0.7 20
+# the connecting lines do NOT touch the symbols,
+# because of larger white circles under symbols
+Paint circle (mm)... white 0 64 6
+Paint circle (mm)... white 0.3 45 6
+Paint circle (mm)... white 0.5 32 6
+Paint circle (mm)... white 0.7 20 6
+Paint circle (mm)... black 0 64 4
+Paint circle (mm)... black 0.3 45 4
+Paint circle (mm)... black 0.5 32 4
+Paint circle (mm)... black 0.7 20 4
+
+12
+# posttest only
+Draw line... 0 128 0.3 128
+Draw line... 0.3 128 0.5 128
+Draw line... 0.5 128 0.7 128
+Paint circle (mm)... white 0 128 6
+Paint circle (mm)... white 0.3 128 6
+Paint circle (mm)... white 0.5 128 6
+Paint circle (mm)... white 0.7 128 6
+call drawsquare 0.3 0 128 1.1 264
+call drawsquare 0.3 0.3 128 1.1 264
+call drawsquare 0.3 0.5 128 1.1 264
+call drawsquare 0.3 0.7 128 1.1 264
+
+12
+# pre-post ANCOVA
+Draw line... 0 128 0.3 117
+Draw line... 0.3 117 0.5 96
+Draw line... 0.5 96 0.7 66
+Paint circle (mm)... white 0 128 6
+Paint circle (mm)... white 0.3 117 6
+# hack to improve overlapping points
+call drawsquare 0.3 0.3 128 1.1 264
+Paint circle (mm)... white 0.5 96 6
+Paint circle (mm)... white 0.7 66 6
+call drawsquare 0.6 0 128 1.1 264
+call drawsquare 0.6 0.3 117 1.1 264
+call drawsquare 0.6 0.5 96 1.1 264
+call drawsquare 0.6 0.7 66 1.1 264
+
+12
+# pre-post ANCOVA
+Draw line... 0 256 0.3 180
+Draw line... 0.3 180 0.5 128
+Draw line... 0.5 128 0.7 77
+# hack to improve overlapping points
+# Paint circle (mm)... white 0 256 6
+Paint circle (mm)... white 0.3 180 6
+Paint circle (mm)... white 0.5 128 6
+Paint circle (mm)... white 0.7 77 6
+# hack to improve overlapping points
+call drawsquare 0.6 0.7 66 1.1 264
+call drawsquare 0.8 0 256 1.1 264
+call drawsquare 0.8 0.3 180 1.1 264
+call drawsquare 0.8 0.5 128 1.1 264
+call drawsquare 0.8 0.7 77 1.1 264
+
+procedure drawsquare kleur atx aty xrange yrange
+	# viewx and viewy are defined at top of script
+	scalar = 25
+	# 25 symbols would fill entire range of x axis
+	# larger number yields smaller symbols
+	xdev = 'xrange'/(2*'scalar')
+	# scale yrange as if aspect ratio would be square 1:1
+	yrange = 'yrange' * ('viewx'/'viewy')
+	ydev = 'yrange'/(2*'scalar')
+	fromx = 'atx'-'xdev'
+	tox = 'atx'+'xdev'
+	fromy = 'aty'-'ydev'
+	toy = 'aty'+'ydev'
+	Paint rectangle... 'kleur' 'fromx' 'tox' 'fromy' 'toy'
+endproc
+
+12
+Text... 0.74 Left 20 Half within
+Text... 0.74 Left 63 Half ANCOVA
+Text... 0.74 Left 80 Half change
+Text... 0.74 Left 128 Half posttest only
+
+Text special... 0.5 Centre -35 Half Helvetica 14 0 intra-subject correlation
+Text special... -0.175 Centre 128 Half Helvetica 14 90 required sample size
+
+# adjust viewport slightly, to have tighter upper and lower margins
+Viewport... 0 6 0.2 4.2
+
+# write result to Windows file
+# Write to Windows metafile... E:\Hugo\zandbak\MD1108.emf
+
