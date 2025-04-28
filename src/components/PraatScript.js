@@ -227,7 +227,7 @@ export const links_and_collections = [
     desc: "main Praat website (e.g. download the program).",
   },
   {
-    href: "https://www.yahoo.com/",
+    href: "https://groups.io/g/Praat-Users-List",
     text: "Praat users group",
     desc: "Yahoo! discussion group for Praat users; some scripts available in database.",
   },
@@ -237,7 +237,7 @@ export const links_and_collections = [
     desc: "a large number of scripts, many quite involved, with very informative descriptions.",
   },
   {
-    href: "https://github.com/stylerw/styler_praat_scripts/blob/master/sinewavespeech_chris_darwin.praat",
+    href: "https://users.sussex.ac.uk/~cjd/Praatscripts/",
     text: "Chris Darwin",
     desc: "advanced scripts for e.g. sine-wave speech, Shannon AM-noise speech, resizing vocal tract, etc.",
   },
@@ -262,17 +262,12 @@ export const links_and_collections = [
     desc: "some neat scripts, including several metronomes.",
   },
   {
-    href: "https://github.com/stylerw/styler_praat_scripts/blob/master/formant_automeasure/FormantMeasureVerifyv3.praat",
-    text: "Bert Remijsen",
-    desc: "some very well explained scripts, with sample input.",
-  },
-  {
     href: "http://web.archive.org/web/20080104122516/http://www.cphling.dk/pers/johtnd/praat/my_praat.htm",
     text: "John Tøndering",
     desc: "a “Label.man” (annotate from ManPage) package plus a few other common scripts.",
   },
   {
-    href: "",
+    href: "http://www.mattwinn.com/praat.html",
     text: "Joe Toscano",
     desc: "archived scripts, including his own.",
   },
