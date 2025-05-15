@@ -22,12 +22,7 @@ import Jonah_Katz from "../components/current_members/Jonah_Katz.jpg";
 import Elise_Bell from "../components/current_members/Elise_Bell.jpg";
 
 export const members = [
-  {
-    name: "Abeer Abbas",
-    occupation: "Graduate Student",
-    imgSrc: Abber_Abbas,
-    link: "https://linguistics.ucla.edu/person/abeer-abbas/",
-  },
+
   {
     name: "Jake Aziz",
     occupation: "Graduate Student",
@@ -75,12 +70,6 @@ export const members = [
     occupation: "Faculty",
     imgSrc: Patricia_Keating,
     link: "https://linguistics.ucla.edu/people/keating/keating.htm",
-  },
-  {
-    name: "Katya Khlystova",
-    occupation: "Graduate Student",
-    imgSrc: Katya_Khlystova,
-    link: "https://ekhlystova.wixsite.com/home",
   },
   {
     name: "Jody Kreiman",

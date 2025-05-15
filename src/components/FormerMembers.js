@@ -6,6 +6,12 @@ export const rows = [
     website: "",
   },
   {
+    key: "1",
+    name: "Abeer Abbas",
+    status: "Department of Foreign Languages, Jazan University, Saudi Arabia",
+    website: "https://jazanu.edu.sa/en/colleges/college-arts-and-humanities/department-foreign-languages",
+  },
+  {
     key: "2",
     name: "Suzy Ahn",
     status: "University of Ottawa, Assistant Professor",
@@ -486,6 +492,12 @@ export const rows = [
     name: "Sameer Khan",
     status: "Professor at Reed College",
     website: "https://www.reed.edu/linguistics/khan/",
+  },
+  {
+    key: "75",
+    name: "Ekaterina Khylstova",
+    status: "Scientist, OutcomeMD",
+    website: "https://www.linkedin.com/in/ekaterina-katya-khlystova/",
   },
   {
     key: "76",
