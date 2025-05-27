@@ -10,7 +10,7 @@ import Jake_Aziz from "../components/current_members/Jake_Aziz.jpg";
 import Jian_Leat_Siah from "../components/current_members/Jian_Leat_Siah.jpg";
 import Jinyoung_Jo from "../components/current_members/Jinyoung_Jo.jpg";
 import Jody_Kreiman from "../components/current_members/Jody_Kreiman.jpg";
-import John_McGahay from "../components/current_members/John_McGahay.jpg";
+import John_McGahay from "../components/current_members/mcgahay_photo.jpg";
 import Kevin_Liang from "../components/current_members/Kevin_Liang.jpg";
 import Kie_Zuraw from "../components/current_members/Kie_Zuraw.jpg";
 import Lily_Xu from "../components/current_members/Lily_Xu.jpg";
@@ -87,7 +87,7 @@ export const members = [
     name: "John McGahay",
     occupation: "Graduate Student",
     imgSrc: John_McGahay,
-    link: "https://www.linkedin.com/in/john-mcgahay-a78ba7126/",
+    link: "https://jmcgahay.github.io/",
   },
   {
     name: "Claire Moore-Cantwell",
