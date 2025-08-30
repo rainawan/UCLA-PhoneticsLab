@@ -30,7 +30,7 @@ const HomePage = () => {
             research we document segments and prosody of a range of languages
             and describe their patterns as part of a linguistic system through
             the production and perception of adult native speakers. We also
-            study how infants and children learn to perceive and produce the
+            study how infants and children learn to perceive the
             sounds of their native language(s). The UCLA Linguistics Department
             is well-known for the close cooperation between its phonetics and
             phonology programs.
@@ -43,9 +43,7 @@ const HomePage = () => {
             phonetics are listed under Teaching, and grant projects and working
             paper information are listed under Research. Current and past
             members of the lab, and local colleagues with whom we collaborate,
-            are listed under People. The UCLA Phonetics Lab has two sub-labs,
-            Language Acquisition “Infant” Lab, and SPOG team (Speech and
-            Cognitive Development).
+            are listed under People. The UCLA Phonetics Lab has a sub-lab, Language Acquisition “Infant” Lab.
           </div>
           <div className="p-3">
             The UCLA Phonetics Lab holds valuable databases, which you can

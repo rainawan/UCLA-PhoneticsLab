@@ -66,7 +66,6 @@ const Navbar = () => {
           label: "Infant Lab",
           link: "https://languagelab.humanities.ucla.edu/en/",
         },
-        { label: "SPOG Lab", link: "https://spog.ucla.edu/" },
       ],
     },
   ];

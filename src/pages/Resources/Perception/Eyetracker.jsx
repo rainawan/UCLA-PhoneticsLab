@@ -56,16 +56,7 @@ const Eyetracker = () => {
           The portable SR Research eyetracker can be used for in-lab studies or
           be packed in a padded crate we have in the lab to collect data
           off-site at schools, clinics, or other locations. If you are
-          interested in using the portable eye-tracker, please email{" "}
-          <Link
-            underline="hover"
-            color="danger"
-            size="lg"
-            href="mailto:mcychosz4@ucla.edu"
-          >
-            mcychosz4@ucla.edu
-          </Link>
-          .
+          interested in using the portable eye-tracker, please contact the lab director.
         </Text>
       </Text>
     </div>

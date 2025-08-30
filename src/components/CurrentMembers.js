@@ -20,6 +20,7 @@ import Patricia_Keating from "../components/current_members/Patricia_Keating.jpg
 import Sun_Ah_Jun from "../components/current_members/Sun_Ah_Jun.jpg";
 import Jonah_Katz from "../components/current_members/Jonah_Katz.jpg";
 import Elise_Bell from "../components/current_members/Elise_Bell.jpg";
+import Sylvia_Cho from "../components/current_members/Sylvia_Cho.jpg";
 
 export const members = [
   {
@@ -27,6 +28,12 @@ export const members = [
     occupation: "Faculty/Lab Support Staff",
     imgSrc: Elise_Bell,
     link: "https://elisebell.github.io/",
+  },
+  {
+    name: "Sylvia Cho",
+    occupation: "Faculty",
+    imgSrc: Sylvia_Cho,
+    link: "https://sylviacho247.github.io/index.html ",
   },
   {
     name: "Ben Eischens",

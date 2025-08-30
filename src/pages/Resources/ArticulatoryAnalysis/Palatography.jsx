@@ -6,9 +6,11 @@ import palatogram_fig_3 from "../../../components/resources/palatography/palatog
 import palatogram_fig_4 from "../../../components/resources/palatography/palatogram_fig_4.gif";
 import palatogram_fig_5 from "../../../components/resources/palatography/palatogram_fig_5.jpeg";
 import palatogram_fig_6 from "../../../components/resources/palatography/palatogram_fig_6.jpeg";
+import palatogram_fig_7 from "../../../components/resources/palatography/palatogram_fig_7.jpg";
+
 
 const Palatography = () => {
-  return (
+  return (  
     <div>
       <div className="pt-10">
         <Text h3>Static Palatography</Text>
@@ -317,7 +319,7 @@ const Palatography = () => {
                 <AccordionItem title="View Figures">
                   <div className="flex flex-wrap">
                     <div class="w-full md:w-1/2 p-2">
-                      <img src={palatogram_fig_5} alt="palatogram_fig_5" />
+                      <img src={palatogram_fig_7} alt="palatogram_fig_7" />
                       <h1 className="pt-4">
                         Figure 7: The impression is now sectioned along the
                         saggital plane. Use the central fissure as a guide. One

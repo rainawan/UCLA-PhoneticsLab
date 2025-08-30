@@ -139,7 +139,24 @@ const Courses = () => {
                       See schedule
                     </Link>
                   </TableCell>
-                  <TableCell>{item.details}</TableCell>
+                  <TableCell>
+                    {item.details &&
+                    item.details.trim().toLowerCase() ===
+                      "past and current topics listed on department page" ? (
+                      <Link
+                        href="https://linguistics.ucla.edu/graduate-courses/"
+                        isExternal
+                        underline="always"
+                        color="foreground"
+                        showAnchorIcon={false}
+                        className="text-sm font-normal"
+                      >
+                        Past and current topics listed on department page
+                      </Link>
+                    ) : (
+                      item.details
+                    )}
+                  </TableCell>
                 </TableRow>
               ) : (
                 <TableRow key={item.key}>

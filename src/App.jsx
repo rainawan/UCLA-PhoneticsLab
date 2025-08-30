@@ -17,7 +17,6 @@ import DataCollection from "./pages/Resources/DataCollection";
 import Courses from "./pages/Teaching/Courses";
 import Materials from "./pages/Teaching/Materials";
 import InfantLab from "./pages/Sub-Labs/InfantLab";
-import SpogLab from "./pages/Sub-Labs/SpogLab";
 import JoinTheLab from "./pages/People/JoinTheLab";
 
 function App() {
@@ -70,7 +69,6 @@ function App() {
               <Route path="/teaching/courses" element={<Courses />} />
               <Route path="/teaching/materials" element={<Materials />} />
               <Route path="/sub-labs/infant" element={<InfantLab />} />
-              <Route path="/sub-labs/spog" element={<SpogLab />} />
             </Routes>
           </div>
         </BrowserRouter>
