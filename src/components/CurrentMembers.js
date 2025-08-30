@@ -22,24 +22,11 @@ import Jonah_Katz from "../components/current_members/Jonah_Katz.jpg";
 import Elise_Bell from "../components/current_members/Elise_Bell.jpg";
 
 export const members = [
-
-  {
-    name: "Jake Aziz",
-    occupation: "Graduate Student",
-    imgSrc: Jake_Aziz,
-    link: "https://linguistics.ucla.edu/person/jake-aziz/",
-  },
   {
     name: "Elise Bell",
     occupation: "Faculty/Lab Support Staff",
     imgSrc: Elise_Bell,
     link: "https://elisebell.github.io/",
-  },
-  {
-    name: "Meg Cychosz",
-    occupation: "Faculty",
-    imgSrc: Meg_Cychosz,
-    link: "https://megseekosh.github.io/",
   },
   {
     name: "Ben Eischens",

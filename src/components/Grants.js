@@ -105,14 +105,14 @@ export const rows = [
   },
   {
     key: "6",
-    name: "Sun-Ah Jun, Janet Oh, Terry Au, Richard Lee",
+    name: "Janet Oh, Sun-Ah Jun, Terry Au, Richard Lee",
     date: "2009-2014",
     agency: "National Science Foundation",
     number: "0844106",
     title:
-      "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0844106&HistoricalAwards=false",
-    website:
       "The Role of Childhood Language Memory in Adult Language Learning: Korean Adoptees Learning Korean as Adults",
+    website:
+      "https://www.nsf.gov/awardsearch/showAward?AWD_ID=0844106&HistoricalAwards=false",
   },
   {
     key: "7",

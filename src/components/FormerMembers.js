@@ -77,6 +77,12 @@ export const rows = [
       "https://s3.amazonaws.com/files.pucp.edu.pe/posgrado/mes-internacional/2019/08/21152003/avelino_cv.pdf",
   },
   {
+      key: "11",
+      name: "Jake Aziz",
+      status: "",
+      website: "https://www.linkedin.com/in/jake-aziz-134b01225/",
+    },
+  {
     key: "12",
     name: "Mary Baltazani",
     status: "University of Oxford, Departmental Lecturer",
@@ -192,7 +198,7 @@ export const rows = [
     key: "30",
     name: "Adam Chong",
     status:
-      "Reader in Linguistics, Director - QMUL Phonetics Lab, Queen Mary University of London",
+      "Associate Professor in Phonology and Language Processing, the Faculty of Linguistics, Philology and Phonetics, University of Oxford",
     website: "https://www.adamjchong.com/",
   },
   {
@@ -207,6 +213,12 @@ export const rows = [
     status: "(retired) Assistant Graduate Dean & Chief of Staff at UC Irvine",
     website: "https://www.linkedin.com/in/court-crowther/",
   },
+  {
+      key: "32",
+      name: "Meg Cychosz",
+      status: "Assistant Professor, Dept. of Linguistics, Stanford University",
+      link: "https://megseekosh.github.io/",
+    },
   {
     key: "33",
     name: "Robert Daland",
