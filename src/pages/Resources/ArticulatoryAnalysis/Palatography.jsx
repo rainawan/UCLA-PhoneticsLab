@@ -6,7 +6,9 @@ import palatogram_fig_3 from "../../../components/resources/palatography/palatog
 import palatogram_fig_4 from "../../../components/resources/palatography/palatogram_fig_4.gif";
 import palatogram_fig_5 from "../../../components/resources/palatography/palatogram_fig_5.jpeg";
 import palatogram_fig_6 from "../../../components/resources/palatography/palatogram_fig_6.jpeg";
-import palatogram_fig_7 from "../../../components/resources/palatography/palatogram_fig_7.jpg";
+import palatogram_fig_7a from "../../../components/resources/palatography/palatogram_fig_7a.png";
+import palatogram_fig_7b from "../../../components/resources/palatography/palatogram_fig_7b.jpg";
+import palatogram_fig_8 from "../../../components/resources/palatography/palatogram_fig_8.png";
 
 
 const Palatography = () => {
@@ -291,49 +293,68 @@ const Palatography = () => {
             </div>
           </AccordionItem>
           <AccordionItem
-            title={<span className="text-xl">Midsaggital Diagrams</span>}
-          >
-            <div className="pb-10 px-4">
-              <Text h4>How to Make Midsaggital Diagrams</Text>
-              <Text p className="pb-10">
-                In order to obtain a precise diagram of the shape of the
-                speaker's palate, the palatal impression must be accurately
-                sectioned in three dimensions. The first cut will be through the
-                center of the impression to provide an datum line for further
-                measurement. To get the most information on the shape of the
-                soft tissues, the impression should be cut mid-sagittally before
-                trimming around the teeth. Next trace an outline of the palate,
-                upper teeth, and upper lip on a sheet of paper. Use a ruler and
-                your fingers to brace the impression. Alternatively, put one of
-                the halves on the glass of a copy machine, and copy. Either way,
-                make several copies of the tracing just in case.
-                <br />
-                <br />
-                Next, bisect the impression halves in the coronal plane, at a
-                point about the middle of the impression (usually between the
-                second premolar and first molar). The intersection of these
-                mid-sagittal and coronal cuts can be used to define x and y axes
-                and an origin on a piece of graph paper.
-              </Text>
-              <Accordion isCompact variant="bordered">
-                <AccordionItem title="View Figures">
-                  <div className="flex flex-wrap">
-                    <div class="w-full md:w-1/2 p-2">
-                      <img src={palatogram_fig_7} alt="palatogram_fig_7" />
-                      <h1 className="pt-4">
-                        Figure 7: The impression is now sectioned along the
-                        saggital plane. Use the central fissure as a guide. One
-                        of the resulting halves is used as a pattern to create a
-                        paper tracing. The flexible nature of the alginate
-                        requires careful support so as not to distort the shape
-                        of the palate.
-                      </h1>
-                    </div>
-                  </div>
-                </AccordionItem>
-              </Accordion>
-            </div>
-          </AccordionItem>
+  title={<span className="text-xl">Midsaggital Diagrams</span>}
+>
+  <div className="pb-10 px-4">
+    <Text h4>How to Make Midsaggital Diagrams</Text>
+    <Text p className="pb-10">
+      In order to obtain a precise diagram of the shape of the
+      speaker's palate, the palatal impression must be accurately
+      sectioned in three dimensions (see Figure 7). The first cut will be through the
+      center of the impression to provide a datum line for further
+      measurement. To get the most information on the shape of the
+      soft tissues, the impression should be cut mid-sagittally before
+      trimming around the teeth (see Figure 8). Next trace an outline of the palate,
+      upper teeth, and upper lip on a sheet of paper. Use a ruler and
+      your fingers to brace the impression. Alternatively, put one of
+      the halves on the glass of a copy machine, and copy. Either way,
+      make several copies of the tracing just in case.
+      <br />
+      <br />
+      Next, bisect the impression halves in the coronal plane, at a
+      point about the middle of the impression (usually between the
+      second premolar and first molar). The intersection of these
+      mid-sagittal and coronal cuts can be used to define x and y axes
+      and an origin on a piece of graph paper.
+    </Text>
+    <Accordion isCompact variant="bordered">
+      <AccordionItem title="View Figures">
+  <div className="flex flex-wrap">
+    <div className="w-full md:w-1/2 p-2 flex flex-col items-center">
+  <img
+    src={palatogram_fig_7a}
+    alt="palatogram_fig_7a"
+    className="w-full h-64 object-contain"
+  />
+  <h1 className="pt-4 text-center">
+    Figure 7. (a) The impression now needs to be sectioned along the saggital plane.
+  </h1>
+</div>
+<div className="w-full md:w-1/2 p-2 flex flex-col items-center">
+  <img
+    src={palatogram_fig_7b}
+    alt="palatogram_fig_7b"
+    className="w-full h-64 object-contain"
+  />
+  <h1 className="pt-4 text-center">
+    (b) Use the central fissure of the impression as a guide.
+  </h1>
+</div>
+  </div>
+  <div className="w-full md:w-1/2 p-2 flex flex-col items-center mx-auto">
+  <img
+    src={palatogram_fig_8}
+    alt="palatogram_fig_8"
+    className="h-64 object-contain max-w-md w-full"
+  />
+  <h1 className="pt-4 text-center">
+    Figure 8: Slice the impression in half, in the midsagittal plane. One of the resulting halves is used as a pattern to create a paper tracing. The flexible nature of the alginate requires careful support so as not to distort the shape of the palate.
+  </h1>
+</div>
+</AccordionItem>
+    </Accordion>
+  </div>
+</AccordionItem>
           <AccordionItem
             title={
               <span className="text-xl">
