@@ -9,6 +9,7 @@ import palatogram_fig_6 from "../../../components/resources/palatography/palatog
 import palatogram_fig_7a from "../../../components/resources/palatography/palatogram_fig_7a.png";
 import palatogram_fig_7b from "../../../components/resources/palatography/palatogram_fig_7b.jpg";
 import palatogram_fig_8 from "../../../components/resources/palatography/palatogram_fig_8.png";
+import CustomLink from "../../../components/CustomLink"
 
 
 const Palatography = () => {
@@ -48,15 +49,20 @@ const Palatography = () => {
               <Text p className="font-semibold">
                 Material presented here has been adapted from:
               </Text>
-              <Text p>
-                Ladefoged, P. (2003). Phonetic Data Analysis. Oxford:
-                Blackwells. (due out summer 2003)
-                <br />
-                Anderson, V. (2000) Giving Weight to Phonetic Principles: The
-                Case of Place of Articulation in Western Arrente. UCLA Ph.D.
-                dissertation. Keating, P. (2002). Class Handout for Linguistics
-                251 Phonetics Seminar, Spring 2002.
-              </Text>
+             <Text p>
+  <span className="text-blue-700">Ladefoged, P. (2003).</span> <span className="italic">Phonetic Data Analysis.</span> Oxford: Blackwells. (due out summer 2003)
+  <br /><br />
+  <span className="text-blue-700">Anderson, V. (2000).</span> <span className="italic">Giving Weight to Phonetic Principles: The Case of Place of Articulation in Western Arrente. UCLA Ph.D. dissertation.</span>
+  <br /><br />
+  <span className="text-blue-700">Keating, P. (2002).</span> Class Handout for Linguistics 251 Phonetics Seminar, Spring 2002.
+  <br /><br />
+  <CustomLink
+    href="https://www2.hawaii.edu/~vanderso/LDC.pdf"
+  >
+    Anderson, V. (2008)
+  </CustomLink>
+  . Static Palatography for Language Fieldwork, <span className="italic">Language Documentation and Conservation.</span> Vol. 2, No. 1, pp. 1-27.
+</Text>
             </div>
           </AccordionItem>
           <AccordionItem title={<span className="text-xl">Palatograms</span>}>
